@@ -11,12 +11,8 @@
     <meta http-equiv="Expires" content="Sat, 01 Dec 2018 00:00:00 GMT">
     <meta name="viewport" content="width=device-width" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
-    <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/assets/css/app.css" rel="stylesheet">
-    <script src="public/js/main.js" type='text/javascript' defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/app.css" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon2.ico?v=2.0" type="image/x-icon">
     <link rel="icon" href="/favicon2.ico" type="image/x-icon">
 </head>
