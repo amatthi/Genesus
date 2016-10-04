@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h1>My First Heading</h1>
-
-<p>My first paragraph.</p>
-
-</body>
+	<head>
+		<title>title</title>
+		<base href="/">
+	</head>
+	<body ng-app="myApp">
+		<a href="/launch">go to launch</a>
+		<a href="/home">go to home</a>
+		<div ng-view></div>
+	</body>
+	<script type="text/javascript" src="/assets/js/app.js"></script>
 </html>

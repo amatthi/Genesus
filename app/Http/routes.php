@@ -15,4 +15,4 @@ $app->group(['prefix' => 'api'], function () use ($app) {
     $app->get('/test', 'TestController@test');
 });
 
-$app->get('/', 'HomeController@show');
+$app->get('/{any:.*}', 'HomeController@show');
