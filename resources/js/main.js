@@ -1,4 +1,4 @@
-var chisel = angular.module('myApp', ['ngRoute']);
+var chisel = angular.module('myApp', ['ngRoute',]);
 
 chisel.config(function($routeProvider, $locationProvider) {
     $routeProvider

@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>title</title>
-		<base href="/">
-	</head>
-	<body ng-app="myApp">
+<head>
+    <title>Lift Off</title>
+    <meta charset="utf-8" />
+    <base href="/">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Lift Off lets you create your own branded supplement line, risk free.">
+    <meta http-equiv="Pragma" content="public">
+    <meta http-equiv="Cache-Control" content="public">
+    <meta http-equiv="Expires" content="Sat, 01 Dec 2018 00:00:00 GMT">
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/assets/css/app.css" rel="stylesheet">
+    <script src="public/js/main.js" type='text/javascript' defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <link rel="shortcut icon" href="/favicon2.ico?v=2.0" type="image/x-icon">
+    <link rel="icon" href="/favicon2.ico" type="image/x-icon">
+</head>
+	<body ng-app="myApp" style="background:#fff;">
 		<a href="/launch">go to launch</a>
 		<a href="/home">go to home</a>
 		<div ng-view></div>
