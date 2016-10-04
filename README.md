@@ -2,6 +2,12 @@
 
 ## install
 
+- clone this repository
+
+- set the web root at `/public`
+
+- set virtual host and local url , like: http://chisel.local
+
 - install comopser
 
 - run `composer update`
