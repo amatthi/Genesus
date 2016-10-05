@@ -17,9 +17,11 @@
     <link rel="icon" href="/favicon2.ico" type="image/x-icon">
 </head>
 	<body ng-app="myApp" style="background:#fff;">
-		<a href="/launch">go to launch</a>
-		<a href="/home">go to home</a>
+    <div class='container-fluid navbar-fixed-top'>
+        <div ng-include src="'templates/navbar.html'"></div>
+    </div>
 		<div ng-view></div>
 	</body>
+    <script src="public/resources/js/vendor/ui-bootstrap-tpls-0.14.3.min.js"></script>
 	<script type="text/javascript" src="/assets/js/app.js"></script>
 </html>

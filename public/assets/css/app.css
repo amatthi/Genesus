@@ -6,6 +6,75 @@
     margin: 0;
 }
 
+header {
+    height: 75px;
+    padding: 10px 0;
+    background: #fff;
+    border-bottom: 1px solid #CCC;
+}
+
+.header-row {
+    overflow: hidden;
+}
+
+header .logo {
+    float: left;
+}
+
+header .logo a {
+    display: block;
+}
+
+header nav {
+    width: 100%;
+}
+
+header nav ul {
+    padding-top: 15px;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none !important;
+    color: #333;
+}
+
+header nav ul li a:hover {
+    color: #06883F;
+    /**border-bottom: 1px solid #06883F;**/
+}
+
+header nav ul li.login-li {
+    float: right;
+    margin: -5px 0 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 26px;
+    font-weight: 400;
+}
+
+header nav ul li .btn:hover {
+    color: #019F6E;
+}
+
+h4 {
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.1;
+    color: #333;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     padding-top: 75px;
@@ -37,6 +106,7 @@ a:focus {
 
   background:url(https://dl.dropboxusercontent.com/u/24098368/responsive-hero-bg-1.jpg) no-repeat center center;
   background-size:cover;
+}
 
   @media (min-width:641px) and (max-width:1024px) {
     background:url(https://dl.dropboxusercontent.com/u/24098368/responsive-hero-bg-2.jpg) no-repeat center center;
@@ -54,7 +124,7 @@ a:focus {
   }
 
 
-}
+
 
 .hero-content {
   position: relative;
