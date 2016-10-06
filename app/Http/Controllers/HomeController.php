@@ -5,12 +5,11 @@ namespace App\Http\Controllers;
 class HomeController extends Controller
 {
     /**
-     * Retrieve the user for the given ID.
+     * Show the application dashboard.
      *
-     * @param  int  $id
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function index()
     {
         return view('home');
     }

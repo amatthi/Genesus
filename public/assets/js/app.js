@@ -6303,3 +6303,45 @@ chisel.controller("homeController", function($scope, $rootScope) {
 chisel.controller("launchController", function($scope, $rootScope) {
     $scope.var = 'var is here';
 });
+
+chisel.controller("mainController", function($scope, $rootScope, mainFactory) {
+    $scope.now_module = '';
+    $scope.template_v = '1.1';
+
+    $scope.set_module = function(name) {
+        $scope.now_module = (name) ? name : '';
+    }
+
+    $scope.register = function(data) {
+        mainFactory.register(data).then(function(r) {
+        	
+        }, $scope.handle_error);
+    }
+
+    $scope.handle_error = function(response) {
+    	// console.log(response);
+    	if(response.status == 422){
+    		var data = response.data;
+    		for(var i in data){
+    			alert(data[i]);
+    		}
+    	}
+    }
+});
+
+chisel.factory("mainFactory", function($http) {
+    var fact = {};
+
+    fact.register = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/register',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded',
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            'data': $.param(data)
+        });
+    }
+    return fact;
+})

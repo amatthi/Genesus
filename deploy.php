@@ -20,9 +20,9 @@ if (!file_exists('.deploy_args.php')) {
 //set('writeable_dirs', ['public/api/v1/application/cache', 'public/api/v1/application/logs']);
 set('repository', 'git@github.com:amatthi/Chisel.git');
 
-env('deploy_path', '/var/www/tappyn');
-server("tappyn-live", "liftoffsupplements.com", 22)
-    ->user('deploy')
+env('deploy_path', '/var/www/chisel');
+server("liftoffsupplements", "liftoffsupplements.com", 22)
+    ->user('root')
     //->identityFile($public_key_file, $private_key_file)
     ->identityFile('~/.ssh/id_rsa.pub', '~/.ssh/id_rsa')
     //->forwardAgent()
@@ -57,9 +57,9 @@ task('deploy:build', function () {
 run('cd {{release_path}} &&  npm run build');
 })->desc("Compiling JS/CSS");*/
 
-task('deploy:post_update', function () {
-    run('chmod +x {{release_path}}/bin/backup.sh');
-})->desc("Setting up backup process");
+//task('deploy:post_update', function () {
+//    run('chmod +x {{release_path}}/bin/backup.sh');
+//})->desc("Setting up backup process");
 /*
 // Run database migrations. This depends on both config and vendor
 task('deploy:migrate', function () {
@@ -70,7 +70,7 @@ task('deploy', [
     'deploy:prepare',
     'deploy:release',
     'deploy:update_code',
-    'deploy:post_update',
+    //'deploy:post_update',
     //'deploy:config',
     'deploy:vendor',
     //'deploy:build',
