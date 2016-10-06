@@ -36,14 +36,12 @@ server("liftoffsupplements", "liftoffsupplements.com", 22)
 //->identityFile()
 ->stage('staging')
 ->env('environment', 'testing')
-->env('branch', 'staging');
+->env('branch', 'staging');*/
 
 // Copy our production configuration to our new release directory
 task('deploy:config', function () {
-run('cp {{deploy_path}}/shared/config/v1/{{environment}}/* {{release_path}}/public/api/v1/application/config/{{environment}}');
-run('cp {{deploy_path}}/shared/config/phinx.yml {{release_path}}/phinx.yml');
-run('cp {{deploy_path}}/shared/config/config.js {{release_path}}/public/config.js');
-})->desc('Adding configuration');*/
+    run('cp {{deploy_path}}/shared/.env {{release_path}}/.env');
+})->desc('Adding configuration');
 
 // Install any vendor requirements
 task('deploy:vendor', function () {
@@ -60,21 +58,21 @@ run('cd {{release_path}} &&  npm run build');
 //task('deploy:post_update', function () {
 //    run('chmod +x {{release_path}}/bin/backup.sh');
 //})->desc("Setting up backup process");
-/*
+
 // Run database migrations. This depends on both config and vendor
 task('deploy:migrate', function () {
-run('cd {{release_path}} && php vendor/bin/phinx migrate');
-})->desc("Running migrations");*/
+    run('cd {{release_path}} && php artisan migrate');
+})->desc("Running migrations");
 
 task('deploy', [
     'deploy:prepare',
     'deploy:release',
     'deploy:update_code',
     //'deploy:post_update',
-    //'deploy:config',
+    'deploy:config',
     'deploy:vendor',
     //'deploy:build',
-    //'deploy:migrate',
+    'deploy:migrate',
     'deploy:symlink',
     'cleanup',
 ])->desc('Deploy your project');
