@@ -41,6 +41,7 @@ server("liftoffsupplements", "liftoffsupplements.com", 22)
 // Copy our production configuration to our new release directory
 task('deploy:config', function () {
     run('cp {{deploy_path}}/shared/.env {{release_path}}/.env');
+    run('cd {{release_path}} && chmod -R 777 storage');
 })->desc('Adding configuration');
 
 // Install any vendor requirements
