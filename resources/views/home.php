@@ -18,10 +18,9 @@
 </head>
 	<body ng-app="myApp" style="background:#fff;">
     <div class='container-fluid navbar-fixed-top'>
-        <div ng-include src="'templates/navbar.html'"></div>
+        <div ng-include="'templates/navbar.html'"></div>
     </div>
 		<div ng-view></div>
 	</body>
-    <script src="public/resources/js/vendor/ui-bootstrap-tpls-0.14.3.min.js"></script>
 	<script type="text/javascript" src="/assets/js/app.js"></script>
 </html>
