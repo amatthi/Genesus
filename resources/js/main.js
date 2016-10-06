@@ -1,6 +1,6 @@
 var chisel = angular.module('myApp', [
     'ngRoute',
-    'ngAnimate',
+    'ui.bootstrap',
 ]);
 
 chisel.config(function($routeProvider, $locationProvider) {
