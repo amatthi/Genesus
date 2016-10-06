@@ -12,6 +12,10 @@
 
 - run `composer update`
 
+- add .env file ( fill with .env.example)
+
+- run `php artisan migrate`
+
 - install npm
 
 - run `npm install`
