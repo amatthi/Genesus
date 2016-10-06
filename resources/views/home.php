@@ -22,7 +22,7 @@
 </head>
 	<body ng-app="myApp" style="background:#fff;">
     <div class='container-fluid navbar-fixed-top'>
-        <div ng-include src="'templates/navbar.html'"></div>
+        <div ng-include="'templates/navbar.html'"></div>
     </div>
     <section class='innerpage' ng-view></section>
 	</body>
