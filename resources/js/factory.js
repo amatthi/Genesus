@@ -42,5 +42,16 @@ chisel.factory("mainFactory", function($http) {
             'data': $.param(data)
         });
     }
+
+    fact.launch_campaign = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/api/campaign/launch',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            'data': $.param(data)
+        });
+    }
     return fact;
 })
