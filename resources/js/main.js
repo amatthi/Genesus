@@ -17,4 +17,10 @@ chisel.config(function($routeProvider, $locationProvider,$httpProvider) {
 
     $locationProvider.html5Mode(true);
     $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+
+    $scope.close_register = function() {
+            $rootScope.modal_up = false;
+            $scope.registration = { show: false, type: '', object: '' };
+        }
+        
 });

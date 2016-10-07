@@ -407,3 +407,18 @@ footer {
 }
 
 /** Footer End **/
+
+.close_circle {
+    background: #aaa;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #fff;
+    height: 20px;
+    line-height: 18px;
+    width: 20px;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    cursor: pointer;
+    text-align: center;
+}
