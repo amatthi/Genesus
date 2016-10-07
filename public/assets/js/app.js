@@ -6281,7 +6281,7 @@ var chisel = angular.module('myApp', [
     'ui.bootstrap',
 ]);
 
-chisel.config(function($routeProvider, $locationProvider) {
+chisel.config(function($routeProvider, $locationProvider,$httpProvider) {
     $routeProvider
         .when('/home', {
             templateUrl: 'html/home.html',
@@ -6294,6 +6294,7 @@ chisel.config(function($routeProvider, $locationProvider) {
         .otherwise({ redirectTo: '/home' });
 
     $locationProvider.html5Mode(true);
+    $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
 });
 
 chisel.controller("homeController", function($scope, $rootScope) {
@@ -6306,7 +6307,8 @@ chisel.controller("launchController", function($scope, $rootScope) {
 
 chisel.controller("mainController", function($scope, $rootScope, mainFactory) {
     $scope.now_module = '';
-    $scope.template_v = '1.1';
+    $scope.template_v = '1.2';
+    $scope.__user = {};
 
     $scope.set_module = function(name) {
         $scope.now_module = (name) ? name : '';
@@ -6314,18 +6316,39 @@ chisel.controller("mainController", function($scope, $rootScope, mainFactory) {
 
     $scope.register = function(data) {
         mainFactory.register(data).then(function(r) {
-        	
+            $scope.__user = r.data.user;
+            $scope.set_module();
         }, $scope.handle_error);
     }
 
     $scope.handle_error = function(response) {
-    	// console.log(response);
-    	if(response.status == 422){
-    		var data = response.data;
-    		for(var i in data){
-    			alert(data[i]);
-    		}
-    	}
+        // console.log(response);
+        if (response.status == 422) {
+            var data = response.data;
+            for (var i in data) {
+                alert(data[i]);
+            }
+        }
+    }
+
+    $scope.is_login = function() {
+        mainFactory.is_login().then(function(r) {
+            $scope.__user = (r.data.user) ? r.data.user : {};
+        });
+    }
+    $scope.is_login();
+
+    $scope.logout = function() {
+        mainFactory.logout().then(function(r) {
+            $scope.__user = {};
+        }, $scope.handle_error);
+    }
+
+    $scope.login = function(data) {
+        mainFactory.login(data).then(function(r) {
+            $scope.__user = (r.data.user) ? r.data.user : {};
+            $scope.set_module();
+        }, $scope.handle_error);
     }
 });
 
@@ -6337,8 +6360,38 @@ chisel.factory("mainFactory", function($http) {
             method: 'POST',
             url: '/register',
             headers: {
-                'Content-type': 'application/x-www-form-urlencoded',
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            'data': $.param(data)
+        });
+    }
+
+    fact.is_login = function() {
+        return $http({
+            method: 'GET',
+            url: '/is_login',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            }
+        });
+    }
+
+    fact.logout = function() {
+        return $http({
+            method: 'GET',
+            url: '/logout',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            }
+        });
+    }
+
+    fact.login = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/login',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
             },
             'data': $.param(data)
         });

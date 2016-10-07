@@ -10,7 +10,6 @@
         <meta http-equiv="Cache-Control" content="public">
         <meta http-equiv="Expires" content="Sat, 01 Dec 2018 00:00:00 GMT">
         <meta name="viewport" content="width=device-width" />
-        <meta name="csrf-token" content="{{ csrf_token() }}">
         <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link href="/assets/css/app.css" rel="stylesheet">
