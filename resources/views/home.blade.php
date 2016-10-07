@@ -26,9 +26,6 @@
             <div ng-if="now_module == 'register'" ng-include="'/html/templates/register.html?'+template_v"></div>
         </div>
     <section class="innerpage" ng-view></section>
-		<div class="container-fluid">
-	<div ng-hide="currentView == '/launch'" ng-include src="'templates/footer.html'"></div>
-</div>
 </body>
 <script type="text/javascript" src="/assets/js/app.js"></script>
 </html>
