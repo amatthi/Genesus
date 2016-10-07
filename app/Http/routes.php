@@ -13,8 +13,13 @@
 
 Route::auth();
 
+Route::group(['namespace' => 'Auth'], function () {
+    Route::get('is_login', 'AuthController@is_login');
+});
+
 Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
     Route::get('test', 'TestController@test');
+    Route::post('campaign/launch', 'CampaignController@launch');
 });
 
 Route::get('/{any}', 'HomeController@index')->where('any', '.*');

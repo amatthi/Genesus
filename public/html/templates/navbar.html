@@ -12,11 +12,17 @@
                         <a class="btn btn-jj btn-lg new-campaign" href="/launch">Create &
                         Sell</a>
                     </li>
-                    <li>
+                    <li ng-show="!__user.email">
                         <a href="#" ng-click="set_module('login')">Login</a>
                     </li>
-                    <li>
+                    <li ng-show="!__user.email">
                         <a href="#" ng-click="set_module('register')">Register</a>
+                    </li>
+                    <li ng-show="__user.email">
+                        <p>hi {{__user.email}}</p>
+                    </li>
+                    <li ng-show="__user.email">
+                        <a href="#" ng-click="logout()">Logout</a>
                     </li>
                 </ul>
             </nav>
@@ -28,8 +34,17 @@
                             <li>
                                 <a href="/launch">Create & Sell</a>
                             </li>
-                            <li>
+                            <li ng-show="!__user.email">
                                 <a href="#" ng-click="set_module('login')">Login</a>
+                            </li>
+                            <li ng-show="!__user.email">
+                                <a href="#" ng-click="set_module('register')">Register</a>
+                            </li>
+                            <li ng-show="__user.email">
+                                <p>hi {{__user.email}}</p>
+                            </li>
+                            <li ng-show="__user.email">
+                                <a href="#" ng-click="logout()">Logout</a>
                             </li>
                         </ul>
                     </li>

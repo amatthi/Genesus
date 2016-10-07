@@ -3,7 +3,7 @@ var chisel = angular.module('myApp', [
     'ui.bootstrap',
 ]);
 
-chisel.config(function($routeProvider, $locationProvider) {
+chisel.config(function($routeProvider, $locationProvider,$httpProvider) {
     $routeProvider
         .when('/home', {
             templateUrl: 'html/home.html',
@@ -16,4 +16,5 @@ chisel.config(function($routeProvider, $locationProvider) {
         .otherwise({ redirectTo: '/home' });
 
     $locationProvider.html5Mode(true);
+    $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
 });

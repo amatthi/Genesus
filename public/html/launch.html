@@ -1,1 +1,52 @@
-<p>launch html {{var}}</p>
+<div>
+    <span ng-class="{ 'launch-current-step' : launch_step_create() }">1. Create</span>
+    <span ng-class="{ 'launch-current-step' : launch_step_goal() }">2. Set a goal</span>
+    <span ng-class="{ 'launch-current-step' : launch_step_desc() }">3. Add a description</span>
+</div>
+<!--{{campaign_data}}-->
+<div class="launch-main">
+    <!-- step create-->
+    <div class="launch-step-create" ng-show="launch_step_create()">
+        <label>Enter text below
+            <input type="text" placeholder="Add your text here" ng-model="campaign_data.name">
+        </label>
+        <label>Chose a font
+            <select ng-model="campaign_data.font">
+                <option value="helvetica">Helvetica</option>
+            </select>
+            <input type="color" ng-model="campaign_data.color" />
+        </label>
+        <button ng-click="set_step('goal')">Continue</button>
+    </div>
+    <!-- END step create-->
+    <!-- step goal-->
+    <div class="launch-step-goal" ng-show="launch_step_goal()">
+        <label>Sales goal
+            <input type="range" min="0" max="100" step="1" ng-model="campaign_data.goal">
+        </label>
+        <label>of units
+            <input type="number" ng-model="campaign_data.units">
+        </label>
+        <button ng-click="set_step('desc')">Continue</button>
+    </div>
+    <!-- END step goal-->
+    <!-- step desc-->
+    <div class="launch-step-desc" ng-show="launch_step_desc()">
+        <label>Campaign title
+             <input type="text" placeholder="Add your text here" ng-model="campaign_data.title">
+        </label>
+        <label>Description
+            <textarea ng-model="campaign_data.description"></textarea>
+        </label>
+        <label>Campaign length
+            <select ng-model="campaign_data.font">
+                <option value="3">3 days</option>
+            </select>
+        </label>
+        <label>Url
+             <input type="text" ng-model="campaign_data.url">
+        </label>
+        <button ng-click="submit_campaign(campaign_data)">Launch</button>
+    </div>
+    <!-- END step desc-->
+</div>
