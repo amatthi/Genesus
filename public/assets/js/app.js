@@ -6279,6 +6279,7 @@ a(g).then(function(a){var c=angular.element(a.trim());e.replaceWith(c),b(c)(d)})
 var chisel = angular.module('myApp', [
     'ngRoute',
     'ui.bootstrap',
+    'ngAnimate',
 ]);
 
 chisel.config(function($routeProvider, $locationProvider,$httpProvider) {

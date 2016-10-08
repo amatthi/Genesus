@@ -20,7 +20,7 @@
 		<link rel="icon" href="/favicon2.ico" type="image/x-icon">
 	</head>
     <body ng-app="myApp" style="background:#fff;" ng-controller="mainController">
-			<div class='darken' ng-show="modal_up"></div>
+			<div class='darken' ng-show="now_module == 'register' || now_module == 'login'"></div>
         <div ng-include="'/html/templates/navbar.html?'+template_v"></div>
         <div id="pop-module">
             <div ng-if="now_module == 'login'" ng-include="'/html/templates/login.html?'+template_v"></div>
