@@ -1,10 +1,18 @@
 chisel.controller("mainController", function($scope, $rootScope, mainFactory) {
+    $rootScope.modal_up = false;
     $scope.now_module = '';
     $scope.template_v = '1.2';
     $scope.__user = {};
 
     $scope.set_module = function(name) {
-        $scope.now_module = (name) ? name : '';
+        if (name) {
+            $scope.now_module = (name) ? name : '';
+            $rootScope.modal_up = true;
+        } else {
+            $rootScope.root_modal.now = '';
+            $rootScope.modal_up = false;
+        }
+
     }
 
     $scope.register = function(data) {
