@@ -1,18 +1,18 @@
 chisel.controller("mainController", function($scope, $rootScope, mainFactory) {
-    $rootScope.modal_up = false;
     $scope.now_module = '';
-    $scope.template_v = '1.2';
+    $scope.template_v = '1.3';
     $scope.__user = {};
 
-    $scope.set_module = function(name) {
-        if (name) {
-            $scope.now_module = (name) ? name : '';
-            $rootScope.modal_up = true;
-        } else {
-            $rootScope.root_modal.now = '';
-            $rootScope.modal_up = false;
+    $("body").on('click', '.darken', function(event) {
+        if (event.target !== this) {
+            return;
         }
+        $scope.set_module();
+        $scope.$apply();
+    });
 
+    $scope.set_module = function(name) {
+        $scope.now_module = (name) ? name : '';
     }
 
     $scope.register = function(data) {

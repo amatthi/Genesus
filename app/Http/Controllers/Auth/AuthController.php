@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Socialite;
 use Validator;
 
 class AuthController extends Controller
@@ -65,8 +66,9 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+        $data['name'] = isset($data['name']) ? $data['name'] : explode("@", $data['email'])[0];
         return User::create([
-            //'name'     => $data['name'],
+            'name'     => $data['name'],
             'email'    => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
@@ -167,5 +169,40 @@ class AuthController extends Controller
         }
 
         return $this->sendFailedLoginResponse($request);
+    }
+
+    /**
+     * Redirect the user to the GitHub authentication page.
+     *
+     * @return Response
+     */
+    public function redirectToProvider()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return Response
+     */
+    public function handleProviderCallback()
+    {
+        $facebook_user = Socialite::driver('facebook')->user();
+        $user_data     = ['name' => $facebook_user->getName(), 'email' => $facebook_user->getEmail(), 'password' => str_random(10)];
+        $user          = User::where('email', $facebook_user->getEmail())->first();
+
+        if ($user) {
+            Auth::login($user);
+        } else {
+            Auth::guard($this->getGuard())->login($this->create($user_data));
+
+            $user          = Auth::user();
+            $user->from    = 'facebook';
+            $user->from_id = $facebook_user->getId();
+            $user->save();
+        }
+
+        return redirect()->route('home');
     }
 }

@@ -4,7 +4,7 @@ var chisel = angular.module('myApp', [
     'ngAnimate',
 ]);
 
-chisel.config(function($routeProvider, $locationProvider,$httpProvider) {
+chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
         .when('/home', {
             templateUrl: 'html/home.html',
@@ -18,6 +18,4 @@ chisel.config(function($routeProvider, $locationProvider,$httpProvider) {
 
     $locationProvider.html5Mode(true);
     $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-
-
 });
