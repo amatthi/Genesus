@@ -1,6 +1,6 @@
 .bottle-out {
   position: relative; }
-  .bottle-out .bottle-text {
+  .bottle-out .bottle-text, .bottle-out .bottle-art {
     height: 1%;
     position: absolute;
     margin: auto;

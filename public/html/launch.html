@@ -7,9 +7,9 @@
         </div>
         <div class="col-xs-12 col-sm-3">
             <span class="step-default">
-        <a ng-click="save_draft()">
-            <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
-            </a>
+                <a ng-click="save_draft()">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
+                </a>
             </span>
         </div>
     </div>
@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Chose a font</label>
-                                    <select class="tab-select" ng-model="campaign_data.font">
+                                    <select class="tab-select" ng-model="campaign_data.font" ng-change="refresh_bottle()">
                                         <option ng-repeat="font in fonts" ng-value="font.value" ng-bind="font.name"></option>
                                     </select>
                                     <input type="color" list="colors-font" ng-model="campaign_data.font_color" />
@@ -49,6 +49,7 @@
                         </uib-tab>
                         <uib-tab index="1" heading="Art">
                             Some Tab Content
+                             <input type="file" ng-file-select="amazon_upload($files,'art')" accept="image/*" />
                         </uib-tab>
                     </uib-tabset>
                 </form>
@@ -85,9 +86,10 @@
             <button ng-click="submit_campaign(campaign_data)">Launch</button>
         </div>
         <!-- END step desc-->
-        <div class="col-xs-12 col-sm-6">
+        <div id="bottle-div" class="col-xs-12 col-sm-6">
             <center class="bottle-out">
                 <img class="img-responsive design-img" src="https://s3-us-west-2.amazonaws.com/tappyn/bottle-ex.jpg" alt="Create your own supplement">
+                <div class="bottle-art" ng-show="campaign_data.art"><img ng-src="{{campaign_data.art}}"></div>
                 <div class="bottle-text" ng-show="campaign_data.name" ng-bind="campaign_data.name"></div>
             </center>
         </div>

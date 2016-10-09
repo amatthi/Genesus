@@ -53,5 +53,14 @@ chisel.factory("mainFactory", function($http) {
             'data': $.param(data)
         });
     }
+
+    fact.aws_key = function(bucket) {
+        return $http({
+            method: 'POST',
+            url: '/api/amazon/get_token',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            data: $.param({ bucket: bucket })
+        })
+    }
     return fact;
 })

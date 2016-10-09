@@ -3,10 +3,12 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory,c
     $scope.var = 'var is here';
     $scope.fonts = chisel_var.get('fonts');
     $scope.campaign_data = {};
+    $scope.amazon_connect('tappyn');
 
     $scope.init = function(){
         $scope.campaign_data.font_color = '#ffffff';
         $scope.campaign_data.cap_color = '#ffffff';
+        $scope.campaign_data.art = 'https://tappyn.s3.amazonaws.com/lo_art1476026650592_42801';
     }
     $scope.init();
 
@@ -35,4 +37,12 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory,c
             alert('submit_campaign complete');
         }, $scope.handle_error);
     }
+
+    $scope.refresh_bottle= function(){
+        $("#bottle-div").css('font-family',$scope.campaign_data.font);
+    }
+
+    $scope.$on('amazon_uploaded', function(event) {
+        $scope.campaign_data.art = $scope.__s.aws.file_url;
+    });
 });

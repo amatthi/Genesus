@@ -4456,6 +4456,8 @@ angular.module('ngAnimate', [], function initAngularHelpers() {
 
 
 })(window, window.angular);
+/*! 1.6.12 */
+!function(){var a=angular.module("angularFileUpload",[]);a.service("$upload",["$http","$q","$timeout",function(a,b,c){function d(d){d.method=d.method||"POST",d.headers=d.headers||{},d.transformRequest=d.transformRequest||function(b,c){return window.ArrayBuffer&&b instanceof window.ArrayBuffer?b:a.defaults.transformRequest[0](b,c)};var e=b.defer();window.XMLHttpRequest.__isShim&&(d.headers.__setXHR_=function(){return function(a){a&&(d.__XHR=a,d.xhrFn&&d.xhrFn(a),a.upload.addEventListener("progress",function(a){e.notify(a)},!1),a.upload.addEventListener("load",function(a){a.lengthComputable&&e.notify(a)},!1))}}),a(d).then(function(a){e.resolve(a)},function(a){e.reject(a)},function(a){e.notify(a)});var f=e.promise;return f.success=function(a){return f.then(function(b){a(b.data,b.status,b.headers,d)}),f},f.error=function(a){return f.then(null,function(b){a(b.data,b.status,b.headers,d)}),f},f.progress=function(a){return f.then(null,null,function(b){a(b)}),f},f.abort=function(){return d.__XHR&&c(function(){d.__XHR.abort()}),f},f.xhr=function(a){return d.xhrFn=function(b){return function(){b&&b.apply(f,arguments),a.apply(f,arguments)}}(d.xhrFn),f},f}this.upload=function(b){b.headers=b.headers||{},b.headers["Content-Type"]=void 0,b.transformRequest=b.transformRequest||a.defaults.transformRequest;var c=new FormData,e=b.transformRequest,f=b.data;return b.transformRequest=function(a,c){if(f)if(b.formDataAppender)for(var d in f){var g=f[d];b.formDataAppender(a,d,g)}else for(var d in f){var g=f[d];if("function"==typeof e)g=e(g,c);else for(var h=0;h<e.length;h++){var i=e[h];"function"==typeof i&&(g=i(g,c))}a.append(d,g)}if(null!=b.file){var j=b.fileFormDataName||"file";if("[object Array]"===Object.prototype.toString.call(b.file))for(var k="[object String]"===Object.prototype.toString.call(j),h=0;h<b.file.length;h++)a.append(k?j:j[h],b.file[h],b.fileName&&b.fileName[h]||b.file[h].name);else a.append(j,b.file,b.fileName||b.file.name)}return a},b.data=c,d(b)},this.http=function(a){return d(a)}}]),a.directive("ngFileSelect",["$parse","$timeout",function(a,b){return function(c,d,e){var f=a(e.ngFileSelect);if("input"!==d[0].tagName.toLowerCase()||"file"!==(d.attr("type")&&d.attr("type").toLowerCase())){for(var g=angular.element('<input type="file">'),h=d[0].attributes,i=0;i<h.length;i++)"type"!==h[i].name.toLowerCase()&&g.attr(h[i].name,h[i].value);e.multiple&&g.attr("multiple","true"),g.css("width","1px").css("height","1px").css("opacity",0).css("position","absolute").css("filter","alpha(opacity=0)").css("padding",0).css("margin",0).css("overflow","hidden"),g.attr("__wrapper_for_parent_",!0),d.append(g),d[0].__file_click_fn_delegate_=function(){g[0].click()},d.bind("click",d[0].__file_click_fn_delegate_),d.css("overflow","hidden"),d=g}d.bind("change",function(a){var d,e,g=[];if(d=a.__files_||a.target.files,null!=d)for(e=0;e<d.length;e++)g.push(d.item(e));b(function(){f(c,{$files:g,$event:a})})})}}]),a.directive("ngFileDropAvailable",["$parse","$timeout",function(a,b){return function(c,d,e){if("draggable"in document.createElement("span")){var f=a(e.ngFileDropAvailable);b(function(){f(c)})}}}]),a.directive("ngFileDrop",["$parse","$timeout","$location",function(a,b,c){return function(d,e,f){function g(a){return/^[\000-\177]*$/.test(a)}function h(a,d){var e=[],f=a.dataTransfer.items;if(f&&f.length>0&&f[0].webkitGetAsEntry&&"file"!=c.protocol()&&f[0].webkitGetAsEntry().isDirectory)for(var h=0;h<f.length;h++){var j=f[h].webkitGetAsEntry();null!=j&&(g(j.name)?i(e,j):f[h].webkitGetAsEntry().isDirectory||e.push(f[h].getAsFile()))}else{var k=a.dataTransfer.files;if(null!=k)for(var h=0;h<k.length;h++)e.push(k.item(h))}!function m(a){b(function(){l?m(10):d(e)},a||0)}()}function i(a,b,c){if(null!=b)if(b.isDirectory){var d=b.createReader();l++,d.readEntries(function(d){for(var e=0;e<d.length;e++)i(a,d[e],(c?c:"")+b.name+"/");l--})}else l++,b.file(function(b){l--,b._relativePath=(c?c:"")+b.name,a.push(b)})}if("draggable"in document.createElement("span")){var j=null;e[0].addEventListener("dragover",function(c){if(c.preventDefault(),b.cancel(j),!e[0].__drag_over_class_)if(f.ngFileDragOverClass&&f.ngFileDragOverClass.search(/\) *$/)>-1){var g=a(f.ngFileDragOverClass)(d,{$event:c});e[0].__drag_over_class_=g}else e[0].__drag_over_class_=f.ngFileDragOverClass||"dragover";e.addClass(e[0].__drag_over_class_)},!1),e[0].addEventListener("dragenter",function(a){a.preventDefault()},!1),e[0].addEventListener("dragleave",function(){j=b(function(){e.removeClass(e[0].__drag_over_class_),e[0].__drag_over_class_=null},f.ngFileDragOverDelay||1)},!1);var k=a(f.ngFileDrop);e[0].addEventListener("drop",function(a){a.preventDefault(),e.removeClass(e[0].__drag_over_class_),e[0].__drag_over_class_=null,h(a,function(b){k(d,{$files:b,$event:a})})},!1);var l=0}}}])}();
 /**
  * @license AngularJS v1.5.8
  * (c) 2010-2016 Google, Inc. http://angularjs.org
@@ -6280,6 +6282,7 @@ var chisel = angular.module('myApp', [
     'ngRoute',
     'ui.bootstrap',
     'ngAnimate',
+    'angularFileUpload',
 ]);
 
 chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
@@ -6303,12 +6306,19 @@ chisel.factory('chisel_var', function() {
     var itemsService = {};
 
     items.fonts = [
-        { name: 'Helvetica', value: 'helvetica' },
-        { name: 'Arial', value: 'Arial' },
-        { name: 'Times', value: 'Times' },
-        { name: 'Times New Roman', value: 'Times New Roman' },
-        { name: 'Courier', value: 'Courier' },
-        { name: 'Verdana', value: 'Verdana' },
+        { name: 'Georgia', value: 'Georgia, serif' },
+        { name: 'Palatino Linotype', value: '"Palatino Linotype", "Book Antiqua", Palatino, serif' },
+        { name: 'Times New Roman', value: '"Times New Roman", Times, serif' },
+        { name: 'Arial', value: 'Arial, Helvetica, sans-serif' },
+        { name: 'Arial Black', value: '"Arial Black", Gadget, sans-serif' },
+        { name: 'Comic Sans MS', value: '"Comic Sans MS", cursive, sans-serif' },
+        { name: 'Impact', value: 'Impact, Charcoal, sans-serif' },
+        { name: 'Lucida Sans Unicode', value: '"Lucida Sans Unicode", "Lucida Grande", sans-serif' },
+        { name: 'Tahoma', value: 'Tahoma, Geneva, sans-serif' },
+        { name: 'Trebuchet MS', value: '"Trebuchet MS", Helvetica, sans-serif' },
+        { name: 'Verdana', value: 'Verdana, Geneva, sans-serif' },
+        { name: 'Courier New', value: '"Courier New", Courier, monospace' },
+        { name: 'Lucida Console', value: '"Lucida Console", Monaco, monospace' },
     ];
 
     itemsService.get = function(name) {
@@ -6332,6 +6342,16 @@ chisel.factory('chisel_var', function() {
     return itemsService;
 });
 
+chisel.directive('customOnChange', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var onChangeHandler = scope.$eval(attrs.customOnChange);
+            element.bind('change', onChangeHandler);
+        }
+    };
+});
+
 chisel.controller("homeController", function($scope, $rootScope) {
     $scope.var = 'var is here';
 });
@@ -6341,10 +6361,12 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory,c
     $scope.var = 'var is here';
     $scope.fonts = chisel_var.get('fonts');
     $scope.campaign_data = {};
+    $scope.amazon_connect('tappyn');
 
     $scope.init = function(){
         $scope.campaign_data.font_color = '#ffffff';
         $scope.campaign_data.cap_color = '#ffffff';
+        $scope.campaign_data.art = 'https://tappyn.s3.amazonaws.com/lo_art1476026650592_42801';
     }
     $scope.init();
 
@@ -6373,12 +6395,21 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory,c
             alert('submit_campaign complete');
         }, $scope.handle_error);
     }
+
+    $scope.refresh_bottle= function(){
+        $("#bottle-div").css('font-family',$scope.campaign_data.font);
+    }
+
+    $scope.$on('amazon_uploaded', function(event) {
+        $scope.campaign_data.art = $scope.__s.aws.file_url;
+    });
 });
 
-chisel.controller("mainController", function($scope, $rootScope, mainFactory) {
+chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
     $scope.now_module = '';
-    $scope.template_v = '1.3';
+    $scope.template_v = '1.4';
     $scope.__user = {};
+    $scope.__s = {};
 
     $("body").on('click', '.darken', function(event) {
         if (event.target !== this) {
@@ -6427,6 +6458,39 @@ chisel.controller("mainController", function($scope, $rootScope, mainFactory) {
             $scope.__user = (r.data.user) ? r.data.user : {};
             $scope.set_module();
         }, $scope.handle_error);
+    }
+
+    $scope.amazon_connect = function(bucket) {
+        mainFactory.aws_key(bucket).success(function(r) {
+            $scope.__s.aws = r;
+        });
+    }
+
+    $scope.amazon_upload = function($files, arg) {
+        arg = (arg) ? arg : '';
+        var aws = $scope.__s.aws;
+        var file = $files[0];
+        var url = aws.base_url;
+        var new_name = Date.now();
+        var rando = Math.floor(Math.random() * 100000);
+        new_name = 'lo_' + arg + new_name.toString() + '_' + rando.toString();
+        $upload.upload({
+            url: url,
+            method: 'POST',
+            data: {
+                key: new_name,
+                acl: 'public-read',
+                "Content-Type": file.type === null || file.type === '' ?
+                    'application/octet-stream' : file.type,
+                AWSAccessKeyId: aws.key,
+                policy: aws.policy,
+                signature: aws.signature
+            },
+            file: file,
+        }).success(function() {
+            $scope.__s.aws.file_url = url + new_name;
+            $scope.$broadcast('amazon_uploaded');
+        });
     }
 });
 
@@ -6484,6 +6548,15 @@ chisel.factory("mainFactory", function($http) {
             },
             'data': $.param(data)
         });
+    }
+
+    fact.aws_key = function(bucket) {
+        return $http({
+            method: 'POST',
+            url: '/api/amazon/get_token',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            data: $.param({ bucket: bucket })
+        })
     }
     return fact;
 })

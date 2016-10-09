@@ -1,7 +1,8 @@
-chisel.controller("mainController", function($scope, $rootScope, mainFactory) {
+chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
     $scope.now_module = '';
-    $scope.template_v = '1.3';
+    $scope.template_v = '1.4';
     $scope.__user = {};
+    $scope.__s = {};
 
     $("body").on('click', '.darken', function(event) {
         if (event.target !== this) {
@@ -50,5 +51,38 @@ chisel.controller("mainController", function($scope, $rootScope, mainFactory) {
             $scope.__user = (r.data.user) ? r.data.user : {};
             $scope.set_module();
         }, $scope.handle_error);
+    }
+
+    $scope.amazon_connect = function(bucket) {
+        mainFactory.aws_key(bucket).success(function(r) {
+            $scope.__s.aws = r;
+        });
+    }
+
+    $scope.amazon_upload = function($files, arg) {
+        arg = (arg) ? arg : '';
+        var aws = $scope.__s.aws;
+        var file = $files[0];
+        var url = aws.base_url;
+        var new_name = Date.now();
+        var rando = Math.floor(Math.random() * 100000);
+        new_name = 'lo_' + arg + new_name.toString() + '_' + rando.toString();
+        $upload.upload({
+            url: url,
+            method: 'POST',
+            data: {
+                key: new_name,
+                acl: 'public-read',
+                "Content-Type": file.type === null || file.type === '' ?
+                    'application/octet-stream' : file.type,
+                AWSAccessKeyId: aws.key,
+                policy: aws.policy,
+                signature: aws.signature
+            },
+            file: file,
+        }).success(function() {
+            $scope.__s.aws.file_url = url + new_name;
+            $scope.$broadcast('amazon_uploaded');
+        });
     }
 });

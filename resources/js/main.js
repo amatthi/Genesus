@@ -2,6 +2,7 @@ var chisel = angular.module('myApp', [
     'ngRoute',
     'ui.bootstrap',
     'ngAnimate',
+    'angularFileUpload',
 ]);
 
 chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
@@ -25,12 +26,19 @@ chisel.factory('chisel_var', function() {
     var itemsService = {};
 
     items.fonts = [
-        { name: 'Helvetica', value: 'helvetica' },
-        { name: 'Arial', value: 'Arial' },
-        { name: 'Times', value: 'Times' },
-        { name: 'Times New Roman', value: 'Times New Roman' },
-        { name: 'Courier', value: 'Courier' },
-        { name: 'Verdana', value: 'Verdana' },
+        { name: 'Georgia', value: 'Georgia, serif' },
+        { name: 'Palatino Linotype', value: '"Palatino Linotype", "Book Antiqua", Palatino, serif' },
+        { name: 'Times New Roman', value: '"Times New Roman", Times, serif' },
+        { name: 'Arial', value: 'Arial, Helvetica, sans-serif' },
+        { name: 'Arial Black', value: '"Arial Black", Gadget, sans-serif' },
+        { name: 'Comic Sans MS', value: '"Comic Sans MS", cursive, sans-serif' },
+        { name: 'Impact', value: 'Impact, Charcoal, sans-serif' },
+        { name: 'Lucida Sans Unicode', value: '"Lucida Sans Unicode", "Lucida Grande", sans-serif' },
+        { name: 'Tahoma', value: 'Tahoma, Geneva, sans-serif' },
+        { name: 'Trebuchet MS', value: '"Trebuchet MS", Helvetica, sans-serif' },
+        { name: 'Verdana', value: 'Verdana, Geneva, sans-serif' },
+        { name: 'Courier New', value: '"Courier New", Courier, monospace' },
+        { name: 'Lucida Console', value: '"Lucida Console", Monaco, monospace' },
     ];
 
     itemsService.get = function(name) {
@@ -52,4 +60,14 @@ chisel.factory('chisel_var', function() {
         }
     }
     return itemsService;
+});
+
+chisel.directive('customOnChange', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var onChangeHandler = scope.$eval(attrs.customOnChange);
+            element.bind('change', onChangeHandler);
+        }
+    };
 });
