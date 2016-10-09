@@ -1,7 +1,14 @@
-chisel.controller("launchController", function($scope, $rootScope, mainFactory) {
+chisel.controller("launchController", function($scope, $rootScope, mainFactory,chisel_var) {
     $scope.launch_step = 'create';
     $scope.var = 'var is here';
+    $scope.fonts = chisel_var.get('fonts');
     $scope.campaign_data = {};
+
+    $scope.init = function(){
+        $scope.campaign_data.font_color = '#ffffff';
+        $scope.campaign_data.cap_color = '#ffffff';
+    }
+    $scope.init();
 
     $scope.launch_step_create = function() {
         return $scope.launch_step == 'create'

@@ -6298,14 +6298,55 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
     $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
 });
 
+chisel.factory('chisel_var', function() {
+    var items = {};
+    var itemsService = {};
+
+    items.fonts = [
+        { name: 'Helvetica', value: 'helvetica' },
+        { name: 'Arial', value: 'Arial' },
+        { name: 'Times', value: 'Times' },
+        { name: 'Times New Roman', value: 'Times New Roman' },
+        { name: 'Courier', value: 'Courier' },
+        { name: 'Verdana', value: 'Verdana' },
+    ];
+
+    itemsService.get = function(name) {
+        if (items[name]) {
+            return items[name];
+        }
+    };
+
+    itemsService.id_to_obj = function(name, id) {
+        if (items[name]) {
+            var result = $.grep(items[name], function(e) {
+                return e.id == id;
+            });
+            if (result.length == 1) {
+                return result[0];
+            } else {
+                return {};
+            }
+        }
+    }
+    return itemsService;
+});
+
 chisel.controller("homeController", function($scope, $rootScope) {
     $scope.var = 'var is here';
 });
 
-chisel.controller("launchController", function($scope, $rootScope, mainFactory) {
+chisel.controller("launchController", function($scope, $rootScope, mainFactory,chisel_var) {
     $scope.launch_step = 'create';
     $scope.var = 'var is here';
+    $scope.fonts = chisel_var.get('fonts');
     $scope.campaign_data = {};
+
+    $scope.init = function(){
+        $scope.campaign_data.font_color = '#ffffff';
+        $scope.campaign_data.cap_color = '#ffffff';
+    }
+    $scope.init();
 
     $scope.launch_step_create = function() {
         return $scope.launch_step == 'create'

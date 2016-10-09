@@ -10,11 +10,12 @@
 		<meta http-equiv="Cache-Control" content="public">
 		<meta http-equiv="Expires" content="Sat, 01 Dec 2018 00:00:00 GMT">
 		<meta name="viewport" content="width=device-width" />
-		<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<link href="/assets/css/app.css" rel="stylesheet">
 		<link rel="shortcut icon" href="/favicon2.ico?v=2.0" type="image/x-icon">
 		<link rel="icon" href="/favicon2.ico" type="image/x-icon">
+		<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link href="/assets/css/dev.css" rel="stylesheet">
+		<link href="/assets/css/app.css" rel="stylesheet">
 	</head>
     <body ng-app="myApp" style="background:#fff;" ng-controller="mainController">
 		<div class='darken' ng-show="now_module != ''"></div>

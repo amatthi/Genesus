@@ -1,157 +1,147 @@
-
 <div class='container-fluid'>
-<div class="col-xs-12 up-down-pad">
-<div class="col-xs-12 col-sm-7 col-sm-offset-1">
-    <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">1</span> Create</span>
-    <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_goal() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_goal() }">2</span> Set a goal</span>
-    <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">3</span> Add a description</span>
-</div>
-<div class="col-xs-12 col-sm-3">
-    <span class="step-default">
+    <div class="col-xs-12 up-down-pad">
+        <div class="col-xs-12 col-sm-7 col-sm-offset-1">
+            <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">1</span> Create</span>
+            <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_goal() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_goal() }">2</span> Set a goal</span>
+            <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">3</span> Add a description</span>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <span class="step-default">
         <a ng-click="save_draft()">
             <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
-        </a>
-    </span>
-</div>
-</div>
-<!--{{campaign_data}}-->
-<div class="col-xs-12 lil-pad launch-main">
-    <div class="col-xs-12 col-sm-3 step1_1">
-    <!-- step create-->
-    <div class="launch-step-create" ng-show="launch_step_create()">
-      <form name="outerForm" class="tab-form-demo">
-      <uib-tabset active="activeForm" class="tabl-link">
-        <uib-tab index="0" heading="Text">
-          <ng-form name="nestedForm">
-            <div class="form-group lil-lil-pad">
-              <label>Enter text below</label>
-                  <input class="input-width" type="text" placeholder="Add your text here" ng-model="campaign_data.name">
-            </div>
-            <div class="form-group">
-              <label>Chose a font</label>
-                  <select class="tab-select" ng-model="campaign_data.font">
-                      <option value="helvetica">Helvetica</option>
-                      <option value="Arial">Arial</option>
-                      <option value="Times">Times</option>
-                      <option value="Times New Roman">Times New Roman</option>
-                      <option value="Courier">Courier</option>
-                      <option value="Verdana">Verdana</option>
-                  </select>
-                  <input type="color" list="colors" ng-model="campaign_data.font_color" />
-                  <datalist id=colors>
-	                <option value="white">#ffffff</option>
-	                <option>#ff0000</option>
-	                <option>#ff7700</option>
-                 </datalist>
-            </div>
-            <div class="form-group">
-              <label>Cap</label>
-                  <input type="color" list="colors" ng-model="campaign_data.cap_color" />
-                  <datalist id=colors>
-	                <option value="white">#ffffff</option>
-	                <option>#ff0000</option>
-	                <option>#ff7700</option>
-                 </datalist>
-            </div>
-          </ng-form>
-        </uib-tab>
-        <uib-tab index="1" heading="Art">
-          Some Tab Content
-        </uib-tab>
-      </uib-tabset>
-    </form>
+            </a>
+            </span>
+        </div>
     </div>
-</div>
-    <div class="col-xs-12 col-sm-6">
-        <center>
-        <img class="img-responsive design-img" src="https://s3-us-west-2.amazonaws.com/tappyn/bottle-ex.jpg" alt="Create your own supplement">
-    </center>
-    </div>
-    <div class="col-xs-12 col-sm-3 tab-content-1 step1_2">
-    <!-- step create-->
-    <div class="launch-step-create" ng-show="launch_step_create()">
-            <div class="form-group lil-lil-pad">
-              <label>Purpose</label>
-                  <select class="tab-select" ng-model="campaign_data.purpose">
-                      <option value="Weight Management">Weight Management</option>
-                      <option value="Option 2">Option 2</option>
-                      <option value="Option 3">Option 3</option>
-                      <option value="Option 4">Option 4</option>
-                  </select>
+    <!--{{campaign_data}}-->
+    <div class="col-xs-12 lil-pad launch-main">
+        <div class="col-xs-12 col-sm-3 step1_1">
+            <!-- step create-->
+            <div class="launch-step-create" ng-show="launch_step_create()">
+                <form name="outerForm" class="tab-form-demo">
+                    <uib-tabset active="activeForm" class="tabl-link">
+                        <uib-tab index="0" heading="Text">
+                            <ng-form name="nestedForm">
+                                <div class="form-group lil-lil-pad">
+                                    <label>Enter text below</label>
+                                    <input class="input-width" type="text" placeholder="Add your text here" ng-model="campaign_data.name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Chose a font</label>
+                                    <select class="tab-select" ng-model="campaign_data.font">
+                                        <option ng-repeat="font in fonts" ng-value="font.value" ng-bind="font.name"></option>
+                                    </select>
+                                    <input type="color" list="colors-font" ng-model="campaign_data.font_color" />
+                                    <datalist id="colors-font">
+                                        <option>#ff0000</option>
+                                        <option>#ff7700</option>
+                                    </datalist>
+                                </div>
+                                <div class="form-group">
+                                    <label>Cap</label>
+                                    <input type="color" list="colors-cap" ng-model="campaign_data.cap_color" />
+                                    <datalist id="colors-cap">
+                                        <option>#ff0000</option>
+                                        <option>#ff7700</option>
+                                    </datalist>
+                                </div>
+                            </ng-form>
+                        </uib-tab>
+                        <uib-tab index="1" heading="Art">
+                            Some Tab Content
+                        </uib-tab>
+                    </uib-tabset>
+                </form>
             </div>
-            <div class="form-group">
-                <label>Formula</label>
+        </div>
+        <!-- END step create-->
+        <!-- step goal-->
+        <div class="launch-step-goal" ng-show="launch_step_goal()">
+            <label>Sales goal
+                <input type="range" min="0" max="100" step="1" ng-model="campaign_data.goal">
+            </label>
+            <label>of units
+                <input type="number" ng-model="campaign_data.units">
+            </label>
+            <button ng-click="set_step('desc')">Continue</button>
+        </div>
+        <!-- END step goal-->
+        <!-- step desc-->
+        <div class="launch-step-desc" ng-show="launch_step_desc()">
+            <label>Campaign title
+                <input type="text" placeholder="Add your text here" ng-model="campaign_data.title">
+            </label>
+            <label>Description
+                <textarea ng-model="campaign_data.description"></textarea>
+            </label>
+            <label>Campaign length
+                <select ng-model="campaign_data.font">
+                    <option value="3">3 days</option>
+                </select>
+            </label>
+            <label>Url
+                <input type="text" ng-model="campaign_data.url">
+            </label>
+            <button ng-click="submit_campaign(campaign_data)">Launch</button>
+        </div>
+        <!-- END step desc-->
+        <div class="col-xs-12 col-sm-6">
+            <center class="bottle-out">
+                <img class="img-responsive design-img" src="https://s3-us-west-2.amazonaws.com/tappyn/bottle-ex.jpg" alt="Create your own supplement">
+                <div class="bottle-text" ng-show="campaign_data.name" ng-bind="campaign_data.name"></div>
+            </center>
+        </div>
+        <div class="col-xs-12 col-sm-3 tab-content-1 step1_2">
+            <!-- step create-->
+            <div class="launch-step-create" ng-show="launch_step_create()">
+                <div class="form-group lil-lil-pad">
+                    <label>Purpose</label>
+                    <select class="tab-select" ng-model="campaign_data.purpose">
+                        <option value="Weight Management">Weight Management</option>
+                        <option value="Option 2">Option 2</option>
+                        <option value="Option 3">Option 3</option>
+                        <option value="Option 4">Option 4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Formula</label>
                     <select class="tab-select" ng-model="campaign_data.formula">
                         <option value="CLA">CLA</option>
                         <option value="Option 2">Option 2</option>
                         <option value="Option 3">Option 3</option>
                         <option value="Option 4">Option 4</option>
                     </select>
-              </div>
-              <div ng-show="campaign_data.formula">
-                  <div class="ingredients">
-                      <div class="CLA_1" ng-if="campaign_data.formula == 'CLA'">
-                          <h4>Caffeine</h4>
-                          <h5>Weight Loss &#183 Energy</h5>
-                          <h5>0.25 mg</h5>
-                      </div>
-                      <div class="CLA_1" ng-if="campaign_data.formula == 'CLA'">
-                          <h4>Garcenia Cambognia</h4>
-                          <h5>Weight Loss &#183 Strength</h5>
-                          <h5>0.50 mg</h5>
-                      </div>
-                      <div class="CLA_1" ng-if="campaign_data.formula == 'CLA'">
-                          <h4>Green Tea Extract</h4>
-                          <h5>Weight Loss &#183 Strength</h5>
-                          <h5>0.37 mg</h5>
-                      </div>
-                  </div>
-
-                      <div class="ing-ex text-center">
-                          <h5>All quantities per serving.</h5>
-                          <h3>Base Cost @ 30 Bottles:</h3>
-                          <h2>$5.75</h2>
-                      </div>
-                  </div>
-              </div>
-              <div class="lil-pad">
-              <center>
-              <a class='btn btn-wj btn-sm' ng-click="set_step('goal')">Continue</a>
-              </center>
-          </div>
+                </div>
+                <div ng-show="campaign_data.formula">
+                    <div class="ingredients">
+                        <div class="CLA_1" ng-if="campaign_data.formula == 'CLA'">
+                            <h4>Caffeine</h4>
+                            <h5>Weight Loss &#183 Energy</h5>
+                            <h5>0.25 mg</h5>
+                        </div>
+                        <div class="CLA_1" ng-if="campaign_data.formula == 'CLA'">
+                            <h4>Garcenia Cambognia</h4>
+                            <h5>Weight Loss &#183 Strength</h5>
+                            <h5>0.50 mg</h5>
+                        </div>
+                        <div class="CLA_1" ng-if="campaign_data.formula == 'CLA'">
+                            <h4>Green Tea Extract</h4>
+                            <h5>Weight Loss &#183 Strength</h5>
+                            <h5>0.37 mg</h5>
+                        </div>
+                    </div>
+                    <div class="ing-ex text-center">
+                        <h5>All quantities per serving.</h5>
+                        <h3>Base Cost @ 30 Bottles:</h3>
+                        <h2>$5.75</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="lil-pad">
+                <center>
+                    <a class='btn btn-wj btn-sm' ng-click="set_step('goal')">Continue</a>
+                </center>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-    <!-- END step create-->
-    <!-- step goal-->
-    <div class="launch-step-goal" ng-show="launch_step_goal()">
-        <label>Sales goal
-            <input type="range" min="0" max="100" step="1" ng-model="campaign_data.goal">
-        </label>
-        <label>of units
-            <input type="number" ng-model="campaign_data.units">
-        </label>
-        <button ng-click="set_step('desc')">Continue</button>
-    </div>
-    <!-- END step goal-->
-    <!-- step desc-->
-    <div class="launch-step-desc" ng-show="launch_step_desc()">
-        <label>Campaign title
-             <input type="text" placeholder="Add your text here" ng-model="campaign_data.title">
-        </label>
-        <label>Description
-            <textarea ng-model="campaign_data.description"></textarea>
-        </label>
-        <label>Campaign length
-            <select ng-model="campaign_data.font">
-                <option value="3">3 days</option>
-            </select>
-        </label>
-        <label>Url
-             <input type="text" ng-model="campaign_data.url">
-        </label>
-        <button ng-click="submit_campaign(campaign_data)">Launch</button>
-    </div>
-    <!-- END step desc-->
-</div>
 </div>
