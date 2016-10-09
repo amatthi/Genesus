@@ -6374,6 +6374,11 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory,c
         return $scope.launch_step == 'create'
     };
 
+    $scope.checkModel = {
+    front: true,
+    back: false
+  };
+
     $scope.launch_step_goal = function() {
         return $scope.launch_step == 'goal'
     };
