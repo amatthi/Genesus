@@ -6366,7 +6366,7 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory,c
     $scope.init = function(){
         $scope.campaign_data.font_color = '#ffffff';
         $scope.campaign_data.cap_color = '#ffffff';
-        $scope.campaign_data.art = 'https://tappyn.s3.amazonaws.com/lo_art1476026650592_42801';
+        //$scope.campaign_data.art = 'https://tappyn.s3.amazonaws.com/lo_art1476026650592_42801';
     }
     $scope.init();
 
