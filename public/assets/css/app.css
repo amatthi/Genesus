@@ -70,7 +70,7 @@ h4 {
 }
 
 label {
-    display: inline-block;
+    display: block;
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: 400;
@@ -220,6 +220,8 @@ position: relative;
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
+    font-size: 16px;
+    border-radius: 6px;
 }
 
 .btn-wj:hover {
@@ -457,4 +459,195 @@ footer {
     opacity: 1;
     transform-style: preserve-3d;
     padding-top: 100px;
+}
+
+.up-down-pad {
+  padding: 25px 0 25px;
+  border-bottom: 1px solid hsla(0, 0%, 80%, 0.61);
+}
+
+.launch-current-step {
+  color: #07B9FF !important;
+  padding-left: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: default;
+}
+
+.step-default {
+  color:#777;
+  padding-left: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: default;
+}
+
+.step-default a {
+  color:#777;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  float: right;
+}
+
+@media (max-width: 767px) {
+  .step-default a {
+    color:#777;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    float: right;
+    padding-top: 25px;
+  }
+
+  .step-default a:hover {
+    text-decoration: none;
+    color:#333;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    float: right;
+    padding-top: 25px;
+  }
+
+  .launch-current-step {
+    color: #07B9FF !important;
+    padding-left: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: default;
+    padding-top: 25px;
+  }
+
+  .step-default {
+    color:#777;
+    padding-left: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: default;
+    padding-top: 25px;
+  }
+}
+
+.step-default a:hover {
+  text-decoration: none;
+  color:#333;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  float: right;
+}
+
+.step-number {
+  background-color: #07B9FF !important;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px 2px 6px;
+}
+
+.step-number-default {
+  background-color: #777;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px 2px 6px;
+}
+
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  background-color: #F4F5F7;
+}
+
+.tab-content-1 {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #F4F5F7;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+  background-color:#F4F5F7;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.nav-tabs>li a {
+  color:#777;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.lil-lil-pad {
+  padding-top: 10px;
+}
+
+.input-width {
+  width: 100%;
+  padding: 5px;
+}
+
+.tab-select {
+  margin-right: 10px;
+  width: 60%;
+}
+
+/**@media (max-width: 1252px) {
+  .tab-select {
+    margin-right: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}**/
+
+.step1_1 {
+  max-width: 322.5px !important;
+}
+
+.step1_2 {
+  max-width: 222.5px !important;
+}
+
+.design-img {
+  max-height: 500px;
+}
+
+.ingredients {
+    background-color: #FEFEFE;
+}
+
+.CLA_1 {
+  border-bottom: 1px solid #ddd;
+}
+
+.CLA_1 h4 {
+  font-weight: 400;
+  font-size: 18px;
+  padding: 10px 0 0 10px;
+  margin-bottom: 5px;
+}
+
+.CLA_1 h5 {
+  font-weight: 300;
+  font-size: 14px;
+  padding: 0 0 0 10px;
+  color: #777;
+  margin-top: 0px;
+}
+
+.ing-ex h5 {
+  color: #98989A;
+}
+
+.ing-ex h3 {
+  color:#7C7C7E;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ing-ex h2 {
+  font-size: 36px;
+    font-weight: 600;
+    text-align: left;
+    color: #2A77A3;
 }
