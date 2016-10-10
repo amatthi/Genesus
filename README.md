@@ -14,6 +14,8 @@
 
 - add .env file ( fill with .env.example)
 
+- run `php artisan key:generate`
+
 - run `php artisan migrate`
 
 - install npm
