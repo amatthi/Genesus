@@ -619,7 +619,7 @@ footer {
 }
 
 .input-width {
-  width: 100%;
+  width: 100% !important;
   padding: 5px;
 }
 
@@ -650,6 +650,8 @@ footer {
 
 .ingredients {
     background-color: #FEFEFE;
+    overflow: auto;
+    height: 285px;
 }
 
 .CLA_1 {
