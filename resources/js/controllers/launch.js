@@ -1,4 +1,6 @@
 chisel.controller("launchController", function($scope, $rootScope, mainFactory, chisel_var) {
+    return;
+    
     $scope.launch_step = 'create';
     $scope.var = 'var is here';
     $scope.fonts = chisel_var.get('fonts');

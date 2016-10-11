@@ -9,20 +9,20 @@
             <nav class='hidden-xs'>
                 <ul class="pull-right">
                     <li class="outline" style='cursor:pointer'>
-                        <a class="btn btn-jj btn-lg new-campaign" href="/launch">Create &
+                        <a class="btn btn-jj btn-lg new-campaign" href="/launch" target="_self">Create &
                         Sell</a>
                     </li>
                     <li ng-show="!__user.email">
-                        <a href="#" ng-click="set_module('login')">Login</a>
+                        <a href="javascript:void(0)" ng-click="set_module('login')">Login</a>
                     </li>
                     <li ng-show="!__user.email">
-                        <a href="#" ng-click="set_module('register')">Register</a>
+                        <a href="javascript:void(0)" ng-click="set_module('register')">Register</a>
                     </li>
                     <li ng-show="__user.email">
                         <p>hi {{__user.email}}</p>
                     </li>
                     <li ng-show="__user.email">
-                        <a href="#" ng-click="logout()">Logout</a>
+                        <a href="javascript:void(0)" ng-click="logout()">Logout</a>
                     </li>
                 </ul>
             </nav>
@@ -35,16 +35,16 @@
                                 <a href="/launch">Create & Sell</a>
                             </li>
                             <li ng-show="!__user.email">
-                                <a href="#" ng-click="set_module('login')">Login</a>
+                                <a href="javascript:void(0)" ng-click="set_module('login')">Login</a>
                             </li>
                             <li ng-show="!__user.email">
-                                <a href="#" ng-click="set_module('register')">Register</a>
+                                <a href="javascript:void(0)" ng-click="set_module('register')">Register</a>
                             </li>
                             <li ng-show="__user.email">
                                 <p>hi {{__user.email}}</p>
                             </li>
                             <li ng-show="__user.email">
-                                <a href="#" ng-click="logout()">Logout</a>
+                                <a href="javascript:void(0)" ng-click="logout()">Logout</a>
                             </li>
                         </ul>
                     </li>

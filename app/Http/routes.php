@@ -26,4 +26,5 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/launch', 'HomeController@launch');
 Route::get('/{any}', 'HomeController@index')->where('any', '.*');
