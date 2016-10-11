@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="/favicon2.ico?v=2.0" type="image/x-icon">
         <link rel="icon" href="/favicon2.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,300|Lobster|Architects+Daughter|Roboto|Oswald|Montserrat|Lora|PT+Sans|Ubuntu|Roboto+Slab|Fjalla+One|Indie+Flower|Playfair+Display|Poiret+One|Dosis|Oxygen|Lobster|Play|Shadows+Into+Light|Pacifico|Dancing+Script|Kaushan+Script|Gloria+Hallelujah|Black+Ops+One|Lobster+Two|Satisfy|Pontano+Sans|Domine|Russo+One|Handlee|Courgette|Special+Elite|Amaranth|Vidaloka' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Lato:400,300|Lobster|Architects+Daughter|Roboto|Oswald|Montserrat|Lora|PT+Sans|Ubuntu|Roboto+Slab|Fjalla+One|Indie+Flower|Playfair+Display|Poiret+One|Dosis|Oxygen|Lobster|Play|Shadows+Into+Light|Pacifico|Dancing+Script|Kaushan+Script|Gloria+Hallelujah|Black+Ops+One|Lobster+Two|Satisfy|Pontano+Sans|Domine|Russo+One|Handlee|Courgette|Special+Elite|Amaranth|Vidaloka' rel='stylesheet' type='text/css'>
         <!-- CSS Start -->
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" >
         <link rel="stylesheet" type="text/css" href="css/normalize.css" >
@@ -20,6 +20,8 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap-colorpicker.min.css">
         <link rel="stylesheet" type="text/css" href="css/angular-material.css">
         <!-- CSS End -->
+        <link href="/assets/css/dev.css" rel="stylesheet">
+        <link href="/assets/css/app.css" rel="stylesheet">
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
@@ -27,6 +29,7 @@
         <div class="container ng-scope" ng-controller="ProductCtrl" ng-app="productApp" id="productApp">
             <div ng-controller="CustomCtrl">
                 <!-- custom -->
+                <div class='darken' ng-show="now_module != ''"></div>
                 <div ng-include="'/html/templates/navbar.html?'+template_v"></div>
                 <div id="pop-module">
                     <div class="modal_actions2" ng-if="now_module == 'login'" ng-include="'/html/templates/login.html?'+template_v"></div>
