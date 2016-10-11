@@ -19,7 +19,7 @@
       "loadMore":true,
       "graphicsPage" : 1,
       "defaultProductId" : 1,
-      "defaultProductImage" : "dummy_data\/products\/t_shirts\/20.png",
+      "defaultProductImage" : "https://s3-us-west-2.amazonaws.com/tappyn/Bottle.jpg",
       "quantity" : 1,
       "defaultPrice" : 210,
       "defaultCurrency" : "USD",

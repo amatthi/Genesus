@@ -89,14 +89,14 @@
                                                     </a>
                                                 </div>
                                             </li>
-                                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                            <!--<li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                                 <div>
                                                     <a class="" href="#qr_code" aria-controls="qr_code" role="tab" data-toggle="tab" ng-click="exitDrawing()">
                                                         <i class="fa fa-qrcode"></i>
                                                         <span>Qr code</span>
                                                     </a>
                                                 </div>
-                                            </li>
+                                            </li>-->
                                             <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                                 <div>
                                                     <a class="" href="#hand_draw" aria-controls="hand_draw" role="tab" data-toggle="tab" ng-click="enterDrawing();">
