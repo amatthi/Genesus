@@ -245,7 +245,7 @@ body {
     box-shadow: none;
     margin-bottom: 0;
     padding: 20px 0;
-} 
+}
 .open .dropdown-menu {
     background-clip: padding-box;
     background-color: white;
@@ -833,7 +833,7 @@ div#wordcloud svg {
     max-width: 20%;
     width: 100%;
 }
-.md-dialog-container,md-backdrop.md-dialog-backdrop{height: 100% !important; z-index: 99999 !important;} 
+.md-dialog-container,md-backdrop.md-dialog-backdrop{height: 100% !important; z-index: 99999 !important;}
 md-radio-group md-radio-button {
   float: left;
   margin: 15px 5px;
@@ -972,7 +972,7 @@ md-radio-group md-radio-button {
   text-align: right;
   cursor: pointer;
   color: #26c4e2;
-}  
+}
 .icon-vertical ul li ul.ulChildMenu li a {
   font-size: 12px;
   padding: 5px 8px;
@@ -983,8 +983,8 @@ input[type=range]{
     -webkit-appearance: none;
 }
 
-input[type=range]::-webkit-slider-runnable-track { 
-    background: #999999; 
+input[type=range]::-webkit-slider-runnable-track {
+    background: #999999;
     height: 2px;
 }
 
@@ -1006,7 +1006,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     background: #ccc;
 }
 /* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {  
+input[type=range]::-moz-range-thumb {
   background: #26C4E2;
   cursor: pointer;
   border: 1px solid #26C4E2;
@@ -1036,7 +1036,7 @@ body.body_overlay::after {
 .graphic_icons .thumb_listing{max-height: 500px; overflow: hidden;}
 .layer_listing{max-height: 600px; overflow: hidden;}
 .color-mixer .col-lg-12::after {clear: both; content: ""; display: block;}
-.editor_section {box-shadow: 1px 0 3px #cacaca; position: relative; z-index: 9;}
+.editor_section {/**box-shadow: 1px 0 3px #cacaca;**/ position: relative; z-index: 9;}
 .ngsb-wrap .ngsb-scrollbar .ngsb-track{background: #000000;}
 .curved_text {
   font-weight: bold;
@@ -1068,7 +1068,7 @@ body.body_overlay::after {
         position: static;
         padding: 0;
         margin-bottom: 30px;
-    } 
+    }
     .color-mixer br{display: none;}
     .editor_section{height: auto !important; }
     .index_02 .canvas_options{padding-left: 40px;}
@@ -1091,7 +1091,7 @@ body.body_overlay::after {
     .btn-group-vertical.btn-group-one {
         left: auto;
         right: 0;
-    } 
+    }
     .icon-vertical ul {
         margin-right: 5px;
     }
@@ -1118,9 +1118,8 @@ body.body_overlay::after {
 @media (max-width: 400px) {
     .canvas-container-outer {
         max-width: 220px;
-    } 
+    }
     .graphic_types > div span{font-size: 10px;}
     .index_02 md-radio-group md-radio-button{ max-width: 40%;}
 }
 /*# sourceMappingURL=custom.css.map */
-

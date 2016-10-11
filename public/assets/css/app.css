@@ -651,7 +651,7 @@ footer {
 .ingredients {
     background-color: #FEFEFE;
     overflow: auto;
-    height: 285px;
+    max-height: 285px;
 }
 
 .CLA_1 {

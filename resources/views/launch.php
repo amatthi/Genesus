@@ -26,6 +26,23 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <body>
+        <div class="container-fluid">
+    <div class="col-xs-12 up-down-pad">
+        <div class="col-xs-12 col-sm-7 col-sm-offset-1">
+            <span class="step-default" ng-class="{ 'launch-current-step' : launch_step = 'create' }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step = 'create' }">1</span> Create</span>
+            <span class="step-default" ng-class="{ 'launch-current-step' : launch_step = 'goal' }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step = 'goal' }">2</span> Set a goal</span>
+            <span class="step-default" ng-class="{ 'launch-current-step' : launch_step = 'desc' }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step = 'desc' }">3</span> Add a description</span>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <span class="step-default">
+
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
+
+            </span>
+        </div>
+    </div>
+    </div>
+        <div class="container-fluid lil-pad">
         <div class="container ng-scope" ng-controller="ProductCtrl" ng-app="productApp" id="productApp">
             <div ng-controller="CustomCtrl">
                 <!-- custom -->
@@ -35,20 +52,21 @@
                     <div class="modal_actions2" ng-if="now_module == 'login'" ng-include="'/html/templates/login.html?'+template_v"></div>
                     <div class="modal_actions2" ng-if="now_module == 'register'" ng-include="'/html/templates/register.html?'+template_v"></div>
                 </div>
+
                 <!-- custom END -->
                 <div ng-show="loading" class="loading">
                     <h1 class="lodingMessage">Initializing Design Tool<img src="images/ajax-loader.gif"></h1>
                 </div>
                 <div class="row clearfix" ng-cloak>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 editor_section">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 editor_section" ng-show="launch_step = 'create'">
                         <div id="content" class="tabing">
                             <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                                <li class="active"><a ng-click="deactivateAll()" href="#Products" class="products" data-toggle="tab"><i class="glyphicon glyphicon-shopping-cart"></i>Products</a></li>
+                                <!--<li class="active"><a ng-click="deactivateAll()" href="#Products" class="products" data-toggle="tab"><i class="glyphicon glyphicon-shopping-cart"></i>Products</a></li>-->
                                 <li><a ng-click="deactivateAll()" href="#Graphics" class="graphics" data-toggle="tab"><i class="glyphicon glyphicon-camera"></i>Graphics</a></li>
-                                <li><a ng-click="addTextByAction()" href="#Text" class="text" data-toggle="tab"><i class="glyphicon glyphicon-text-size"></i>Text</a></li>
+                                <li class="active"><a ng-click="addTextByAction()" href="#Text" class="text" data-toggle="tab"><i class="glyphicon glyphicon-text-size"></i>Text</a></li>
                             </ul>
                             <div id="my-tab-content" class="tab-content action_tabs">
-                                <div class="tab-pane active clearfix" id="Products">
+                                <!--<div class="tab-pane active clearfix" id="Products">
                                     <h1>Products</h1>
                                     <div class="col-lg-12">
                                         <md-input-container>
@@ -69,7 +87,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="tab-pane clearfix" id="Graphics">
                                     <div class="graphic_options clearfix">
                                         <ul>
@@ -219,7 +237,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane clearfix" id="Text">
+                                <div class="tab-pane active clearfix" id="Text">
                                     <div class="graphic_options clearfix">
                                         <ul>
                                             <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 active">
@@ -377,7 +395,7 @@
                         </div>
                         <!---->
                     </div>
-                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 canvas_section pull-right">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 canvas_section" ng-show="launch_step = 'create'">
                         <div class="row">
                             <div class="canvas_image image-builder ng-isolate-scope">
                                 <div class='fabric-container'>
@@ -526,9 +544,180 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-xs-12 col-sm-2 tab-content-1 step1_2">
+                        <!-- step create-->
+                        <div class="launch-step-create" >
+                            <div class="form-group lil-lil-pad">
+                                <label>Purpose</label>
+                                <select class="tab-select input-width" ng-model="campaign_data.purpose">
+                                    <option value="Weight Management">Weight Management</option>
+                                    <option value="Wellness">Wellness</option>
+                                    <option value="Strength">Strength</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Formula</label>
+                                <select class="tab-select input-width" ng-model="campaign_data.formula">
+                                    <option ng-show="campaign_data.purpose =='Weight Management'" value="Green Coffee Bean Extract">Green Coffee Bean Extract</option>
+                                    <option ng-show="campaign_data.purpose =='Weight Management'" value="Raspberry Ketone Burner">Raspberry Ketone Burner</option>
+                                    <option ng-show="campaign_data.purpose =='Weight Management'" value="Garcinia Cambogia">Garcinia Cambogia (60% Standardized)</option>
+                                    <option ng-show="campaign_data.purpose =='Weight Management'" value="Safflower Oil">Safflower Oil (CLA)</option>
+                                    <option ng-show="campaign_data.purpose =='Weight Management'" value="African Mango Cleanse">African Mango Cleanse</option>
+                                    <option ng-show="campaign_data.purpose =='Weight Management'" value="Rasberry Ketone Cleanse">Rasberry Ketone Cleanse</option>
+                                    <option ng-show="campaign_data.purpose =='Weight Management'" value="GABA Sleep Aid">GABA Sleep Aid</option>
+
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="Probiotic 1150">Probiotic 1150</option>
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="Omega-3">Omega-3 from Chile </option>
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="Krill Oil">Krill Oil</option>
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="One Tab Daily">One Tab Daily</option>
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="Multivitamin 2000">Multivitamin 2000</option>
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="Multivatmin 2400">Multivatmin 2400</option>
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="Whole Foods Mutli">Whole Foods Mutli</option>
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="Life's Vitality Mutli">Life's Vitality Mutli</option>
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="Turmeric Complex with Bioperine">Turmeric Complex with Bioperine</option>
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="Sleep Formula 786">Vitamin C</option>
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="Sleep Formula 786">Calcium</option>
+                                    <option ng-show="campaign_data.purpose =='Wellness'" value="Sleep Formula 786">B Complex</option>
+
+                                    <option ng-show="campaign_data.purpose =='Strength'" value="L-Glutamine">L-Glutamine</option>
+                                    <option ng-show="campaign_data.purpose =='Strength'" value="L-Arginine">L-Arginine</option>
+                                    <option ng-show="campaign_data.purpose =='Strength'" value="L-Carnitine">L-Carnitine (Tartrate)</option>
+                                    <option ng-show="campaign_data.purpose =='Strength'" value="Ginger Root">Ginger Root </option>
+                                    <option ng-show="campaign_data.purpose =='Strength'" value="Ginsing Complex">Ginsing Complex</option>
+                                    <option ng-show="campaign_data.purpose =='Strength'" value="Nitro Pump">Nitro Pump</option>
+                                    <option ng-show="campaign_data.purpose =='Strength'" value="Creatine Monohydrate (700)">Creatine Monohydrate (700)</option>
+                                    <option ng-show="campaign_data.purpose =='Strength'" value="Creatine Monohydrate (2500)">Creatine Monohydrate (2500)</option>
+
+                                </select>
+                            </div>
+                            <div ng-show="campaign_data.formula">
+                                <div class="ingredients">
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Green Coffee Bean Extract'">
+                                        <h4>Green Coffee Bean Extract</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>800 mg</h5>
+                                    </div>
+
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
+                                        <h4>Raspberry Ketones</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>600 mg</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
+                                        <h4>African Mango</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
+                                        <h4>Acai Fruit</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
+                                        <h4>Green Tea</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
+                                        <h4>Resveratrol</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
+                                        <h4>Kelp</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Garcinia Cambogia'">
+                                        <h4>Potassium</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>50 mg</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Garcinia Cambogia'">
+                                        <h4>Calcium</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>50 mg</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Garcinia Cambogia'">
+                                        <h4>Calcium</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>200 mcg</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Garcinia Cambogia'">
+                                        <h4>Garcinia Cambogia</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>1000 mg</h5>
+                                    </div>
+
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'Safflower Oil'">
+                                        <h4>CLA</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>1000 mg</h5>
+                                    </div>
+
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
+                                        <h4>African Mango</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>800 mg</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
+                                        <h4>Flax Seed</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
+                                        <h4>Oat Bran</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
+                                        <h4>Cayenne Pepper</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
+                                        <h4>Licorice</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
+                                        <h4>Ginger</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
+                                        <h4>Prune Juice</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
+                                        <h4>Aloe Vera</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                    <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
+                                        <h4>Golden Seal</h4>
+                                        <h5>Weight Loss &#183 Energy</h5>
+                                        <h5>--</h5>
+                                    </div>
+                                </div>
+                                <div class="ing-ex text-center">
+                                    <h5>All quantities per serving.</h5>
+                                    <h3>Base Cost @ 30 Bottles:</h3>
+                                    <h2>$5.75</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lil-pad">
+                            <center>
+                                <div class='btn btn-wj btn-sm'>Continue</div>
+                            </center>
+                        </div>
                 </div>
             </div>
         </div>
+    </div>
         <script src="assets/angular.js"></script>
         <script src="assets/angular-animate.js"></script>
         <script src="assets/angular-aria.js"></script>
@@ -561,4 +750,7 @@
         <div class="css_gen"></div>
         <div class="svgElements"></div>
     </body>
+    <script>
+    $scope.launch_step = 'create';
+    </script>
 </html>
