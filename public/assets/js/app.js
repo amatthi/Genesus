@@ -6356,16 +6356,18 @@ chisel.controller("homeController", function($scope, $rootScope) {
     $scope.var = 'var is here';
 });
 
-chisel.controller("launchController", function($scope, $rootScope, mainFactory,chisel_var) {
+chisel.controller("launchController", function($scope, $rootScope, mainFactory, chisel_var) {
     $scope.launch_step = 'create';
     $scope.var = 'var is here';
     $scope.fonts = chisel_var.get('fonts');
     $scope.campaign_data = {};
     $scope.amazon_connect('tappyn');
 
-    $scope.init = function(){
+    $scope.init = function() {
         $scope.campaign_data.font_color = '#ffffff';
         $scope.campaign_data.cap_color = '#ffffff';
+        $scope.campaign_data.front = true;
+        $scope.campaign_data.back = false;
         //$scope.campaign_data.art = 'https://tappyn.s3.amazonaws.com/lo_art1476026650592_42801';
     }
     $scope.init();
@@ -6373,11 +6375,6 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory,c
     $scope.launch_step_create = function() {
         return $scope.launch_step == 'create'
     };
-
-    $scope.checkModel = {
-    front: true,
-    back: false
-  };
 
     $scope.launch_step_goal = function() {
         return $scope.launch_step == 'goal'
@@ -6401,8 +6398,8 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory,c
         }, $scope.handle_error);
     }
 
-    $scope.refresh_bottle= function(){
-        $("#bottle-div").css('font-family',$scope.campaign_data.font);
+    $scope.refresh_bottle = function() {
+        $("#bottle-div").css('font-family', $scope.campaign_data.font);
     }
 
     $scope.$on('amazon_uploaded', function(event) {
