@@ -19,6 +19,10 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
             templateUrl: 'html/launch.html',
             controller: 'launchController',
         })
+        .when('/campaign/:slug', {
+            templateUrl: 'html/campaign.html',
+            controller: 'campaignController',
+        })
         .otherwise({ redirectTo: '/home' });
 
     $locationProvider.html5Mode(true);

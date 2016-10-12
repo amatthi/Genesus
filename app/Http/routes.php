@@ -12,6 +12,9 @@
  */
 
 Route::auth();
+Route::bind('campaign_slug', function ($value) {
+    return App\Campaign::where('slug', $value)->first();
+});
 
 Route::group(['namespace' => 'Auth'], function () {
     Route::get('is_login', 'AuthController@is_login');
@@ -22,6 +25,7 @@ Route::group(['namespace' => 'Auth'], function () {
 Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
     Route::get('test', 'TestController@test');
     Route::get('campaign/purposes', 'CampaignController@purposes');
+    Route::get('campaign/get_by_slug/{campaign_slug}', 'CampaignController@get');
     Route::post('campaign/launch', 'CampaignController@launch');
     Route::post('amazon/get_token', 'AmazonController@get_token');
 });

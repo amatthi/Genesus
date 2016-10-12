@@ -6299,6 +6299,10 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
             templateUrl: 'html/launch.html',
             controller: 'launchController',
         })
+        .when('/campaign/:slug', {
+            templateUrl: 'html/campaign.html',
+            controller: 'campaignController',
+        })
         .otherwise({ redirectTo: '/home' });
 
     $locationProvider.html5Mode(true);
@@ -6354,6 +6358,89 @@ chisel.directive('customOnChange', function() {
             element.bind('change', onChangeHandler);
         }
     };
+});
+
+chisel.factory("mainFactory", function($http) {
+    var fact = {};
+
+    fact.register = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/register',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            'data': $.param(data)
+        });
+    }
+
+    fact.is_login = function() {
+        return $http({
+            method: 'GET',
+            url: '/is_login',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            }
+        });
+    }
+
+    fact.logout = function() {
+        return $http({
+            method: 'GET',
+            url: '/logout',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            }
+        });
+    }
+
+    fact.login = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/login',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            'data': $.param(data)
+        });
+    }
+
+    fact.launch_campaign = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/api/campaign/launch',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            'data': $.param(data)
+        });
+    }
+
+    fact.aws_key = function(bucket) {
+        return $http({
+            method: 'POST',
+            url: '/api/amazon/get_token',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            data: $.param({ bucket: bucket })
+        })
+    }
+
+    fact.get_campaign = function(slug) {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/get_by_slug/'+slug,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
+    return fact;
+})
+
+chisel.controller("campaignController", function($scope, $rootScope,$routeParams, mainFactory, chisel_var) {
+    $scope.campaign_data = {};
+    mainFactory.get_campaign($routeParams.slug).then(function(r) {
+        $scope.campaign_data = r.data;
+    }, $scope.handle_error);
+
 });
 
 chisel.controller("homeController", function($scope, $rootScope) {
@@ -6499,70 +6586,3 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
         });
     }
 });
-
-chisel.factory("mainFactory", function($http) {
-    var fact = {};
-
-    fact.register = function(data) {
-        return $http({
-            method: 'POST',
-            url: '/register',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            },
-            'data': $.param(data)
-        });
-    }
-
-    fact.is_login = function() {
-        return $http({
-            method: 'GET',
-            url: '/is_login',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            }
-        });
-    }
-
-    fact.logout = function() {
-        return $http({
-            method: 'GET',
-            url: '/logout',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            }
-        });
-    }
-
-    fact.login = function(data) {
-        return $http({
-            method: 'POST',
-            url: '/login',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            },
-            'data': $.param(data)
-        });
-    }
-
-    fact.launch_campaign = function(data) {
-        return $http({
-            method: 'POST',
-            url: '/api/campaign/launch',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            },
-            'data': $.param(data)
-        });
-    }
-
-    fact.aws_key = function(bucket) {
-        return $http({
-            method: 'POST',
-            url: '/api/amazon/get_token',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            data: $.param({ bucket: bucket })
-        })
-    }
-    return fact;
-})

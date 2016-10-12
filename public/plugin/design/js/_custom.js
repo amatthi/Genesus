@@ -11,7 +11,7 @@ chisel_launch.controller('CustomCtrl', [
     'mainFactory',
 
     function($scope, Fabric, FabricConstants, Keypress, $http, $timeout, $mdDialog, $mdToast, Upload, mainFactory) {
-        $scope.template_v = '1.1.0';
+        $scope.template_v = '1.1.1';
         $scope.now_module = '';
         $scope.__user = {};
         $scope.__s = {};
@@ -119,7 +119,9 @@ chisel_launch.controller('CustomCtrl', [
 
         $scope.submit_campaign = function(data) {
             mainFactory.launch_campaign(data).then(function(r) {
+                //console.log(r);
                 alert('submit_campaign complete');
+                window.location = '/campaign/' + r.data.slug;
             }, $scope.handle_error);
         }
 
@@ -135,6 +137,18 @@ chisel_launch.controller('CustomCtrl', [
                 }
             });
         });
+
+        $scope.estimated_profit = function() {
+            var price = Number($scope.campaign_data.sale_price);
+            var bottle = Number($scope.campaign_data.cost_per_bottle);
+            var goal = Number($scope.campaign_data.goal);
+
+            return (price - (bottle * 30)) - (price * 1.3 - price) * goal;
+        }
+
+        $scope.test = function() {
+            console.log($scope.campaign_data);
+        }
     }
 ]);
 chisel_launch.factory("mainFactory", function($http) {

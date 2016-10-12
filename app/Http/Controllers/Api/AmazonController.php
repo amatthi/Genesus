@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class AmazonController extends Controller
 {
     private $s3;
-    private $aws_access_key_id = 'AKIAIKTBSRSNTPRV6TNA';
-    private $aws_secret_key    = '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';
+    private $aws_access_key_id = env('S3_KEY');
+    private $aws_secret_key    = env('S3_SECRET');
     private $bucket_name       = '';
     private $base_url          = 'https://tappyn.s3.amazonaws.com/';
 

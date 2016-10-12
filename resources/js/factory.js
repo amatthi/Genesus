@@ -62,5 +62,13 @@ chisel.factory("mainFactory", function($http) {
             data: $.param({ bucket: bucket })
         })
     }
+
+    fact.get_campaign = function(slug) {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/get_by_slug/'+slug,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
     return fact;
 })
