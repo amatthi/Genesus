@@ -498,8 +498,9 @@ md-tab-item {
 }
 
 .input-group-addon:last-child {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 4px;
+    border-radius: 4px;
+    position: relative;
+    right: 20px;
 }
 
 .col-lg-12.color-mixer {
@@ -572,7 +573,7 @@ md-select-value {
     font-size: 13px;
     line-height: 16px;
     text-align: center;
-    margin-top: 5px;
+    margin: 5px;
 }
 
 .graphic_options i {
@@ -913,13 +914,14 @@ md-radio-group md-radio-button {
 .graphic_types > div {
   background-color: #e7e7e7;
   float: left;
-  height: 100px;
+  height: 50px;
   margin-bottom: 10px;
   margin-right: 10px;
   max-width: 31.2%;
   text-align: center;
   width: 33%;
   cursor: pointer;
+  border-radius: 4px;
 }
 .graphic_types > div:hover {
   box-shadow: 0 0 5px #a4a4a4;
@@ -928,7 +930,7 @@ md-radio-group md-radio-button {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 50px auto;
-  height: 75px;
+  height: 17px;
 }
 .graphic_types > div:nth-child(3n+3) {
   margin-right: 0;
@@ -938,6 +940,7 @@ md-radio-group md-radio-button {
   margin-top: 10px;
   max-width: 100%;
 }
+/**
 .badges {
   background-image:url("../images/badges.svg");
 }
@@ -959,6 +962,7 @@ md-radio-group md-radio-button {
 .countryflags {
   background-image:url("../images/flag.png");
 }
+**/
 .graphic_types > div span {
   display: block;
   font-size: 12px;

@@ -900,4 +900,13 @@ input[type=range]:focus::-ms-fill-upper {
 
 .tabing .nav-tabs {
   border-bottom: 1px solid #ddd !important;
+  text-align: center;
+}
+
+.border-rad {
+  border-radius: 4px;
+}
+
+.grey-back {
+  background: #F4F5F7 !important;
 }

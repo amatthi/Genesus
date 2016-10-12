@@ -6,8 +6,8 @@
         <div id="content" class="tabing">
             <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
                 <!--<li class="active"><a ng-click="deactivateAll()" href="#Products" class="products" data-toggle="tab"><i class="glyphicon glyphicon-shopping-cart"></i>Products</a></li>-->
-                <li class="active"><a ng-click="addTextByAction()" href="#Text" class="text" data-toggle="tab"><i class="glyphicon glyphicon-text-size"></i>Text</a></li>
-                <li><a ng-click="deactivateAll()" href="#Graphics" class="graphics" data-toggle="tab"><i class="glyphicon glyphicon-camera"></i>Art</a></li>
+                <li class="active"><a ng-click="addTextByAction()" href="#Text" class="text" data-toggle="tab" style="padding-top:0px;">Text</a></li>
+                <li><a ng-click="deactivateAll()" href="#Graphics" class="graphics" data-toggle="tab" style="padding-top:0px;">Art</a></li>
             </ul>
             <div id="my-tab-content" class="tab-content action_tabs">
                 <!--<div class="tab-pane active clearfix" id="Products">
@@ -35,19 +35,24 @@
                 <div class="tab-pane clearfix" id="Graphics">
                     <div class="graphic_options clearfix">
                         <ul>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 active">
-                                <div>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="float:none;display:inline;">
+                                <div class="col-xs-12 col-sm-6 col-sm-offset-3 border-rad">
                                     <a class="" href="#clip_arts" aria-controls="clip_arts" role="tab" data-toggle="tab" ng-click="exitDrawing()">
-                                        <i class="fa fa-camera-retro"></i>
-                                        <span>Art works</span>
+                                        <!--<i class="fa fa-camera-retro"></i>-->
+                                        <span>Browse Artwork</span>
                                     </a>
                                 </div>
+                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="float:none;display:inline;">
+                                  <div class="col-xs-12 col-sm-6 col-sm-offset-3 grey-back">
+                                  <p>Or</p>
+                                </div>
+                                </li>
                             </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                                <div>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="float:none;display:inline;">
+                                <div class="col-xs-12 col-sm-6 col-sm-offset-3 border-rad">
                                     <a class="" href="#upload_own" aria-controls="upload_own" role="tab" data-toggle="tab" ng-click="exitDrawing()">
-                                        <i class="fa fa-cloud-upload"></i>
-                                        <span>Upload own</span>
+                                        <!--<i class="fa fa-cloud-upload"></i>-->
+                                        <span>Upload Own</span>
                                     </a>
                                 </div>
                             </li>
@@ -70,7 +75,7 @@
                         </ul>
                     </div>
                     <div class="tab-content-3">
-                        <div role="tabpanel" class="tab-pane fade in active" id="clip_arts">
+                        <div role="tabpanel" class="tab-pane fade" id="clip_arts">
                             <div class="graphic_types clearfix" ng-show="!graphic_icons">
                                 <div ng-repeat="graphicsCategory in graphicsCategories" value="{{graphicsCategory}}"  ng-click="loadByGraphicsCat(graphicsCategory)" ng-model="graphicsCategory" >
                                     <div class="{{graphicsCategory.split(' ').join('') | lowercase}}" ></div>
@@ -120,6 +125,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!--
                         <div role="tabpanel" class="tab-pane fade" id="qr_code">
                             <div class="col-lg-12 thumb_listing">
                                 <div class="well" >
@@ -178,7 +184,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <div class="tab-pane active clearfix" id="Text">
@@ -297,17 +303,17 @@
                     </div>
                 </div>
                 <div class='row form-group' ng-show="fabric.selectedObject.type == 'text' || fabric.selectedObject.type == 'curvedText'">
-                    <md-button class="md-raised md-cornered" ng-class="{ active: fabric.selectedObject.textAlign == 'left' }" ng-click="fabric.selectedObject.textAlign = 'left'" aria-label="Align Left"><i class='fa fa-align-left'></i></md-button>
+                    <!--<md-button class="md-raised md-cornered" ng-class="{ active: fabric.selectedObject.textAlign == 'left' }" ng-click="fabric.selectedObject.textAlign = 'left'" aria-label="Align Left"><i class='fa fa-align-left'></i></md-button>
                     <md-button class="md-raised md-cornered" ng-class="{ active: fabric.selectedObject.textAlign == 'center' }" ng-click="fabric.selectedObject.textAlign = 'center'" aria-label="Align Center"><i class='fa fa-align-center'></i></md-button>
-                    <md-button class="md-raised md-cornered" ng-class="{ active: fabric.selectedObject.textAlign == 'right' }" ng-click="fabric.selectedObject.textAlign = 'right'" aria-label="Align Right"><i class='fa fa-align-right'></i></md-button>
+                    <md-button class="md-raised md-cornered" ng-class="{ active: fabric.selectedObject.textAlign == 'right' }" ng-click="fabric.selectedObject.textAlign = 'right'" aria-label="Align Right"><i class='fa fa-align-right'></i></md-button>-->
                     <md-button class="md-raised md-cornered" ng-class="{ active: fabric.isBold() }" ng-click="toggleBold()" aria-label="Bold"><i class='fa fa-bold'></i></md-button>
                     <md-button class="md-raised md-cornered" ng-class="{ active: fabric.isItalic() }" ng-click="toggleItalic()" aria-label="Italic"><i class='fa fa-italic'></i></md-button>
                     <md-button class="md-raised md-cornered" ng-class="{ active: fabric.isUnderline() }" ng-click="toggleUnderline()" aria-label="Underline"><i class='fa fa-underline'></i></md-button>
                     <md-button class="md-raised md-cornered" ng-class="{ active: fabric.isLinethrough() }" ng-click="toggleLinethrough()" aria-label="Strike through"><i class='fa fa-strikethrough'></i></md-button>
                 </div>
-                <div class='row form-group curved_text' ng-show="fabric.selectedObject.type == 'text' || fabric.selectedObject.type == 'curvedText'">
+                <!--<div class='row form-group curved_text' ng-show="fabric.selectedObject.type == 'text' || fabric.selectedObject.type == 'curvedText'">
                     <md-switch ng-model="fabric.selectedObject.isCurved" aria-label="Switch 1" ng-change="curveText();">Curved text </md-switch>
-                </div>
+                </div>-->
                 <div class="row form-group transparency" title="Radius" ng-show="fabric.selectedObject.type == 'curvedText'" style="margin-bottom: 0px;">
                     <md-input-container flex>
                     <label for="Radius">Radius:</label>
@@ -349,8 +355,8 @@
                     </div>
                     <div class="btn-group-vertical btn-group-one">
                         <div class="icon-vertical m-b-sm pull-right">
-                            <ul>
-                                <!--<li class="saveObject">
+                            <!--<ul>
+                                <li class="saveObject">
                                     <span class="fa fa-save"></span>
                                     <ul class="ulChildMenu">
                                         <li class="childLi">
@@ -366,15 +372,15 @@
                                             <a ng-click="downloadObjectAsPdf()" href="#" class="ng-scope">Download as PDF</a>
                                         </li>
                                     </ul>
-                                </li>-->
-                                <!--<li>
+                                </li>
+                                <li>
                                     <a ng-click="printObject()" href="#" class="ng-scope"><span class="fa fa-print"></span></a>
                                     <md-tooltip md-visible="print.showTooltip" md-direction="left">Print</md-tooltip>
                                 </li>
                                 <li>
                                     <a ng-click="downloadObject()" href="#" class="ng-scope"><span class="fa fa-cloud-download"></span></a>
                                     <md-tooltip md-visible="download.showTooltip" md-direction="left">Download as PNG</md-tooltip>
-                                </li>-->
+                                </li>
                                 <li class="">
                                     <a class="fa fa-search-plus ng-scope ng-isolate-scope" translate="" ng-click="zoomObject('zoomin')" href="#"><span class="ng-binding ng-scope"></span></a>
                                     <md-tooltip md-visible="zoomin.showTooltip" md-direction="left">Select object and Zoom In</md-tooltip>
@@ -383,7 +389,7 @@
                                     <a class="fa fa-search-minus ng-scope ng-isolate-scope" translate="" ng-click="zoomObject('zoomout')" href="#"><span class="ng-binding ng-scope"></span></a>
                                     <md-tooltip md-visible="zoomout.showTooltip" md-direction="left">Select object and  Zoom Out</md-tooltip>
                                 </li>
-                            </ul>
+                            </ul>-->
                             <!--<ul>
                                 <li>
                                     <a class="fa fa-undo ng-scope ng-isolate-scope" translate="" ng-click="undo()" href="#"><span class="ng-binding ng-scope"></span></a>

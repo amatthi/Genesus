@@ -95,12 +95,14 @@ label {
 
 .tabing .nav-tabs > li > a {
     border: none;
-    border-radius: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     color: #3e4954;
     padding: 40px 10px 10px;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     position: relative;
+    border: 1px solid #ddd;
 }
 
 .tabing .nav-tabs > li > a:after {
@@ -133,6 +135,11 @@ label {
 
 .action_tabs .fileUpload span {
     background: none;
+}
+
+.nav-tabs>li {
+  float: none !important;
+  display: inline-block !important;
 }
 
 .action_tabs .fileUpload.btn {
