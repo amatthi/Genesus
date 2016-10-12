@@ -19,7 +19,7 @@
       "loadMore":true,
       "graphicsPage" : 1,
       "defaultProductId" : 1,
-      "defaultProductImage" : "https://s3-us-west-2.amazonaws.com/tappyn/Bottle.jpg",
+      "defaultProductImage" : "https://s3-us-west-2.amazonaws.com/tappyn/bottle.png",
       "quantity" : 1,
       "defaultPrice" : 210,
       "defaultCurrency" : "USD",

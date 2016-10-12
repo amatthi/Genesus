@@ -7,9 +7,9 @@
          "price":310,
          "category": "bottles",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Bottle.jpg",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/bottle.png",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Bottle.jpg"
+            "https://s3-us-west-2.amazonaws.com/tappyn/bottle.png"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
