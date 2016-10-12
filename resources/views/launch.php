@@ -26,17 +26,10 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container-fluid lil-pad">
-            <div class="container ng-scope" ng-controller="ProductCtrl" ng-app="productApp" id="productApp">
+
+            <div class="container-fluid ng-scope" ng-controller="ProductCtrl" ng-app="productApp" id="productApp">
+
                 <div ng-controller="CustomCtrl">
-                    <h1 ng-click="test()">test</h1>
-                    <!-- custom -->
-                    <div class='darken' ng-show="now_module != ''"></div>
-                    <div ng-include="'/html/templates/navbar.html?'+template_v"></div>
-                    <div id="pop-module">
-                        <div class="modal_actions2" ng-if="now_module == 'login'" ng-include="'/html/templates/login.html?'+template_v"></div>
-                        <div class="modal_actions2" ng-if="now_module == 'register'" ng-include="'/html/templates/register.html?'+template_v"></div>
-                    </div>
                     <div class="col-xs-12 up-down-pad">
                         <div class="col-xs-12 col-sm-7 col-sm-offset-1">
                             <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">1</span> Create</span>
@@ -51,6 +44,16 @@
                             </span>
                         </div>
                     </div>
+                    <div class="container bigger-pad">
+                    <!--<h1 ng-click="test()">test</h1>-->
+                    <!-- custom -->
+                    <div class='darken' ng-show="now_module != ''"></div>
+                    <div ng-include="'/html/templates/navbar.html?'+template_v"></div>
+                    <div id="pop-module">
+                        <div class="modal_actions2" ng-if="now_module == 'login'" ng-include="'/html/templates/login.html?'+template_v"></div>
+                        <div class="modal_actions2" ng-if="now_module == 'register'" ng-include="'/html/templates/register.html?'+template_v"></div>
+                    </div>
+
                     <!-- custom END -->
                     <!-- step -->
                     <div ng-include="'/html/templates/launch/step_left.html?'+template_v"></div>

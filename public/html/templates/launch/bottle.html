@@ -6,8 +6,8 @@
         <div id="content" class="tabing">
             <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
                 <!--<li class="active"><a ng-click="deactivateAll()" href="#Products" class="products" data-toggle="tab"><i class="glyphicon glyphicon-shopping-cart"></i>Products</a></li>-->
-                <li><a ng-click="deactivateAll()" href="#Graphics" class="graphics" data-toggle="tab"><i class="glyphicon glyphicon-camera"></i>Graphics</a></li>
                 <li class="active"><a ng-click="addTextByAction()" href="#Text" class="text" data-toggle="tab"><i class="glyphicon glyphicon-text-size"></i>Text</a></li>
+                <li><a ng-click="deactivateAll()" href="#Graphics" class="graphics" data-toggle="tab"><i class="glyphicon glyphicon-camera"></i>Graphics</a></li>
             </ul>
             <div id="my-tab-content" class="tab-content action_tabs">
                 <!--<div class="tab-pane active clearfix" id="Products">
@@ -69,7 +69,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-content">
+                    <div class="tab-content-3">
                         <div role="tabpanel" class="tab-pane fade in active" id="clip_arts">
                             <div class="graphic_types clearfix" ng-show="!graphic_icons">
                                 <div ng-repeat="graphicsCategory in graphicsCategories" value="{{graphicsCategory}}"  ng-click="loadByGraphicsCat(graphicsCategory)" ng-model="graphicsCategory" >
@@ -202,7 +202,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-content">
+                    <div class="tab-content-3">
                         <div role="tabpanel" class="tab-pane fade in active" id="text_design">
                             <div class="col-lg-12 thumb_listing">
                                 <div class="well" >
@@ -257,7 +257,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-12" ng-class="fabric.selectedObject ? 'activeControlsElem' : ''" ng-if='fabric.selectedObject.type' ng-switch='fabric.selectedObject.type'>
+        <div class="col-lg-12 tab-content" ng-class="fabric.selectedObject ? 'activeControlsElem' : ''" ng-if='fabric.selectedObject.type' ng-switch='fabric.selectedObject.type'>
             <div class="close-circle"><i class="fa fa-angle-left" ng-click="deactivateAll();"><span>Back</span></i></div>
             <div class="well">
                 <div class="row form-group" ng-show="fabric.selectedObject.type == 'text' || fabric.selectedObject.type == 'curvedText'">
@@ -272,7 +272,7 @@
                         <li ng-repeat='font in FabricConstants.fonts' ng-click='toggleFont(font.name);' style='font-family: "{{ font.name }}";'> <a>{{ font.name }}</a> </li>
                     </ul>
                 </div>
-                <div class="row row-margin">
+                <div class="row row-margin lil-lil-pad">
                     <div class="row col-lg-6" title="Font size" ng-show="fabric.selectedObject.type == 'text' || fabric.selectedObject.type == 'curvedText'">
                         <md-input-container flex>
                         <label><i class="fa fa-text-height"></i> (Font size)</label>
@@ -313,14 +313,14 @@
                     <input class='col-sm-12' title="Spacing" type='range' min="5" max="30" value="10" ng-model="fabric.selectedObject.spacing" ng-change="spacing(fabric.selectedObject.spacing);"/>
                     </md-input-container>
                 </div>
-                <div class="row form-group input-group colorPicker2" ng-show="fabric.selectedObject.type != 'image' && fabric.selectedObject.type != 'path'">
+                <div class="row form-group input-group colorPicker2 lil-lil-pad" ng-show="fabric.selectedObject.type != 'image' && fabric.selectedObject.type != 'path'">
                     <md-input-container flex>
                     <label for="Color">Color:</label>
                     <input type="text" value="" class="" colorpicker ng-model="fabric.selectedObject.fill" ng-change="fillColor(fabric.selectedObject.fill);"/>
                     </md-input-container>
                     <span class="input-group-addon" style="border: medium none #000000; background-color: {{fabric.selectedObject.fill}}"><i></i></span>
                 </div>
-                <div class="row form-group transparency" ng-show="fabric.selectedObject.type != 'curvedText'">
+                <div class="row form-group transparency lil-lil-pad" ng-show="fabric.selectedObject.type != 'curvedText'">
                     <md-input-container flex>
                     <label for="Transparency">Transparency:</label>
                     <input class='col-sm-12' title="Transparency" type='range' min="0" max="1" step=".01" ng-model="fabric.selectedObject.opacity" ng-change="opacity(fabric.selectedObject.opacity);"/>

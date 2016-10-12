@@ -890,7 +890,7 @@ md-radio-group md-radio-button {
 	border-top-left-radius: 4px;
 }
 .editor_section .activeControlsElem {
-	background: $color_concrete_approx none repeat scroll 0 0 !important;
+	background: $color_concrete_approx none repeat scroll 0 0;
 	height: calc(100% - 70px);
 	padding: 20px;
 	position: absolute;

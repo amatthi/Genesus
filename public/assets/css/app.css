@@ -560,8 +560,13 @@ footer {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  padding: 10px;
-  background-color: #F4F5F7;
+  padding: 10px !important;
+  background-color: #F4F5F7 !important;
+}
+
+.tab-content-3 {
+  padding: 10px !important;
+  background-color: #F4F5F7 !important;
 }
 
 .tab-content-1 {
@@ -879,4 +884,20 @@ input[type=range]:focus::-ms-fill-upper {
     background-color: #6C7477;
     border-color: #6C7477;
     font-family: 'Roboto', sans-serif;
+}
+
+.bigger-pad {
+  padding-top: 100px;
+}
+
+.tabing .nav-tabs > li.active > a, .tabing .nav-tabs > li.active > a:focus, .tabing .nav-tabs > li.active > a:hover {
+  background: #F4F5F7 !important;
+    color: #3a2800 !important;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.tabing .nav-tabs {
+  border-bottom: 1px solid #ddd !important;
 }
