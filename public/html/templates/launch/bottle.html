@@ -7,7 +7,7 @@
             <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
                 <!--<li class="active"><a ng-click="deactivateAll()" href="#Products" class="products" data-toggle="tab"><i class="glyphicon glyphicon-shopping-cart"></i>Products</a></li>-->
                 <li class="active"><a ng-click="addTextByAction()" href="#Text" class="text" data-toggle="tab"><i class="glyphicon glyphicon-text-size"></i>Text</a></li>
-                <li><a ng-click="deactivateAll()" href="#Graphics" class="graphics" data-toggle="tab"><i class="glyphicon glyphicon-camera"></i>Graphics</a></li>
+                <li><a ng-click="deactivateAll()" href="#Graphics" class="graphics" data-toggle="tab"><i class="glyphicon glyphicon-camera"></i>Art</a></li>
             </ul>
             <div id="my-tab-content" class="tab-content action_tabs">
                 <!--<div class="tab-pane active clearfix" id="Products">
@@ -59,14 +59,14 @@
                                     </a>
                                 </div>
                             </li>-->
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <!--<li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                 <div>
                                     <a class="" href="#hand_draw" aria-controls="hand_draw" role="tab" data-toggle="tab" ng-click="enterDrawing();">
                                         <i class="fa fa-pencil-square-o"></i>
                                         <span>Hand draw</span>
                                     </a>
                                 </div>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                     <div class="tab-content-3">
@@ -82,15 +82,15 @@
                             <span ng-show="graphic_icons" class="back_to_graphic" ng-click="ShowGraphicIcons()">
                                 <i class="fa fa-angle-left"></i> Back
                             </span>
-                            <div class="graphic_icons" ng-show="graphic_icons">
-                                <div class="cal-lg-12 filter_by_cat">
+                            <div class="graphic_icons lil-pad" ng-show="graphic_icons">
+                                <!--<div class="cal-lg-12 filter_by_cat">
                                     <md-input-container style="">
                                     <label>Sort by category</label>
                                     <md-select ng-model="graphicsCategory" ng-change="loadByGraphicsCategory();">
                                     <md-option ng-repeat="graphicsCategory in graphicsCategories" value="{{graphicsCategory}}">{{graphicsCategory}}</md-option>
                                     </md-select>
                                     </md-input-container>
-                                </div>
+                                </div>-->
                                 <div class="col-lg-12 thumb_listing scrollme" rebuild-on="rebuild:me" ng-scrollbar is-bar-shown="barShown" ng-class="fabric.selectedObject ? 'activeControls' : ''">
                                     <ul>
                                         <li ng-repeat="graphic in graphics"><a href="javascript:void(0);" ng-click='addShape(graphic)'><img data-ng-src="{{graphic}}" alt="" width="120px;"></a></li>
@@ -184,22 +184,22 @@
                 <div class="tab-pane active clearfix" id="Text">
                     <div class="graphic_options clearfix">
                         <ul>
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 active">
+                            <!--<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 active">
                                 <div>
                                     <a href="#text_design" aria-controls="text_design" role="tab" data-toggle="tab">
                                         <i class="fa fa-font"></i>
                                         <span>Text Design</span>
                                     </a>
                                 </div>
-                            </li>
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            </li>-->
+                            <!--<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <div>
                                     <a href="#word_cloud" aria-controls="word_cloud" role="tab" data-toggle="tab">
                                         <i class="fa fa-cloud"></i>
                                         <span>Word Cloud</span>
                                     </a>
                                 </div>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                     <div class="tab-content-3">
@@ -236,7 +236,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane clearfix" id="Layers">
+                <!--<div class="tab-pane clearfix" id="Layers">
                     <h1>Layers</h1>
                     <div class="col-lg-12 layer_listing scrollme" rebuild-on="rebuild:layer" ng-scrollbar is-bar-shown="barShown">
                         <ul class="ul_layer_canvas row">
@@ -254,7 +254,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="col-lg-12 tab-content" ng-class="fabric.selectedObject ? 'activeControlsElem' : ''" ng-if='fabric.selectedObject.type' ng-switch='fabric.selectedObject.type'>
@@ -279,12 +279,19 @@
                         <input type='number' class="" ng-model="fabric.selectedObject.fontSize" />
                         </md-input-container>
                     </div>
-                    <div class="row col-lg-6" title="Line height" ng-show="fabric.selectedObject.type == 'text'">
+                    <div class="row col-lg-6 form-group input-group colorPicker2" ng-show="fabric.selectedObject.type != 'image' && fabric.selectedObject.type != 'path'" style="padding-top:20px;">
+                        <md-input-container flex>
+                        <label for="Color">Color:</label>
+                        <input type="text" value="" class="" colorpicker ng-model="fabric.selectedObject.fill" ng-change="fillColor(fabric.selectedObject.fill);"/>
+                        </md-input-container>
+                        <span class="input-group-addon" style="border: medium none #000000; background-color: {{fabric.selectedObject.fill}}"><i></i></span>
+                    </div>
+                    <!--<div class="row col-lg-6" title="Line height" ng-show="fabric.selectedObject.type == 'text'">
                         <md-input-container flex>
                         <label><i class="fa fa-align-left"></i> (Line height)</label>
                         <input type='number' class="" ng-model="fabric.selectedObject.lineHeight" step=".1" />
                         </md-input-container>
-                    </div>
+                    </div>-->
                     <div class="row col-lg-6" title="Reverse" ng-show="fabric.selectedObject.type == 'curvedText'">
                         <md-checkbox ng-model="fabric.selectedObject.isReversed" aria-label="Reverse" ng-click="toggleReverse(fabric.selectedObject.isReversed);">Reverse </md-checkbox>
                     </div>
@@ -313,19 +320,13 @@
                     <input class='col-sm-12' title="Spacing" type='range' min="5" max="30" value="10" ng-model="fabric.selectedObject.spacing" ng-change="spacing(fabric.selectedObject.spacing);"/>
                     </md-input-container>
                 </div>
-                <div class="row form-group input-group colorPicker2 lil-lil-pad" ng-show="fabric.selectedObject.type != 'image' && fabric.selectedObject.type != 'path'">
-                    <md-input-container flex>
-                    <label for="Color">Color:</label>
-                    <input type="text" value="" class="" colorpicker ng-model="fabric.selectedObject.fill" ng-change="fillColor(fabric.selectedObject.fill);"/>
-                    </md-input-container>
-                    <span class="input-group-addon" style="border: medium none #000000; background-color: {{fabric.selectedObject.fill}}"><i></i></span>
-                </div>
-                <div class="row form-group transparency lil-lil-pad" ng-show="fabric.selectedObject.type != 'curvedText'">
+
+                <!--<div class="row form-group transparency lil-lil-pad" ng-show="fabric.selectedObject.type != 'curvedText'">
                     <md-input-container flex>
                     <label for="Transparency">Transparency:</label>
                     <input class='col-sm-12' title="Transparency" type='range' min="0" max="1" step=".01" ng-model="fabric.selectedObject.opacity" ng-change="opacity(fabric.selectedObject.opacity);"/>
                     </md-input-container>
-                </div>
+                </div>-->
                 <div class="col-sm-12 input-group cloud-options" ng-show="fabric.selectedObject.type == 'image'">
                     <label class="custom-label">Filters:</label>
                     <br>
@@ -349,7 +350,7 @@
                     <div class="btn-group-vertical btn-group-one">
                         <div class="icon-vertical m-b-sm pull-right">
                             <ul>
-                                <li class="saveObject">
+                                <!--<li class="saveObject">
                                     <span class="fa fa-save"></span>
                                     <ul class="ulChildMenu">
                                         <li class="childLi">
@@ -365,15 +366,15 @@
                                             <a ng-click="downloadObjectAsPdf()" href="#" class="ng-scope">Download as PDF</a>
                                         </li>
                                     </ul>
-                                </li>
-                                <li>
+                                </li>-->
+                                <!--<li>
                                     <a ng-click="printObject()" href="#" class="ng-scope"><span class="fa fa-print"></span></a>
                                     <md-tooltip md-visible="print.showTooltip" md-direction="left">Print</md-tooltip>
                                 </li>
                                 <li>
                                     <a ng-click="downloadObject()" href="#" class="ng-scope"><span class="fa fa-cloud-download"></span></a>
                                     <md-tooltip md-visible="download.showTooltip" md-direction="left">Download as PNG</md-tooltip>
-                                </li>
+                                </li>-->
                                 <li class="">
                                     <a class="fa fa-search-plus ng-scope ng-isolate-scope" translate="" ng-click="zoomObject('zoomin')" href="#"><span class="ng-binding ng-scope"></span></a>
                                     <md-tooltip md-visible="zoomin.showTooltip" md-direction="left">Select object and Zoom In</md-tooltip>
@@ -383,7 +384,7 @@
                                     <md-tooltip md-visible="zoomout.showTooltip" md-direction="left">Select object and  Zoom Out</md-tooltip>
                                 </li>
                             </ul>
-                            <ul>
+                            <!--<ul>
                                 <li>
                                     <a class="fa fa-undo ng-scope ng-isolate-scope" translate="" ng-click="undo()" href="#"><span class="ng-binding ng-scope"></span></a>
                                     <md-tooltip md-visible="undo.showTooltip" md-direction="left">Undo</md-tooltip>
@@ -392,19 +393,19 @@
                                     <a class="fa fa-repeat ng-scope ng-isolate-scope" translate="" ng-click="redo()" href="#"><span class="ng-binding ng-scope"></span></a>
                                     <md-tooltip md-visible="redo.showTooltip" md-direction="left">Redo</md-tooltip>
                                 </li>
-                            </ul>
+                            </ul>-->
                         </div>
-                        <div class="social-share">
+                        <!--<div class="social-share">
                             <a href="javascript:void(0);" id="f_share_button" class="fa fa-facebook" ng-click="shareOnFacebook($event);"></a> <a href="javascript:void(0)" class="fa fa-twitter" ng-click="shareOnTwitter($event);"></a>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="btn-group-vertical btn-group-two">
                         <div class="icon-vertical m-b-sm pull-right" style="float: left ! important;">
                             <ul>
-                                <li>
+                                <!--<li>
                                     <a ng-click="layers()" href="#Layers" data-toggle="tab" class="fa fa-object-ungroup"></a>
                                     <md-tooltip md-visible="layer.showTooltip" md-direction="right">Layers</md-tooltip>
-                                </li>
+                                </li>-->
                                 <li>
                                     <a ng-click="copyItem()" href="#" class="fa fa-copy"></a>
                                     <md-tooltip md-visible="copy.showTooltip" md-direction="right">Copy</md-tooltip>
@@ -413,14 +414,14 @@
                                     <a ng-click="pasteItem()" href="#" class="fa fa-paste"></a>
                                     <md-tooltip md-visible="paste.showTooltip" md-direction="right">Paste</md-tooltip>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <a ng-click="forwardSwap()" href="#" class="fa fa-mail-forward"></a>
                                     <md-tooltip md-visible="forward.showTooltip" md-direction="right">Forward Swap</md-tooltip>
                                 </li>
                                 <li>
                                     <a ng-click="backwordSwap()"  href="#" class="fa fa-mail-reply"></a>
                                     <md-tooltip md-visible="backward.showTooltip" md-direction="right">Backward Swap</md-tooltip>
-                                </li>
+                                </li>-->
                                 <li>
                                     <a ng-click="horizontalAlign()" href="#" class="fa fa-arrows-h"></a>
                                     <md-tooltip md-visible="horizontal.showTooltip" md-direction="right">Horizontal Align</md-tooltip>
@@ -433,8 +434,12 @@
                                     <a ng-click="{ active: flipObject() }" href="#" class="fa fa-exchange fa-2"></a>
                                     <md-tooltip md-visible="flip.showTooltip" md-direction="right">Flip</md-tooltip>
                                 </li>
+                                <li>
+                                    <a ng-click="clearAll()" href="#" class="fa fa-trash"></a>
+                                    <md-tooltip md-visible="clear.showTooltip" md-direction="right">Empty Canvas</md-tooltip>
+                                </li>
                             </ul>
-                            <ul class="but_dist">
+                            <!--<ul class="but_dist">
                                 <li>
                                     <a ng-click="lockObject()" ng-class="isLocked() ? 'fa fa-lock' : 'fa fa-unlock'" href="#"></a>
                                     <md-tooltip md-visible="lock.showTooltip" md-direction="right">Lock Layer</md-tooltip>
@@ -443,11 +448,8 @@
                                     <a ng-click="removeSelectedObject()" href="#" class="fa fa-eraser"></a>
                                     <md-tooltip md-visible="remove.showTooltip" md-direction="right">Remove Layer</md-tooltip>
                                 </li>
-                                <li>
-                                    <a ng-click="clearAll()" href="#" class="fa fa-trash"></a>
-                                    <md-tooltip md-visible="clear.showTooltip" md-direction="right">Empty Canvas</md-tooltip>
-                                </li>
-                            </ul>
+
+                            </ul>-->
                         </div>
                     </div>
                 </div>

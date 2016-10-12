@@ -196,7 +196,7 @@ body {
 	float: none;
 	margin: auto;
 	max-width: 550px;
-	border: 2px dashed $color_cape_cod_approx;
+	/**border: 2px dashed $color_cape_cod_approx;**/
 }
 .fabric-container {
 	position: relative;
@@ -797,10 +797,7 @@ ng\:form {
 .dropdown-menu > li > a:hover {
 	@extend %extend_3;
 }
-.colorPicker2 md-input-container {
-	margin: 0;
-	padding: 0;
-}
+
 .transparency md-input-container input {
 	border: none;
 }

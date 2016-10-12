@@ -155,10 +155,10 @@ body {
 }
 
 .canvas_sub_image {
-  background: #f9f9f9 none repeat scroll 0 0;
-  border-bottom: 1px solid #e1e1e1;
+  background: #fff none repeat scroll 0 0;
+  /**border-bottom: 1px solid #e1e1e1;**/
   min-height: 150px;
-  padding-top: 30px;
+  /**padding-top: 30px;**/
 }
 
 .canvas_sub_image > ul > li > img {
@@ -171,7 +171,7 @@ body {
     float: none;
     margin: auto;
     max-width: 550px;
-    border: 1px dashed #D91E18;
+    /**border: 1px dashed #D91E18;**/
 }
 .canvas_details .clearfix > span{margin-top: 10px; margin-right: 10px;}
 .fabric-container {

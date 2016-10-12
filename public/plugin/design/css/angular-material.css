@@ -9596,7 +9596,9 @@ md-datepicker[disabled] .md-datepicker-triangle-button {
   width: 100%;
   height: 100%;
   z-index: 80;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 494px !important;
+}
 
 md-dialog {
   opacity: 0;

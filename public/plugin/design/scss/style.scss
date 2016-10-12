@@ -3,7 +3,7 @@
 
 Project:	Tshirt Design
 Version:	1.1
-Last change:	24/12/2015   
+Last change:	24/12/2015
 Primary use:	Tshirt Design
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
@@ -735,7 +735,7 @@ md-tab-content {
   }
 }
 .canvas_sub_image ul {
-  text-align: center;
+  /**text-align: center;**/
   li {
     display: inline-block;
     cursor: pointer;
