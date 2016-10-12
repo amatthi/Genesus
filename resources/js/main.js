@@ -15,6 +15,10 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
         //    templateUrl: 'html/launch.html',
         //    controller: 'launchController',
         //})
+        .when('/launch_old', {
+            templateUrl: 'html/launch.html',
+            controller: 'launchController',
+        })
         .otherwise({ redirectTo: '/home' });
 
     $locationProvider.html5Mode(true);
