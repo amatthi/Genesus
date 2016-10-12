@@ -4,149 +4,21 @@
         <div class="form-group lil-lil-pad">
             <label>Purpose</label>
             <select class="tab-select input-width" ng-model="campaign_data.purpose">
-                <option value="Weight Management">Weight Management</option>
-                <option value="Wellness">Wellness</option>
-                <option value="Strength">Strength</option>
+                <option ng-repeat="(key,purpose) in purposes" ng-value="key" ng-bind="purpose.name"></option>
             </select>
         </div>
         <div class="form-group">
             <label>Formula</label>
             <select class="tab-select input-width" ng-model="campaign_data.formula">
-                <option ng-show="campaign_data.purpose =='Weight Management'" value="Green Coffee Bean Extract">Green Coffee Bean Extract</option>
-                <option ng-show="campaign_data.purpose =='Weight Management'" value="Raspberry Ketone Burner">Raspberry Ketone Burner</option>
-                <option ng-show="campaign_data.purpose =='Weight Management'" value="Garcinia Cambogia">Garcinia Cambogia (60% Standardized)</option>
-                <option ng-show="campaign_data.purpose =='Weight Management'" value="Safflower Oil">Safflower Oil (CLA)</option>
-                <option ng-show="campaign_data.purpose =='Weight Management'" value="African Mango Cleanse">African Mango Cleanse</option>
-                <option ng-show="campaign_data.purpose =='Weight Management'" value="Rasberry Ketone Cleanse">Rasberry Ketone Cleanse</option>
-                <option ng-show="campaign_data.purpose =='Weight Management'" value="GABA Sleep Aid">GABA Sleep Aid</option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="Probiotic 1150">Probiotic 1150</option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="Omega-3">Omega-3 from Chile </option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="Krill Oil">Krill Oil</option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="One Tab Daily">One Tab Daily</option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="Multivitamin 2000">Multivitamin 2000</option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="Multivatmin 2400">Multivatmin 2400</option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="Whole Foods Mutli">Whole Foods Mutli</option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="Life's Vitality Mutli">Life's Vitality Mutli</option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="Turmeric Complex with Bioperine">Turmeric Complex with Bioperine</option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="Sleep Formula 786">Vitamin C</option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="Sleep Formula 786">Calcium</option>
-                <option ng-show="campaign_data.purpose =='Wellness'" value="Sleep Formula 786">B Complex</option>
-                <option ng-show="campaign_data.purpose =='Strength'" value="L-Glutamine">L-Glutamine</option>
-                <option ng-show="campaign_data.purpose =='Strength'" value="L-Arginine">L-Arginine</option>
-                <option ng-show="campaign_data.purpose =='Strength'" value="L-Carnitine">L-Carnitine (Tartrate)</option>
-                <option ng-show="campaign_data.purpose =='Strength'" value="Ginger Root">Ginger Root </option>
-                <option ng-show="campaign_data.purpose =='Strength'" value="Ginsing Complex">Ginsing Complex</option>
-                <option ng-show="campaign_data.purpose =='Strength'" value="Nitro Pump">Nitro Pump</option>
-                <option ng-show="campaign_data.purpose =='Strength'" value="Creatine Monohydrate (700)">Creatine Monohydrate (700)</option>
-                <option ng-show="campaign_data.purpose =='Strength'" value="Creatine Monohydrate (2500)">Creatine Monohydrate (2500)</option>
+                <option ng-repeat="(key,formula) in purposes[campaign_data.purpose]['formulas']" ng-value="key" ng-bind="formula.name"></option>
             </select>
         </div>
         <div ng-show="campaign_data.formula">
             <div class="ingredients">
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Green Coffee Bean Extract'">
-                    <h4>Green Coffee Bean Extract</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>800 mg</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
-                    <h4>Raspberry Ketones</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>600 mg</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
-                    <h4>African Mango</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
-                    <h4>Acai Fruit</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
-                    <h4>Green Tea</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
-                    <h4>Resveratrol</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Raspberry Ketone Burner'">
-                    <h4>Kelp</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Garcinia Cambogia'">
-                    <h4>Potassium</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>50 mg</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Garcinia Cambogia'">
-                    <h4>Calcium</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>50 mg</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Garcinia Cambogia'">
-                    <h4>Calcium</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>200 mcg</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Garcinia Cambogia'">
-                    <h4>Garcinia Cambogia</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>1000 mg</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'Safflower Oil'">
-                    <h4>CLA</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>1000 mg</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
-                    <h4>African Mango</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>800 mg</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
-                    <h4>Flax Seed</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
-                    <h4>Oat Bran</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
-                    <h4>Cayenne Pepper</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
-                    <h4>Licorice</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
-                    <h4>Ginger</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
-                    <h4>Prune Juice</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
-                    <h4>Aloe Vera</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
-                </div>
-                <div class="CLA_1" ng-if="campaign_data.formula == 'African Mango Cleanse'">
-                    <h4>Golden Seal</h4>
-                    <h5>Weight Loss &#183 Energy</h5>
-                    <h5>--</h5>
+                <div ng-repeat="ingredient in purposes[campaign_data.purpose]['formulas'][campaign_data.formula]['ingredients']" class="CLA_1">
+                    <h4 ng-bind="ingredient[0]"></h4>
+                    <h5 ng-bind="ingredient[1]"></h5>
+                    <h5 ng-bind="ingredient[2]"></h5>
                 </div>
             </div>
             <div class="ing-ex text-center">

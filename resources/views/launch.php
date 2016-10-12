@@ -56,7 +56,8 @@
                     <div ng-include="'/html/templates/launch/step_left.html?'+template_v"></div>
                     <!-- step END -->
                     <!-- bottle -->
-                    <div ng-show="launch_step_create()" ng-include="'/html/templates/launch/bottle.html?'+template_v"></div>
+                    <div class="bottle-img" ng-if="campaign_data.png64 && !launch_step_create()"><img ng-src="{{campaign_data.png64}}"></div>
+                    <div class="bottle-design" ng-show="launch_step_create()" ng-include="'/html/templates/launch/bottle.html?'+template_v"></div>
                     <!-- bottle END -->
                     <!-- step -->
                     <div ng-include="'/html/templates/launch/step_right.html?'+template_v"></div>

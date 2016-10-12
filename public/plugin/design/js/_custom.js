@@ -13,7 +13,6 @@ chisel_launch.controller('CustomCtrl', [
     function($scope, Fabric, FabricConstants, Keypress, $http, $timeout, $mdDialog, $mdToast, Upload, mainFactory) {
         $scope.template_v = '1.1.0';
         $scope.now_module = '';
-        $scope.template_v = '1.5';
         $scope.__user = {};
         $scope.__s = {};
         $("body").on('click', '.darken', function(event) {
@@ -91,24 +90,9 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         /********** launch **************/
-        var base_url = window.location.href.split('#')[0];
-        $("a").each(function() {
-            if ($(this).attr('href') && $(this).attr('href').indexOf('#') >= 0) {
-                $(this).attr('href', base_url + $(this).attr('href'));
-            }
-        });
         $scope.launch_step = 'create';
-        $scope.campaign_data = {};
-        $scope.amazon_connect('tappyn');
-
-        $scope.init = function() {
-            $scope.campaign_data.font_color = '#ffffff';
-            $scope.campaign_data.cap_color = '#ffffff';
-            $scope.campaign_data.front = true;
-            $scope.campaign_data.back = false;
-            //$scope.campaign_data.art = 'https://tappyn.s3.amazonaws.com/lo_art1476026650592_42801';
-        }
-        $scope.init();
+        $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75 };
+        // $scope.amazon_connect('tappyn');
 
         $scope.launch_step_create = function() {
             return $scope.launch_step == 'create'
@@ -123,8 +107,11 @@ chisel_launch.controller('CustomCtrl', [
         };
 
         $scope.set_step = function(step) {
-            if (false) {
-
+            $scope.campaign_data.png64 = $scope.fabric.saveCanvasObjectAsPng();
+            if (step == 'goal') {
+                if (!$scope.campaign_data.purpose) alert('chose one purpose');
+                else if (!$scope.campaign_data.formula) alert('chose one formula');
+                else $scope.launch_step = step;
             } else {
                 $scope.launch_step = step;
             }
@@ -136,18 +123,17 @@ chisel_launch.controller('CustomCtrl', [
             }, $scope.handle_error);
         }
 
-        $scope.refresh_bottle = function() {
-            $("#bottle-div").css('font-family', $scope.campaign_data.font);
-        }
+        mainFactory.campaign_purposes().then(function(r) {
+            $scope.purposes = r.data;
+        });
 
-        $scope.test = function(){
-            //$scope.beforeSave();
-            //$scope.downloadObject();
-            console.log($scope.objectLayers,$scope.fabric);
-        }
-
-        $scope.$on('amazon_uploaded', function(event) {
-            $scope.campaign_data.art = $scope.__s.aws.file_url;
+        $scope.$on('canvas:created', function() {
+            var base_url = window.location.href.split('#')[0];
+            $("a").each(function() {
+                if ($(this).attr('href') && $(this).attr('href').indexOf('#') >= 0) {
+                    $(this).attr('href', base_url + $(this).attr('href'));
+                }
+            });
         });
     }
 ]);
@@ -208,6 +194,15 @@ chisel_launch.factory("mainFactory", function($http) {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             data: $.param({ bucket: bucket })
         })
+    }
+    fact.campaign_purposes = function() {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/purposes',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            }
+        });
     }
     return fact;
 })

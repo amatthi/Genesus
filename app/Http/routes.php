@@ -21,6 +21,7 @@ Route::group(['namespace' => 'Auth'], function () {
 
 Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
     Route::get('test', 'TestController@test');
+    Route::get('campaign/purposes', 'CampaignController@purposes');
     Route::post('campaign/launch', 'CampaignController@launch');
     Route::post('amazon/get_token', 'AmazonController@get_token');
 });
