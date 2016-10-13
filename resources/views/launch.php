@@ -19,11 +19,13 @@
         <link rel="stylesheet" type="text/css" href="css/fonts.css" >
         <link rel="stylesheet" type="text/css" href="css/bootstrap-colorpicker.min.css">
         <link rel="stylesheet" type="text/css" href="css/angular-material.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
         <!-- CSS End -->
         <link href="/assets/css/dev.css" rel="stylesheet">
         <link href="/assets/css/app.css" rel="stylesheet">
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
     </head>
     <body>
         <div class="container-fluid ng-scope" ng-controller="ProductCtrl" ng-app="productApp" id="productApp">
@@ -60,14 +62,15 @@
                     <!-- step END -->
                     <!-- bottle -->
                     <div class="bottle-img" ng-if="campaign_data.png64 && !launch_step_create()"><img ng-src="{{campaign_data.png64}}"></div>
-                    <div class="col-xs-12 col-sm-10 bottle-design" ng-show="launch_step_create()" ng-include="'/html/templates/launch/bottle.html?'+template_v"></div>
+                    <div class="col-xs-12 col-sm-9 bottle-design" ng-show="launch_step_create()" ng-include="'/html/templates/launch/bottle.html?'+template_v"></div>
                     <!-- bottle END -->
                     <!-- step -->
-                    <div class="col-xs-12 col-sm-2" ng-include="'/html/templates/launch/step_right.html?'+template_v"></div>
+                    <div class="col-xs-12 col-sm-3" ng-include="'/html/templates/launch/step_right.html?'+template_v"></div>
                     <!-- step END -->
                 </div>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
         <script src="assets/angular.js"></script>
         <script src="assets/angular-animate.js"></script>
         <script src="assets/angular-aria.js"></script>

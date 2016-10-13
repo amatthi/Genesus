@@ -3,7 +3,7 @@
     <div class="launch-step-create">
         <div class="form-group lil-lil-pad">
             <label>Purpose</label>
-            <select class="tab-select input-width" ng-model="campaign_data.purpose">
+            <select class="tab-select input-width selectpicker" ng-model="campaign_data.purpose">
                 <option ng-repeat="(key,purpose) in purposes" ng-value="key" ng-bind="purpose.name"></option>
             </select>
         </div>

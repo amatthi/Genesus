@@ -2,9 +2,11 @@
   padding:0px;
 }
 
+/**
 .row {
     margin: 0;
 }
+**/
 
 header {
     height: 75px;
@@ -646,7 +648,7 @@ footer {
 }
 
 .step1_2 {
-  max-width: 222.5px !important;
+  min-width: 222.5px !important;
 }
 
 .design-img {
