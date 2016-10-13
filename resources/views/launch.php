@@ -26,25 +26,23 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <body>
-
-            <div class="container-fluid ng-scope" ng-controller="ProductCtrl" ng-app="productApp" id="productApp">
-
-                <div ng-controller="CustomCtrl">
-                    <div class="col-xs-12 up-down-pad">
-                        <div class="col-xs-12 col-sm-7 col-sm-offset-1">
-                            <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">1</span> Create</span>
-                            <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_goal() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_goal() }">2</span> Set a goal</span>
-                            <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">3</span> Add a description</span>
-                        </div>
-                        <div class="col-xs-12 col-sm-3">
-                            <span class="step-default">
-                                <a ng-click="save_draft()">
-                                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
-                                </a>
-                            </span>
-                        </div>
+        <div class="container-fluid ng-scope" ng-controller="ProductCtrl" ng-app="productApp" id="productApp">
+            <div ng-controller="CustomCtrl">
+                <div class="col-xs-12 up-down-pad">
+                    <div class="col-xs-12 col-sm-7 col-sm-offset-1">
+                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }" ng-click="set_step('create',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">1</span> Create</span>
+                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_goal() }" ng-click="set_step('goal',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_goal() }">2</span> Set a goal</span>
+                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }" ng-click="set_step('desc',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">3</span> Add a description</span>
                     </div>
-                    <div class="container bigger-pad">
+                    <div class="col-xs-12 col-sm-3">
+                        <span class="step-default">
+                            <a ng-click="save_draft()">
+                                <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="container bigger-pad">
                     <!--<h1 ng-click="test()">test</h1>-->
                     <!-- custom -->
                     <div class='darken' ng-show="now_module != ''"></div>
@@ -53,7 +51,6 @@
                         <div class="modal_actions2" ng-if="now_module == 'login'" ng-include="'/html/templates/login.html?'+template_v"></div>
                         <div class="modal_actions2" ng-if="now_module == 'register'" ng-include="'/html/templates/register.html?'+template_v"></div>
                     </div>
-
                     <!-- custom END -->
                     <!-- step -->
                     <div ng-include="'/html/templates/launch/step_left.html?'+template_v"></div>

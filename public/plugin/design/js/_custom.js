@@ -106,9 +106,15 @@ chisel_launch.controller('CustomCtrl', [
             return $scope.launch_step == 'desc'
         };
 
-        $scope.set_step = function(step) {
+        $scope.set_step = function(step, ignore) {
             $scope.campaign_data.png64 = $scope.fabric.saveCanvasObjectAsPng();
-            if (step == 'goal') {
+            if (ignore) {
+                $scope.launch_step = step;
+            } else if (step == 'desc') {
+                if (!$scope.campaign_data.sale_price) alert('enter sale price');
+                else if (!$scope.campaign_data.blend_name) alert('enter Blend');
+                else $scope.launch_step = step;
+            } else if (step == 'goal') {
                 if (!$scope.campaign_data.purpose) alert('chose one purpose');
                 else if (!$scope.campaign_data.formula) alert('chose one formula');
                 else $scope.launch_step = step;
