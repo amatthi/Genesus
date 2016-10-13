@@ -43,9 +43,9 @@
       },
       "productCategories":{
         "All" : "All",
-        "Clothes" : "Clothes",
-        "Bottles" : "Bottles",
-        "Others" : "Others"
+        "Clothes" : "Standard Bottle",
+        "Bottles" : "Protein Bottle",
+        "Others" : "Pre-Workout Bottle"
       },
       "productByName": "DESC",
       "productByNames":{

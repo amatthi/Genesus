@@ -138,7 +138,6 @@ label {
 }
 
 .nav-tabs>li {
-  float: none !important;
   display: inline-block !important;
 }
 
@@ -746,7 +745,7 @@ md-tab-content {
     text-align: center;
     color: #3e4954;
     font-size: 24px;
-    text-transform: uppercase;
+    /**text-transform: uppercase;**/
     padding: 15px 0 0;
 }
 

@@ -584,6 +584,7 @@ md-select-value {
 }
 .graphic_options {
 	text-align: center;
+	padding-top: 50px;
 	span {
 		display: block;
 		font-size: 13px;
@@ -798,7 +799,7 @@ ng\:form {
 	@extend %extend_3;
 }
 .colorPicker2 md-input-container {
-	
+
 }
 .transparency md-input-container input {
 	border: none;
