@@ -38,8 +38,7 @@ chisel_launch.controller('CustomCtrl', [
                 for (var i in data) {
                     alert(data[i]);
                 }
-            }
-            else if (response.status == 401) {
+            } else if (response.status == 401) {
                 alert('must login');
             }
         }
@@ -129,6 +128,8 @@ chisel_launch.controller('CustomCtrl', [
         $scope.submit_campaign = function(data) {
             mainFactory.launch_campaign(data).then(function(r) {
                 //console.log(r);
+                window.onbeforeunload = null;
+                window.onhashchange = null;
                 alert('submit_campaign complete');
                 window.location = '/campaign/' + r.data.slug;
             }, $scope.handle_error);
