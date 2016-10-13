@@ -5,6 +5,7 @@ angular.module('productApp', [
     'common.fabric.constants',
     'colorpicker.module',
     'ngSanitize',
+    'ui.select',
     'ngMaterial',
     'ngScrollbar',
     'ngFileUpload'

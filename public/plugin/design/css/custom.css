@@ -934,7 +934,7 @@ md-radio-group md-radio-button {
   height: 17px;
 }
 .graphic_types > div:nth-child(3n+3) {
-  margin-right: 0;
+  /**margin-right: 0;**/
 }
 .graphic_types.clearfix {
   margin-left: 3px;

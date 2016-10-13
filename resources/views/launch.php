@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link href='//fonts.googleapis.com/css?family=Lato:400,300|Lobster|Architects+Daughter|Roboto|Oswald|Montserrat|Lora|PT+Sans|Ubuntu|Roboto+Slab|Fjalla+One|Indie+Flower|Playfair+Display|Poiret+One|Dosis|Oxygen|Lobster|Play|Shadows+Into+Light|Pacifico|Dancing+Script|Kaushan+Script|Gloria+Hallelujah|Black+Ops+One|Lobster+Two|Satisfy|Pontano+Sans|Domine|Russo+One|Handlee|Courgette|Special+Elite|Amaranth|Vidaloka' rel='stylesheet' type='text/css'>
         <!-- CSS Start -->
+        <link rel="stylesheet" type="text/css" href="css/select.css">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" >
         <link rel="stylesheet" type="text/css" href="css/normalize.css" >
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
@@ -19,7 +20,6 @@
         <link rel="stylesheet" type="text/css" href="css/fonts.css" >
         <link rel="stylesheet" type="text/css" href="css/bootstrap-colorpicker.min.css">
         <link rel="stylesheet" type="text/css" href="css/angular-material.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
         <!-- CSS End -->
         <link href="/assets/css/dev.css" rel="stylesheet">
         <link href="/assets/css/app.css" rel="stylesheet">
@@ -61,7 +61,7 @@
                     <div ng-include="'/html/templates/launch/step_left.html?'+template_v"></div>
                     <!-- step END -->
                     <!-- bottle -->
-                    <div class="bottle-img" ng-if="campaign_data.png64 && !launch_step_create()"><img ng-src="{{campaign_data.png64}}"></div>
+                    <div class="bottle-img col-xs-12 col-sm-5" ng-if="campaign_data.png64 && !launch_step_create()"><img ng-src="{{campaign_data.png64}}"></div>
                     <div class="col-xs-12 col-sm-9 bottle-design" ng-show="launch_step_create()" ng-include="'/html/templates/launch/bottle.html?'+template_v"></div>
                     <!-- bottle END -->
                     <!-- step -->
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+        <script src="assets/select.js"></script>
         <script src="assets/angular.js"></script>
         <script src="assets/angular-animate.js"></script>
         <script src="assets/angular-aria.js"></script>
