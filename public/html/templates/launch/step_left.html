@@ -91,7 +91,8 @@
             <input class="input-width" type="text" ng-model="campaign_data.slug">
         </div>
         <div class="col-xs-12 lil-pad text-center">
-            <a class="btn btn-wj btn-lg" ng-click="submit_campaign(campaign_data)">Launch</a>
+            <a ng-show="!__user.email" class="btn btn-wj btn-lg" ng-click="set_module('login')">Login to Launch</a>
+            <a ng-show="__user.email" class="btn btn-wj btn-lg" ng-click="submit_campaign(campaign_data)">Launch</a>
         </div>
     </div>
 </div>

@@ -26,8 +26,11 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
     Route::get('test', 'TestController@test');
     Route::get('campaign/purposes', 'CampaignController@purposes');
     Route::get('campaign/get_by_slug/{campaign_slug}', 'CampaignController@get');
-    Route::post('campaign/launch', 'CampaignController@launch');
     Route::post('amazon/get_token', 'AmazonController@get_token');
+
+    Route::group(['middleware' => 'auth'], function () {
+    	Route::post('campaign/launch', 'CampaignController@launch');
+    });
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

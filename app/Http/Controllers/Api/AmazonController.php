@@ -8,14 +8,15 @@ use Illuminate\Http\Request;
 class AmazonController extends Controller
 {
     private $s3;
-    private $aws_access_key_id = env('S3_KEY');
-    private $aws_secret_key    = env('S3_SECRET');
+    private $aws_access_key_id;
+    private $aws_secret_key;
     private $bucket_name       = '';
     private $base_url          = 'https://tappyn.s3.amazonaws.com/';
 
     public function __construct()
     {
-
+        $this->aws_access_key_id = env('S3_KEY');
+        $this->aws_secret_key    = env('S3_SECRET');
     }
 
     protected function get_token(Request $request)

@@ -30,6 +30,8 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
             for (var i in data) {
                 alert(data[i]);
             }
+        } else if (response.status == 401) {
+            alert('must login');
         }
     }
 

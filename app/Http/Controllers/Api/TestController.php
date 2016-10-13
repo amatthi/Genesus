@@ -15,6 +15,6 @@ class TestController extends Controller
     protected function test()
     {
         echo 'hi test';
-        var_dump(Auth::user());
+        dd(Auth::user()->campaigns());
     }
 }

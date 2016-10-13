@@ -36,7 +36,10 @@
                     </div>
                     <div class="col-xs-12 col-sm-3">
                         <span class="step-default">
-                            <a ng-click="save_draft()">
+                            <a ng-show="__user.email" ng-click="submit_campaign(campaign_data)">
+                                <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
+                            </a>
+                            <a ng-show="!__user.email" ng-click="set_module('login')">
                                 <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
                             </a>
                         </span>

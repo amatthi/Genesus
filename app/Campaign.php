@@ -6,12 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Campaign extends Model
 {
-    protected $fillable = ['title', 'goal', 'slug', 'description', 'end_at', 'others'];
+    protected $fillable = ['title', 'goal', 'slug', 'description', 'end_at', 'others','user_id'];
     protected $appends  = ['cost_per_bottle', 'purpose', 'formula', 'sale_price', 'length', 'bottle_img'];
 
     public function findBySlug($slug)
     {
         return $this->where('slug', $slug)->first();
+    }
+
+    public function user()
+    {
+        return $this->hasOne('App\User');
     }
 
     public function getCostPerBottleAttribute()

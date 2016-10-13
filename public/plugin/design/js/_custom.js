@@ -11,7 +11,7 @@ chisel_launch.controller('CustomCtrl', [
     'mainFactory',
 
     function($scope, Fabric, FabricConstants, Keypress, $http, $timeout, $mdDialog, $mdToast, Upload, mainFactory) {
-        $scope.template_v = '1.1.1';
+        $scope.template_v = '1.1.2';
         $scope.now_module = '';
         $scope.__user = {};
         $scope.__s = {};
@@ -38,6 +38,9 @@ chisel_launch.controller('CustomCtrl', [
                 for (var i in data) {
                     alert(data[i]);
                 }
+            }
+            else if (response.status == 401) {
+                alert('must login');
             }
         }
         $scope.is_login = function() {
