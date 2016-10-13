@@ -12,14 +12,14 @@
             <div id="my-tab-content" class="tab-content action_tabs">
                 <div class="tab-pane active clearfix" id="Products">
                     <h1>Get started with a template or create your own label.</h1>
-                    <div class="col-lg-12">
+                    <!--<div class="col-lg-12">
                         <md-input-container>
                         <label>Sort by category</label>
                         <md-select ng-model="productCategory">
                         <md-option ng-repeat="productCategory in productCategories" value="{{productCategory}}" ng-click="prodctByCat(productCategory);">{{productCategory}}</md-option>
                         </md-select>
                         </md-input-container>
-                    </div>
+                    </div>-->
                     <div class="col-lg-12 thumb_listing">
                         <ul>
                             <li ng-repeat="prod in products | orderBy:predicate:reverse" ng-class="(defaultProductId == prod.id) ? 'selected' : ''" ng-if="hasCategory(prod)">
@@ -287,7 +287,7 @@
                     </div>
                     <div class="row col-lg-6 form-group input-group colorPicker2" ng-show="fabric.selectedObject.type != 'image' && fabric.selectedObject.type != 'path'" style="padding-top:20px;">
                         <md-input-container flex>
-                        <label for="Color">Color:</label>
+                        <label for="Color" style="padding-left:20px;">Color:</label>
                         <input id="text-color-picker" type="text" value="" class="" colorpicker ng-model="fabric.selectedObject.fill" ng-change="fillColor(fabric.selectedObject.fill);"/>
                         </md-input-container>
                         <span onclick="$('#text-color-picker').trigger('click')" class="input-group-addon" style="border: medium none #000000; background-color: {{fabric.selectedObject.fill}}"><i></i></span>

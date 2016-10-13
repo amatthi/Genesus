@@ -4,18 +4,341 @@
       {
          "id":1,
          "name":"Standard Bottle",
-         "price":310,
-         "category": "Bottles",
+         "price":99,
+         "category": "Standard",
          "currency":"USD",
          "image":"https://s3-us-west-2.amazonaws.com/tappyn/Bottle.jpg",
          "sub_images":[
-            "dummy_data/products/t_shirts/20.png",
-            "dummy_data/products/t_shirts/20-1.png",
-            "dummy_data/products/t_shirts/20-2.png"
-         ],
-         "description":"Bottle description"
-      },
+            "https://s3-us-west-2.amazonaws.com/tappyn/Bottle.jpg"
 
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":2,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_1.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_1.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":3,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_2.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_2.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":4,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_3.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_3.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":5,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_4.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_4.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":6,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_5.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_5.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":7,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_6.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_6.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":8,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_7.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_7.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":9,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_8.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_8.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":10,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_9.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_9.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":11,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_10.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_10.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":12,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_11.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_11.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":13,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_12.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_12.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":14,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_13.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_13.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":15,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_14.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_14.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":16,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_15.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_15.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":17,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_16.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_16.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":18,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_17.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_17.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":19,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_18.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_18.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":20,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_19.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_19.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":21,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_20.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_20.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":22,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_21.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_21.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":23,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_22.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_22.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":24,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_23.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_23.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":25,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_24.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_24.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":26,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_25.jpg",
+         "sub_images":[
+            "https://s3-us-west-2.amazonaws.com/tappyn/Template_25.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      }
    ],
    "message":"Products Loaded Successfully"
 }

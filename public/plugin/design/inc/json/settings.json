@@ -19,7 +19,7 @@
       "loadMore":true,
       "graphicsPage" : 1,
       "defaultProductId" : 1,
-      "defaultProductImage" : "dummy_data/products/bottle/bottle.png",
+      "defaultProductImage" : "https://s3-us-west-2.amazonaws.com/tappyn/Bottle.jpg",
       "quantity" : 1,
       "defaultPrice" : 210,
       "defaultCurrency" : "USD",
@@ -43,7 +43,7 @@
       },
       "productCategories":{
         "All" : "All",
-        "Clothes" : "Standard Bottle",
+        "Clothes" : "Standard",
         "Bottles" : "Protein Bottle",
         "Others" : "Pre-Workout Bottle"
       },

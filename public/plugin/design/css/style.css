@@ -98,7 +98,7 @@ label {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     color: #3e4954;
-    padding: 40px 10px 10px;
+    padding: 40px 5px 10px;
     text-align: center;
     font-size: 18px;
     position: relative;
@@ -275,8 +275,8 @@ label {
 }
 
 .canvas_image {
-    padding: 25px 0;
-    /**background: rgba(0, 0, 0, 0) url("../images/pattern-bg.jpg") repeat scroll 0 0;**/
+    /**padding: 25px 0;
+    background: rgba(0, 0, 0, 0) url("../images/pattern-bg.jpg") repeat scroll 0 0;**/
 }
 
 .canvas_image > img {
@@ -758,6 +758,7 @@ md-tab-content {
 .thumb_listing ul {
     padding: 15px 0 0;
     margin: auto;
+    text-align: center;
 }
 
 .thumb_listing ul li {
@@ -782,7 +783,7 @@ md-tab-content {
 
 .thumb_listing ul li img {
     display: block;
-    max-width: 60px;
+    max-width: 50px;
     margin: auto;
 }
 

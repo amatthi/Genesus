@@ -746,7 +746,7 @@ ng\:form {
 
 .colorPicker2 md-input-container {
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 20px;
 }
 
 .transparency md-input-container input {
@@ -1047,6 +1047,14 @@ body.body_overlay::after {
   font-weight: bold;
   padding: 15px 0;
 }
+
+@media  (min-width: 1200)
+{
+    .ng-isolate-scope.lower-canvas,.upper-canvas.ng-isolate-scope,.canvas-container {
+      height: 480px !important;
+      width: 100% !important;
+    }
+  }
 @media  (min-width: 991px) and (max-width: 1199px)
 {
     .ng-isolate-scope.lower-canvas,.upper-canvas.ng-isolate-scope,.canvas-container {

@@ -9,7 +9,7 @@
 **/
 
 header {
-    height: 75px;
+    height: 60px;
     padding: 10px 0;
     background: #fff;
     border-bottom: 1px solid #CCC;
@@ -32,7 +32,7 @@ header nav {
 }
 
 header nav ul {
-    padding-top: 15px;
+    padding-top: 8px;
     list-style: none;
 }
 
@@ -81,7 +81,7 @@ label {
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding-top: 75px;
+    padding-top: 60px;
 }
 
 small {
@@ -255,24 +255,24 @@ position: relative;
     color: #fff;
     font-weight: 400;
     border: 1px solid #07B9FF;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .btn-jj:hover {
     background: #fff;
     color: #07B9FF;
     border: 1px solid #07B9FF;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .btn-jj:focus {
     color: #07B9FF;
     background: #fff;
     border: 1px solid #07B9FF;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .btn-secondary {
@@ -295,8 +295,8 @@ position: relative;
     display:inline;
     font-size:16px;
     font-weight:400;
-    padding-left:20px;
-    padding-right:20px
+    padding-left:15px;
+    padding-right:15px
 }
 
 .pull-right {
@@ -468,7 +468,7 @@ footer {
 }
 
 .up-down-pad {
-  padding: 25px 0 25px;
+  padding: 17px 0 17px;
   border-bottom: 1px solid hsla(0, 0%, 80%, 0.61);
 }
 
@@ -485,7 +485,7 @@ footer {
   padding-left: 25px;
   font-size: 14px;
   font-weight: 400;
-  cursor: default;
+  cursor: pointer;
 }
 
 .step-default a {
@@ -564,6 +564,8 @@ footer {
   border-bottom: 1px solid #ddd;
   padding: 10px !important;
   background-color: #F4F5F7 !important;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .tab-content-3 {
@@ -575,6 +577,7 @@ footer {
   border: 1px solid #ddd;
   padding: 10px;
   background-color: #F4F5F7;
+  border-radius: 4px;
 }
 
 .tab-content-style {
@@ -889,7 +892,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .bigger-pad {
-  padding-top: 100px;
+  padding-top: 75px;
 }
 
 .tabing .nav-tabs > li.active > a, .tabing .nav-tabs > li.active > a:focus, .tabing .nav-tabs > li.active > a:hover {
