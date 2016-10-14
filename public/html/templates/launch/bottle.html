@@ -39,7 +39,7 @@
                         <ul>
                             <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="float:none;display:inline;">
                                 <div class="col-xs-12 col-sm-6 col-sm-offset-3 border-rad">
-                                    <a class="" href="#clip_arts" aria-controls="clip_arts" role="tab" data-toggle="tab" ng-click="exitDrawing()">
+                                    <a class="" href="#clip_arts" aria-controls="clip_arts" role="tab" data-toggle="tab" ng-click="own_upload = false">
                                         <!--<i class="fa fa-camera-retro"></i>-->
                                         <span>Browse Artwork</span>
                                     </a>
@@ -52,7 +52,7 @@
                             </li>
                             <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="float:none;display:inline;">
                                 <div class="col-xs-12 col-sm-6 col-sm-offset-3 border-rad">
-                                    <a class="" href="#upload_own" aria-controls="upload_own" role="tab" data-toggle="tab" ng-click="exitDrawing()">
+                                    <a class="" href="#upload_own" aria-controls="upload_own" role="tab" data-toggle="tab" ng-click="own_upload = true">
                                         <!--<i class="fa fa-cloud-upload"></i>-->
                                         <span>Upload Your Own Art</span>
                                     </a>
@@ -77,7 +77,7 @@
                         </ul>
                     </div>
                     <div class="tab-content-3">
-                        <div role="tabpanel" class="tab-pane fade" id="clip_arts">
+                        <div role="tabpanel" class="tab-pane fade" id="clip_arts" ng-if="own_upload == false">
                             <div class="graphic_types clearfix" ng-show="!graphic_icons">
                                 <div ng-repeat="graphicsCategory in graphicsCategories" value="{{graphicsCategory}}"  ng-click="loadByGraphicsCat(graphicsCategory)" ng-model="graphicsCategory" >
                                     <div class="{{graphicsCategory.split(' ').join('') | lowercase}}" ></div>
@@ -107,10 +107,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="upload_own">
+                        <div role="tabpanel" class="tab-pane fade" id="upload_own" ng-if="own_upload == true">
                             <div class="col-lg-12 thumb_listing">
                                 <div class="well">
-                                    <form name="myForm">
+                                    <form name="myForm" class="text-center">
                                         <div class="fileUpload btn btn-primary">
                                             <span>Choose File</span>
                                             <input type="file" ngf-select="onFileSelect(picFile);" ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" class="upload">

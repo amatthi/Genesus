@@ -108,6 +108,7 @@ chisel_launch.controller('CustomCtrl', [
             return $scope.launch_step == 'desc'
         };
 
+
         $scope.set_step = function(step, ignore) {
             $scope.campaign_data.png64 = $scope.fabric.saveCanvasObjectAsPng();
             if (ignore) {

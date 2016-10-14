@@ -13,13 +13,14 @@ background: <?php echo $_REQUEST['primaryColor']; ?>;
 .graphic_options ul li.active > div{background: <?php echo $_REQUEST['primaryColor']; ?>;}
 .md-raised.md-cornered.md-button.md-ink-ripple.active {
  background: <?php echo $_REQUEST['primaryColor']; ?>;
-    color: <?php echo $_REQUEST['secondaryColor']; ?>;   
+    color: <?php echo $_REQUEST['secondaryColor']; ?>;
 }
 .m-prod_counter i:hover{color:  <?php echo $_REQUEST['primaryColor']; ?>;}
 .m-prod_counter span:hover i{color:  <?php echo $_REQUEST['primaryColor']; ?>;}
 .action_tabs .fileUpload.btn {
 background: <?php echo $_REQUEST['primaryColor']; ?>;
     color: <?php echo $_REQUEST['secondaryColor']; ?>;
+    border-radius: 4px;
 }
 
 .canvas_options li:hover span {
@@ -162,4 +163,3 @@ input[type=range]::-webkit-slider-thumb {background: <?php echo $_REQUEST['prima
 input[type=range]::-moz-range-thumb {  background: <?php echo $_REQUEST['primaryColor']; ?>; border-color: <?php echo $_REQUEST['primaryColor']; ?>; }
 input[type=range]::-ms-thumb {  background: <?php echo $_REQUEST['primaryColor']; ?>; border-color: <?php echo $_REQUEST['primaryColor']; ?>; }
 </style>
-
