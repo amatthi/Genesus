@@ -55,7 +55,7 @@ trait CampaignTrait
                 $result[$purpose_i]['formulas'][$formula_i] = $formula;
             }
         }
-        Cache::put($this->purposes_key, $result, 100);
+        //Cache::put($this->purposes_key, $result, 100);
         return $result;
     }
 
