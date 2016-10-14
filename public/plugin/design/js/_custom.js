@@ -22,6 +22,14 @@ chisel_launch.controller('CustomCtrl', [
             $scope.set_module();
             $scope.$apply();
         });
+
+        $scope.goal_slider = {
+            options: {
+                floor: 0,
+                ceil: 100,
+            }
+        };
+
         $scope.set_module = function(name) {
             $scope.now_module = (name) ? name : '';
         }
@@ -93,7 +101,7 @@ chisel_launch.controller('CustomCtrl', [
 
         /********** launch **************/
         $scope.launch_step = 'create';
-        $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75};
+        $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75 };
         // $scope.amazon_connect('tappyn');
 
         $scope.launch_step_create = function() {

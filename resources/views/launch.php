@@ -20,6 +20,7 @@
         <link rel="stylesheet" type="text/css" href="css/fonts.css" >
         <link rel="stylesheet" type="text/css" href="css/bootstrap-colorpicker.min.css">
         <link rel="stylesheet" type="text/css" href="css/angular-material.css">
+        <link rel="stylesheet" type="text/css" href="css/rzslider.min.css">
         <!-- CSS End -->
         <link href="/assets/css/dev.css" rel="stylesheet">
         <link href="/assets/css/app.css" rel="stylesheet">
@@ -71,6 +72,7 @@
             </div>
         </div>
         <script src="assets/angular.js"></script>
+        <script src="assets/rzslider.min.js"></script>
         <script src="assets/select.js"></script>
         <script src="assets/angular-animate.js"></script>
         <script src="assets/angular-aria.js"></script>
