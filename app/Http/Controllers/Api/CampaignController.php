@@ -49,6 +49,8 @@ class CampaignController extends Controller
         $data['end_at']               = date('Y-m-d H:i:s', strtotime('+' . $request->input('length') . 'days'));
         $data['others']               = $request->except($db_cols);
         $data['others']['bottle_img'] = $s3->url($filePath);
+        $data['others']['purpose'] = $data['others']['purpose']['key'];
+        $data['others']['formula'] = $data['others']['formula']['sku'];
         unset($data['others']['png64']);
         return Campaign::create($data);
     }
@@ -60,6 +62,6 @@ class CampaignController extends Controller
 
     public function purposes()
     {
-        return $this->purposes;
+        return $this->_get_purposes();
     }
 }

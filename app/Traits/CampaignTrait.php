@@ -2,58 +2,76 @@
 
 namespace App\Traits;
 
+use Cache;
+use File;
+
 trait CampaignTrait
 {
-    protected $purposes = [
-        'weight_management' => [
-            'name'     => 'Weight Management',
-            'formulas' => [
-                'green-coffee-bean-extract' => ['name' => 'Green Coffee Bean Extract',
-                    'ingredients'                          => [['Green Coffee Bean Extract', 'Weight Loss &#183 Energy', '800 mg']],
-                ],
-                'raspberry-ketone-burner'   => ['name' => 'Raspberry Ketone Burner',
-                    'ingredients'                          => [
-                        ['Raspberry Ketones', 'Weight Loss &#183 Energy', '600 mg'],
-                    ],
-                ],
-                'garcinia-cambogia'         => ['name' => 'Garcinia Cambogia (60% Standardized)'],
-                'safflower-oil'             => ['name' => 'Safflower Oil (CLA)'],
-                'african-mango-cleanse'     => ['name' => 'African Mango Cleanse'],
-                'rasberry-ketone-cleanse'   => ['name' => 'Rasberry Ketone Cleanse'],
-                'gaba-sleep-aid'            => ['name' => 'GABA Sleep Aid'],
-            ],
-        ],
+    protected $purposes_key = 'purposes-array4';
 
-        'wellness'          => [
-            'name'     => 'Wellness',
-            'formulas' => [
-                'probiotic-1150'                  => ['name' => 'Probiotic 1150'],
-                'omega-3-from-chile'              => ['name' => 'Omega-3 from Chile'],
-                'krill-oil'                       => ['name' => 'Krill Oil'],
-                'one-tab-daily'                   => ['name' => 'One Tab Daily'],
-                'multivitamin-2000'               => ['name' => 'Multivitamin 2000'],
-                'multivatmin-2400'                => ['name' => 'Multivatmin 2400'],
-                'whole-foods-mutli'               => ['name' => 'Whole Foods Mutli'],
-                'lifes-vitality-mutli'            => ['name' => 'Life\'s Vitality Mutli'],
-                'turmeric-complex-with-bioperine' => ['name' => 'Turmeric Complex with Bioperine'],
-                'vitamin-c'                       => ['name' => 'Vitamin C'],
-                'calcium'                         => ['name' => 'Calcium'],
-                'b-complex'                       => ['name' => 'B Complex'],
-            ],
-        ],
+    protected function _get_purposes()
+    {
+        if (Cache::has($this->purposes_key)) {
+            return Cache::get($this->purposes_key);
+        }
+        $file  = File::get(storage_path("csv/Genesus Data & Formula's - Input Data Sheet.csv"));
+        $lines = explode(PHP_EOL, $file);
+        $array = array();
+        foreach ($lines as $line) {
+            $array[] = str_getcsv($line);
+        }
+        $last          = [];
+        $result        = [];
+        $purpose_i     = -1;
+        $formula_i     = 0;
+        $ingredients_i = 0;
+        unset($array[0]);
+        foreach ($array as $index => $row) {
+            $purpose     = $row[0];
+            $sku         = $row[1];
+            $formula     = $row[2];
+            $cost30      = (float) str_replace('$', '', $row[3]);
+            $ingredients = $row[6];
+            $servings    = $row[7];
+            $capsules    = $row[8];
+            $form_type   = $row[9];
+            $description = $row[10];
+            if ($formula) {
+                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'capsules' => $capsules, 'form_type' => $form_type, 'sku' => $sku, 'description' => [$description]];
+            } else if ($ingredients) {
+                $ingredients_i++;
+                $result[$purpose_i]['formulas'][$formula_i]['ingredients'][$ingredients_i] = $ingredients;
+                $result[$purpose_i]['formulas'][$formula_i]['description'][$ingredients_i] = $description;
+                continue;
+            } else {
+                continue;
+            }
 
-        'strength'          => [
-            'name'     => 'Strength',
-            'formulas' => [
-                'l-glutamine'               => ['name' => 'L-Glutamine'],
-                'l-arginine'                => ['name' => 'L-Arginine'],
-                'l-carnitine-tartrate'      => ['name' => 'L-Carnitine (Tartrate)'],
-                'ginger-root'               => ['name' => 'Ginger Root'],
-                'ginsing-complex'           => ['name' => 'Ginsing Complex'],
-                'nitro-pump'                => ['name' => 'Nitro Pump'],
-                'creatine-monohydrate-700'  => ['name' => 'Creatine Monohydrate (700)'],
-                'creatine-monohydrate-2500' => ['name' => 'Creatine Monohydrate (2500)'],
-            ],
-        ],
-    ];
+            if ($purpose) {
+                $purpose_i++;
+                $result[$purpose_i] = ['key' => str_slug($purpose, '_'), 'name' => $purpose, 'formulas' => [$formula]];
+            } else {
+                $formula_i++;
+                $result[$purpose_i]['formulas'][$formula_i] = $formula;
+            }
+        }
+        //Cache::put($this->purposes_key, $result, 100);
+        return $result;
+    }
+
+    protected function _get_one($key, $type = 'purpose')
+    {
+        $purposes = $this->_get_purposes();
+        foreach ($purposes as $purpose) {
+            if ($type == 'purpose' && $purpose['key'] == $key) {
+                return $purpose;
+            } else if ($type == 'formula') {
+                foreach ($purpose['formulas'] as $formula) {
+                    if ($formula['sku'] == $key) {
+                        return $formula;
+                    }
+                }
+            }
+        }
+    }
 }

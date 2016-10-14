@@ -22,6 +22,14 @@ chisel_launch.controller('CustomCtrl', [
             $scope.set_module();
             $scope.$apply();
         });
+
+        $scope.goal_slider = {
+            options: {
+                floor: 0,
+                ceil: 100,
+            }
+        };
+
         $scope.set_module = function(name) {
             $scope.now_module = (name) ? name : '';
         }
@@ -138,6 +146,8 @@ chisel_launch.controller('CustomCtrl', [
 
         mainFactory.campaign_purposes().then(function(r) {
             $scope.purposes = r.data;
+            $scope.campaign_data.purpose = r.data[0];
+            $scope.campaign_data.formula = r.data[0]['formulas'][0];
         });
 
         $scope.$on('canvas:created', function() {
@@ -158,6 +168,7 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         $scope.test = function() {
+            $scope.campaign_data.purpose = 'reen-coffee-bean-extract';
             console.log($scope.campaign_data);
         }
     }

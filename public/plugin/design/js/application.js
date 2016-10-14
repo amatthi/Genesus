@@ -7,7 +7,8 @@ var chisel_launch = angular.module('productApp', [
     'ngSanitize',
     'ngMaterial',
     'ngScrollbar',
-    'ngFileUpload'
+    'ngFileUpload',
+    'rzModule'
 ]).controller('ProductCtrl', [
     '$scope',
     'Fabric',
@@ -852,7 +853,8 @@ var chisel_launch = angular.module('productApp', [
             _this.sanitizePosition();
             return Object.keys($scope.toastPosition)
                 .filter(function(pos) {
-                    return $scope.toastPosition[pos]; })
+                    return $scope.toastPosition[pos];
+                })
                 .join(' ');
         };
 
@@ -1262,7 +1264,8 @@ var chisel_launch = angular.module('productApp', [
             (function(d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id)) {
-                    return; }
+                    return;
+                }
                 js = d.createElement(s);
                 js.id = id;
                 js.src = "//connect.facebook.net/en_US/sdk.js";
