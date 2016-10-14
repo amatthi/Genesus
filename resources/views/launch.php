@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="container bigger-pad">
-                    <h1 ng-click="test()">test</h1>
+                    <h1 ng-click="test()" style="display:none;">test</h1>
                     <!-- custom -->
                     <div class='darken' ng-show="now_module != ''"></div>
                     <div ng-include="'/html/templates/navbar.html?'+template_v"></div>
