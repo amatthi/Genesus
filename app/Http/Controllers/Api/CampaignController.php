@@ -60,6 +60,6 @@ class CampaignController extends Controller
 
     public function purposes()
     {
-        return $this->purposes;
+        return $this->_get_purposes();
     }
 }

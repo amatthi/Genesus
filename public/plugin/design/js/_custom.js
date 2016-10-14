@@ -93,7 +93,7 @@ chisel_launch.controller('CustomCtrl', [
 
         /********** launch **************/
         $scope.launch_step = 'create';
-        $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75 };
+        $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75};
         // $scope.amazon_connect('tappyn');
 
         $scope.launch_step_create = function() {
@@ -137,6 +137,8 @@ chisel_launch.controller('CustomCtrl', [
 
         mainFactory.campaign_purposes().then(function(r) {
             $scope.purposes = r.data;
+            $scope.campaign_data.purpose = r.data[0];
+            $scope.campaign_data.formula = r.data[0]['formulas'][0];
         });
 
         $scope.$on('canvas:created', function() {
@@ -157,6 +159,7 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         $scope.test = function() {
+            $scope.campaign_data.purpose = 'reen-coffee-bean-extract';
             console.log($scope.campaign_data);
         }
     }

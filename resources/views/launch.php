@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="container bigger-pad">
-                    <!--<h1 ng-click="test()">test</h1>-->
+                    <h1 ng-click="test()">test</h1>
                     <!-- custom -->
                     <div class='darken' ng-show="now_module != ''"></div>
                     <div ng-include="'/html/templates/navbar.html?'+template_v"></div>
@@ -70,8 +70,8 @@
                 </div>
             </div>
         </div>
-        <script src="assets/select.js"></script>
         <script src="assets/angular.js"></script>
+        <script src="assets/select.js"></script>
         <script src="assets/angular-animate.js"></script>
         <script src="assets/angular-aria.js"></script>
         <script src="assets/angular-material.js"></script>

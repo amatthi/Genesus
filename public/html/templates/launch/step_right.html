@@ -3,28 +3,30 @@
     <div class="launch-step-create">
         <div class="form-group lil-lil-pad">
             <label>Purpose</label>
-            <select class="tab-select input-width selectpicker" ng-model="campaign_data.purpose">
-                <option ng-repeat="(key,purpose) in purposes" ng-value="key" ng-bind="purpose.name"></option>
+            <select class="tab-select input-width selectpicker" ng-model="campaign_data.purpose" ng-options="purpose.name for purpose in purposes">
             </select>
         </div>
         <div class="form-group">
             <label>Formula</label>
-            <select class="tab-select input-width" ng-model="campaign_data.formula">
-                <option ng-repeat="(key,formula) in purposes[campaign_data.purpose]['formulas']" ng-value="key" ng-bind="formula.name"></option>
+            <select class="tab-select input-width" ng-model="campaign_data.formula" ng-options="formula.name for formula in campaign_data.purpose.formulas">
             </select>
         </div>
         <div ng-show="campaign_data.formula">
             <div class="ingredients">
-                <div ng-repeat="ingredient in purposes[campaign_data.purpose]['formulas'][campaign_data.formula]['ingredients']" class="CLA_1">
-                    <h4 ng-bind="ingredient[0]"></h4>
-                    <h5 ng-bind="ingredient[1]"></h5>
-                    <h5 ng-bind="ingredient[2]"></h5>
+                <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients" class="CLA_1">
+                    <h4 ng-bind="ingredient"></h4>
+                    <h5 ng-bind="campaign_data.formula.description[key]"></h5>
                 </div>
             </div>
             <div class="ing-ex text-center">
                 <h5>All quantities per serving.</h5>
                 <h3>Base Cost @ 30 Bottles:</h3>
-                <h2>$5.75</h2>
+                <h2 ng-bind="campaign_data.formula.cost30 | currency"></h2>
+                <h3>Base Cost @ 100 Bottles:</h3>
+                <h2 ng-bind="campaign_data.formula.cost100 | currency"></h2>
+                <h3>Base Cost @ 200 Bottles:</h3>
+                <h2 ng-bind="campaign_data.formula.cost200 | currency"></h2>
+
             </div>
         </div>
     </div>
