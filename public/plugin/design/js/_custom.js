@@ -24,9 +24,19 @@ chisel_launch.controller('CustomCtrl', [
         });
 
         $scope.goal_slider = {
+          value: 30,
             options: {
-                floor: 0,
-                ceil: 100,
+            showTicksValues: true,
+            stepsArray: [
+              {value: 10},
+              {value: 20},
+              {value: 30},
+              {value: 40},
+              {value: 50},
+              {value: 100},
+              {value: 150},
+              {value: 200}
+            ]
             }
         };
 
