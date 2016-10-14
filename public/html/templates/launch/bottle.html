@@ -20,7 +20,8 @@
                         </md-select>
                         </md-input-container>
                     </div>-->
-                    <div class="col-lg-12 thumb_listing">
+
+                      <div class="col-lg-12 thumb_listing scrollme" rebuild-on="rebuild:me" ng-scrollbar is-bar-shown="barShown" ng-class="fabric.selectedObject ? 'activeControls' : ''">
                         <ul>
                             <li ng-repeat="prod in products | orderBy:predicate:reverse" ng-class="(defaultProductId == prod.id) ? 'selected' : ''" ng-if="hasCategory(prod)">
                                 <a href="javascript:void(0);" ng-click="loadProduct(prod.name, prod.image, prod.id, prod.price, prod.currency);">
@@ -30,7 +31,8 @@
                                 <span class="product_price">{{prod.price}} {{prod.currency}}</span>
                             </li>
                         </ul>
-                    </div>
+                      </div>
+
                 </div>
                 <div class="tab-pane clearfix" id="Graphics">
                     <div class="graphic_options clearfix">
@@ -44,7 +46,7 @@
                                 </div>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="float:none;display:inline;">
                                   <div class="col-xs-12 col-sm-6 col-sm-offset-3 grey-back">
-                                  <p>Or</p>
+                                  <p class="no-margin">Or</p>
                                 </div>
                                 </li>
                             </li>

@@ -759,6 +759,8 @@ md-tab-content {
     padding: 15px 0 0;
     margin: auto;
     text-align: center;
+    max-height: 400px;
+    overflow: auto;
 }
 
 .thumb_listing ul li {
