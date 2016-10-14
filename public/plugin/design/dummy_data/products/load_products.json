@@ -7,9 +7,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Bottle.jpg",
+         "image":"dummy_data/products/bottle/Bottle.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Bottle.jpg"
+            "dummy_data/products/bottle/Bottle.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -20,9 +20,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_1.jpg",
+         "image":"dummy_data/products/bottle/Template_1.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_1.jpg"
+            "dummy_data/products/bottle/Template_1.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -33,9 +33,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_2.jpg",
+         "image":"dummy_data/products/bottle/Template_2.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_2.jpg"
+            "dummy_data/products/bottle/Template_2.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -46,9 +46,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_3.jpg",
+         "image":"dummy_data/products/bottle/Template_3.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_3.jpg"
+            "dummy_data/products/bottle/Template_3.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -59,9 +59,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_4.jpg",
+         "image":"dummy_data/products/bottle/Template_4.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_4.jpg"
+            "dummy_data/products/bottle/Template_4.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -72,9 +72,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_5.jpg",
+         "image":"dummy_data/products/bottle/Template_5.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_5.jpg"
+            "dummy_data/products/bottle/Template_5.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -85,9 +85,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_6.jpg",
+         "image":"dummy_data/products/bottle/Template_6.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_6.jpg"
+            "dummy_data/products/bottle/Template_6.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -98,9 +98,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_7.jpg",
+         "image":"dummy_data/products/bottle/Template_7.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_7.jpg"
+            "dummy_data/products/bottle/Template_7.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -111,9 +111,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_8.jpg",
+         "image":"dummy_data/products/bottle/Template_8.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_8.jpg"
+            "dummy_data/products/bottle/Template_8.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -124,9 +124,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_9.jpg",
+         "image":"dummy_data/products/bottle/Template_9.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_9.jpg"
+            "dummy_data/products/bottle/Template_9.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -137,9 +137,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_10.jpg",
+         "image":"dummy_data/products/bottle/Template_10.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_10.jpg"
+            "dummy_data/products/bottle/Template_10.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -150,9 +150,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_11.jpg",
+         "image":"dummy_data/products/bottle/Template_11.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_11.jpg"
+            "dummy_data/products/bottle/Template_11.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -163,9 +163,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_12.jpg",
+         "image":"dummy_data/products/bottle/Template_12.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_12.jpg"
+            "dummy_data/products/bottle/Template_12.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -176,9 +176,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_13.jpg",
+         "image":"dummy_data/products/bottle/Template_13.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_13.jpg"
+            "dummy_data/products/bottle/Template_13.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -189,9 +189,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_14.jpg",
+         "image":"dummy_data/products/bottle/Template_14.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_14.jpg"
+            "dummy_data/products/bottle/Template_14.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -202,9 +202,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_15.jpg",
+         "image":"dummy_data/products/bottle/Template_15.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_15.jpg"
+            "dummy_data/products/bottle/Template_15.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -215,9 +215,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_16.jpg",
+         "image":"dummy_data/products/bottle/Template_16.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_16.jpg"
+            "dummy_data/products/bottle/Template_16.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -228,9 +228,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_17.jpg",
+         "image":"dummy_data/products/bottle/Template_17.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_17.jpg"
+            "dummy_data/products/bottle/Template_17.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -241,9 +241,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_18.jpg",
+         "image":"dummy_data/products/bottle/Template_18.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_18.jpg"
+            "dummy_data/products/bottle/Template_18.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -254,9 +254,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_19.jpg",
+         "image":"dummy_data/products/bottle/Template_19.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_19.jpg"
+            "dummy_data/products/bottle/Template_19.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -267,9 +267,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_20.jpg",
+         "image":"dummy_data/products/bottle/Template_20.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_20.jpg"
+            "dummy_data/products/bottle/Template_20.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -280,9 +280,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_21.jpg",
+         "image":"dummy_data/products/bottle/Template_21.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_21.jpg"
+            "dummy_data/products/bottle/Template_21.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -293,9 +293,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_22.jpg",
+         "image":"dummy_data/products/bottle/Template_22.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_22.jpg"
+            "dummy_data/products/bottle/Template_22.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -306,9 +306,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_23.jpg",
+         "image":"dummy_data/products/bottle/Template_23.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_23.jpg"
+            "dummy_data/products/bottle/Template_23.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -319,9 +319,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_24.jpg",
+         "image":"dummy_data/products/bottle/Template_24.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_24.jpg"
+            "dummy_data/products/bottle/Template_24.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -332,9 +332,9 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"https://s3-us-west-2.amazonaws.com/tappyn/Template_25.jpg",
+         "image":"dummy_data/products/bottle/Template_25.jpg",
          "sub_images":[
-            "https://s3-us-west-2.amazonaws.com/tappyn/Template_25.jpg"
+            "dummy_data/products/bottle/Template_25.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
