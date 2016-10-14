@@ -19,11 +19,11 @@ header {
     overflow: hidden;
 }
 
-header .logo {
+header .logo-1 {
     float: none;
 }
 
-header .logo a {
+header .logo-1 a {
     display: block;
 }
 
