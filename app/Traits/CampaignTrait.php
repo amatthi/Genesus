@@ -58,4 +58,20 @@ trait CampaignTrait
         Cache::put($this->purposes_key, $result, 100);
         return $result;
     }
+
+    protected function _get_one($key, $type = 'purpose')
+    {
+        $purposes = $this->_get_purposes();
+        foreach ($purposes as $purpose) {
+            if ($type == 'purpose' && $purpose['key'] == $key) {
+                return $purpose;
+            } else if ($type == 'formula') {
+                foreach ($purpose['formulas'] as $formula) {
+                    if ($formula['sku'] == $key) {
+                        return $formula;
+                    }
+                }
+            }
+        }
+    }
 }

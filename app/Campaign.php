@@ -2,11 +2,14 @@
 
 namespace App;
 
+use App\Traits\CampaignTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Campaign extends Model
 {
-    protected $fillable = ['title', 'goal', 'slug', 'description', 'end_at', 'others','user_id'];
+    use CampaignTrait;
+
+    protected $fillable = ['title', 'goal', 'slug', 'description', 'end_at', 'others', 'user_id'];
     protected $appends  = ['cost_per_bottle', 'purpose', 'formula', 'sale_price', 'length', 'bottle_img'];
 
     public function findBySlug($slug)
@@ -26,12 +29,12 @@ class Campaign extends Model
 
     public function getPurposeAttribute()
     {
-        return $this->others['purpose'];
+        return $this->_get_one($this->others['purpose'], 'purpose');
     }
 
     public function getFormulaAttribute()
     {
-        return $this->others['formula'];
+        return $this->_get_one($this->others['formula'], 'formula');
     }
 
     public function getSalePriceAttribute()
