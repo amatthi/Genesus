@@ -8,7 +8,8 @@ var chisel_launch = angular.module('productApp', [
     'ngMaterial',
     'ngScrollbar',
     'ngFileUpload',
-    'rzModule'
+    'rzModule',
+    'ui.bootstrap'
 ]).controller('ProductCtrl', [
     '$scope',
     'Fabric',

@@ -14,8 +14,7 @@
         <div ng-show="campaign_data.formula">
             <div class="ingredients">
                 <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients" class="CLA_1">
-                    <h4 uib-tooltip-template="tooltip.html" ng-bind="ingredient"></h4>
-                    <h5 ng-bind="campaign_data.formula.description[key]"></h5>
+                    <h4 uib-tooltip-template="'ingredient_tooltip.html'" ng-bind="ingredient"></h4>
                 </div>
             </div>
             <div class="ing-ex text-center">
@@ -28,7 +27,6 @@
                 <h3>Base Cost @ 200 Bottles:</h3>
                 <h2 ng-bind="campaign_data.formula.cost200 | currency"></h2>
               -->
-
             </div>
         </div>
     </div>
@@ -39,3 +37,6 @@
     </div>
 </div>
 <!-- step create END -->
+<script type="text/ng-template" id="ingredient_tooltip.html">
+    <span ng-bind="campaign_data.formula.description[key]"></span>
+</script>
