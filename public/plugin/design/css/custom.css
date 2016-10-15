@@ -171,7 +171,7 @@ body {
     float: none;
     margin: auto;
     max-width: 550px;
-    /**border: 1px dashed #D91E18;**/
+    border: 1px dashed #D91E18;
 }
 .canvas_details .clearfix > span{margin-top: 10px; margin-right: 10px;}
 .fabric-container {

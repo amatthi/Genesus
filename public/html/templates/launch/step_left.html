@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="col-xs-12 no-pad-left min-width-2" style="cursor:default;">
-            <label>Your Estimated Profit:</label>
+            <label>Estimated profit</label>
             <h3>${{estimated_profit() | number:0 }}+</h3>
         </div>
         <div class="col-xs-12no-pad-left lil-pad" style="cursor:default;">
@@ -51,7 +51,7 @@
         </div>
         <div class="lil-pad col-xs-12">
             <center>
-                <div class="btn btn-wj btn-sm" ng-click="set_step('desc')">Continue</div>
+                <div class="btn btn-gn btn-sm" ng-click="set_step('desc')">Continue</div>
             </center>
         </div>
     </div>
@@ -67,6 +67,7 @@
         </div>
         <div class="col-xs-12 lil-pad-bottom">
             <label>Description</label>
+            <h4 class="grey-info-2" style="cursor:default;">Let people know why they should buy your product and how it will help them.</h4>
             <textarea class="input-width border-rad input-border" ng-model="campaign_data.description"></textarea>
         </div>
         <div class="col-xs-12 lil-pad-bottom">
@@ -89,8 +90,8 @@
           </div>
         </div>
         <div class="col-xs-12 lil-pad text-center">
-            <a ng-show="!__user.email" class="btn btn-wj btn-lg" ng-click="set_module('login')">Launch</a>
-            <a ng-show="__user.email" class="btn btn-wj btn-lg" ng-click="submit_campaign(campaign_data)">Launch</a>
+            <a ng-show="!__user.email" class="btn btn-gn btn-lg" ng-click="set_module('login')">Launch</a>
+            <a ng-show="__user.email" class="btn btn-gn btn-lg" ng-click="submit_campaign(campaign_data)">Launch</a>
         </div>
     </div>
 </div>

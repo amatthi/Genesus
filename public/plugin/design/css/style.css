@@ -100,9 +100,10 @@ label {
     color: #3e4954;
     padding: 40px 5px 10px;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     position: relative;
     border: 1px solid #ddd;
+    font-weight: 600;
 }
 
 .tabing .nav-tabs > li > a:after {
@@ -743,7 +744,7 @@ md-tab-content {
 
 .editor_section h1 {
     text-align: center;
-    color: #3e4954;
+    color: #3a2800 !important;
     font-size: 24px;
     /**text-transform: uppercase;**/
     padding: 0px;

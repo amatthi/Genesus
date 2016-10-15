@@ -338,6 +338,32 @@
 
          ],
          "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":27,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/pre-workout.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/pre-workout.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":28,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/whey-protein.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/whey-protein.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
       }
    ],
    "message":"Products Loaded Successfully"

@@ -75,8 +75,8 @@ label {
     display: block;
     max-width: 100%;
     margin-bottom: 5px;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 body {
@@ -212,6 +212,43 @@ position: relative;
 .hero-content .btn-banner {
     font-size: 18px;
     line-height: 50px;
+}
+
+
+.btn-gn {
+    background: #70CE66;
+    color: #fff;
+    font-weight: 400;
+    border: 1px solid #70CE66;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 16px;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-gn:hover {
+    background: #fff;
+    color: #70CE66;
+    border: 1px solid #70CE66;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-gn:focus {
+    color: #70CE66;
+    background: #fff;
+    border: 1px solid #70CE66;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-wj {
@@ -612,8 +649,8 @@ footer {
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
   background-color:#F4F5F7;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .nav-tabs>li a {
@@ -660,6 +697,7 @@ footer {
     background-color: #FEFEFE;
     overflow: auto;
     max-height: 285px;
+    border: 1px solid #d8dddf;
 }
 
 .CLA_1 {
@@ -852,8 +890,9 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .min-width-2 h3 {
-  font-size: 36px;
-  color: #07B9FF;
+  font-size: 42px;
+  font-weight: 600;
+  color: #8bbf4f;
   margin-top: 10px;
   padding-left: 25px;
 }
@@ -870,6 +909,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .tab-content-1 label {
   font-size: 14px;
+  font-weight: 600;
 }
 
 .btn-group-1 {
