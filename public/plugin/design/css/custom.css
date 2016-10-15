@@ -566,7 +566,7 @@ md-select-value {
 
 .graphic_options {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 25px;
 }
 
 .graphic_options span {
@@ -1048,13 +1048,6 @@ body.body_overlay::after {
   padding: 15px 0;
 }
 
-@media  (min-width: 1200)
-{
-    .ng-isolate-scope.lower-canvas,.upper-canvas.ng-isolate-scope,.canvas-container {
-      height: 480px !important;
-      width: 100% !important;
-    }
-  }
 @media  (min-width: 991px) and (max-width: 1199px)
 {
     .ng-isolate-scope.lower-canvas,.upper-canvas.ng-isolate-scope,.canvas-container {

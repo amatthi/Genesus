@@ -5,9 +5,9 @@
     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 editor_section">
         <div id="content" class="tabing">
             <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                <li class="active"><a ng-click="deactivateAll()" href="#Products" class="products" data-toggle="tab" style="padding-top:0px;">Templates</a></li>
-                <li><a ng-click="addTextByAction()" href="#Text" class="text" data-toggle="tab" style="padding-top:0px;">Text</a></li>
-                <li><a ng-click="deactivateAll()" href="#Graphics" class="graphics" data-toggle="tab" style="padding-top:0px;margin-right:0px;">Art</a></li>
+                <li class="active"><a ng-click="deactivateAll()" href="#Products" class="products" data-toggle="tab" style="padding-top:10px;">Templates</a></li>
+                <li><a ng-click="addTextByAction()" href="#Text" class="text" data-toggle="tab" style="padding-top:10px;">Text</a></li>
+                <li><a ng-click="deactivateAll()" href="#Graphics" class="graphics" data-toggle="tab" style="padding-top:10px;margin-right:0px;">Art</a></li>
             </ul>
             <div id="my-tab-content" class="tab-content action_tabs">
                 <div class="tab-pane active clearfix" id="Products">
@@ -199,8 +199,8 @@
                                         <span>Text Design</span>
                                     </a>
                                 </div>
-                            </li>-->
-                            <!--<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            </li>
+                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <div>
                                     <a href="#word_cloud" aria-controls="word_cloud" role="tab" data-toggle="tab">
                                         <i class="fa fa-cloud"></i>
@@ -227,17 +227,17 @@
                                 <div class="clearfix"></div>
                             </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="word_cloud">
+                        <div role="tabpanel" class="tab-pane fade">
                             <div class="col-lg-12 thumb_listing">
                                 <div class="well" >
                                     <div class="row form-group">
                                         <md-input-container flex>
                                         <label>Enter words below</label>
-                                        <textarea  columns="1" id="textarea-text-word-cloud" style="text-align: {{ fabric.selectedObject.textAlign }}" ng-model="fabric.selectedObject.textWordCloud"></textarea>
+                                        <textarea  columns="1" id="textarea-text-word-cloud" style="text-align: {{ fabric.selectedObject.textAlign }}; cursor:default;" ng-model="fabric.selectedObject.textWordCloud"></textarea>
                                         </md-input-container>
-                                        <div class="clearfix">
+                                        <!--<div class="clearfix">
                                             <md-button class="md-raised md-cornered" ng-click="addWordCloud()" aria-label="Add Word Cloud"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Word Cloud</md-button>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
                             </div>
@@ -462,13 +462,13 @@
                     </div>
                 </div>
             </div>
-            <!--<div class="canvas_sub_image">
+            <div class="canvas_sub_image" style="display:none;">
                 <ul>
                     <li ng-repeat="prodImg in productImages">
                         <img ng-click='loadProduct(defaultProductTitle, prodImg, defaultProductId, defaultPrice, defaultCurrency, $index)' data-ng-src="{{prodImg}}" alt="" width="120px;">
                     </li>
                 </ul>
-            </div>-->
+            </div>
             <!--<div class="canvas_details clearfix">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <span class="product_name">{{defaultProductTitle}}</span>
