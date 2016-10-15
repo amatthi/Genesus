@@ -930,3 +930,7 @@ input[type=range]:focus::-ms-fill-upper {
 .no-margin {
   margin: 0px;
 }
+
+.input-border {
+  border: 1px solid #ddd;
+}

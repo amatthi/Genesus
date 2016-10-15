@@ -26,6 +26,7 @@ chisel_launch.controller('CustomCtrl', [
         $scope.goal_slider = {
           value: 30,
             options: {
+            showSelectionBar: true,
             showTicksValues: true,
             stepsArray: [
               {value: 10},
@@ -37,6 +38,7 @@ chisel_launch.controller('CustomCtrl', [
               {value: 150},
               {value: 200}
             ]
+
             }
         };
 

@@ -886,7 +886,8 @@ md-radio-group md-radio-button {
 	//Instead of the line below you could use @include border-bottom-left-radius($radius)
 	border-bottom-left-radius: 0;
 	//Instead of the line below you could use @include border-top-left-radius($radius)
-	border-top-left-radius: 4px;
+	border-top-left-radius: 0px;
+	
 }
 .editor_section .activeControlsElem {
 	background: $color_concrete_approx none repeat scroll 0 0;
