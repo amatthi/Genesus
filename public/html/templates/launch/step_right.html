@@ -8,7 +8,7 @@
         </div>
         <div class="form-group">
             <label>Formula</label>
-            <select class="tab-select input-width border-rad" ng-model="campaign_data.formula" ng-options="formula.name for formula in campaign_data.purpose.formulas">
+            <select class="tab-select input-width border-rad" ng-model="campaign_data.formula" ng-change="formula_change()" ng-options="formula.name for formula in campaign_data.purpose.formulas">
             </select>
         </div>
         <div ng-show="campaign_data.formula">

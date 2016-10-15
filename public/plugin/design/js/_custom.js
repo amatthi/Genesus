@@ -9,8 +9,9 @@ chisel_launch.controller('CustomCtrl', [
     '$mdToast',
     'Upload',
     'mainFactory',
+    '$timeout',
 
-    function($scope, Fabric, FabricConstants, Keypress, $http, $timeout, $mdDialog, $mdToast, Upload, mainFactory) {
+    function($scope, Fabric, FabricConstants, Keypress, $http, $timeout, $mdDialog, $mdToast, Upload, mainFactory, $timeout) {
         $scope.template_v = '1.1.2';
         $scope.now_module = '';
         $scope.__user = {};
@@ -180,6 +181,20 @@ chisel_launch.controller('CustomCtrl', [
 
         $scope.purpose_change = function() {
             $scope.campaign_data.formula = $scope.campaign_data.purpose['formulas'][0];
+            $scope.formula_change();
+        }
+
+        $scope.add_back_image_path = function(back_image) {
+            return 'dummy_data/products/bottle/back/' + back_image;
+        }
+
+        $scope.formula_change = function() {
+            if ($scope.campaign_data.formula.back_image && $scope.activeDesignObject == 1) {
+                $scope.loadProduct($scope.defaultProductTitle, $scope.add_back_image_path($scope.campaign_data.formula.back_image), $scope.defaultProductId, $scope.defaultPrice, $scope.defaultCurrency, 1);
+            }
+            else{
+                $scope.loadProduct($scope.defaultProductTitle, $scope.productImages[0], $scope.defaultProductId, $scope.defaultPrice, $scope.defaultCurrency, 0);
+            }
         }
 
         $scope.test = function() {
