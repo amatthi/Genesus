@@ -171,7 +171,7 @@ chisel_launch.controller('CustomCtrl', [
 
         $scope.estimated_profit = function() {
             var price = Number($scope.campaign_data.sale_price);
-            var bottle = Number($scope.campaign_data.cost_per_bottle);
+            var bottle = Number($scope.campaign_data.formula.cost30);
             var goal = Number($scope.campaign_data.goal);
 
             return (price - bottle) * goal;
