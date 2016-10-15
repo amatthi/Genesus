@@ -48,7 +48,7 @@
             <div class="col-xs-12">
                 <label>Proprietary Blend</label>
                     <p>You can name this blend to make it distinctly yours.</p>
-                    <input class="input-width" type="text" placeholder="Add your text here" ng-model="campaign_data.blend_name">  
+                    <input class="input-width" type="text" placeholder="Add your text here" ng-model="campaign_data.blend_name">
             </div>
         </div>
         <div class="lil-pad col-xs-12">
@@ -85,7 +85,10 @@
         <div class="col-xs-12">
             <label>Url</label>
             <h4 class="grey-info-2">This is where you'll send buyers to view your campaign.</h4>
-            <input class="input-width border-rad input-border" type="text" ng-model="campaign_data.slug">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon2">liftoffsupplements.com/</span>
+            <input class="input-width border-rad input-border form-control" type="text" ng-model="campaign_data.slug" aria-describedby="basic-addon2">
+          </div>
         </div>
         <div class="col-xs-12 lil-pad text-center">
             <a ng-show="!__user.email" class="btn btn-wj btn-lg" ng-click="set_module('login')">Launch</a>
