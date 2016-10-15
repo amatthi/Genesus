@@ -19,7 +19,7 @@
       "loadMore":true,
       "graphicsPage" : 1,
       "defaultProductId" : 1,
-      "defaultProductImage" : "dummy_data/products/bottle/bottle.jpg",
+      "defaultProductImage" : "dummy_data/products/bottle/Bottle.jpg",
       "quantity" : 1,
       "defaultPrice" : 210,
       "defaultCurrency" : "USD",
