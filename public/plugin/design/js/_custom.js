@@ -114,7 +114,7 @@ chisel_launch.controller('CustomCtrl', [
 
         /********** launch **************/
         $scope.launch_step = 'create';
-        $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75, sale_price: 20.00 };
+        $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75, sale_price: 24.99 };
         // $scope.amazon_connect('tappyn');
 
         $scope.launch_step_create = function() {

@@ -601,10 +601,6 @@ footer {
 .goal-output input {
   font-size: 16px;
   font-weight: 600;
-  position: relative;
-  top: 10px;
-  left: 8px;
-  max-width: 30px;;
   border: none;
 }
 
@@ -936,12 +932,24 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .tooltip-inner {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #ddd;
+  background-color: #6c7478;
+  color: #fff;
+  border: 1px solid #6c7478;
 }
 
 .tooltip.in {
   opacity: 1;
   filter: alpha(opacity=100);
+}
+
+.form-control[readonly] {
+  background-color: #fff;
+}
+
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #6c7478;
+  border-width: 5px 5px 0;
 }

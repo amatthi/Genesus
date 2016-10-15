@@ -15,28 +15,26 @@
         </div>
         <div class="col-xs-12 no-pad-left lil-pad">
           <div class="col-xs-12 col-md-4 tab-content-style">
-            <div class="col-xs-8 tab-content-rad">
-                <label># of units</label>
-            </div>
-            <div class="col-xs-4 goal-output">
-                <input type="text" ng-model="campaign_data.goal" placeholder="30" readonly="readonly"></input>
+            <div class="goal-output input-group">
+                <span class="input-group-addon" id="basic-addon3" style="cursor:default;"># of units</span>
+                <input class="form-control" type="text" ng-model="campaign_data.goal" placeholder="30" readonly="readonly" aria-describedby="basic-addon3" style="border-left:1px solid #ccc;">
             </div>
           </div>
-            <div class="col-xs-12 col-md-7 col-md-offset-1">
+            <div class="col-xs-12 col-md-7 col-md-offset-1" style="cursor:default;">
                 <h4 class="grey-info">Your goal is the number of units you're aiming to sell, but we'll print your campaign as long
                 as you sell enough to generate profit.</h4>
             </div>
         </div>
-        <div class="col-xs-12 no-pad-left min-width-2">
+        <div class="col-xs-12 no-pad-left min-width-2" style="cursor:default;">
             <label>Your Estimated Profit:</label>
             <h3>${{estimated_profit() | number:0 }}+</h3>
         </div>
-        <div class="col-xs-12no-pad-left lil-pad">
+        <div class="col-xs-12no-pad-left lil-pad" style="cursor:default;">
             <label>Supplement Options</label>
             <hr class="bor-bot">
         </div>
         <div class="col-xs-12 tab-content-1 no-pad-left">
-            <div class="col-xs-12 col-sm-8">
+            <div class="col-xs-12 col-sm-8" style="cursor:default;">
                 <label>Bottle (30 Servings, 60 Capsules)</label>
                     <p>{{estimated_profit()/campaign_data.goal | currency}} profit/sale</p>
                 </div>
@@ -47,7 +45,7 @@
         <div class="col-xs-12 no-pad-left tab-content-1" style="padding-top:10px !important;margin-top: 10px;">
             <div class="col-xs-12">
                 <label>Proprietary Blend</label>
-                    <p>You can name this blend to make it distinctly yours.</p>
+                    <p style="cursor:default;">You can name this blend to make it distinctly yours.</p>
                     <input class="input-width" type="text" placeholder="Add your text here" ng-model="campaign_data.blend_name">
             </div>
         </div>
@@ -64,7 +62,7 @@
     <div class="col-xs-12 launch-step-desc">
         <div class="col-xs-12 lil-pad-bottom">
             <label>Campaign title</label>
-            <h4 class="grey-info-2">Summarize your campaign in 40 characters or less.</h4>
+            <h4 class="grey-info-2" style="cursor:default;">Summarize your campaign in 40 characters or less.</h4>
             <input class="input-width border-rad input-border" type="text" placeholder="" ng-model="campaign_data.title">
         </div>
         <div class="col-xs-12 lil-pad-bottom">
@@ -73,7 +71,7 @@
         </div>
         <div class="col-xs-12 lil-pad-bottom">
             <label>Campaign length</label>
-            <h4 class="grey-info-2">U.S. orders will arrive 10-14 days after the end of the campagin.
+            <h4 class="grey-info-2" style="cursor:default;">U.S. orders will arrive 10-14 days after the end of the campagin.
             </h4>
             <select class="input-width border-rad input-border" ng-init="campaign_data.length = '7'" ng-model="campaign_data.length">
                 <option value="3">3 days</option>
@@ -84,9 +82,9 @@
         </div>
         <div class="col-xs-12">
             <label>Url</label>
-            <h4 class="grey-info-2">This is where you'll send buyers to view your campaign.</h4>
+            <h4 class="grey-info-2" style="cursor:default;">This is where you'll send buyers to view your campaign.</h4>
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon2">liftoffsupplements.com/</span>
+              <span class="input-group-addon" id="basic-addon2" style="cursor:default;">liftoffsupplements.com/</span>
             <input class="input-width border-rad input-border form-control" type="text" ng-model="campaign_data.slug" aria-describedby="basic-addon2">
           </div>
         </div>
