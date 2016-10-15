@@ -668,13 +668,13 @@ footer {
 
 .CLA_1 {
   border-bottom: 1px solid #ddd;
+  cursor: help;
 }
 
 .CLA_1 h4 {
   font-weight: 400;
   font-size: 18px;
-  padding: 10px 0 0 10px;
-  margin-bottom: 5px;
+  padding: 10px 0 10px 10px;
 }
 
 .CLA_1 h5 {
@@ -933,4 +933,15 @@ input[type=range]:focus::-ms-fill-upper {
 
 .input-border {
   border: 1px solid #ddd;
+}
+
+.tooltip-inner {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.tooltip.in {
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
