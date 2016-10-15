@@ -8,7 +8,8 @@ var chisel_launch = angular.module('productApp', [
     'ngMaterial',
     'ngScrollbar',
     'ngFileUpload',
-    'rzModule'
+    'rzModule',
+    'ui.bootstrap'
 ]).controller('ProductCtrl', [
     '$scope',
     'Fabric',
@@ -959,7 +960,7 @@ var chisel_launch = angular.module('productApp', [
                 $scope.fabric.designedPNGObjects[$scope.activeDesignObject] = $scope.fabric.saveCanvasObjectAsPng();
                 $scope.fabric.designedJPGObjects[$scope.activeDesignObject] = $scope.fabric.saveCanvasObjectAsJpg();
 
-                if ($scope.fabric.designedObjects[indexKey] != null) {
+                if ($scope.fabric.designedObjects[indexKey] != null && indexKey == 0) {
                     $scope.fabric.loadJSON($scope.fabric.designedObjects[indexKey]);
                     $scope.objectLayers = [];
                     $scope.objectLayers = $scope.fabric.canvasLayers();

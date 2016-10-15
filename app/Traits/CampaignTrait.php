@@ -27,17 +27,20 @@ trait CampaignTrait
         $ingredients_i = 0;
         unset($array[0]);
         foreach ($array as $index => $row) {
-            $purpose     = $row[0];
-            $sku         = $row[1];
-            $formula     = $row[2];
-            $cost30      = (float) str_replace('$', '', $row[3]);
-            $ingredients = $row[6];
-            $servings    = $row[7];
-            $capsules    = $row[8];
-            $form_type   = $row[9];
-            $description = $row[10];
+            $i = 0;
+            $purpose     = $row[$i++];
+            $sku         = $row[$i++];
+            $formula     = $row[$i++];
+            $back_image = $row[$i++];
+            $cost30      = (float) str_replace('$', '', $row[$i++]);
+            $i+=2;
+            $ingredients = $row[$i++];
+            $servings    = $row[$i++];
+            $capsules    = $row[$i++];
+            $form_type   = $row[$i++];
+            $description = $row[$i++];
             if ($formula) {
-                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'capsules' => $capsules, 'form_type' => $form_type, 'sku' => $sku, 'description' => [$description]];
+                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'capsules' => $capsules, 'form_type' => $form_type, 'sku' => $sku,'back_image'=>$back_image, 'description' => [$description]];
             } else if ($ingredients) {
                 $ingredients_i++;
                 $result[$purpose_i]['formulas'][$formula_i]['ingredients'][$ingredients_i] = $ingredients;
@@ -49,12 +52,15 @@ trait CampaignTrait
 
             if ($purpose) {
                 $purpose_i++;
+                $formula_i          = 0;
                 $result[$purpose_i] = ['key' => str_slug($purpose, '_'), 'name' => $purpose, 'formulas' => [$formula]];
             } else {
+                $ingredients_i = 0;
                 $formula_i++;
                 $result[$purpose_i]['formulas'][$formula_i] = $formula;
             }
         }
+        //var_dump($result);
         //Cache::put($this->purposes_key, $result, 100);
         return $result;
     }

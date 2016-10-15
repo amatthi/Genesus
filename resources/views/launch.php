@@ -72,6 +72,7 @@
             </div>
         </div>
         <script src="assets/angular.js"></script>
+        <script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
         <script src="assets/rzslider.min.js"></script>
         <script src="assets/select.js"></script>
         <script src="assets/angular-animate.js"></script>
