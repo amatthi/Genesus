@@ -49,12 +49,15 @@ trait CampaignTrait
 
             if ($purpose) {
                 $purpose_i++;
+                $formula_i          = 0;
                 $result[$purpose_i] = ['key' => str_slug($purpose, '_'), 'name' => $purpose, 'formulas' => [$formula]];
             } else {
+                $ingredients_i = 0;
                 $formula_i++;
                 $result[$purpose_i]['formulas'][$formula_i] = $formula;
             }
         }
+        //var_dump($result);
         //Cache::put($this->purposes_key, $result, 100);
         return $result;
     }

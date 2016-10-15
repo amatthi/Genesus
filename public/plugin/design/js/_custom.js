@@ -24,19 +24,19 @@ chisel_launch.controller('CustomCtrl', [
         });
 
         $scope.goal_slider = {
-          value: 30,
+            value: 30,
             options: {
-            showTicksValues: true,
-            stepsArray: [
-              {value: 10},
-              {value: 20},
-              {value: 30},
-              {value: 40},
-              {value: 50},
-              {value: 100},
-              {value: 150},
-              {value: 200}
-            ]
+                showTicksValues: true,
+                stepsArray: [
+                    { value: 10 },
+                    { value: 20 },
+                    { value: 30 },
+                    { value: 40 },
+                    { value: 50 },
+                    { value: 100 },
+                    { value: 150 },
+                    { value: 200 }
+                ]
             }
         };
 
@@ -170,11 +170,16 @@ chisel_launch.controller('CustomCtrl', [
         });
 
         $scope.estimated_profit = function() {
+            if (!$scope.campaign_data.formula) return 0;
             var price = Number($scope.campaign_data.sale_price);
             var bottle = Number($scope.campaign_data.formula.cost30);
             var goal = Number($scope.campaign_data.goal);
 
             return (price - bottle) * goal;
+        }
+
+        $scope.purpose_change = function() {
+            $scope.campaign_data.formula = $scope.campaign_data.purpose['formulas'][0];
         }
 
         $scope.test = function() {
