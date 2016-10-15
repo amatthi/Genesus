@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link href='//fonts.googleapis.com/css?family=Lato:400,300|Lobster|Architects+Daughter|Roboto|Oswald|Montserrat|Lora|PT+Sans|Ubuntu|Roboto+Slab|Fjalla+One|Indie+Flower|Playfair+Display|Poiret+One|Dosis|Oxygen|Lobster|Play|Shadows+Into+Light|Pacifico|Dancing+Script|Kaushan+Script|Gloria+Hallelujah|Black+Ops+One|Lobster+Two|Satisfy|Pontano+Sans|Domine|Russo+One|Handlee|Courgette|Special+Elite|Amaranth|Vidaloka' rel='stylesheet' type='text/css'>
         <!-- CSS Start -->
+        <link rel="stylesheet" type="text/css" href="css/select.css">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" >
         <link rel="stylesheet" type="text/css" href="css/normalize.css" >
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
@@ -72,6 +73,7 @@
         </div>
         <script src="assets/angular.js"></script>
         <script src="assets/rzslider.min.js"></script>
+        <script src="assets/select.js"></script>
         <script src="assets/angular-animate.js"></script>
         <script src="assets/angular-aria.js"></script>
         <script src="assets/angular-material.js"></script>

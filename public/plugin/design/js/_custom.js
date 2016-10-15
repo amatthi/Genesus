@@ -111,7 +111,7 @@ chisel_launch.controller('CustomCtrl', [
 
         /********** launch **************/
         $scope.launch_step = 'create';
-        $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75 };
+        $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75, sale_price: 20 };
         // $scope.amazon_connect('tappyn');
 
         $scope.launch_step_create = function() {
@@ -174,7 +174,7 @@ chisel_launch.controller('CustomCtrl', [
             var bottle = Number($scope.campaign_data.cost_per_bottle);
             var goal = Number($scope.campaign_data.goal);
 
-            return (price - (bottle * 30)) - (price * 1.3 - price) * goal;
+            return (price - bottle) * goal;
         }
 
         $scope.test = function() {
