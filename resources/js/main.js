@@ -3,6 +3,7 @@ var chisel = angular.module('myApp', [
     'ui.bootstrap',
     'ngAnimate',
     'angularFileUpload',
+    'angularMoment',
 ]);
 
 chisel.config(function($routeProvider, $locationProvider, $httpProvider) {

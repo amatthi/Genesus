@@ -29,6 +29,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
     Route::post('amazon/get_token', 'AmazonController@get_token');
 
     Route::group(['middleware' => 'auth'], function () {
+        Route::get('campaign/dashboard', 'CampaignController@dashboard');
     	Route::post('campaign/launch', 'CampaignController@launch');
     });
 });

@@ -64,4 +64,8 @@ class CampaignController extends Controller
     {
         return $this->_get_purposes();
     }
+
+    function dashboard(){
+        return Auth::user()->campaigns;
+    }
 }

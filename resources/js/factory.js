@@ -70,5 +70,13 @@ chisel.factory("mainFactory", function($http) {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         })
     }
+
+    fact.dashboard_campaigns = function() {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/dashboard',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
     return fact;
 })
