@@ -1082,3 +1082,15 @@ a {
  .tooltip-inner {
    text-align: left;
  }
+
+ .bordered {
+  border: dashed 4px #D91E18;
+  
+  /* Individual border image properties */
+  border-image-source: url("/img/red-border.png");
+  border-image-slice: 2;
+  border-image-repeat: round;  
+  
+  /* or use the shorthand border-image */
+  border-image: url("/img/red-border.png") 2 round;
+}
