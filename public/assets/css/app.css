@@ -214,6 +214,36 @@ position: relative;
     line-height: 50px;
 }
 
+.btn-gy {
+    background: #fff;
+    color: #6c7478;
+    font-weight: 400;
+    border: 1px solid #6c7478;
+    font-size: 16px;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-gy:hover {
+    background: #6c7478;
+    color: #fff;
+    border: 1px solid #6c7478;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-gy:focus {
+    color: #fff;
+    background: #6c7478;
+    border: 1px solid #6c7478;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-gy:active {
+    color: #fff;
+    background: #6c7478;
+    border: 1px solid #6c7478;
+    font-family: 'Roboto', sans-serif;
+}
 
 .btn-gn {
     background: #70CE66;
@@ -497,11 +527,10 @@ footer {
 
 .modal_actions {
     z-index: 100000000 !important;
-    position: fixed;
+    position: fixed !important;
     height: 100%;
     opacity: 1;
     transform-style: preserve-3d;
-    padding-top: 100px;
 }
 
 .up-down-pad {
@@ -1085,12 +1114,16 @@ a {
 
  .bordered {
   border: dashed 4px #D91E18;
-  
+
   /* Individual border image properties */
   border-image-source: url("/img/red-border.png");
   border-image-slice: 2;
-  border-image-repeat: round;  
-  
+  border-image-repeat: round;
+
   /* or use the shorthand border-image */
   border-image: url("/img/red-border.png") 2 round;
+}
+
+.canvas-container-outer {
+  border: none;
 }
