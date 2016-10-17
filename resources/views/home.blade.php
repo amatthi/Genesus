@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lift Off</title>
+        <title>Genesus</title>
 		<meta charset="utf-8" />
 		<base href="/">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="description" content="Lift Off lets you create your own branded supplement line, risk free.">
+		<meta name="description" content="Genesus lets you create your own branded supplement line, risk free.">
 		<meta http-equiv="Pragma" content="public">
 		<meta http-equiv="Cache-Control" content="public">
 		<meta http-equiv="Expires" content="Sat, 01 Dec 2018 00:00:00 GMT">

@@ -381,13 +381,13 @@ position: relative;
 }
 
 .home-section h3 {
-  font-size: 40px;
-  font-weight: 200;
+  font-size: 30px;
+  font-weight: 300;
   cursor: default;
 }
 
 .home-section h5 {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 200;
   cursor: default;
   line-height: 1.6;

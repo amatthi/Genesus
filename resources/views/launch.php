@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <base href="/plugin/design/">
-        <title>Lift Off</title>
-        <meta name="description" content="Lift Off lets you create your own branded supplement line, risk free.">
+        <title>Genesus</title>
+        <meta name="description" content="Genesus lets you create your own branded supplement line, risk free.">
         <link rel="shortcut icon" href="/favicon2.ico?v=2.0" type="image/x-icon">
         <link rel="icon" href="/favicon2.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
