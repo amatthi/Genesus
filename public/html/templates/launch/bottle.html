@@ -464,12 +464,12 @@
             </div>
             <div class="canvas_sub_image" ng-show="campaign_data.formula.back_image">
                 <ul>
-                    <li ng-repeat="prodImg in productImages" style="margin-right:0px;">
+                    <li ng-repeat="prodImg in productImages" style="margin-right:-5px;">
                       <a ng-click='loadProduct(defaultProductTitle, prodImg, defaultProductId, defaultPrice, defaultCurrency, $index)'class="btn btn-gy btn-sm">Front
                         <img ng-click='loadProduct(defaultProductTitle, prodImg, defaultProductId, defaultPrice, defaultCurrency, $index)' data-ng-src="{{prodImg}}" alt="" width="120px;" style="display:none;">
                       </a>
                     </li>
-                    <li style="margin-left:0px;">
+                    <li style="margin-left:-5px;">
                       <a ng-click="loadProduct(defaultProductTitle, add_back_image_path(campaign_data.formula.back_image), defaultProductId, defaultPrice, defaultCurrency, $index+1)" class="btn btn-gy btn-sm">Back
                         <img ng-click="loadProduct(defaultProductTitle, add_back_image_path(campaign_data.formula.back_image), defaultProductId, defaultPrice, defaultCurrency, $index+1)" data-ng-src="{{add_back_image_path(campaign_data.formula.back_image)}}" alt="" width="120px;" style="display:none;">
                       </a>
