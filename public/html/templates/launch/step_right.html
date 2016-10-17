@@ -14,6 +14,7 @@
         <div ng-show="campaign_data.formula">
             <div class="ingredients">
                 <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients" class="CLA_1">
+                  <span class="glyphicon glyphicon-info-sign" style="top: 40px;left: 200px;font-size: 10px;"></span>
                     <h4 uib-tooltip-template="'ingredient_tooltip.html'"><img style="width:50px" ng-src="{{add_ingredient_path(ingredient)}}">{{ingredient}}</h4>
                 </div>
             </div>
