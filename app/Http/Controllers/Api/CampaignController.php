@@ -23,12 +23,12 @@ class CampaignController extends Controller
             'cost_per_bottle' => 'required',
             'purpose'         => 'required',
             'formula'         => 'required',
-            'png64'           => 'required',
+            //'png64'           => 'required',
             'sale_price'      => 'required',
-            'description'     => 'required',
+            //'description'     => 'required',
             'length'          => 'required',
-            'slug'            => 'required|max:255',
-            'title'           => 'required|max:255',
+            //'slug'            => 'required|max:255',
+            //'title'           => 'required|max:255',
         ]);
         $slug = str_slug($request->input('slug'), '-');
         $tmp  = new Campaign();

@@ -143,7 +143,7 @@ chisel_launch.controller('CustomCtrl', [
                 $scope.launch_step = step;
             } else if (step == 'desc') {
                 if (!$scope.campaign_data.sale_price) alert('Please enter a sale price.');
-                else if (!$scope.campaign_data.blend_name) alert('Please enter a proprietary blend name to continue.');
+                //else if (!$scope.campaign_data.blend_name) alert('Please enter a proprietary blend name to continue.');
                 else $scope.launch_step = step;
             } else if (step == 'goal') {
                 if (!$scope.campaign_data.purpose) alert('Please choose one purpose.');
