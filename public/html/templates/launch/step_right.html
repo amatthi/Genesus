@@ -14,11 +14,11 @@
         <div ng-show="campaign_data.formula">
             <div class="ingredients">
                 <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients" class="CLA_1">
-                  <span class="glyphicon glyphicon-info-sign" style="top: 40px;left: 200px;font-size: 10px;"></span>
-                    <h4 uib-tooltip-template="'ingredient_tooltip.html'"><img style="width:50px" ng-src="{{add_ingredient_path(ingredient)}}">{{ingredient}}</h4>
+                  <span class="glyphicon glyphicon-info-sign" style="top: 20px;left: 200px;font-size: 10px;"></span>
+                    <h4 uib-tooltip-template="'ingredient_tooltip.html'"><img style="width:50px;padding-right:5px;" ng-src="{{add_ingredient_path(ingredient)}}">{{ingredient}}</h4>
                 </div>
             </div>
-            <div class="ing-ex text-center" style="cursor:default;">
+            <div class="ing-ex" style="cursor:default;">
                 <h3>Base Cost @ 30 Bottles:</h3>
                 <h2 ng-bind="campaign_data.formula.cost30 | currency"></h2>
                 <!--
