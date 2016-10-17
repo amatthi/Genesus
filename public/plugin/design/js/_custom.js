@@ -12,8 +12,9 @@ chisel_launch.controller('CustomCtrl', [
     '$timeout',
 
     function($scope, Fabric, FabricConstants, Keypress, $http, $timeout, $mdDialog, $mdToast, Upload, mainFactory, $timeout) {
-        $scope.template_v = '1.1.2';
+        $scope.template_v = '1.1.3';
         $scope.now_module = '';
+        $scope.login_after = '';
         $scope.__user = {};
         $scope.__s = {};
         $("body").on('click', '.darken', function(event) {
@@ -42,12 +43,16 @@ chisel_launch.controller('CustomCtrl', [
             }
         };
 
-        $scope.set_module = function(name) {
+        $scope.set_module = function(name, login_after) {
             $scope.now_module = (name) ? name : '';
+            $scope.login_after = (login_after) ? login_after : '';
         }
         $scope.register = function(data) {
             mainFactory.register(data).then(function(r) {
                 $scope.__user = r.data.user;
+                if ($scope.login_after == 'launch') {
+                    $scope.submit_campaign($scope.campaign_data);
+                }
                 $scope.set_module();
             }, $scope.handle_error);
         }
@@ -76,6 +81,9 @@ chisel_launch.controller('CustomCtrl', [
         $scope.login = function(data) {
             mainFactory.login(data).then(function(r) {
                 $scope.__user = (r.data.user) ? r.data.user : {};
+                if ($scope.login_after == 'launch') {
+                    $scope.submit_campaign($scope.campaign_data);
+                }
                 $scope.set_module();
             }, $scope.handle_error);
         }
@@ -218,6 +226,7 @@ chisel_launch.controller('CustomCtrl', [
         }
     }
 ]);
+
 chisel_launch.factory("mainFactory", function($http) {
     var fact = {};
     fact.register = function(data) {
@@ -286,4 +295,8 @@ chisel_launch.factory("mainFactory", function($http) {
         });
     }
     return fact;
-})
+});
+
+chisel_launch.config(function($httpProvider) {
+    $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+});

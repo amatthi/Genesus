@@ -42,7 +42,7 @@
                             <a ng-show="__user.email" ng-click="submit_campaign(campaign_data)">
                                 <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
                             </a>
-                            <a ng-show="!__user.email" ng-click="set_module('login')">
+                            <a ng-show="!__user.email" ng-click="set_module('login','launch')">
                                 <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
                             </a>
                         </span>
