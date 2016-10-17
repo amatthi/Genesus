@@ -10,6 +10,7 @@
 		<meta http-equiv="Cache-Control" content="public">
 		<meta http-equiv="Expires" content="Sat, 01 Dec 2018 00:00:00 GMT">
 		<meta name="viewport" content="width=device-width" />
+    <meta name="google-site-verification" content="pqwiId01A3wp5QfmFmK2hskliqxeOkGkcUa03aV2Loc" />
 		<link rel="shortcut icon" href="/favicon2.ico?v=2.0" type="image/x-icon">
 		<link rel="icon" href="/favicon2.ico" type="image/x-icon">
 		<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
