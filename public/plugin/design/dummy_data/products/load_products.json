@@ -341,7 +341,7 @@
       },
       {
          "id":27,
-         "name":"Template",
+         "name":"Pre-Workout (Fruit Punch)",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -354,7 +354,7 @@
       },
       {
          "id":28,
-         "name":"Template",
+         "name":"Whey Protein Isolate (Vanilla)",
          "price":99,
          "category": "Standard",
          "currency":"USD",

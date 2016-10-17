@@ -27,9 +27,9 @@ chisel_launch.controller('CustomCtrl', [
         $scope.goal_slider = {
             value: 30,
             options: {
-            showSelectionBar: true,
-            showTicksValues: true,
-            stepsArray: [
+                showSelectionBar: true,
+                showTicksValues: true,
+                stepsArray: [
                     { value: 20 },
                     { value: 30 },
                     { value: 40 },
@@ -192,10 +192,20 @@ chisel_launch.controller('CustomCtrl', [
         $scope.formula_change = function() {
             if ($scope.campaign_data.formula.back_image && $scope.activeDesignObject == 1) {
                 $scope.loadProduct($scope.defaultProductTitle, $scope.add_back_image_path($scope.campaign_data.formula.back_image), $scope.defaultProductId, $scope.defaultPrice, $scope.defaultCurrency, 1);
-            }
-            else{
+            } else {
                 $scope.loadProduct($scope.defaultProductTitle, $scope.productImages[0], $scope.defaultProductId, $scope.defaultPrice, $scope.defaultCurrency, 0);
             }
+        }
+
+        $scope.hasFormula = function(product) {
+            if (product.name == 'Template' || product.name == 'Standard Bottle') {
+                return true;
+            }
+
+            if ($scope.campaign_data.formula.name == product.name) {
+                return true;
+            }
+            return false;
         }
 
         $scope.test = function() {
