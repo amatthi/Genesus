@@ -208,6 +208,10 @@ chisel_launch.controller('CustomCtrl', [
             return false;
         }
 
+        $scope.add_ingredient_path = function(ingredient) {
+            return 'images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
+        }
+
         $scope.test = function() {
             $scope.campaign_data.purpose = 'reen-coffee-bean-extract';
             console.log($scope.campaign_data);
