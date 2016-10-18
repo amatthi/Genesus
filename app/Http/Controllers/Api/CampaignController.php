@@ -33,9 +33,9 @@ class CampaignController extends Controller
         $db_cols = ['goal'];
         $slug    = str_slug($request->input('slug'), '-');
         $tmp     = new Campaign();
-        if ($tmp->findBySlug($slug)) {
-            return response(['slug' => ['The Url has already been taken.']], 422);
-        }
+        //if ($tmp->findBySlug($slug)) {
+            //return response(['slug' => ['The Url has already been taken.']], 422);
+        //}
 
         if ($request->input('png64')) {
             $img           = base64_decode(explode(',', $request->input('png64'))[1]);
