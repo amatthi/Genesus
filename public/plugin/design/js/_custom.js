@@ -159,7 +159,7 @@ chisel_launch.controller('CustomCtrl', [
                 //console.log(r);
                 window.onbeforeunload = null;
                 window.onhashchange = null;
-                alert('submit_campaign complete');
+                alert('Your campaign has been saved!');
                 window.location = '/dashboard';
             }, $scope.handle_error);
         }
