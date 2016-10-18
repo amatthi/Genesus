@@ -10536,12 +10536,12 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
             templateUrl: 'html/launch.html',
             controller: 'launchController',
         })
-        .when('/campaign/:slug', {
-            templateUrl: 'html/campaign.html',
-            controller: 'campaignController',
-        })
         .when('/faq', {
             templateUrl: 'html/faq.html',
+            controller: 'launchController',
+        })
+        .when('/campaign/:slug', {
+            templateUrl: 'html/campaign.html',
             controller: 'campaignController',
         })
         .when('/dashboard', {
@@ -10615,7 +10615,7 @@ chisel.controller("campaignController", function($scope, $rootScope,$routeParams
 
 chisel.controller("dashboardController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
     $scope.campaigns = [];
-
+    
     mainFactory.dashboard_campaigns().then(function(r){
     	$scope.campaigns = r.data;
     }, $scope.handle_error);

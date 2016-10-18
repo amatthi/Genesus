@@ -36,21 +36,23 @@ class CampaignController extends Controller
             return response(['slug' => ['The Url has already been taken.']], 422);
         }
 
-        $db_cols       = ['title', 'description', 'goal'];
-        $img           = base64_decode(explode(',', $request->input('png64'))[1]);
-        $s3            = \Storage::disk('s3');
-        $imageFileName = 'lo' . time() . str_random(20) . '.png';
-        $filePath      = $imageFileName;
-        $s3->put($filePath, $img, 'public');
+        if ($request->input('png64')) {
+            $db_cols       = ['title', 'description', 'goal'];
+            $img           = base64_decode(explode(',', $request->input('png64'))[1]);
+            $s3            = \Storage::disk('s3');
+            $imageFileName = 'lo' . time() . str_random(20) . '.png';
+            $filePath      = $imageFileName;
+            $s3->put($filePath, $img, 'public');
+        }
 
         $data                         = $request->only($db_cols);
         $data['user_id']              = Auth::user()->id;
         $data['slug']                 = $slug;
         $data['end_at']               = date('Y-m-d H:i:s', strtotime('+' . $request->input('length') . 'days'));
         $data['others']               = $request->except($db_cols);
-        $data['others']['bottle_img'] = $s3->url($filePath);
-        $data['others']['purpose'] = $data['others']['purpose']['key'];
-        $data['others']['formula'] = $data['others']['formula']['sku'];
+        $data['others']['bottle_img'] = isset($s3) ? $s3->url($filePath) : '';
+        $data['others']['purpose']    = $data['others']['purpose']['key'];
+        $data['others']['formula']    = $data['others']['formula']['sku'];
         unset($data['others']['png64']);
         return Campaign::create($data);
     }
@@ -65,7 +67,8 @@ class CampaignController extends Controller
         return $this->_get_purposes();
     }
 
-    function dashboard(){
+    public function dashboard()
+    {
         return Auth::user()->campaigns;
     }
 }
