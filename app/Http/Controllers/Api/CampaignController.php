@@ -30,14 +30,14 @@ class CampaignController extends Controller
             //'slug'            => 'required|max:255',
             //'title'           => 'required|max:255',
         ]);
-        $slug = str_slug($request->input('slug'), '-');
-        $tmp  = new Campaign();
+        $db_cols = ['title', 'description', 'goal'];
+        $slug    = str_slug($request->input('slug'), '-');
+        $tmp     = new Campaign();
         if ($tmp->findBySlug($slug)) {
             return response(['slug' => ['The Url has already been taken.']], 422);
         }
 
         if ($request->input('png64')) {
-            $db_cols       = ['title', 'description', 'goal'];
             $img           = base64_decode(explode(',', $request->input('png64'))[1]);
             $s3            = \Storage::disk('s3');
             $imageFileName = 'lo' . time() . str_random(20) . '.png';
