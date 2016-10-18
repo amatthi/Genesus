@@ -22,7 +22,6 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
         })
         .when('/faq', {
             templateUrl: 'html/faq.html',
-            controller: 'launchController',
         })
         .when('/campaign/:slug', {
             templateUrl: 'html/campaign.html',

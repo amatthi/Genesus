@@ -9,6 +9,7 @@ gulp.task('default', ['js', 'css', 'watch']);
 
 gulp.task('js', function() {
     gulp.src([
+            'resources/js/vendor/jquery-1.12.4.min.js',
             'resources/js/vendor/angular.min.js',
             'resources/js/vendor/moment.js',
             'resources/js/vendor/**/*.js',
