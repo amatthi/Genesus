@@ -30,7 +30,7 @@ class CampaignController extends Controller
             //'slug'            => 'required|max:255',
             //'title'           => 'required|max:255',
         ]);
-        $db_cols = ['title', 'description', 'goal'];
+        $db_cols = ['goal'];
         $slug    = str_slug($request->input('slug'), '-');
         $tmp     = new Campaign();
         if ($tmp->findBySlug($slug)) {
@@ -46,6 +46,8 @@ class CampaignController extends Controller
         }
 
         $data                         = $request->only($db_cols);
+        $data['title']                = ($request->input('title')) ? $request->input('title') : '';
+        $data['description']          = ($request->input('description')) ? $request->input('description') : '';
         $data['user_id']              = Auth::user()->id;
         $data['slug']                 = $slug;
         $data['end_at']               = date('Y-m-d H:i:s', strtotime('+' . $request->input('length') . 'days'));
