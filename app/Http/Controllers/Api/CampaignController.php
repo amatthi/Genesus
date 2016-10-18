@@ -34,7 +34,7 @@ class CampaignController extends Controller
         $slug    = str_slug($request->input('slug'), '-');
         $tmp     = new Campaign();
         if ($tmp->findBySlug($slug)) {
-            return response(['slug' => ['The Url has already been taken.']], 422);
+            return response(['slug' => ['Please enter a url on Step 3 to Save!']], 422);
         }
 
         if ($request->input('png64')) {
