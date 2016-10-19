@@ -367,7 +367,7 @@
       },
       {
          "id":29,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Template",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -380,7 +380,7 @@
       },
       {
          "id":30,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Template",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -393,7 +393,7 @@
       },
       {
          "id":31,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Template",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -406,7 +406,7 @@
       },
       {
          "id":32,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Template",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -419,7 +419,7 @@
       },
       {
          "id":33,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Template",
          "price":99,
          "category": "Standard",
          "currency":"USD",
