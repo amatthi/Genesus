@@ -27,20 +27,22 @@ trait CampaignTrait
         $ingredients_i = 0;
         unset($array[0]);
         foreach ($array as $index => $row) {
-            $i = 0;
-            $purpose     = $row[$i++];
-            $sku         = $row[$i++];
-            $formula     = $row[$i++];
-            $back_image = $row[$i++];
-            $cost30      = (float) str_replace('$', '', $row[$i++]);
-            $i+=2;
-            $ingredients = $row[$i++];
-            $servings    = $row[$i++];
-            $capsules    = $row[$i++];
-            $form_type   = $row[$i++];
-            $description = $row[$i++];
+            if(count($row) <= 10){
+                continue;
+            }
+            $purpose     = $row[0];
+            $sku         = $row[1];
+            $formula     = $row[2];
+            $back_image = $row[3];
+            $cost30      = (float) str_replace('$', '', $row[4]);
+            $ingredients = $row[7];
+            $recommended_price = $row[8];
+            $servings    = $row[9];
+            $capsules    = $row[10];
+            $form_type   = $row[11];
+            $description = $row[12];
             if ($formula) {
-                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'capsules' => $capsules, 'form_type' => $form_type, 'sku' => $sku,'back_image'=>$back_image, 'description' => [$description]];
+                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'capsules' => $capsules,'recommended_price'=>$recommended_price, 'form_type' => $form_type, 'sku' => $sku,'back_image'=>$back_image, 'description' => [$description]];
             } else if ($ingredients) {
                 $ingredients_i++;
                 $result[$purpose_i]['formulas'][$formula_i]['ingredients'][$ingredients_i] = $ingredients;
