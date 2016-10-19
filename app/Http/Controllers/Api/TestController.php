@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Auth;
+use App\Profile;
 
 class TestController extends Controller
 {
@@ -15,6 +16,12 @@ class TestController extends Controller
     protected function test()
     {
         echo 'hi test';
-        dd(Auth::user()->campaigns());
+        $a = Auth::user()->profile;
+        if(!$a){
+        	$a = new Profile;
+        	$a->photo = '123';
+        	$a->save();
+        }
+        dd($a);
     }
 }

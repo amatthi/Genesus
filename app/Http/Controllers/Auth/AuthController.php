@@ -101,13 +101,6 @@ class AuthController extends Controller
         return redirect($this->redirectPath());
     }
 
-    public function is_login()
-    {
-        return [
-            'user' => Auth::user(),
-        ];
-    }
-
     /**
      * Log the user out of the application.
      *
@@ -190,12 +183,15 @@ class AuthController extends Controller
     {
         $facebook_user = Socialite::driver('facebook')->user();
         $user_data     = ['name' => $facebook_user->getName(), 'email' => $facebook_user->getEmail(), 'password' => str_random(10)];
-        $user          = User::where('email', $facebook_user->getEmail())->first();
+        $user_by_id    = User::where('from', 'facebook')->where('from_id', $facebook_user->getId())->first();
+        $user_by_email = User::where('email', $facebook_user->getEmail())->first();
 
-        if ($user) {
-            Auth::login($user);
+        if ($user_by_id) {
+            Auth::login($user_by_id, true);
+        } else if ($user_by_email) {
+            Auth::login($user_by_email, true);
         } else {
-            Auth::guard($this->getGuard())->login($this->create($user_data));
+            Auth::guard($this->getGuard())->login($this->create($user_data), true);
 
             $user          = Auth::user();
             $user->from    = 'facebook';

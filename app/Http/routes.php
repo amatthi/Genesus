@@ -17,7 +17,6 @@ Route::bind('campaign_slug', function ($value) {
 });
 
 Route::group(['namespace' => 'Auth'], function () {
-    Route::get('is_login', 'AuthController@is_login');
     Route::get('auth/facebook', 'AuthController@redirectToProvider');
     Route::get('auth/facebook/callback', 'AuthController@handleProviderCallback');
 });
@@ -30,7 +29,9 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
 
     Route::group(['middleware' => 'auth'], function () {
         Route::get('campaign/dashboard', 'CampaignController@dashboard');
-    	Route::post('campaign/launch', 'CampaignController@launch');
+        Route::post('campaign/launch', 'CampaignController@launch');
+        Route::get('is_login', 'ProfileController@is_login');
+        Route::post('profile', 'ProfileController@updateProfile');
     });
 });
 

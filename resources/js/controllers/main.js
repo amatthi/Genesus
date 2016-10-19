@@ -38,6 +38,7 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     $scope.is_login = function() {
         mainFactory.is_login().then(function(r) {
             $scope.__user = (r.data.user) ? r.data.user : {};
+            $scope.$broadcast('is_login_done');
         });
     }
     $scope.is_login();

@@ -243,7 +243,7 @@ chisel_launch.factory("mainFactory", function($http) {
     fact.is_login = function() {
         return $http({
             method: 'GET',
-            url: '/is_login',
+            url: '/api/is_login',
             headers: {
                 'Content-type': 'application/x-www-form-urlencoded'
             }
