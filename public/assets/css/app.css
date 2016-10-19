@@ -1130,3 +1130,13 @@ a {
 .canvas-container-outer {
   border: none;
 }
+
+.faq-head {
+  background-color: #83dcff;
+}
+
+.faq-head h3 {
+  color:#fff;
+  font-size:44px;
+  font-weight: 600;
+}
