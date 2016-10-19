@@ -17,6 +17,8 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link href="/assets/css/dev.css" rel="stylesheet">
 		<link href="/assets/css/app.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="cfgen-form-1/js/form.js"></script>
     <link href="cfgen-form-1/css/form.css" rel="stylesheet" type="text/css">
 	</head>
     <body ng-app="myApp" style="background:#fff;" ng-controller="mainController">
@@ -29,8 +31,7 @@
     <section class="innerpage" ng-view></section>
 </body>
 <script type="text/javascript" src="/assets/js/app.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="cfgen-form-1/js/form.js"></script>
+
 <script type='text/javascript'>
 window.__lo_site_id = 67462;
 
