@@ -9,8 +9,8 @@
 **/
 
 header {
-    height: 60px;
-    padding: 10px 0;
+    height: 40px;
+    padding: 7px 0;
     background: #fff;
     border-bottom: 1px solid #CCC;
 }
@@ -32,8 +32,8 @@ header nav {
 }
 
 header nav ul {
-    padding-top: 8px;
     list-style: none;
+    padding-top: 2px;
 }
 
 header nav ul li a {
@@ -81,7 +81,7 @@ label {
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 
 small {
@@ -536,7 +536,7 @@ footer {
 }
 
 .up-down-pad {
-  padding: 17px 0 17px;
+  padding: 10px 0 10px;
   border-bottom: 1px solid hsla(0, 0%, 80%, 0.61);
 }
 
@@ -969,7 +969,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .bigger-pad {
-  padding-top: 75px;
+  padding-top: 55px;
 }
 
 .tabing .nav-tabs > li.active > a, .tabing .nav-tabs > li.active > a:focus, .tabing .nav-tabs > li.active > a:hover {
