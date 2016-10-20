@@ -10,7 +10,7 @@ class Campaign extends Model
     use CampaignTrait;
 
     protected $fillable = ['title', 'goal', 'slug', 'description', 'end_at', 'others', 'user_id'];
-    protected $appends  = ['cost_per_bottle', 'purpose', 'formula', 'sale_price', 'length', 'bottle_img'];
+    protected $appends  = ['cost_per_bottle', 'purpose', 'formula', 'sale_price', 'length', 'bottle_img','blend_name'];
 
     public function findBySlug($slug)
     {
@@ -20,6 +20,11 @@ class Campaign extends Model
     public function user()
     {
         return $this->hasOne('App\User');
+    }
+
+    public function getBlendNameAttribute()
+    {
+        return $this->others['blend_name'];
     }
 
     public function getCostPerBottleAttribute()
@@ -39,7 +44,7 @@ class Campaign extends Model
 
     public function getSalePriceAttribute()
     {
-        return $this->others['sale_price'];
+        return (float)$this->others['sale_price'];
     }
 
     public function getLengthAttribute()

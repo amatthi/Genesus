@@ -32,9 +32,11 @@ class CampaignController extends Controller
         ]);
         $db_cols = ['goal'];
         $slug    = str_slug($request->input('slug'), '-');
-        $tmp     = new Campaign();
-        if ($tmp->findBySlug($slug)) {
-            return response(['slug' => ['Please enter a url on Step 3 to Save!']], 422);
+        $tmp     = Campaign::where('slug', $slug)->first();
+        if ($tmp) {
+            if($tmp->id != $request->input('id') ){
+                return response(['slug' => ['Please enter a url on Step 3 to Save!']], 422);
+            }
         }
 
         if ($request->input('png64')) {
@@ -56,7 +58,7 @@ class CampaignController extends Controller
         $data['others']['purpose']    = $data['others']['purpose']['key'];
         $data['others']['formula']    = $data['others']['formula']['sku'];
         unset($data['others']['png64']);
-        return Campaign::create($data);
+        return Campaign::updateOrCreate(['id' => $request->input('id')],$data);
     }
 
     public function get(Campaign $campaign)

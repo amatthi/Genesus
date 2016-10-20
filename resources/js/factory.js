@@ -71,6 +71,14 @@ chisel.factory("mainFactory", function($http) {
         })
     }
 
+    fact.get_campaign_by_id = function(id) {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/get_by_id/'+id,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
+
     fact.dashboard_campaigns = function() {
         return $http({
             method: 'GET',
