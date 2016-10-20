@@ -1139,3 +1139,13 @@ a {
   font-size:44px;
   font-weight: 600;
 }
+
+.dash-a a {
+  color:#07B9FF;
+  cursor: default;
+}
+
+.nav-pills>li>a {
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -8,6 +8,8 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
         $scope.profile_data.email = $scope.__user.email;
         $scope.profile_data.biography = $scope.__user.profile.biography;
         $scope.profile_data.old_photo = $scope.__user.profile.photo;
+        $scope.profile_data.brand = $scope.__user.profile.brand;
+        $scope.profile_data.website = $scope.__user.profile.website;
     });
     $scope.is_login();
 
@@ -31,4 +33,13 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
             $scope.is_login();
         }, $scope.handle_error);
     }
+
+    $scope.dash_set = function(view) {
+      if (view == 'campaigns') {
+        $scope.dash_view = 'campaigns';
+      } else if (view == 'settings') {
+        $scope.dash_view = 'settings';
+      }
+    }
+
 });
