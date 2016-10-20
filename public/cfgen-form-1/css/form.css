@@ -3,7 +3,7 @@ body{
 }
 .cfgen-form-container{
 	padding:30px;
-	border:1px solid #EEE;
+	/**border:1px solid #EEE;**/
 	background-color:#FFF;
 	border-radius:4px;
 	-webkit-box-sizing:border-box;
