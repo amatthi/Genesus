@@ -123,7 +123,7 @@ strong {
 
   @media (max-width:640px) {
     .hero-bg {
-    background-color:#fff;
+    background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbannermobile.jpg) no-repeat center center;
     background-size:cover;
       }
   }
@@ -184,7 +184,7 @@ position: relative;
 
 .hero-content h1 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 60px;
     color:#07B9FF;
     cursor: default;
@@ -193,7 +193,7 @@ position: relative;
 @media (min-width:641px) {
 .hero-content h1 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 60px;
     margin-top: 50px;
     color:#07B9FF;
@@ -201,10 +201,15 @@ position: relative;
     }
 }
 
+@media (max-width:640px) {
+  .hero-content h3 {
+    color:#333 !important;
+  }
+}
+
 .hero-content h3 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
-    font-size: 30;
+    font-weight: 300;
     color:#646772;
     cursor: default;
 }
@@ -374,7 +379,7 @@ position: relative;
 }
 
 .home-section h2 {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 300;
   cursor: default;
 }
@@ -386,7 +391,7 @@ position: relative;
 }
 
 .home-section h5 {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 200;
   cursor: default;
   line-height: 1.6;
@@ -1148,4 +1153,23 @@ a {
 .nav-pills>li>a {
   border-radius: 4px;
   cursor: pointer;
+}
+
+.dash-style-standard {
+  margin-top:-25px;
+  background-color:#fff;
+}
+
+.dash-style {
+  background-color:#F5F7F6;
+  margin-left:-15px;
+  padding-bottom:500px;
+}
+
+.nav-highlight a {
+  color:#07B9FF;
+}
+
+.nav-highlight a:hover {
+  color:#0698D1;
 }

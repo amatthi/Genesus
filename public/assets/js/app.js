@@ -10674,7 +10674,7 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
         $scope.dash_view = 'settings';
       }
     }
-    
+
 });
 
 chisel.controller("homeController", function($scope, $rootScope) {
@@ -10687,6 +10687,7 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
     $scope.fonts = chisel_var.get('fonts');
     $scope.campaign_data = {};
     $scope.amazon_connect('tappyn');
+    
 
     $scope.init = function() {
         $scope.campaign_data.font_color = '#ffffff';
