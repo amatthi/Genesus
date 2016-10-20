@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div class="col-xs-12 col-sm-2 lil-pad" style="margin-top:-25px;">
         <ul class="nav nav-pills nav-stacked dash-nav lil-pad">
-            <li role="presentation" class="active"><a href="#campaigns">Campaigns</a></li>
+            <li role="presentation" class="active" ng-click="dash_view == 'campaigns'"><a href="#campaigns">Campaigns</a></li>
             <li role="presentation"><a href="#">Payouts</a></li>
-            <li role="presentation"><a href="#settings">Settings</a></li>
+            <li role="presentation" ng-click="dash_view = settings"><a href="#settings">Settings</a></li>
         </ul>
     </div>
     <div id="campaigns" class="col-xs-12 col-sm-10 lil-pad dash-campaigns" style="background-color:#F5F7F6;margin-left:-15px;padding-bottom:600px;">
@@ -67,15 +67,36 @@
                 <a style="cursor:pointer;"><span class="glyphicon glyphicon-trash"></span></a>
             </div>
         </div>
+        <div id="settings" class="col-xs-12 col-sm-10 lil-pad dash-campaigns" style="background-color:#F5F7F6;margin-left:-15px;">
+          <h2>Profile</h2>
+          <div class="col-xs-12 col-sm-10 campaign-overview">
+            <div class="col-xs-12 lil-pad">
+            <label class="col-xs-12 col-sm-3">Profile Picture</label>
+            <input id="profile-photo" type="file" name="file" class="col-xs-12 col-sm-6 inputfile" accept="image/*">
+            <img ng-src="{{profile_data.old_photo}}">
+          </div>
+          <div class="col-xs-12 lil-pad">
+            <label class="col-xs-12 col-sm-3">Biography</label>
+            <textarea ng-model="profile_data.biography" class="col-xs-12 col-sm-8"></textarea>
+          </div>
+          <div class="col-xs-12 lil-pad">
+            <label class="col-xs-12 col-sm-3">Email</label>
+            <input type="email" value="{{profile_data.email}}" ng-model="profile_data.email" class="col-xs-12 col-sm-3">
+           </div>
+           <div class="col-xs-12 lil-pad">
+            <label class="col-xs-12 col-sm-3">Password</label>
+            <input type="password" ng-model="profile_data.password" class="col-xs-12 col-sm-3">
+          </div>
+          <div class="col-xs-12 lil-pad">
+            <label class="col-xs-12 col-sm-3">Confirm Password</label>
+             <input type="password" ng-model="profile_data.password_confirmation" class="col-xs-12 col-sm-3">
+           </div>
+           <div class="col-xs-12 lil-pad text-center lil-pad-bottom">
+            <button ng-click="update_profile(profile_data)">Update</button>
+          </div>
+          </div>
+        </div>
     </div>
 
-    <div id="settings" class="col-xs-12 col-sm-10 lil-pad">
-        profile photo <input id="profile-photo" type="file" name="file" class="inputfile" accept="image/*">
-        <img ng-src="{{profile_data.old_photo}}">
-        Biography <textarea ng-model="profile_data.biography"></textarea>
-        email <input type="email" ng-model="profile_data.email">
-        password <input type="password" ng-model="profile_data.password">
-        confirm password <input type="password" ng-model="profile_data.password_confirmation">
-        <button ng-click="update_profile(profile_data)">update</button>
-    </div>
+
 </div>

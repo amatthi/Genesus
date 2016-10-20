@@ -1,6 +1,7 @@
 chisel.controller("dashboardController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
     $scope.campaigns = [];
     $scope.profile_data = {};
+    $scope.dash_view = 'campaigns';
 
     $scope.$on('is_login_done', function(event) {
     	$scope.profile_data = {};
