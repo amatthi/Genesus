@@ -120,6 +120,8 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         /********** launch **************/
+
+
         $scope.launch_step = 'create';
         $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75, sale_price: 24.99 };
         // $scope.amazon_connect('tappyn');
@@ -155,12 +157,14 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         $scope.submit_campaign = function(data) {
+            // data.product_id = $scope.defaultProductId;
+            // data.objectLayers = $scope.objectLayers;
             mainFactory.launch_campaign(data).then(function(r) {
                 //console.log(r);
                 window.onbeforeunload = null;
                 window.onhashchange = null;
                 alert('Your campaign has been saved!');
-                window.location = '/dashboard';
+                //window.location = '/dashboard';
             }, $scope.handle_error);
         }
 
@@ -168,7 +172,32 @@ chisel_launch.controller('CustomCtrl', [
             $scope.purposes = r.data;
             $scope.campaign_data.purpose = r.data[0];
             $scope.campaign_data.formula = r.data[0]['formulas'][0];
+            $scope.check_is_update();
         });
+
+        $scope.check_is_update = function() {
+            var campaign_id = window.location.pathname.match(/\d+/);
+            if (campaign_id) {
+                mainFactory.get_campaign_by_id(campaign_id[0]).then(function(r) {
+                    if (r.data.user_id != $scope.__user.id) {
+                        alert('this campaign is not yours');
+                        window.onbeforeunload = null;
+                        window.onhashchange = null;
+                        window.location = '/launch';
+                        return;
+                    }
+                    $scope.campaign_data = r.data;
+                    $scope.campaign_data.purpose = $scope.purposes.find(function(purpose){
+                        return purpose.key == $scope.campaign_data.purpose.key;
+                    });
+                    $scope.campaign_data.formula = $scope.campaign_data.purpose.formulas.find(function(formula){
+                        return formula.sku == $scope.campaign_data.formula.sku;
+                    });
+
+                    // $scope.loadProduct($scope.defaultProductTitle, $scope.defaultProductImage, $scope.defaultProductId, $scope.defaultPrice, $scope.defaultCurrency);
+                }, $scope.handle_error);
+            }
+        }
 
         $scope.$on('canvas:created', function() {
             var base_url = window.location.href.split('#')[0];
@@ -222,8 +251,7 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         $scope.test = function() {
-            $scope.campaign_data.purpose = 'reen-coffee-bean-extract';
-            console.log($scope.campaign_data);
+            console.log($scope.fabric.canvasLayers());
         }
     }
 ]);
@@ -294,6 +322,14 @@ chisel_launch.factory("mainFactory", function($http) {
                 'Content-type': 'application/x-www-form-urlencoded'
             }
         });
+    }
+
+    fact.get_campaign_by_id = function(id) {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/get_by_id/' + id,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
     }
     return fact;
 });

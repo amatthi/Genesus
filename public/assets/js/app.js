@@ -10614,11 +10614,21 @@ chisel.directive('customOnChange', function() {
     };
 });
 
-chisel.controller("campaignController", function($scope, $rootScope,$routeParams, mainFactory, chisel_var) {
+chisel.controller("campaignController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
     $scope.campaign_data = {};
     mainFactory.get_campaign($routeParams.slug).then(function(r) {
         $scope.campaign_data = r.data;
     }, $scope.handle_error);
+
+    $scope.add_ingredient_path = function(ingredient) {
+        return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
+    }
+
+    $scope.buy_campaign = function() {
+        mainFactory.buy_campaign($scope.campaign_data).then(function(r) {
+            console.log(r);
+        }, $scope.handle_error);
+    }
 
 });
 
@@ -10871,7 +10881,15 @@ chisel.factory("mainFactory", function($http) {
     fact.get_campaign = function(slug) {
         return $http({
             method: 'GET',
-            url: '/api/campaign/get_by_slug/'+slug,
+            url: '/api/campaign/get_by_slug/' + slug,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
+
+    fact.get_campaign_by_id = function(id) {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/get_by_id/' + id,
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         })
     }
@@ -10884,10 +10902,19 @@ chisel.factory("mainFactory", function($http) {
         })
     }
 
-    fact.update_profile = function(data){
+    fact.update_profile = function(data) {
         return $http({
             method: 'POST',
             url: '/api/profile',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            data: $.param(data)
+        })
+    }
+
+    fact.buy_campaign = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/api/buy/' + data.id,
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             data: $.param(data)
         })

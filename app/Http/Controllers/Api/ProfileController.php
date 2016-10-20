@@ -17,7 +17,9 @@ class ProfileController extends Controller
     public function is_login()
     {
         $user = Auth::user();
-        $user->profile;
+        if ($user) {
+            $user->profile;
+        }
         return [
             'user' => $user,
         ];

@@ -32,9 +32,18 @@ class CampaignController extends Controller
         ]);
         $db_cols = ['goal'];
         $slug    = str_slug($request->input('slug'), '-');
-        $tmp     = new Campaign();
-        if ($tmp->findBySlug($slug)) {
-            return response(['slug' => ['Please enter a url on Step 3 to Save!']], 422);
+        $tmp     = Campaign::where('slug', $slug)->first();
+        if ($tmp) {
+            if ($tmp->id != $request->input('id')) {
+                return response(['slug' => ['Please enter a url on Step 3 to Save!']], 422);
+            }
+        }
+        $update_id = $request->input('id');
+        if ($update_id) {
+            $tmp = Campaign::findOrFail($update_id);
+            if ($tmp->user_id != Auth::user()->id) {
+                return response(['auth' => ['You are not the owner']], 422);
+            }
         }
 
         if ($request->input('png64')) {
@@ -45,22 +54,26 @@ class CampaignController extends Controller
             $s3->put($filePath, $img, 'public');
         }
 
-        $data                         = $request->only($db_cols);
-        $data['title']                = ($request->input('title')) ? $request->input('title') : '';
-        $data['description']          = ($request->input('description')) ? $request->input('description') : '';
-        $data['user_id']              = Auth::user()->id;
-        $data['slug']                 = $slug;
-        $data['end_at']               = date('Y-m-d H:i:s', strtotime('+' . $request->input('length') . 'days'));
+        $data                = $request->only($db_cols);
+        $data['title']       = ($request->input('title')) ? $request->input('title') : '';
+        $data['description'] = ($request->input('description')) ? $request->input('description') : '';
+        $data['user_id']     = Auth::user()->id;
+        $data['slug']        = $slug;
+        $data['end_at']      = date('Y-m-d H:i:s', strtotime('+' . $request->input('length') . 'days'));
+
         $data['others']               = $request->except($db_cols);
         $data['others']['bottle_img'] = isset($s3) ? $s3->url($filePath) : '';
         $data['others']['purpose']    = $data['others']['purpose']['key'];
         $data['others']['formula']    = $data['others']['formula']['sku'];
+        unset($data['others']['others']);
         unset($data['others']['png64']);
-        return Campaign::create($data);
+        return Campaign::updateOrCreate(['id' => $update_id], $data);
     }
 
     public function get(Campaign $campaign)
     {
+        $campaign->orders;
+        $campaign->goal_count = count($campaign->orders);
         return $campaign;
     }
 
