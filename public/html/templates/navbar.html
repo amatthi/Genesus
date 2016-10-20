@@ -13,16 +13,16 @@
                         Sell</a>
                     </li>
                     <li ng-show="!__user.email">
-                        <a href="javascript:void(0)" ng-click="set_module('login')">Login</a>
+                        <a class="new-campaign" href="javascript:void(0)" ng-click="set_module('login')">Login</a>
                     </li>
                     <li ng-show="!__user.email">
-                        <a href="javascript:void(0)" ng-click="set_module('register')">Register</a>
+                        <a class="new-campaign" href="javascript:void(0)" ng-click="set_module('register')">Register</a>
                     </li>
                     <li ng-show="__user.email">
-                        <a href="/dashboard">{{__user.email}}</a>
+                        <a class="new-campaign" href="/dashboard">{{__user.email}}</a>
                     </li>
                     <li ng-show="__user.email">
-                        <a href="javascript:void(0)" ng-click="logout()">Logout</a>
+                        <a class="new-campaign" href="javascript:void(0)" ng-click="logout()">Logout</a>
                     </li>
                 </ul>
             </nav>

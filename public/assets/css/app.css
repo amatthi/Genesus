@@ -184,7 +184,7 @@ position: relative;
 
 .hero-content h1 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 60px;
     color:#07B9FF;
     cursor: default;
@@ -193,8 +193,8 @@ position: relative;
 @media (min-width:641px) {
 .hero-content h1 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
-    font-size: 80px;
+    font-weight: 300;
+    font-size: 60px;
     margin-top: 50px;
     color:#07B9FF;
     cursor: default;
@@ -374,8 +374,8 @@ position: relative;
 }
 
 .home-section h2 {
-  font-size: 50px;
-  font-weight: 200;
+  font-size: 30px;
+  font-weight: 300;
   cursor: default;
 }
 
