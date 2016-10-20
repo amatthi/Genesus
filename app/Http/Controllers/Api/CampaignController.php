@@ -72,6 +72,8 @@ class CampaignController extends Controller
 
     public function get(Campaign $campaign)
     {
+        $campaign->orders;
+        $campaign->goal_count = count($campaign->orders);
         return $campaign;
     }
 

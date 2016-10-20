@@ -22,6 +22,11 @@ class Campaign extends Model
         return $this->hasOne('App\User');
     }
 
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+
     public function getBlendNameAttribute()
     {
         return isset($this->others['blend_name']) ? $this->others['blend_name'] : '';
