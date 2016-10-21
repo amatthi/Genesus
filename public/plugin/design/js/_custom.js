@@ -159,6 +159,7 @@ chisel_launch.controller('CustomCtrl', [
         $scope.submit_campaign = function(data) {
             // data.product_id = $scope.defaultProductId;
             // data.objectLayers = $scope.objectLayers;
+            data.status = 'draft';
             mainFactory.launch_campaign(data).then(function(r) {
                 //console.log(r);
                 window.onbeforeunload = null;

@@ -28,6 +28,17 @@
 
 - run `php dep deploy production`
 
+## pull
+# sometimes pull needs do something new in command line
+
+- run `composer update`
+
+- run `php artisan migrate`
+
+- run `npm install`
+
+- run `gulp`
+
 ## add a page
 
 - create `example.html` at `/public/html`

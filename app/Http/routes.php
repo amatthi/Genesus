@@ -37,6 +37,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
         Route::post('campaign/launch', 'CampaignController@launch');
         Route::post('pay', 'OrderController@pay');
         Route::post('profile', 'ProfileController@updateProfile');
+        Route::get('profile/payment', 'ProfileController@getPayment');
     });
 });
 

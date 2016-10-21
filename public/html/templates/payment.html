@@ -1,4 +1,7 @@
-<div class="container modal_actions col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+<div class="container modal_actions col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3" style="background-color: white">
+    <div ng-show="__user.card_brand">
+        <button ng-click="submit_payment()">use saved payment ({{__user.card_brand}} ,card last four{{__user.card_last_four}})</button>
+    </div>
     <form method="POST" id="payment-form" ng-submit="stripe_get_token()">
         <span class="payment-errors"></span>
         <div class="form-row">

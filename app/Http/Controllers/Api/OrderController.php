@@ -20,7 +20,7 @@ class OrderController extends Controller
         $user   = Auth::user();
         $result = false;
         $post   = $request->all();
-        if ($post['token']) {
+        if (isset($post['token'])) {
             $this->check_token($post['token']);
         } else if (!$user->hasStripeId()) {
             return response(['stripe' => ['Payment method not found']], 422);

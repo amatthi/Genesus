@@ -1,6 +1,6 @@
 chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
     $scope.now_module = '';
-    $scope.template_v = '1.8';
+    $scope.template_v = '1.9';
     $scope.__user = {};
     $scope.__s = {};
     $scope.__payment = {};
@@ -91,7 +91,10 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     }
 
     $scope.open_payment = function() {
-        $scope.set_module('payment');
+        mainFactory.get_payment().then(function(r){
+            $scope.__user = (r.data.user) ? r.data.user : $scope.__user;
+            $scope.set_module('payment');
+        },$scope.handle_error);
     }
 
     $scope.stripe_get_token = function() {

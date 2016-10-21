@@ -66,4 +66,15 @@ class ProfileController extends Controller
 
         return $user;
     }
+
+    public function getPayment()
+    {
+        $user = Auth::user();
+        if ($user) {
+            $user->makeVisible(['card_brand', 'card_last_four']);
+        }
+        return [
+            'user' => $user,
+        ];
+    }
 }

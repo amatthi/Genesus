@@ -104,5 +104,13 @@ chisel.factory("mainFactory", function($http) {
             data: $.param(data)
         })
     }
+
+    fact.get_payment = function() {
+        return $http({
+            method: 'GET',
+            url: '/api/profile/payment',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
     return fact;
 })

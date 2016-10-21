@@ -10614,6 +10614,129 @@ chisel.directive('customOnChange', function() {
     };
 });
 
+chisel.filter('capitalize', function() {
+    return function(input) {
+      return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+    }
+});
+
+chisel.factory("mainFactory", function($http) {
+    var fact = {};
+
+    fact.register = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/register',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            'data': $.param(data)
+        });
+    }
+
+    fact.is_login = function() {
+        return $http({
+            method: 'GET',
+            url: '/api/is_login',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            }
+        });
+    }
+
+    fact.logout = function() {
+        return $http({
+            method: 'GET',
+            url: '/logout',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            }
+        });
+    }
+
+    fact.login = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/login',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            'data': $.param(data)
+        });
+    }
+
+    fact.launch_campaign = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/api/campaign/launch',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            'data': $.param(data)
+        });
+    }
+
+    fact.aws_key = function(bucket) {
+        return $http({
+            method: 'POST',
+            url: '/api/amazon/get_token',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            data: $.param({ bucket: bucket })
+        })
+    }
+
+    fact.get_campaign = function(slug) {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/get_by_slug/' + slug,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
+
+    fact.get_campaign_by_id = function(id) {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/get_by_id/' + id,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
+
+    fact.dashboard_campaigns = function() {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/dashboard',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
+
+    fact.update_profile = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/api/profile',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            data: $.param(data)
+        })
+    }
+
+    fact.pay = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/api/pay',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            data: $.param(data)
+        })
+    }
+
+    fact.get_payment = function() {
+        return $http({
+            method: 'GET',
+            url: '/api/profile/payment',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
+    return fact;
+})
+
 chisel.controller("campaignController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
     $scope.campaign_data = {};
 
@@ -10741,7 +10864,7 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
 
 chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
     $scope.now_module = '';
-    $scope.template_v = '1.8';
+    $scope.template_v = '1.9';
     $scope.__user = {};
     $scope.__s = {};
     $scope.__payment = {};
@@ -10832,7 +10955,10 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     }
 
     $scope.open_payment = function() {
-        $scope.set_module('payment');
+        mainFactory.get_payment().then(function(r){
+            $scope.__user = (r.data.user) ? r.data.user : $scope.__user;
+            $scope.set_module('payment');
+        },$scope.handle_error);
     }
 
     $scope.stripe_get_token = function() {
@@ -10863,112 +10989,3 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
         },$scope.handle_error);
     }
 });
-
-chisel.factory("mainFactory", function($http) {
-    var fact = {};
-
-    fact.register = function(data) {
-        return $http({
-            method: 'POST',
-            url: '/register',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            },
-            'data': $.param(data)
-        });
-    }
-
-    fact.is_login = function() {
-        return $http({
-            method: 'GET',
-            url: '/api/is_login',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            }
-        });
-    }
-
-    fact.logout = function() {
-        return $http({
-            method: 'GET',
-            url: '/logout',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            }
-        });
-    }
-
-    fact.login = function(data) {
-        return $http({
-            method: 'POST',
-            url: '/login',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            },
-            'data': $.param(data)
-        });
-    }
-
-    fact.launch_campaign = function(data) {
-        return $http({
-            method: 'POST',
-            url: '/api/campaign/launch',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            },
-            'data': $.param(data)
-        });
-    }
-
-    fact.aws_key = function(bucket) {
-        return $http({
-            method: 'POST',
-            url: '/api/amazon/get_token',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            data: $.param({ bucket: bucket })
-        })
-    }
-
-    fact.get_campaign = function(slug) {
-        return $http({
-            method: 'GET',
-            url: '/api/campaign/get_by_slug/' + slug,
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        })
-    }
-
-    fact.get_campaign_by_id = function(id) {
-        return $http({
-            method: 'GET',
-            url: '/api/campaign/get_by_id/' + id,
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        })
-    }
-
-    fact.dashboard_campaigns = function() {
-        return $http({
-            method: 'GET',
-            url: '/api/campaign/dashboard',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        })
-    }
-
-    fact.update_profile = function(data) {
-        return $http({
-            method: 'POST',
-            url: '/api/profile',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            data: $.param(data)
-        })
-    }
-
-    fact.pay = function(data) {
-        return $http({
-            method: 'POST',
-            url: '/api/pay',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            data: $.param(data)
-        })
-    }
-    return fact;
-})
