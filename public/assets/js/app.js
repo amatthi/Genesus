@@ -10616,20 +10616,30 @@ chisel.directive('customOnChange', function() {
 
 chisel.controller("campaignController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
     $scope.campaign_data = {};
-    mainFactory.get_campaign($routeParams.slug).then(function(r) {
-        $scope.campaign_data = r.data;
-    }, $scope.handle_error);
+
+    $scope.get_campaign = function() {
+        mainFactory.get_campaign($routeParams.slug).then(function(r) {
+            $scope.campaign_data = r.data;
+        }, $scope.handle_error);
+    }
+    $scope.get_campaign();
+
 
     $scope.add_ingredient_path = function(ingredient) {
         return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
     }
 
     $scope.buy_campaign = function() {
-        mainFactory.buy_campaign($scope.campaign_data).then(function(r) {
-            console.log(r);
-        }, $scope.handle_error);
+        $scope.__payment.type = 'buy_campaign';
+        $scope.__payment.data = $scope.campaign_data;
+        $scope.open_payment();
     }
 
+    $scope.$on('payment_done', function() {
+        $scope.set_module();
+        alert('buy campaign complete!');
+        $scope.get_campaign();
+    });
 });
 
 chisel.controller("dashboardController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
@@ -10723,9 +10733,10 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
 
 chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
     $scope.now_module = '';
-    $scope.template_v = '1.6';
+    $scope.template_v = '1.7';
     $scope.__user = {};
     $scope.__s = {};
+    $scope.__payment = {};
 
     $("body").on('click', '.darken', function(event) {
         if (event.target !== this) {
@@ -10810,6 +10821,38 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
             $scope.__s.aws.file_url = url + new_name;
             $scope.$broadcast('amazon_uploaded');
         });
+    }
+
+    $scope.open_payment = function() {
+        $scope.set_module('payment');
+    }
+
+    $scope.stripe_get_token = function() {
+        var $form = $('#payment-form');
+        $form.find('.submit').prop('disabled', true);
+        Stripe.card.createToken($form, $scope.stripeResponseHandler);
+        return false;
+    }
+
+    $scope.stripeResponseHandler = function(status, response) {
+        var $form = $('#payment-form');
+        if (response.error) {
+            $form.find('.payment-errors').text(response.error.message);
+            $form.find('.submit').prop('disabled', false);
+        } else {
+            $scope.__payment.token = response.id;
+            $scope.submit_payment();
+            //$scope.$broadcast('stripe_token_get');
+        }
+    };
+
+    $scope.submit_payment = function() {
+        mainFactory.pay($scope.__payment).then(function(r){
+            var $form = $('#payment-form');
+            $form.find('.submit').prop('disabled', false);
+            $scope.__payment.r = r.data;
+            $scope.$broadcast('payment_done');
+        },$scope.handle_error);
     }
 });
 
@@ -10911,10 +10954,10 @@ chisel.factory("mainFactory", function($http) {
         })
     }
 
-    fact.buy_campaign = function(data) {
+    fact.pay = function(data) {
         return $http({
             method: 'POST',
-            url: '/api/buy/' + data.id,
+            url: '/api/pay',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             data: $.param(data)
         })

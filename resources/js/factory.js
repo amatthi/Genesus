@@ -96,10 +96,10 @@ chisel.factory("mainFactory", function($http) {
         })
     }
 
-    fact.buy_campaign = function(data) {
+    fact.pay = function(data) {
         return $http({
             method: 'POST',
-            url: '/api/buy/' + data.id,
+            url: '/api/pay',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             data: $.param(data)
         })

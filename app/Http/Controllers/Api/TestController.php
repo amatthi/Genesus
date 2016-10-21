@@ -16,12 +16,7 @@ class TestController extends Controller
     protected function test()
     {
         echo 'hi test';
-        $a = Auth::user()->profile;
-        if(!$a){
-        	$a = new Profile;
-        	$a->photo = '123';
-        	$a->save();
-        }
+        $a = Auth::user()->charge(100);
         dd($a);
     }
 }
