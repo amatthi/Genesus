@@ -10635,6 +10635,7 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
 chisel.controller("dashboardController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
     $scope.campaigns = [];
     $scope.profile_data = {};
+    $scope.campaign_data = {};
     $scope.dash_view = "campaigns";
 
     $scope.$on('is_login_done', function(event) {
@@ -10687,7 +10688,6 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
     $scope.fonts = chisel_var.get('fonts');
     $scope.campaign_data = {};
     $scope.amazon_connect('tappyn');
-    
 
     $scope.init = function() {
         $scope.campaign_data.font_color = '#ffffff';
