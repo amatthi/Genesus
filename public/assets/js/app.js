@@ -10645,12 +10645,15 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
 chisel.controller("dashboardController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
     $scope.campaigns = [];
     $scope.profile_data = {};
+    $scope.dash_view = "campaigns";
 
     $scope.$on('is_login_done', function(event) {
     	$scope.profile_data = {};
         $scope.profile_data.email = $scope.__user.email;
         $scope.profile_data.biography = $scope.__user.profile.biography;
         $scope.profile_data.old_photo = $scope.__user.profile.photo;
+        $scope.profile_data.brand = $scope.__user.profile.brand;
+        $scope.profile_data.website = $scope.__user.profile.website;
     });
     $scope.is_login();
 
@@ -10674,6 +10677,14 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
             $scope.is_login();
         }, $scope.handle_error);
     }
+    $scope.dash_set = function(view) {
+      if (view == 'campaigns') {
+        $scope.dash_view = 'campaigns';
+      } else if (view == 'settings') {
+        $scope.dash_view = 'settings';
+      }
+    }
+
 });
 
 chisel.controller("homeController", function($scope, $rootScope) {
@@ -10686,6 +10697,7 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
     $scope.fonts = chisel_var.get('fonts');
     $scope.campaign_data = {};
     $scope.amazon_connect('tappyn');
+    
 
     $scope.init = function() {
         $scope.campaign_data.font_color = '#ffffff';
