@@ -31,7 +31,7 @@
 ## pull
 sometimes pull needs do something new in command line
 
-- check `.env` file`s field is like `.env.example` , if not , fill `.env` file with `.env.example`
+- check `.env` file's field is like `.env.example` , if not , fill `.env` file with `.env.example`
 
 - run `composer update`
 
