@@ -7,7 +7,7 @@
         </ul>
     </div>
     <div class="col-xs-12 col-sm-10 lil-pad dash-campaigns dash-style">
-        <div id="campaigns" ng-if="dash_view == 'campaigns'">
+        <div id="campaigns" ng-show="dash_view == 'campaigns'">
             <div class="alert alert-warning alert-dismissible" role="alert">
                 <button class="close" data-dismiss="alert" type="button">
                     <span aria-hidden="true">&times;</span>
@@ -76,40 +76,40 @@
                 </div>
             </div>
         </div>
-        <div ng-if="dash_view == 'settings'" id="settings">
-            <h2>Profile</h2>
+        <div ng-show="dash_view == 'settings'" id="settings">
+            <h2>Profile</h2> {{profile_data}}
             <div class="col-xs-12 col-sm-10 campaign-overview">
                 <div class="col-xs-12 lil-pad">
-                    <label class="col-xs-12 col-sm-3">Profile Picture
-                    </label>
+                    <label class="col-xs-12 col-sm-3">Profile Picture</label>
                     <input accept="image/*" class="col-xs-12 col-sm-6 inputfile" id="profile-photo" name="file" type="file">
-                    <img></div>
+                    <img ng-src="{{profile_data.old_photo}}">
+                </div>
                 <div class="col-xs-12 lil-pad">
                     <label class="col-xs-12 col-sm-3">Brand Name</label>
-                    <textarea class="col-xs-12 col-sm-8"></textarea>
+                    <textarea class="col-xs-12 col-sm-8" ng-model="profile_data.brand_name"></textarea>
                 </div>
                 <div class="col-xs-12 lil-pad">
                     <label class="col-xs-12 col-sm-3">Biography</label>
-                    <textarea class="col-xs-12 col-sm-8"></textarea>
+                    <textarea class="col-xs-12 col-sm-8" ng-model="profile_data.biography"></textarea>
                 </div>
                 <div class="col-xs-12 lil-pad">
                     <label class="col-xs-12 col-sm-3">Website</label>
-                    <textarea class="col-xs-12 col-sm-8"></textarea>
+                    <textarea class="col-xs-12 col-sm-8" ng-model="profile_data.website"></textarea>
                 </div>
                 <div class="col-xs-12 lil-pad">
                     <label class="col-xs-12 col-sm-3">Email</label>
-                    <input class="col-xs-12 col-sm-3" type="email" value="{{profile_data.email}}">
+                    <input class="col-xs-12 col-sm-3" type="email" ng-model="profile_data.email">
                 </div>
                 <div class="col-xs-12 lil-pad">
                     <label class="col-xs-12 col-sm-3">Password</label>
-                    <input class="col-xs-12 col-sm-3" type="password">
+                    <input class="col-xs-12 col-sm-3" type="password" ng-model="profile_data.password">
                 </div>
                 <div class="col-xs-12 lil-pad">
                     <label class="col-xs-12 col-sm-3">Confirm Password</label>
-                    <input class="col-xs-12 col-sm-3" type="password">
+                    <input class="col-xs-12 col-sm-3" type="password" ng-model="profile_data.password_confirmation">
                 </div>
                 <div class="col-xs-12 lil-pad text-center lil-pad-bottom">
-                    <button>Update</button>
+                    <button ng-click="update_profile(profile_data)">Update</button>
                 </div>
             </div>
         </div>

@@ -10648,11 +10648,11 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
     $scope.dash_view = 'campaigns';
 
     $scope.$on('is_login_done', function(event) {
-    	$scope.profile_data = {};
+        $scope.profile_data = {};
         $scope.profile_data.email = $scope.__user.email;
         $scope.profile_data.biography = $scope.__user.profile.biography;
         $scope.profile_data.old_photo = $scope.__user.profile.photo;
-        $scope.profile_data.brand = $scope.__user.profile.brand;
+        $scope.profile_data.brand_name = $scope.__user.profile.brand_name;
         $scope.profile_data.website = $scope.__user.profile.website;
     });
     $scope.is_login();
@@ -10673,17 +10673,13 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
 
     $scope.update_profile = function(profile_data) {
         mainFactory.update_profile(profile_data).then(function(r) {
-        	alert('update profile success');
+            alert('update profile success');
             $scope.is_login();
         }, $scope.handle_error);
     }
 
     $scope.dash_set = function(view) {
-      if (view == 'campaigns') {
-        $scope.dash_view = 'campaigns';
-      } else if (view == 'settings') {
-        $scope.dash_view = 'settings';
-      }
+        $scope.dash_view = view;
     }
 
 });
@@ -10745,7 +10741,7 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
 
 chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
     $scope.now_module = '';
-    $scope.template_v = '1.7';
+    $scope.template_v = '1.8';
     $scope.__user = {};
     $scope.__s = {};
     $scope.__payment = {};

@@ -29,9 +29,11 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         $this->validate($request, [
-            'email'     => 'required|email|max:255|unique:users,email,' . $user->id,
-            'biography' => 'max:500',
-            'password'  => 'min:6|confirmed',
+            'email'      => 'required|email|max:255|unique:users,email,' . $user->id,
+            'biography'  => 'max:500',
+            'website'    => 'max:255',
+            'brand_name' => 'max:255',
+            'password'   => 'min:6|confirmed',
         ]);
 
         $profile = $user->profile;
@@ -51,7 +53,9 @@ class ProfileController extends Controller
             $profile->photo = $s3->url($filePath);
         }
 
-        $profile->biography = ($request->input('biography')) ? $request->input('biography') : '';
+        $profile->website    = $request->input('website');
+        $profile->brand_name = $request->input('brand_name');
+        $profile->biography  = ($request->input('biography')) ? $request->input('biography') : '';
         $profile->save();
 
         $user->email = $request->input('email');
