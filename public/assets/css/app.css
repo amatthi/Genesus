@@ -703,9 +703,18 @@ footer {
   padding: 5px;
 }
 
+.input-width-1 {
+  width: 100% !important;
+}
+
 .tab-select {
   margin-right: 10px;
   width: 60%;
+}
+
+.tab-select-1 {
+  border:none !important;
+  background-color: #F4F5F7 !important;
 }
 
 /**@media (max-width: 1252px) {
@@ -1172,4 +1181,10 @@ a {
 
 .nav-highlight a:hover {
   color:#0698D1;
+}
+
+.products-style option {
+  border: 1px solid #d8dddf;
+  background-color: #fff;
+  height: 86px;
 }
