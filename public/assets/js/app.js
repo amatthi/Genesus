@@ -10614,214 +10614,9 @@ chisel.directive('customOnChange', function() {
     };
 });
 
-chisel.controller("campaignController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
-    $scope.campaign_data = {};
-    mainFactory.get_campaign($routeParams.slug).then(function(r) {
-        $scope.campaign_data = r.data;
-    }, $scope.handle_error);
-
-    $scope.add_ingredient_path = function(ingredient) {
-        return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
-    }
-
-    $scope.buy_campaign = function() {
-        mainFactory.buy_campaign($scope.campaign_data).then(function(r) {
-            console.log(r);
-        }, $scope.handle_error);
-    }
-
-});
-
-chisel.controller("dashboardController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
-    $scope.campaigns = [];
-    $scope.profile_data = {};
-    $scope.campaign_data = {};
-    $scope.dash_view = "campaigns";
-
-    $scope.$on('is_login_done', function(event) {
-    	$scope.profile_data = {};
-        $scope.profile_data.email = $scope.__user.email;
-        $scope.profile_data.biography = $scope.__user.profile.biography;
-        $scope.profile_data.old_photo = $scope.__user.profile.photo;
-        $scope.profile_data.brand = $scope.__user.profile.brand;
-        $scope.profile_data.website = $scope.__user.profile.website;
-    });
-    $scope.is_login();
-
-    mainFactory.dashboard_campaigns().then(function(r) {
-        $scope.campaigns = r.data;
-    }, $scope.handle_error);
-
-    $scope.add_profile_photo = function() {
-        var f = document.getElementById('profile-photo').files[0],
-            r = new FileReader();
-        r.onloadend = function(e) {
-            $scope.profile_data.photo = e.target.result;
-        }
-        r.readAsDataURL(f);
-    }
-    angular.element(document.querySelector('#profile-photo')).on('change', $scope.add_profile_photo);
-
-    $scope.update_profile = function(profile_data) {
-        mainFactory.update_profile(profile_data).then(function(r) {
-        	alert('update profile success');
-            $scope.is_login();
-        }, $scope.handle_error);
-    }
-    $scope.dash_set = function(view) {
-      if (view == 'campaigns') {
-        $scope.dash_view = 'campaigns';
-      } else if (view == 'settings') {
-        $scope.dash_view = 'settings';
-      }
-    }
-
-});
-
-chisel.controller("homeController", function($scope, $rootScope) {
-    $scope.var = 'var is here';
-});
-
-chisel.controller("launchController", function($scope, $rootScope, mainFactory, chisel_var) {
-    $scope.launch_step = 'create';
-    $scope.var = 'var is here';
-    $scope.fonts = chisel_var.get('fonts');
-    $scope.campaign_data = {};
-    $scope.amazon_connect('tappyn');
-
-    $scope.init = function() {
-        $scope.campaign_data.font_color = '#ffffff';
-        $scope.campaign_data.cap_color = '#ffffff';
-        $scope.campaign_data.front = true;
-        $scope.campaign_data.back = false;
-        //$scope.campaign_data.art = 'https://tappyn.s3.amazonaws.com/lo_art1476026650592_42801';
-    }
-    $scope.init();
-
-    $scope.launch_step_create = function() {
-        return $scope.launch_step == 'create'
-    };
-
-    $scope.launch_step_goal = function() {
-        return $scope.launch_step == 'goal'
-    };
-
-    $scope.launch_step_desc = function() {
-        return $scope.launch_step == 'desc'
-    };
-
-    $scope.set_step = function(step) {
-        if (false) {
-
-        } else {
-            $scope.launch_step = step;
-        }
-    }
-
-    $scope.submit_campaign = function(data) {
-        mainFactory.launch_campaign(data).then(function(r) {
-            alert('Your campaign has been saved!');
-        }, $scope.handle_error);
-    }
-
-    $scope.refresh_bottle = function() {
-        $("#bottle-div").css('font-family', $scope.campaign_data.font);
-    }
-
-    $scope.$on('amazon_uploaded', function(event) {
-        $scope.campaign_data.art = $scope.__s.aws.file_url;
-    });
-});
-
-chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
-    $scope.now_module = '';
-    $scope.template_v = '1.6';
-    $scope.__user = {};
-    $scope.__s = {};
-
-    $("body").on('click', '.darken', function(event) {
-        if (event.target !== this) {
-            return;
-        }
-        $scope.set_module();
-        $scope.$apply();
-    });
-
-    $scope.set_module = function(name) {
-        $scope.now_module = (name) ? name : '';
-    }
-
-    $scope.register = function(data) {
-        mainFactory.register(data).then(function(r) {
-            $scope.__user = r.data.user;
-            $scope.set_module();
-        }, $scope.handle_error);
-    }
-
-    $scope.handle_error = function(response) {
-        // console.log(response);
-        if (response.status == 422) {
-            var data = response.data;
-            for (var i in data) {
-                alert(data[i]);
-            }
-        } else if (response.status == 401) {
-            alert('must login');
-        }
-    }
-
-    $scope.is_login = function() {
-        mainFactory.is_login().then(function(r) {
-            $scope.__user = (r.data.user) ? r.data.user : {};
-            $scope.$broadcast('is_login_done');
-        });
-    }
-    $scope.is_login();
-
-    $scope.logout = function() {
-        mainFactory.logout().then(function(r) {
-            $scope.__user = {};
-        }, $scope.handle_error);
-    }
-
-    $scope.login = function(data) {
-        mainFactory.login(data).then(function(r) {
-            $scope.__user = (r.data.user) ? r.data.user : {};
-            $scope.set_module();
-        }, $scope.handle_error);
-    }
-
-    $scope.amazon_connect = function(bucket) {
-        mainFactory.aws_key(bucket).success(function(r) {
-            $scope.__s.aws = r;
-        });
-    }
-
-    $scope.amazon_upload = function($files, arg) {
-        arg = (arg) ? arg : '';
-        var aws = $scope.__s.aws;
-        var file = $files[0];
-        var url = aws.base_url;
-        var new_name = Date.now();
-        var rando = Math.floor(Math.random() * 100000);
-        new_name = 'lo_' + arg + new_name.toString() + '_' + rando.toString();
-        $upload.upload({
-            url: url,
-            method: 'POST',
-            data: {
-                key: new_name,
-                acl: 'public-read',
-                "Content-Type": file.type === null || file.type === '' ?
-                    'application/octet-stream' : file.type,
-                AWSAccessKeyId: aws.key,
-                policy: aws.policy,
-                signature: aws.signature
-            },
-            file: file,
-        }).success(function() {
-            $scope.__s.aws.file_url = url + new_name;
-            $scope.$broadcast('amazon_uploaded');
-        });
+chisel.filter('capitalize', function() {
+    return function(input) {
+      return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
     }
 });
 
@@ -10923,13 +10718,275 @@ chisel.factory("mainFactory", function($http) {
         })
     }
 
-    fact.buy_campaign = function(data) {
+    fact.pay = function(data) {
         return $http({
             method: 'POST',
-            url: '/api/buy/' + data.id,
+            url: '/api/pay',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             data: $.param(data)
         })
     }
+
+    fact.get_payment = function() {
+        return $http({
+            method: 'GET',
+            url: '/api/profile/payment',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
     return fact;
 })
+
+chisel.controller("campaignController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
+    $scope.campaign_data = {};
+
+    $scope.get_campaign = function() {
+        mainFactory.get_campaign($routeParams.slug).then(function(r) {
+            $scope.campaign_data = r.data;
+        }, $scope.handle_error);
+    }
+    $scope.get_campaign();
+
+
+    $scope.add_ingredient_path = function(ingredient) {
+        return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
+    }
+
+    $scope.buy_campaign = function() {
+        $scope.__payment.type = 'buy_campaign';
+        $scope.__payment.data = $scope.campaign_data;
+        $scope.open_payment();
+    }
+
+    $scope.$on('payment_done', function() {
+        $scope.set_module();
+        alert('buy campaign complete!');
+        $scope.get_campaign();
+    });
+});
+
+chisel.controller("dashboardController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
+    $scope.campaigns = [];
+    $scope.profile_data = {};
+    $scope.campaign_data = {};
+    $scope.dash_view = 'campaigns';
+
+    $scope.$on('is_login_done', function(event) {
+        $scope.profile_data = {};
+        $scope.profile_data.email = $scope.__user.email;
+        $scope.profile_data.biography = $scope.__user.profile.biography;
+        $scope.profile_data.old_photo = $scope.__user.profile.photo;
+        $scope.profile_data.brand_name = $scope.__user.profile.brand_name;
+        $scope.profile_data.website = $scope.__user.profile.website;
+    });
+    $scope.is_login();
+
+    mainFactory.dashboard_campaigns().then(function(r) {
+        $scope.campaigns = r.data;
+    }, $scope.handle_error);
+
+    $scope.add_profile_photo = function() {
+        var f = document.getElementById('profile-photo').files[0],
+            r = new FileReader();
+        r.onloadend = function(e) {
+            $scope.profile_data.photo = e.target.result;
+        }
+        r.readAsDataURL(f);
+    }
+    angular.element(document.querySelector('#profile-photo')).on('change', $scope.add_profile_photo);
+
+    $scope.update_profile = function(profile_data) {
+        mainFactory.update_profile(profile_data).then(function(r) {
+            alert('update profile success');
+            $scope.is_login();
+        }, $scope.handle_error);
+    }
+
+    $scope.dash_set = function(view) {
+        $scope.dash_view = view;
+    }
+
+});
+
+chisel.controller("homeController", function($scope, $rootScope) {
+    $scope.var = 'var is here';
+});
+
+chisel.controller("launchController", function($scope, $rootScope, mainFactory, chisel_var) {
+    $scope.launch_step = 'create';
+    $scope.var = 'var is here';
+    $scope.fonts = chisel_var.get('fonts');
+    $scope.campaign_data = {};
+    $scope.amazon_connect('tappyn');
+
+    $scope.init = function() {
+        $scope.campaign_data.font_color = '#ffffff';
+        $scope.campaign_data.cap_color = '#ffffff';
+        $scope.campaign_data.front = true;
+        $scope.campaign_data.back = false;
+        //$scope.campaign_data.art = 'https://tappyn.s3.amazonaws.com/lo_art1476026650592_42801';
+    }
+    $scope.init();
+
+    $scope.launch_step_create = function() {
+        return $scope.launch_step == 'create'
+    };
+
+    $scope.launch_step_goal = function() {
+        return $scope.launch_step == 'goal'
+    };
+
+    $scope.launch_step_desc = function() {
+        return $scope.launch_step == 'desc'
+    };
+
+    $scope.set_step = function(step) {
+        if (false) {
+
+        } else {
+            $scope.launch_step = step;
+        }
+    }
+
+    $scope.submit_campaign = function(data) {
+        mainFactory.launch_campaign(data).then(function(r) {
+            alert('Your campaign has been saved!');
+        }, $scope.handle_error);
+    }
+
+    $scope.refresh_bottle = function() {
+        $("#bottle-div").css('font-family', $scope.campaign_data.font);
+    }
+
+    $scope.$on('amazon_uploaded', function(event) {
+        $scope.campaign_data.art = $scope.__s.aws.file_url;
+    });
+});
+
+chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
+    $scope.now_module = '';
+    $scope.template_v = '1.9';
+    $scope.__user = {};
+    $scope.__s = {};
+    $scope.__payment = {};
+
+    $("body").on('click', '.darken', function(event) {
+        if (event.target !== this) {
+            return;
+        }
+        $scope.set_module();
+        $scope.$apply();
+    });
+
+    $scope.set_module = function(name) {
+        $scope.now_module = (name) ? name : '';
+    }
+
+    $scope.register = function(data) {
+        mainFactory.register(data).then(function(r) {
+            $scope.__user = r.data.user;
+            $scope.set_module();
+        }, $scope.handle_error);
+    }
+
+    $scope.handle_error = function(response) {
+        // console.log(response);
+        if (response.status == 422) {
+            var data = response.data;
+            for (var i in data) {
+                alert(data[i]);
+            }
+        } else if (response.status == 401) {
+            alert('must login');
+        }
+    }
+
+    $scope.is_login = function() {
+        mainFactory.is_login().then(function(r) {
+            $scope.__user = (r.data.user) ? r.data.user : {};
+            $scope.$broadcast('is_login_done');
+        });
+    }
+    $scope.is_login();
+
+    $scope.logout = function() {
+        mainFactory.logout().then(function(r) {
+            $scope.__user = {};
+        }, $scope.handle_error);
+    }
+
+    $scope.login = function(data) {
+        mainFactory.login(data).then(function(r) {
+            $scope.__user = (r.data.user) ? r.data.user : {};
+            $scope.set_module();
+        }, $scope.handle_error);
+    }
+
+    $scope.amazon_connect = function(bucket) {
+        mainFactory.aws_key(bucket).success(function(r) {
+            $scope.__s.aws = r;
+        });
+    }
+
+    $scope.amazon_upload = function($files, arg) {
+        arg = (arg) ? arg : '';
+        var aws = $scope.__s.aws;
+        var file = $files[0];
+        var url = aws.base_url;
+        var new_name = Date.now();
+        var rando = Math.floor(Math.random() * 100000);
+        new_name = 'lo_' + arg + new_name.toString() + '_' + rando.toString();
+        $upload.upload({
+            url: url,
+            method: 'POST',
+            data: {
+                key: new_name,
+                acl: 'public-read',
+                "Content-Type": file.type === null || file.type === '' ?
+                    'application/octet-stream' : file.type,
+                AWSAccessKeyId: aws.key,
+                policy: aws.policy,
+                signature: aws.signature
+            },
+            file: file,
+        }).success(function() {
+            $scope.__s.aws.file_url = url + new_name;
+            $scope.$broadcast('amazon_uploaded');
+        });
+    }
+
+    $scope.open_payment = function() {
+        mainFactory.get_payment().then(function(r){
+            $scope.__user = (r.data.user) ? r.data.user : $scope.__user;
+            $scope.set_module('payment');
+        },$scope.handle_error);
+    }
+
+    $scope.stripe_get_token = function() {
+        var $form = $('#payment-form');
+        $form.find('.submit').prop('disabled', true);
+        Stripe.card.createToken($form, $scope.stripeResponseHandler);
+        return false;
+    }
+
+    $scope.stripeResponseHandler = function(status, response) {
+        var $form = $('#payment-form');
+        if (response.error) {
+            $form.find('.payment-errors').text(response.error.message);
+            $form.find('.submit').prop('disabled', false);
+        } else {
+            $scope.__payment.token = response.id;
+            $scope.submit_payment();
+            //$scope.$broadcast('stripe_token_get');
+        }
+    };
+
+    $scope.submit_payment = function() {
+        mainFactory.pay($scope.__payment).then(function(r){
+            var $form = $('#payment-form');
+            $form.find('.submit').prop('disabled', false);
+            $scope.__payment.r = r.data;
+            $scope.$broadcast('payment_done');
+        },$scope.handle_error);
+    }
+});

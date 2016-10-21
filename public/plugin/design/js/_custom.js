@@ -159,12 +159,13 @@ chisel_launch.controller('CustomCtrl', [
         $scope.submit_campaign = function(data) {
             // data.product_id = $scope.defaultProductId;
             // data.objectLayers = $scope.objectLayers;
+            data.status = 'draft';
             mainFactory.launch_campaign(data).then(function(r) {
                 //console.log(r);
                 window.onbeforeunload = null;
                 window.onhashchange = null;
                 alert('Your campaign has been saved!');
-                //window.location = '/dashboard';
+                window.location = '/dashboard';
             }, $scope.handle_error);
         }
 

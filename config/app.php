@@ -160,6 +160,7 @@ return [
          * custom
          */
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Laravel\Cashier\CashierServiceProvider::class,
     ],
 
     /*

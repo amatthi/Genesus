@@ -1,8 +1,9 @@
 chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
     $scope.now_module = '';
-    $scope.template_v = '1.6';
+    $scope.template_v = '1.9';
     $scope.__user = {};
     $scope.__s = {};
+    $scope.__payment = {};
 
     $("body").on('click', '.darken', function(event) {
         if (event.target !== this) {
@@ -87,5 +88,40 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
             $scope.__s.aws.file_url = url + new_name;
             $scope.$broadcast('amazon_uploaded');
         });
+    }
+
+    $scope.open_payment = function() {
+        mainFactory.get_payment().then(function(r){
+            $scope.__user = (r.data.user) ? r.data.user : $scope.__user;
+            $scope.set_module('payment');
+        },$scope.handle_error);
+    }
+
+    $scope.stripe_get_token = function() {
+        var $form = $('#payment-form');
+        $form.find('.submit').prop('disabled', true);
+        Stripe.card.createToken($form, $scope.stripeResponseHandler);
+        return false;
+    }
+
+    $scope.stripeResponseHandler = function(status, response) {
+        var $form = $('#payment-form');
+        if (response.error) {
+            $form.find('.payment-errors').text(response.error.message);
+            $form.find('.submit').prop('disabled', false);
+        } else {
+            $scope.__payment.token = response.id;
+            $scope.submit_payment();
+            //$scope.$broadcast('stripe_token_get');
+        }
+    };
+
+    $scope.submit_payment = function() {
+        mainFactory.pay($scope.__payment).then(function(r){
+            var $form = $('#payment-form');
+            $form.find('.submit').prop('disabled', false);
+            $scope.__payment.r = r.data;
+            $scope.$broadcast('payment_done');
+        },$scope.handle_error);
     }
 });

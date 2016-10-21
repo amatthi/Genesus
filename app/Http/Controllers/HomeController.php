@@ -11,7 +11,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home')->with('stripe_key', env('STRIPE_KEY'));
     }
 
     public function launch()

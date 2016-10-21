@@ -27,10 +27,11 @@ class CampaignController extends Controller
             'sale_price'      => 'required',
             //'description'     => 'required',
             'length'          => 'required',
+            'status'          => 'required|in:public,draft',
             //'slug'            => 'required|max:255',
             //'title'           => 'required|max:255',
         ]);
-        $db_cols = ['goal'];
+        $db_cols = ['goal', 'status'];
         $slug    = str_slug($request->input('slug'), '-');
         $tmp     = Campaign::where('slug', $slug)->first();
         if ($tmp) {
@@ -74,6 +75,7 @@ class CampaignController extends Controller
     {
         $campaign->orders;
         $campaign->goal_count = count($campaign->orders);
+        $campaign->user->profile;
         return $campaign;
     }
 
@@ -84,6 +86,13 @@ class CampaignController extends Controller
 
     public function dashboard()
     {
-        return Auth::user()->campaigns;
+        $campaigns = [];
+        foreach (Auth::user()->campaigns as $campaign) {
+            $campaign->orders;
+            $campaign->goal_count = count($campaign->orders);
+            unset($campaign->orders);
+            $campaigns[] = $campaign;
+        }
+        return $campaigns;
     }
 }

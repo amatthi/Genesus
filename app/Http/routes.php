@@ -35,8 +35,9 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
     Route::group(['middleware' => 'auth'], function () {
         Route::get('campaign/dashboard', 'CampaignController@dashboard');
         Route::post('campaign/launch', 'CampaignController@launch');
-        Route::post('buy/{campaign_id}', 'OrderController@buy');
+        Route::post('pay', 'OrderController@pay');
         Route::post('profile', 'ProfileController@updateProfile');
+        Route::get('profile/payment', 'ProfileController@getPayment');
     });
 });
 
