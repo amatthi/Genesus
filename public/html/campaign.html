@@ -1,12 +1,18 @@
-<div>
+<div class="container-fluid">
+	<div class="col-xs-12 col-sm-6">
+		design image:<img ng-src="{{campaign_data.bottle_img}}">
+	</div>
+	<div class="col-xs-12 col-sm-6">
 	title:{{campaign_data.title}}
 	descrition:{{campaign_data.description}}
-	design image:<img ng-src="{{campaign_data.bottle_img}}">
+
 	sale price:{{campaign_data.sale_price | currency}}
 	purpose:{{campaign_data.purpose.name}}
 	formula:{{campaign_data.formula.name}}
 	goal: {{campaign_data.goal_count}} / {{campaign_data.goal}}
+</div>
 	<hr>
+	<div class="col-xs-12">
 	Ingredients
 	<div class="ingredients">
         <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients" class="CLA_1">
@@ -15,19 +21,20 @@
         </div>
     </div>
     <hr>
-	owner: 
+	owner:
 	photo: <img ng-src="{{campaign_data.user.profile.photo}}">
-	email : {{campaign_data.user.email}} 
-	Brand Name: {{campaign_data.user.profile.brand_name}} 
-	Biography: {{campaign_data.user.profile.biography}} 
-	Website: {{campaign_data.user.profile.website}} 
+	email : {{campaign_data.user.email}}
+	Brand Name: {{campaign_data.user.profile.brand_name}}
+	Biography: {{campaign_data.user.profile.biography}}
+	Website: {{campaign_data.user.profile.website}}
     <button ng-click="buy_campaign()">buy</button>
 	<br>
 
 	<div class="ng-hide">
 		{{campaign_data}}
 	</div>
-	
+</div>
+
 </div>
 <script type="text/ng-template" id="ingredient_tooltip.html">
     <span ng-bind="campaign_data.formula.description[key]"></span>
