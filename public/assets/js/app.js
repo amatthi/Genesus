@@ -10645,7 +10645,7 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
 chisel.controller("dashboardController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
     $scope.campaigns = [];
     $scope.profile_data = {};
-    $scope.dash_view = "campaigns";
+    $scope.dash_view = 'campaigns';
 
     $scope.$on('is_login_done', function(event) {
     	$scope.profile_data = {};
@@ -10677,6 +10677,7 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
             $scope.is_login();
         }, $scope.handle_error);
     }
+
     $scope.dash_set = function(view) {
       if (view == 'campaigns') {
         $scope.dash_view = 'campaigns';
@@ -10697,7 +10698,6 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
     $scope.fonts = chisel_var.get('fonts');
     $scope.campaign_data = {};
     $scope.amazon_connect('tappyn');
-    
 
     $scope.init = function() {
         $scope.campaign_data.font_color = '#ffffff';
