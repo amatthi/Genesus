@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Campaign;
 use App\Http\Controllers\Controller;
+use App\Log;
 use App\Order;
 use Auth;
 use Illuminate\Http\Request;
@@ -29,7 +30,7 @@ class OrderController extends Controller
         switch ($post['type']) {
             case 'buy_campaign':
                 $campaign = Campaign::where('id', $post['data']['id'])->firstOrFail();
-                $user->charge($campaign->sale_price * 100);
+                $this->charge_and_log($campaign);
                 $result = $this->buy_campaign($campaign);
                 break;
 
@@ -55,5 +56,29 @@ class OrderController extends Controller
     {
         $user     = Auth::user();
         $customer = $user->createAsStripeCustomer($token);
+    }
+
+    public function charge_and_log(Campaign $campaign)
+    {
+        $description = 'Charge for Camapign#' . $campaign->id;
+        $user        = Auth::user();
+        $charge      = $user->charge($campaign->sale_price * 100, ['description' => $description]);
+        $content     = [
+            'id'          => $charge->id,
+            'amount'      => $charge->amount,
+            'currency'    => $charge->currency,
+            'customer'    => $charge->customer,
+            'source_id'   => $charge->source->id,
+            'status'      => $charge->status,
+            'description' => $charge->description,
+        ];
+        // dd($content, $charge);
+        $log          = new Log;
+        $log->user_id = $user->id;
+        $log->type    = 'charge';
+        $log->type_id = $campaign->id;
+        $log->content = $content;
+        $log->save();
+        // dd($charge);
     }
 }
