@@ -1,15 +1,14 @@
 <div class="container-fluid">
-	<div class="col-xs-12 col-sm-6">
-		design image:<img ng-src="{{campaign_data.bottle_img}}">
+	<div class="col-xs-12 col-sm-6 text-center">
+		<img class="img-responsive pull-right" ng-src="{{campaign_data.bottle_img}}" alt="Image Of Custom Supplement">
 	</div>
-	<div class="col-xs-12 col-sm-6">
-	title:{{campaign_data.title}}
-	descrition:{{campaign_data.description}}
-
-	sale price:{{campaign_data.sale_price | currency}}
-	purpose:{{campaign_data.purpose.name}}
-	formula:{{campaign_data.formula.name}}
-	goal: {{campaign_data.goal_count}} / {{campaign_data.goal}}
+	<div class="col-xs-12 col-sm-6 campaign-info">
+	<h2>{{campaign_data.title}}</h2>
+	<h4>{{campaign_data.description}}</h4>
+	<h3>{{campaign_data.sale_price | currency}}</h3>
+	<h4>{{campaign_data.purpose.name}}</h4>
+	<h4>{{campaign_data.formula.name}}</h4>
+	<span>{{campaign_data.goal_count}} / {{campaign_data.goal}}</span>
 </div>
 	<hr>
 	<div class="col-xs-12">
