@@ -6,118 +6,112 @@
             <li role="presentation" ng-class="{'dash-a' : dash_view == 'settings'}" ng-click="dash_set('settings')"><a>Settings</a></li>
         </ul>
     </div>
-
     <div class="col-xs-12 col-sm-10 lil-pad dash-campaigns dash-style">
-		<div id="campaigns" ng-if="dash_view == 'campaigns'">
-			<div class="alert alert-warning alert-dismissible" role="alert">
-				<button class="close" data-dismiss="alert" type="button">
-          <span aria-hidden="true">&times;</span>
-          <span class="sr-only">Close</span>
-        </button>
-        Thanks for saving your campaign! We're still developing the buy side of your campaign,
-				so please sit tight and we'll send you an e-mail when your campaigns are
-				ready to go live.<br>
-				-Austin (Co-Founder Genesus)
-			</div>
-      <br>
-			<h2>Campaigns</h2>
-			<div class="col-xs-12 col-sm-10 campaign-overview">
-				<h3>Overview</h3>
-				<hr>
-				<div class="col-xs-12 col-sm-4 text-center overview-data">
-					<h4>0</h4>
-					<h5>Products Ordered</h5>
-				</div>
-				<div class="col-xs-12 col-sm-4 text-center overview-data">
-					<h4>$0</h4>
-					<h5>Profit</h5>
-				</div>
-				<div class="col-xs-12 col-sm-4 text-center overview-data">
-					<h4 style="border-right:none;">$0</h4>
-					<h5>To Be Paid</h5>
-				</div>
-				<div class="col-xs-12 text-center dash-cat" style="padding-bottom:10px;">
-					<div class="col-xs-3 col-sm-2 col-sm-offset-4 dash-bor">
-						<a>Today</a>
-					</div>
-					<div class="col-xs-3 col-sm-2 dash-bor">
-						<a>Yesterday</a>
-					</div>
-					<div class="col-xs-3 col-sm-2 dash-bor">
-						<a>Active</a>
-					</div>
-					<div class="col-xs-3 col-sm-2">
-						<a>All Time</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 campaign-hr" style="padding-bottom:25px;">
-				<hr>
-			</div>
-			<div class="col-xs-12 col-sm-10 campaign-overview text-center">
-				<div class="col-xs-12 col-sm-2 col-sm-offset-1">
-					<h5 style="margin-bottom: 0px;">{{campaign_data.purpose}} - {{campaign.formula}}</h5>
-				</div>
-				<div class="col-xs-12 col-sm-2">
-					<h5 style="margin-bottom: 0px;">0/{{campaign_data.goal}}</h5>
-					<p style="font-size:10px;color:#777;">Sold</p>
-				</div>
-				<div class="col-xs-12 col-sm-2">
-					<h5 style="margin-bottom: 0px;">Draft</h5>
-					<p style="font-size:10px;color:#777;"></p>
-				</div>
-				<div class="col-xs-12 col-sm-2">
-					<h5>N/A</h5>
-				</div>
-				<div class="col-xs-12 col-sm-2">
-					<a href="/launch/{{campaign.id}}" style="cursor:pointer;" target="_self">
-            <span class="glyphicon glyphicon-pencil" style="margin-top:10px;"></span>
-          </a>
-          <a style="cursor:pointer;">
-            <span class="glyphicon glyphicon-trash"></span>
-          </a>
-				</div>
-			</div>
-		</div>
-
-
-<div ng-if="dash_view == 'settings'" id="settings">
-<h2>Profile</h2>
-<div class="col-xs-12 col-sm-10 campaign-overview">
-  <div class="col-xs-12 lil-pad"><label class="col-xs-12 col-sm-3">Profile
-  Picture</label> <input accept="image/*" class=
-  "col-xs-12 col-sm-6 inputfile" id="profile-photo" name="file" type="file">
-  <img></div>
-  <div class="col-xs-12 lil-pad">
-    <label class="col-xs-12 col-sm-3">Brand Name</label>
-    <textarea class="col-xs-12 col-sm-8"></textarea>
-  </div>
-  <div class="col-xs-12 lil-pad">
-    <label class="col-xs-12 col-sm-3">Biography</label>
-    <textarea class="col-xs-12 col-sm-8"></textarea>
-  </div>
-  <div class="col-xs-12 lil-pad">
-    <label class="col-xs-12 col-sm-3">Website</label>
-    <textarea class="col-xs-12 col-sm-8"></textarea>
-  </div>
-  <div class="col-xs-12 lil-pad">
-    <label class="col-xs-12 col-sm-3">Email</label> <input class=
-    "col-xs-12 col-sm-3" type="email" value="{{profile_data.email}}">
-  </div>
-  <div class="col-xs-12 lil-pad">
-    <label class="col-xs-12 col-sm-3">Password</label> <input class=
-    "col-xs-12 col-sm-3" type="password">
-  </div>
-  <div class="col-xs-12 lil-pad">
-    <label class="col-xs-12 col-sm-3">Confirm Password</label> <input class=
-    "col-xs-12 col-sm-3" type="password">
-  </div>
-  <div class="col-xs-12 lil-pad text-center lil-pad-bottom">
-    <button>Update</button>
-  </div>
-</div>
-</div>
-</div>
-
-
+        <div id="campaigns" ng-if="dash_view == 'campaigns'">
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <button class="close" data-dismiss="alert" type="button">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                Thanks for saving your campaign! We're still developing the buy side of your campaign, so please sit tight and we'll send you an e-mail when your campaigns are ready to go live.
+                <br> -Austin (Co-Founder Genesus)
+            </div>
+            <br>
+            <h2>Campaigns</h2>
+            <div class="col-xs-12 col-sm-10 campaign-overview">
+                <h3>Overview</h3>
+                <hr>
+                <div class="col-xs-12 col-sm-4 text-center overview-data">
+                    <h4>0</h4>
+                    <h5>Products Ordered</h5>
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center overview-data">
+                    <h4>$0</h4>
+                    <h5>Profit</h5>
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center overview-data">
+                    <h4 style="border-right:none;">$0</h4>
+                    <h5>To Be Paid</h5>
+                </div>
+                <div class="col-xs-12 text-center dash-cat" style="padding-bottom:10px;">
+                    <div class="col-xs-3 col-sm-2 col-sm-offset-4 dash-bor">
+                        <a>Today</a>
+                    </div>
+                    <div class="col-xs-3 col-sm-2 dash-bor">
+                        <a>Yesterday</a>
+                    </div>
+                    <div class="col-xs-3 col-sm-2 dash-bor">
+                        <a>Active</a>
+                    </div>
+                    <div class="col-xs-3 col-sm-2">
+                        <a>All Time</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 campaign-hr" style="padding-bottom:25px;">
+                <hr>
+            </div>
+            <div class="col-xs-12 col-sm-10 campaign-overview text-center" ng-repeat="campaign in campaigns">
+                <div class="col-xs-12 col-sm-2 col-sm-offset-1">
+                    <h5 style="margin-bottom: 0px;"><a href="/campaign/{{campaign.slug}}">{{campaign.purpose.name}} - {{campaign.formula.name}}</a></h5>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <h5 style="margin-bottom: 0px;">{{campaign.goal_count}}/{{campaign.goal}}</h5>
+                    <p style="font-size:10px;color:#777;">Sold</p>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <h5 style="margin-bottom: 0px;">Draft</h5>
+                    <p style="font-size:10px;color:#777;"></p>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <h5>N/A</h5>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <a href="/launch/{{campaign.id}}" style="cursor:pointer;" target="_self">
+                        <span class="glyphicon glyphicon-pencil" style="margin-top:10px;"></span>
+                    </a>
+                    <a style="cursor:pointer;">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div ng-if="dash_view == 'settings'" id="settings">
+            <h2>Profile</h2>
+            <div class="col-xs-12 col-sm-10 campaign-overview">
+                <div class="col-xs-12 lil-pad">
+                    <label class="col-xs-12 col-sm-3">Profile Picture
+                    </label>
+                    <input accept="image/*" class="col-xs-12 col-sm-6 inputfile" id="profile-photo" name="file" type="file">
+                    <img></div>
+                <div class="col-xs-12 lil-pad">
+                    <label class="col-xs-12 col-sm-3">Brand Name</label>
+                    <textarea class="col-xs-12 col-sm-8"></textarea>
+                </div>
+                <div class="col-xs-12 lil-pad">
+                    <label class="col-xs-12 col-sm-3">Biography</label>
+                    <textarea class="col-xs-12 col-sm-8"></textarea>
+                </div>
+                <div class="col-xs-12 lil-pad">
+                    <label class="col-xs-12 col-sm-3">Website</label>
+                    <textarea class="col-xs-12 col-sm-8"></textarea>
+                </div>
+                <div class="col-xs-12 lil-pad">
+                    <label class="col-xs-12 col-sm-3">Email</label>
+                    <input class="col-xs-12 col-sm-3" type="email" value="{{profile_data.email}}">
+                </div>
+                <div class="col-xs-12 lil-pad">
+                    <label class="col-xs-12 col-sm-3">Password</label>
+                    <input class="col-xs-12 col-sm-3" type="password">
+                </div>
+                <div class="col-xs-12 lil-pad">
+                    <label class="col-xs-12 col-sm-3">Confirm Password</label>
+                    <input class="col-xs-12 col-sm-3" type="password">
+                </div>
+                <div class="col-xs-12 lil-pad text-center lil-pad-bottom">
+                    <button>Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

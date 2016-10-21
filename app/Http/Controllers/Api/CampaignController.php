@@ -84,6 +84,13 @@ class CampaignController extends Controller
 
     public function dashboard()
     {
-        return Auth::user()->campaigns;
+        $campaigns = [];
+        foreach (Auth::user()->campaigns as $campaign) {
+            $campaign->orders;
+            $campaign->goal_count = count($campaign->orders);
+            unset($campaign->orders);
+            $campaigns[] = $campaign;
+        }
+        return $campaigns;
     }
 }
