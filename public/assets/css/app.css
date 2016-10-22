@@ -1188,3 +1188,102 @@ a {
   background-color: #fff;
   height: 86px;
 }
+
+.campaign-info h2 {
+  font-size: 36px;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.campaign-info h4 {
+  font-size: 14px;
+  color: #777;
+}
+
+.campaign-info h4 span {
+  color: #71CE66;
+}
+
+.campaign-info h3 {
+  color: #71CE66;
+  margin-top: 10px;
+  padding: 15px 0 15px;
+}
+
+.progress-bar {
+  background-color: #71CE66;
+}
+
+.campaign-info h5 {
+  font-size: 24px;
+}
+
+.campaign-button {
+  margin-top: 20px;
+}
+
+.campaign-button button {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.campaign-share p {
+  font-size: 12px;
+  color: #777;
+}
+
+.social-box {
+  border: 1px solid #ddd;
+  background-color: #F5F7F6;
+  display: inline-block;
+  padding: 0px 25px 0px 25px;
+  border-radius: 4px;
+}
+
+.social-box:hover {
+  border: 1px solid #ddd;
+  background-color: #ddd;
+  display: inline-block;
+  padding: 0px 25px 0px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.social-box h5 {
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.social-box a:hover {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.social-box span img {
+  max-height: 15px;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+}
+
+.campaign-desc h2 {
+  font-size: 24px;
+}
+
+.campaign-desc h4 {
+  font-size: 14px;
+}
+
+.campaign-desc span {
+  font-weight: 400;
+  color: #777;
+}
+
+.pic-desc h3 {
+  font-size: 16px;
+  margin: 0px 0px 5px;
+  color: #777;
+}

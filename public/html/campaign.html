@@ -1,20 +1,115 @@
 <div class="container-fluid">
-	<div class="row">
-	<div class="col-xs-12 col-sm-6 text-center">
-		<img class="img-responsive pull-right" ng-src="{{campaign_data.bottle_img}}" alt="Image Of Custom Supplement">
+	<div class="row big-pad">
+		<div class="col-xs-12 col-sm-6 text-center">
+			<div class="col-xs-12">
+				<img class="img-responsive pull-right" ng-src="{{campaign_data.bottle_img}}" alt="Image Of Custom Supplement">
+			</div>
+			<div class="campaign-user-photo col-xs-12 col-sm-4">
+				<img ng-src="{{campaign_data.user.profile.photo}}">
+				<span>{{campaign_data.user.first_name}}</span>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+			</div>
+			<div class="col-xs-12 col-sm-4">
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 campaign-info">
+			<div class="col-xs-12">
+				<h2>{{campaign_data.title}}</h2>
+				<h4>{{campaign_data.description}}</h4>
+				<h3>{{campaign_data.sale_price | currency}}</h3>
+				<h4><span class="glyphicon glyphicon-leaf"></span> {{campaign_data.purpose.name}}</h4>
+				<h4><span class="glyphicon glyphicon-leaf"></span> {{campaign_data.formula.name}}</h4>
+			</div>
+			<div class="col-xs-12 col-sm-8 campaign-progress lil-pad">
+				<uib-progressbar class="progress-striped active" value="purchase_count" max='campaign_data.goal'></uib-progressbar>
+				<h5 class="text-center">{{campaign_data.goal_count}} of {{campaign_data.goal}} sold</h5>
+			</div>
+			<div class="col-xs-12 col-sm-8 text-center campaign-button">
+				<button class="col-xs-12 btn btn-lg btn-gn" ng-click="buy_campaign()">Buy It Now</button>
+			</div>
+			<div class="col-xs-12 col-sm-8 text-center">
+				<!--Start Clock-->
+				<div id="clockdiv">
+  				<div>
+    				<span class="days"></span>
+    				<div class="smalltext">Days</div>
+  				</div>
+  				<div>
+    				<span class="hours"></span>
+    				<div class="smalltext">Hours</div>
+  				</div>
+  				<div>
+    				<span class="minutes"></span>
+    				<div class="smalltext">Minutes</div>
+  				</div>
+  				<div>
+    				<span class="seconds"></span>
+    					<div class="smalltext">Seconds</div>
+  				</div>
+				</div>
+				<!--End Clock-->
+			</div>
+			<div class="col-xs-12 col-sm-8 text-center campaign-share lil-pad">
+				<div>
+				<p><em>Share this campaign on</em></p>
+				</div>
+				<div class="social-box">
+					<a>
+						<span><img src="img/facebook.png"></span>
+						<h5>Facebook</h5>
+					</a>
+				</div>
+				<div class="social-box">
+					<a>
+						<span><img src="img/twitter.png"></span>
+						<h5>Twitter</h5>
+					</a>
+				</div>
+			</div>
+
+		</div>
 	</div>
-	<div class="col-xs-12 col-sm-6 campaign-info">
-	<h2>{{campaign_data.title}}</h2>
-	<h4>{{campaign_data.description}}</h4>
-	<h3>{{campaign_data.sale_price | currency}}</h3>
-	<h4>{{campaign_data.purpose.name}}</h4>
-	<h4>{{campaign_data.formula.name}}</h4>
-	<span>{{campaign_data.goal_count}} / {{campaign_data.goal}}</span>
-</div>
-</div>
 	<hr>
-	<div class="col-xs-12">
-	Ingredients
+	<div class="row">
+	<div class="container">
+	<div class="col-xs-12 col-sm-8 campaign-desc">
+		<div class="col-xs-12">
+			<h2>Long Description</h2>
+		</div>
+		<div class="col-xs-12">
+			<h4>{{campaign_data.description}}</h4>
+		</div>
+		<div class="col-xs-12">
+			<h4><span>Shipping Info</span></h4>
+			<h4>Orders are printed and shipped when the time expires. You can expect your package to arrive around 4-7 business days
+				after the campaign ends.</h4>
+		</div>
+		<div class="col-xs-12">
+			<h4>Shipping costs $3.99 for the first item and $2.00 for each additional item.</h4>
+		</div>
+		<div class="col-xs-12">
+			<h4><span>Return Policy</span></h4>
+			<h4>If you're not 100% satisfied, let us know and we'll make it right.</h4>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-4">
+		<div class="col-xs-12 text-center">
+			<h2>About Duncan</h2>
+		</div>
+		<div class="col-xs-12 text-center">
+			<img src="img/dog-example.png" class="img-responsive" style="max-height:250px;">
+		</div>
+		<div class="col-xs-12 pic-desc">
+			<h3>Doggy Dogg</h3>
+			<h3>@DoggyDogg</h3>
+		</div>
+		</div>
+	</div>
+
+	</div>
+</div>
+
 	<div class="ingredients">
         <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients" class="CLA_1">
           <span class="glyphicon glyphicon-info-sign" style="top: 32px;left: 180px;font-size: 10px;color:#777;"></span>
@@ -28,7 +123,6 @@
 	Brand Name: {{campaign_data.user.profile.brand_name}}
 	Biography: {{campaign_data.user.profile.biography}}
 	Website: {{campaign_data.user.profile.website}}
-    <button ng-click="buy_campaign()">buy</button>
 	<br>
 
 	<div class="ng-hide">
@@ -36,7 +130,87 @@
 	</div>
 </div>
 
+
 </div>
+<style>
+#clockdiv{
+    font-family: sans-serif;
+    color: #333;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+		padding-top: 15px;
+		cursor: default;
+}
+
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 4px;
+    background: #fff;
+    display: inline-block;
+		border: 1px solid #ddd;
+		cursor: default;
+}
+
+#clockdiv div > span{
+    padding: 0px 15px 0px 15px;
+    border-radius: 3px;
+    background: #fff;
+    display: inline-block;
+		cursor: default;
+}
+
+.smalltext{
+    padding-top: 0px;
+    font-size: 14px;
+		color:#777;
+		cursor: default;
+}
+</style>
 <script type="text/ng-template" id="ingredient_tooltip.html">
     <span ng-bind="campaign_data.formula.description[key]"></span>
+</script>
+<script>
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
 </script>
