@@ -1,41 +1,34 @@
 <div class="container-fluid">
-	<div class="row">
-	<div class="col-xs-12 col-sm-6 text-center">
-		<img class="img-responsive pull-right" ng-src="{{campaign_data.bottle_img}}" alt="Image Of Custom Supplement">
-	</div>
-	<div class="col-xs-12 col-sm-6 campaign-info">
-	<h2>{{campaign_data.title}}</h2>
-	<h4>{{campaign_data.description}}</h4>
-	<h3>{{campaign_data.sale_price | currency}}</h3>
-	<h4>{{campaign_data.purpose.name}}</h4>
-	<h4>{{campaign_data.formula.name}}</h4>
-	<span>{{campaign_data.goal_count}} / {{campaign_data.goal}}</span>
-</div>
-</div>
-	<hr>
-	<div class="col-xs-12">
-	Ingredients
-	<div class="ingredients">
-        <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients" class="CLA_1">
-          <span class="glyphicon glyphicon-info-sign" style="top: 32px;left: 180px;font-size: 10px;color:#777;"></span>
-            <h4 uib-tooltip-template="'ingredient_tooltip.html'" tooltip-placement="top"><img style="width:50px;padding-right:5px;" ng-src="{{add_ingredient_path(ingredient)}}">{{ingredient}}</h4>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 text-center">
+            <img class="img-responsive pull-right" ng-src="{{campaign_data.bottle_img}}" alt="Image Of Custom Supplement">
+        </div>
+        <div class="col-xs-12 col-sm-6 campaign-info">
+            <h2>{{campaign_data.title}}</h2>
+            <h4>{{campaign_data.description}}</h4>
+            <h3>{{campaign_data.sale_price | currency}}</h3>
+            <h4>{{campaign_data.purpose.name}}</h4>
+            <h4>{{campaign_data.formula.name}}</h4>
+            <rzslider rz-slider-model="campaign_data.goal_count" rz-slider-options="{floor: 0,ceil: campaign_data.goal,showSelectionBar: true,readOnly: true}"></rzslider>
+            <span>{{campaign_data.goal_count}} / {{campaign_data.goal}}</span>
         </div>
     </div>
     <hr>
-	owner:
-	photo: <img ng-src="{{campaign_data.user.profile.photo}}">
-	email : {{campaign_data.user.email}}
-	Brand Name: {{campaign_data.user.profile.brand_name}}
-	Biography: {{campaign_data.user.profile.biography}}
-	Website: {{campaign_data.user.profile.website}}
-    <button ng-click="buy_campaign()">buy</button>
-	<br>
-
-	<div class="ng-hide">
-		{{campaign_data}}
-	</div>
-</div>
-
+    <div class="col-xs-12">
+        Ingredients
+        <div class="ingredients">
+            <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients" class="CLA_1">
+                <span class="glyphicon glyphicon-info-sign" style="top: 32px;left: 180px;font-size: 10px;color:#777;"></span>
+                <h4 uib-tooltip-template="'ingredient_tooltip.html'" tooltip-placement="top"><img style="width:50px;padding-right:5px;" ng-src="{{add_ingredient_path(ingredient)}}">{{ingredient}}</h4>
+            </div>
+        </div>
+        <hr> owner: photo: <img ng-src="{{campaign_data.user.profile.photo}}"> email : {{campaign_data.user.email}} Brand Name: {{campaign_data.user.profile.brand_name}} Biography: {{campaign_data.user.profile.biography}} Website: {{campaign_data.user.profile.website}}
+        <button ng-click="buy_campaign()">buy</button>
+        <br>
+        <div class="ng-hide">
+            {{campaign_data}}
+        </div>
+    </div>
 </div>
 <script type="text/ng-template" id="ingredient_tooltip.html">
     <span ng-bind="campaign_data.formula.description[key]"></span>
