@@ -4,6 +4,7 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
     $scope.get_campaign = function() {
         mainFactory.get_campaign($routeParams.slug).then(function(r) {
             $scope.campaign_data = r.data;
+            $scope.$broadcast('timer-set-countdown', $scope.campaign_data.countdown);
         }, $scope.handle_error);
     }
     $scope.get_campaign();

@@ -9,8 +9,12 @@
             <h3>{{campaign_data.sale_price | currency}}</h3>
             <h4>{{campaign_data.purpose.name}}</h4>
             <h4>{{campaign_data.formula.name}}</h4>
-            <rzslider rz-slider-model="campaign_data.goal_count" rz-slider-options="{floor: 0,ceil: campaign_data.goal,showSelectionBar: true,readOnly: true}"></rzslider>
-            <span>{{campaign_data.goal_count}} / {{campaign_data.goal}}</span>
+            <rzslider rz-slider-model="campaign_data.goal_count" rz-slider-options="{floor: 0,ceil: campaign_data.goal, showSelectionBar: true,readOnly: true}"></rzslider>
+            <div>{{campaign_data.goal_count}} / {{campaign_data.goal}}</div>
+            <div>end at : {{campaign_data.end_at}}</div>
+            <div>
+            	<timer countdown="100000" interval="1000"> {{ddays}} day{{daysS}}, {{hhours}} hour{{hoursS}}, {{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
+            </div>
         </div>
     </div>
     <hr>
