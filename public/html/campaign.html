@@ -25,6 +25,11 @@
             <div>
                 <timer countdown="100000" interval="1000"> {{ddays}} day{{daysS}}, {{hhours}} hour{{hoursS}}, {{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
             </div>
+            <div class="contest-share">
+                <div class="contest-share-socials">
+                    <div class="addthis_sharing_toolbox" data-title="{{campaign_data.title}}" data-description="{{campaign_data.description}}" data-media="{{campaign_data.bottle_img}}"></div>
+                </div>
+            </div>
         </div>
     </div>
     <hr>
@@ -36,9 +41,7 @@
                 <h4 uib-tooltip-template="'ingredient_tooltip.html'" tooltip-placement="top"><img style="width:50px;padding-right:5px;" ng-src="{{add_ingredient_path(ingredient)}}">{{ingredient}}</h4>
             </div>
         </div>
-        <hr> owner: photo: <img ng-src="{{campaign_data.user.profile.photo}}"> email : {{campaign_data.user.email}} Brand Name: {{campaign_data.user.profile.brand_name}} Biography: {{campaign_data.user.profile.biography}} Website: {{campaign_data.user.profile.website}}
-        First Name {{campaign_data.user.profile.first_name}}
-        Instagram {{campaign_data.user.profile.instagram}}
+        <hr> owner: photo: <img ng-src="{{campaign_data.user.profile.photo}}"> email : {{campaign_data.user.email}} Brand Name: {{campaign_data.user.profile.brand_name}} Biography: {{campaign_data.user.profile.biography}} Website: {{campaign_data.user.profile.website}} First Name {{campaign_data.user.profile.first_name}} Instagram {{campaign_data.user.profile.instagram}}
         <button ng-click="buy_campaign()">buy</button>
         <br>
         <div class="ng-hide">
@@ -48,4 +51,16 @@
 </div>
 <script type="text/ng-template" id="ingredient_tooltip.html">
     <span ng-bind="campaign_data.formula.description[key]"></span>
+</script>
+<script type="text/javascript">
+var addthis_config = addthis_config || {};
+addthis_config.data_track_addressbar = false;
+addthis_config.data_track_clickback = false;
+addthis_share = {
+    passthrough: {
+        twitter: {
+            via: "TheRealFabel"
+        }
+    }
+}
 </script>
