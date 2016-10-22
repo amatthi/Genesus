@@ -53,6 +53,8 @@ class ProfileController extends Controller
             $profile->photo = $s3->url($filePath);
         }
 
+        $profile->first_name = $request->input('first_name');
+        $profile->instagram  = $request->input('instagram');
         $profile->website    = $request->input('website');
         $profile->brand_name = $request->input('brand_name');
         $profile->biography  = ($request->input('biography')) ? $request->input('biography') : '';
