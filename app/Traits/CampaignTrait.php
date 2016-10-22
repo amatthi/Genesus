@@ -26,6 +26,7 @@ trait CampaignTrait
         $formula_i     = 0;
         $ingredients_i = 0;
         unset($array[0]);
+        //dd($array);
         foreach ($array as $index => $row) {
             if (count($row) <= 10) {
                 continue;
@@ -33,20 +34,24 @@ trait CampaignTrait
             $purpose           = $row[0];
             $sku               = $row[1];
             $formula           = $row[2];
-            $back_image        = $row[3];
-            $cost30            = (float) str_replace('$', '', $row[4]);
-            $ingredients       = $row[7];
-            $recommended_price = $row[8];
-            $servings          = $row[9];
-            $capsules          = $row[10];
-            $form_type         = $row[11];
-            $description       = $row[12];
+            $back_image        = $row[7];
+            $cost30            = (float) str_replace('$', '', $row[8]);
+            $ingredients       = $row[11];
+            $recommended_price = $row[12];
+            $servings          = $row[13];
+            $capsules          = $row[14];
+            $form_type         = $row[15];
+            $description       = utf8_encode($row[16]);
+            $study_name        = $row[17];
+            $study_url         = $row[18];
             if ($formula) {
-                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'capsules' => $capsules, 'recommended_price' => $recommended_price, 'form_type' => $form_type, 'sku' => $sku, 'back_image' => $back_image, 'description' => [$description]];
+                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'capsules' => $capsules, 'recommended_price' => $recommended_price, 'form_type' => $form_type, 'sku' => $sku, 'back_image' => $back_image, 'description' => [$description], 'study_name' => [$study_name], 'study_url' => [$study_url]];
             } else if ($ingredients) {
                 $ingredients_i++;
                 $result[$purpose_i]['formulas'][$formula_i]['ingredients'][$ingredients_i] = $ingredients;
                 $result[$purpose_i]['formulas'][$formula_i]['description'][$ingredients_i] = $description;
+                $result[$purpose_i]['formulas'][$formula_i]['study_name'][$ingredients_i]  = $study_name;
+                $result[$purpose_i]['formulas'][$formula_i]['study_url'][$ingredients_i]   = $study_url;
                 continue;
             } else {
                 continue;
@@ -62,6 +67,7 @@ trait CampaignTrait
                 $result[$purpose_i]['formulas'][$formula_i] = $formula;
             }
         }
+
         //var_dump($result);
         //Cache::put($this->purposes_key, $result, 100);
         return $result;

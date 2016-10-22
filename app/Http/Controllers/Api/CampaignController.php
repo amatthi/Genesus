@@ -76,11 +76,13 @@ class CampaignController extends Controller
         $campaign->orders;
         $campaign->goal_count = count($campaign->orders);
         $campaign->user->profile;
+        $campaign->countdown = $campaign->end_at->getTimestamp() - time();
         return $campaign;
     }
 
     public function purposes()
     {
+        // dd($this->_get_purposes());
         return $this->_get_purposes();
     }
 

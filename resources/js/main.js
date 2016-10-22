@@ -4,6 +4,8 @@ var chisel = angular.module('myApp', [
     'ngAnimate',
     'angularFileUpload',
     'angularMoment',
+    'rzModule',
+    'timer',
 ]);
 
 chisel.config(function($routeProvider, $locationProvider, $httpProvider) {

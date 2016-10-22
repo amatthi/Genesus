@@ -15,6 +15,7 @@
 		<link rel="icon" href="/favicon2.ico" type="image/x-icon">
 		<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link href="/assets/css/rzslider.min.css" rel="stylesheet">
 		<link href="/assets/css/dev.css" rel="stylesheet">
 		<link href="/assets/css/app.css" rel="stylesheet">
 	</head>
@@ -33,6 +34,7 @@
 <script type="text/javascript">
   Stripe.setPublishableKey('{{ $stripe_key }}');
 </script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5751c5addc1cc557"></script>
 <script type='text/javascript'>
 window.__lo_site_id = 67462;
 	(function() {
