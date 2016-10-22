@@ -82,6 +82,7 @@ class CampaignController extends Controller
 
     public function purposes()
     {
+        // dd($this->_get_purposes());
         return $this->_get_purposes();
     }
 

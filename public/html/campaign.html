@@ -39,6 +39,8 @@
             <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients" class="CLA_1">
                 <span class="glyphicon glyphicon-info-sign" style="top: 32px;left: 180px;font-size: 10px;color:#777;"></span>
                 <h4 uib-tooltip-template="'ingredient_tooltip.html'" tooltip-placement="top"><img style="width:50px;padding-right:5px;" ng-src="{{add_ingredient_path(ingredient)}}">{{ingredient}}</h4>
+                <p>study_name:{{campaign_data.formula.study_name[key]}}</p>
+                <p>study_url:{{campaign_data.formula.study_url[key]}}</p>
             </div>
         </div>
         <hr> owner: photo: <img ng-src="{{campaign_data.user.profile.photo}}"> email : {{campaign_data.user.email}} Brand Name: {{campaign_data.user.profile.brand_name}} Biography: {{campaign_data.user.profile.biography}} Website: {{campaign_data.user.profile.website}} First Name {{campaign_data.user.profile.first_name}} Instagram {{campaign_data.user.profile.instagram}}
