@@ -1,7 +1,17 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12 col-sm-6 text-center">
-            <img class="img-responsive pull-right" ng-src="{{campaign_data.bottle_img}}" alt="Image Of Custom Supplement">
+            <img class="img-responsive pull-right" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement">
+        </div>
+        <div ng-show="campaign_data.formula.back_image">
+            <ul>
+                <li>
+                    <button class="btn btn-gy btn-sm" ng-click="campaign_data.bottle_type = 'front'">Front</a>
+                </li>
+                <li style="margin-left:-5px;">
+                    <button class="btn btn-gy btn-sm" ng-click="campaign_data.bottle_type = 'back'">Back</a>
+                </li>
+            </ul>
         </div>
         <div class="col-xs-12 col-sm-6 campaign-info">
             <h2>{{campaign_data.title}}</h2>
@@ -13,7 +23,7 @@
             <div>{{campaign_data.goal_count}} / {{campaign_data.goal}}</div>
             <div>end at : {{campaign_data.end_at}}</div>
             <div>
-            	<timer countdown="100000" interval="1000"> {{ddays}} day{{daysS}}, {{hhours}} hour{{hoursS}}, {{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
+                <timer countdown="100000" interval="1000"> {{ddays}} day{{daysS}}, {{hhours}} hour{{hoursS}}, {{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
             </div>
         </div>
     </div>
