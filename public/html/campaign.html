@@ -1,135 +1,160 @@
 <div class="container-fluid">
-    <div class="row">
+    <div class="row big-pad">
         <div class="col-xs-12 col-sm-6 text-center">
-			<div class="col-xs-12">
-            <img class="img-responsive pull-right" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement">
-        </div>
-			<div class="campaign-user-photo col-xs-12 col-sm-4">
-        <div ng-show="campaign_data.formula.back_image">
-            <ul>
-			</div>
-			<div class="col-xs-12 col-sm-4">
-			</div>
-			<div class="col-xs-12 col-sm-4">
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 campaign-info">
-			<div class="col-xs-12">
-				<h2>{{campaign_data.title}}</h2>
-				<h4>{{campaign_data.description}}</h4>
-				<h3>{{campaign_data.sale_price | currency}}</h3>
-                <li>
-				<h4><span class="glyphicon glyphicon-leaf"></span> {{campaign_data.formula.name}}</h4>
-			</div>
-			<div class="col-xs-12 col-sm-8 campaign-progress lil-pad">
-				<uib-progressbar class="progress-striped active" value="purchase_count" max='campaign_data.goal'></uib-progressbar>
-				<h5 class="text-center">{{campaign_data.goal_count}} of {{campaign_data.goal}} sold</h5>
-			</div>
-			<div class="col-xs-12 col-sm-8 text-center campaign-button">
-                    <button class="btn btn-gy btn-sm" ng-click="campaign_data.bottle_type = 'front'">Front</a>
-			</div>
-			<div class="col-xs-12 col-sm-8 text-center">
-				<!--Start Clock-->
-				<div id="clockdiv">
-  				<div>
-                </li>
-                <li style="margin-left:-5px;">
-  				</div>
-  				<div>
-    				<span class="hours"></span>
-    				<div class="smalltext">Hours</div>
-  				</div>
-  				<div>
-                    <button class="btn btn-gy btn-sm" ng-click="campaign_data.bottle_type = 'back'">Back</a>
-                </li>
-  				</div>
-  				<div>
-    				<span class="seconds"></span>
-            </ul>
-  				</div>
-				</div>
-				<!--End Clock-->
-			</div>
-			<div class="col-xs-12 col-sm-8 text-center campaign-share lil-pad">
-				<div>
-				<p><em>Share this campaign on</em></p>
-        </div>
-				<div class="social-box">
-					<a>
-						<span><img src="img/facebook.png"></span>
-						<h5>Facebook</h5>
-					</a>
-				</div>
-				<div class="social-box">
-					<a>
-						<span><img src="img/twitter.png"></span>
-						<h5>Twitter</h5>
-					</a>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<hr>
-	<div class="row">
-	<div class="container">
-        <div class="col-xs-12 col-sm-6 campaign-info">
-		<div class="col-xs-12">
-            <h2>{{campaign_data.title}}</h2>
-		</div>
-		<div class="col-xs-12">
-            <h4>{{campaign_data.description}}</h4>
-		</div>
-            <h3>{{campaign_data.sale_price | currency}}</h3>
-			<h4><span>Shipping Info</span></h4>
-			<h4>Orders are printed and shipped when the time expires. You can expect your package to arrive around 4-7 business days
-            <h4>{{campaign_data.purpose.name}}</h4>
-		</div>
-		<div class="col-xs-12">
-            <h4>{{campaign_data.formula.name}}</h4>
-		</div>
-		<div class="col-xs-12">
-            <rzslider rz-slider-model="campaign_data.goal_count" rz-slider-options="{floor: 0,ceil: campaign_data.goal, showSelectionBar: true,readOnly: true}"></rzslider>
-			<h4>If you're not 100% satisfied, let us know and we'll make it right.</h4>
-		</div>
-            <div>{{campaign_data.goal_count}} / {{campaign_data.goal}}</div>
-	<div class="col-xs-12 col-sm-4">
-            <div>end at : {{campaign_data.end_at}}</div>
-            <div>
-		<div class="col-xs-12 text-center">
-                <timer countdown="100000" interval="1000"> {{ddays}} day{{daysS}}, {{hhours}} hour{{hoursS}}, {{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
+          <div class="col-xs-12">
+            <img class="img-responsive pull-right" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement" style="max-height:550px;">
+          </div>
+            <div class="col-xs-12" ng-show="campaign_data.formula.back_image">
+                <ul>
+                    <li style="display:inline-block;">
+                        <button class="btn btn-gy btn-sm" ng-click="campaign_data.bottle_type = 'front'">Front</a>
+                    </li>
+                    <li style="display:inline-block;">
+                        <button class="btn btn-gy btn-sm" ng-click="campaign_data.bottle_type = 'back'">Back</a>
+                    </li>
+                </ul>
             </div>
-	</div>
-
-	</div>
-</div>
-
-	<div class="ingredients">
-            <div class="contest-share">
-                <div class="contest-share-socials">
+            <div class="col-xs-12 col-sm-4">
+              <img ng-src="{{campaign_data.user.profile.photo}}">
+              <h5>{{campaign_data.user.profile.first_name}}</h5>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+            </div>
+            <div class="col-xs-12 col-sm-4">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 campaign-info">
+          <div class="col-xs-12">
+            <h2>{{campaign_data.title}}</h2>
+            <h4>{{campaign_data.description}}</h4>
+            <h3>{{campaign_data.sale_price | currency}}</h3>
+            <h4 ng-show="campaign_data.purpose.name"><span class="glyphicon glyphicon-leaf"></span> {{campaign_data.purpose.name}}</h4>
+            <h4 ng-show="campaign_data.formula.name"><span class="glyphicon glyphicon-leaf"></span> {{campaign_data.formula.name}}</h4>
+          </div>
+            <div class="col-xs-12 col-sm-8 campaign-progress lil-pad">
+            <!--<uib-progressbar class="progress-striped active" value="campaign_data.goal_count" max='campaign_data.goal'></uib-progressbar>-->
+            <uib-progressbar class="progress-striped active" value="10" max='campaign_data.goal'></uib-progressbar>
+            <h5 class="text-center">{{campaign_data.goal_count}} of {{campaign_data.goal}} sold</h5>
+            </div>
+            <!--<div>end at : {{campaign_data.end_at}}</div>-->
+            <div class="col-xs-12 col-sm-8 text-center campaign-button">
+                <button class="col-xs-12 btn btn-gn btn-sm btn-buy" ng-click="buy_campaign()">Buy It Now</a>
+      			</div>
+            <div class="col-xs-12 col-sm-8">
+              <div class="col-xs-12" id="clockdiv">
+                <timer countdown="100000" interval="1000">
+                  <div>
+                    <span class="numtext">{{ddays}}</span> <span class="smalltext">day{{daysS}}</span>
+                  </div>
+                  <div>
+                    <span class="numtext">{{hhours}}</span> <span class="smalltext">hour{{hoursS}}</span>
+                  </div>
+                  <div>
+                    <span class="numtext">{{mminutes}}</span> <span class="smalltext">minute{{minutesS}}</span>
+                  </div>
+                  <div>
+                    <span class="numtext">{{sseconds}}</span> <span class="smalltext">second{{secondsS}}</span>
+                  </div>
+                </timer>
+            </div>
+          </div>
+            <div class="col-xs-12 col-sm-8 contest-share">
+              <div class="col-xs-12 text-center">
+                <p><em>Share this campaign on</em></p>
+              </div>
+                <div class=" col-xs-12 text-center contest-share-socials">
                     <div class="addthis_sharing_toolbox" data-title="{{campaign_data.title}}" data-description="{{campaign_data.description}}" data-media="{{campaign_data.bottle_img}}"></div>
                 </div>
             </div>
         </div>
     </div>
+    <!--End Row-->
     <hr>
-    <div class="col-xs-12">
-        Ingredients
-        <div class="ingredients">
-            <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients" class="CLA_1">
-                <span class="glyphicon glyphicon-info-sign" style="top: 32px;left: 180px;font-size: 10px;color:#777;"></span>
-                <h4 uib-tooltip-template="'ingredient_tooltip.html'" tooltip-placement="top"><img style="width:50px;padding-right:5px;" ng-src="{{add_ingredient_path(ingredient)}}">{{ingredient}}</h4>
-                <p>study_name:{{campaign_data.formula.study_name[key]}}</p>
-                <p>study_url:{{campaign_data.formula.study_url[key]}}</p>
-            </div>
+    <div class="row">
+    <div class="container">
+      <div class="col-xs-12 col-sm-8 descript">
+        <h2>Description</h2>
+
+        <div class="col-xs-12 no-pad-left">
+          <h4>{{campaign_data.description}}</h4>
         </div>
-        <hr> owner: photo: <img ng-src="{{campaign_data.user.profile.photo}}"> email : {{campaign_data.user.email}} Brand Name: {{campaign_data.user.profile.brand_name}} Biography: {{campaign_data.user.profile.biography}} Website: {{campaign_data.user.profile.website}} First Name {{campaign_data.user.profile.first_name}} Instagram {{campaign_data.user.profile.instagram}}
-        <button ng-click="buy_campaign()">buy</button>
-        <br>
-        <div class="ng-hide">
-            {{campaign_data}}
+        <div class="col-xs-12 no-pad-left">
+          <h5>Shipping Info</h5>
+          <p>Orders are printed and shipped when the time expires. You can expect your package to arrive around 4-7 business days after the campaign finishes.</p>
+        </div>
+        <div class="col-xs-12 no-pad-left">
+          <p>Shipping costs $3.99 for your first item and $2.00 for each additional item.</p>
+        </div>
+        <div class="col-xs-12 no-pad-left">
+          <h5>Return Policy</h5>
+          <p>If you're not 100% satisfied, let us know and we'll make it right.</p>
         </div>
     </div>
+    <div class="col-xs-12 col-sm-4">
+      <h2>About {{campaign_data.user.profile.first_name}}</h2>
+      <div class="col-xs-12">
+        <img ng-src="{{campaign_data.user.profile.photo}}">
+      </div>
+      <div class="col-xs-12">
+        <h4>{{campaign_data.user.profile.instagram}}</h4>
+      </div>
+      <div class="col-xs-12" ng-show="campaign_data.user.profile.website">
+        <h4>{{campaign_data.user.profile.website}}</h4>
+      </div>
+      <div class="col-xs-12">
+        <h5>{{campaign_data.user.profile.biography}}</h5>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--End Row-->
+<hr>
+<div class="row">
+  <div class="container">
+    <div class="col-xs-12">
+      <div id="instafeed">
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Row-->
+<div class="row blue-row">
+  <div class="container science">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h2>The Science Behind {{campaign_data.blend_name}}</h2>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h4>We formulate our products based on clinical studies. Below are the clinical studies for the main
+      ingredients found in {{campaign_data.blend_name}}. These clinical studies were not performed by Genesus
+      and are not sponsored by Genesus.</h4>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 d-key">
+          <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients">
+              <h4><img style="width:50px;padding-right:5px;" ng-src="{{add_ingredient_path(ingredient)}}">{{ingredient}}</h4>
+              <h5 ng-bind="campaign_data.formula.description[key]"></h5>
+              <h4 class="case-study">{{campaign_data.formula.study_name[key]}}</h4>
+              <h5><a href="{{campaign_data.formula.study_url[key]}}" target="_blank">{{campaign_data.formula.study_url[key]}}</a></h5>
+          </div>
+    </div>
+  </div>
+</div>
+<!--End Row-->
+<div class="row">
+  <img src="https://s3-us-west-2.amazonaws.com/tappyn/campaign-banner.jpg" class="img-responsive" alt="Genesus banner">
+    <div class="row">
+      email : {{campaign_data.user.email}} Brand Name: {{campaign_data.user.profile.brand_name}} Biography: {{campaign_data.user.profile.biography}} Website: {{campaign_data.user.profile.website}} First Name {{campaign_data.user.profile.first_name}} Instagram {{campaign_data.user.profile.instagram}}
+      <hr>
+      <div>
+        {{campaign_data}}
+      </div>
+      <hr>
+      {{campaign_data.user.profile.photo}}
+  </div>
+</div>
+
+
+
 </div>
 <style>
 #clockdiv{
@@ -143,7 +168,7 @@
 		cursor: default;
 }
 
-#clockdiv > div{
+#clockdiv > timer > div {
     padding: 10px;
     border-radius: 4px;
     background: #fff;
@@ -152,11 +177,10 @@
 		cursor: default;
 }
 
-#clockdiv div > span{
+#clockdiv > timer > div > span{
     padding: 0px 15px 0px 15px;
     border-radius: 3px;
     background: #fff;
-    display: inline-block;
 		cursor: default;
 }
 
@@ -165,51 +189,94 @@
     font-size: 14px;
 		color:#777;
 		cursor: default;
+    display: block;
 }
+
+.numtext {
+  display: block;
+}
+
+.contest-share {
+  padding-top: 15px;
+}
+
+.contest-share p {
+  font-size: 12px;
+    color: #777;
+}
+
+.descript h2 {
+  font-size: 26px;
+  margin-bottom: 0px;
+}
+
+.descript h5 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #777;
+}
+
+.descript p {
+  font-size: 12px;
+}
+
+.blue-row {
+  background-color: #24BCD3;
+}
+
+.science h2 {
+  color:#fff;
+}
+
+.science h4 {
+  color:#F0E9E9;
+}
+
+.d-key h4 {
+  color:#fff;
+}
+
+.d-key h5 {
+  color:#F0E9E9;
+  font-weight: 300;
+}
+
+.case-study {
+  font-size:16px;
+}
+
+.d-key a {
+  color: #fff;
+}
+
+.d-key a:hover {
+  color: #F0E9E9;
+}
+
 </style>
 <script type="text/ng-template" id="ingredient_tooltip.html">
     <span ng-bind="campaign_data.formula.description[key]"></span>
 </script>
+<script src="plugin/design/assets/instafeed.min.js"></script>
 <script type="text/javascript">
-function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
+var userFeed = new Instafeed({
+get: 'user',
+userId: '540627244',
+clientId: '9f57493df86b447d9c8df9cded4988df',
+target: 'instafeed',
+template: '<a class="animation" href="{{link}}"><img src="{{image}}" /></a>'
+});
+userFeed.run();
+</script>
+<script type="text/javascript">
 var addthis_config = addthis_config || {};
 addthis_config.data_track_addressbar = false;
 addthis_config.data_track_clickback = false;
 addthis_share = {
-  return {
     passthrough: {
-    'days': days,
         twitter: {
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
-
-function initializeClock(id, endtime) {
             via: "TheRealFabel"
-  var daysSpan = clock.querySelector('.days');
-  var hoursSpan = clock.querySelector('.hours');
-  var minutesSpan = clock.querySelector('.minutes');
         }
-
-  function updateClock() {
-    var t = getTimeRemaining(endtime);
-
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
     }
-  }
-
-  updateClock();
-  var timeinterval = setInterval(updateClock, 1000);
 }
-
-var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-initializeClock('clockdiv', deadline);
 </script>
