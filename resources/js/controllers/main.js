@@ -1,6 +1,6 @@
 chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
     $scope.now_module = '';
-    $scope.template_v = '1.9';
+    $scope.template_v = '1.10';
     $scope.__user = {};
     $scope.__s = {};
     $scope.__payment = {};
@@ -91,15 +91,16 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     }
 
     $scope.open_payment = function() {
-        mainFactory.get_payment().then(function(r){
+        mainFactory.get_payment().then(function(r) {
             $scope.__user = (r.data.user) ? r.data.user : $scope.__user;
             $scope.set_module('payment');
-        },$scope.handle_error);
+        }, $scope.handle_error);
     }
 
     $scope.stripe_get_token = function() {
         var $form = $('#payment-form');
         $form.find('.submit').prop('disabled', true);
+        console.log($form);
         Stripe.card.createToken($form, $scope.stripeResponseHandler);
         return false;
     }
@@ -117,11 +118,16 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     };
 
     $scope.submit_payment = function() {
-        mainFactory.pay($scope.__payment).then(function(r){
+        mainFactory.pay($scope.__payment).then(function(r) {
             var $form = $('#payment-form');
             $form.find('.submit').prop('disabled', false);
             $scope.__payment.r = r.data;
             $scope.$broadcast('payment_done');
-        },$scope.handle_error);
+        }, $scope.handle_error);
+    }
+
+    $scope.set_payment_step = function(step) {
+        $scope.__payment.step = step;
+        return false;
     }
 });

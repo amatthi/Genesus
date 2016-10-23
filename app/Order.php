@@ -15,4 +15,14 @@ class Order extends Model
     {
         return $this->belongsTo('App\Campaign');
     }
+
+    public function getOthersAttribute()
+    {
+        return json_decode($this->attributes['others'], true);
+    }
+
+    public function setOthersAttribute(array $val)
+    {
+        $this->attributes['others'] = json_encode($val);
+    }
 }

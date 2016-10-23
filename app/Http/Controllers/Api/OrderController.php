@@ -29,9 +29,17 @@ class OrderController extends Controller
 
         switch ($post['type']) {
             case 'buy_campaign':
+                $this->validate($request, [
+                    'email'           => 'required|email|max:255',
+                    'street_address'  => 'required|max:255',
+                    'state'           => 'required|max:255',
+                    'country'         => 'required|max:255',
+                    'street_address2' => 'required|max:255',
+                    'zipcode'         => 'required|max:255',
+                ]);
                 $campaign = Campaign::where('id', $post['data']['id'])->firstOrFail();
                 $this->charge_and_log($campaign);
-                $result = $this->buy_campaign($campaign);
+                $result = $this->buy_campaign($campaign, $request);
                 break;
 
             default:
@@ -42,12 +50,13 @@ class OrderController extends Controller
         //dd($request->all());
     }
 
-    public function buy_campaign(Campaign $campaign)
+    public function buy_campaign(Campaign $campaign, Request $request = null)
     {
         $order              = new Order;
         $order->campaign_id = $campaign->id;
         $order->user_id     = Auth::user()->id;
         $order->status      = 'paid';
+        $order->others      = $request->only(['email', 'street_address', 'state', 'country', 'street_address2', 'zipcode']);
         $order->save();
         return $order;
     }
