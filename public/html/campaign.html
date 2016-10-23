@@ -128,10 +128,9 @@
     <div class="row">
         <div class="container">
             <div class="col-xs-12">
-                <div id="instafeed">
-                </div>
-            </div>
+              <div class="my-instashow"></div>
         </div>
+      </div>
     </div>
     <!--End Row-->
     <div class="row blue-row">
@@ -162,15 +161,17 @@
 <script type="text/ng-template" id="ingredient_tooltip.html">
     <span ng-bind="campaign_data.formula.description[key]"></span>
 </script>
-<script src="plugin/design/assets/instafeed.min.js"></script>
-<script type="text/javascript">
-var userFeed = new Instafeed({
-    get: 'user',
-    userId: '540627244',
-    clientId: '9f57493df86b447d9c8df9cded4988df',
-    target: 'instafeed',
-    accessToken: '540627244.1677ed0.99589a90118343dd87274fa4b56709a5',
-    template: '<a class="animation" href="{{link}}"><img src="{{image}}" /></a>'
-});
-userFeed.run();
+<script src="/instashow/jquery.instashow.packaged.js"></script>
+<script>
+    $('.my-instashow').instaShow({
+        api: '/instashow/api/',
+        source: '@kimberadecker',
+        width: 'auto',
+        height: '500px',
+        columns: 5,
+        rows: 3,
+        direction: 'vertical',
+        lang: 'en',
+        popupInfo: ''
+    });
 </script>
