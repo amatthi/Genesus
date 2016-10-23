@@ -1287,3 +1287,81 @@ a {
   margin: 0px 0px 5px;
   color: #777;
 }
+
+.smalltext{
+    padding-top: 0px;
+    font-size: 14px;
+		color:#777;
+		cursor: default;
+    display: block;
+}
+
+.numtext {
+  display: block;
+}
+
+.contest-share {
+  padding-top: 15px;
+}
+
+.contest-share p {
+  font-size: 12px;
+    color: #777;
+}
+
+.descript h2 {
+  font-size: 26px;
+  margin-bottom: 0px;
+}
+
+.descript h5 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #777;
+}
+
+.descript p {
+  font-size: 12px;
+}
+
+.blue-row {
+  background-color: #24BCD3;
+}
+
+.science h2 {
+  color:#fff;
+}
+
+.science h4 {
+  color:#F0E9E9;
+}
+
+.d-key h4 {
+  color:#fff;
+}
+
+.d-key h5 {
+  color:#F0E9E9;
+  font-weight: 300;
+}
+
+.case-study {
+  font-size:16px;
+}
+
+.d-key a {
+  color: #fff;
+}
+
+.d-key a:hover {
+  color: #F0E9E9;
+}
+
+.bio-info a {
+  font-size:14px;
+}
+
+.bio-info h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

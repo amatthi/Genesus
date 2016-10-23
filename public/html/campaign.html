@@ -2,10 +2,13 @@
     <div class="row big-pad">
         <div class="col-xs-12 col-sm-6 text-center">
           <div class="col-xs-12">
-            <img class="img-responsive pull-right" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement" style="max-height:550px;">
+            <center>
+              <img class="img-responsive" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement" style="max-height:550px;max-width:550px;">
+            </center>
           </div>
             <div class="col-xs-12" ng-show="campaign_data.formula.back_image">
-                <ul>
+              <center>
+                <ul class="no-pad-left" style="max-width:550px;">
                     <li style="display:inline-block;">
                         <button class="btn btn-gy btn-sm" ng-click="campaign_data.bottle_type = 'front'">Front</a>
                     </li>
@@ -13,14 +16,25 @@
                         <button class="btn btn-gy btn-sm" ng-click="campaign_data.bottle_type = 'back'">Back</a>
                     </li>
                 </ul>
+              </center>
             </div>
-            <div class="col-xs-12 col-sm-4">
-              <img ng-src="{{campaign_data.user.profile.photo}}">
+            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-3">
+              <center>
+                <img ng-src="{{campaign_data.user.profile.photo}}" style="max-height:100px;">
+              </center>
               <h5>{{campaign_data.user.profile.first_name}}</h5>
             </div>
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <center>
+                <img ng-src="{{campaign_data.user.profile.photo}}" style="max-height:100px;">
+              </center>
+              <h5>{{campaign_data.user.profile.first_name}}</h5>
             </div>
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <center>
+                <img ng-src="{{campaign_data.user.profile.photo}}" style="max-height:100px;">
+              </center>
+              <h5>{{campaign_data.user.profile.first_name}}</h5>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 campaign-info">
@@ -78,6 +92,9 @@
         <div class="col-xs-12 no-pad-left">
           <h4>{{campaign_data.description}}</h4>
         </div>
+        <br />
+        <br />
+        <br />
         <div class="col-xs-12 no-pad-left">
           <h5>Shipping Info</h5>
           <p>Orders are printed and shipped when the time expires. You can expect your package to arrive around 4-7 business days after the campaign finishes.</p>
@@ -90,16 +107,16 @@
           <p>If you're not 100% satisfied, let us know and we'll make it right.</p>
         </div>
     </div>
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-xs-12 col-sm-4 bio-info">
       <h2>About {{campaign_data.user.profile.first_name}}</h2>
       <div class="col-xs-12">
-        <img ng-src="{{campaign_data.user.profile.photo}}">
+        <img ng-src="{{campaign_data.user.profile.photo}}" style="max-height:200px;">
       </div>
-      <div class="col-xs-12">
-        <h4>{{campaign_data.user.profile.instagram}}</h4>
+      <div class="col-xs-12" ng-show="campaign_data.user.profile.instagram">
+        <h4><a href="{{campaign_data.user.profile.instagram}}" target="_blank">{{campaign_data.user.profile.instagram}}</a></h4>
       </div>
       <div class="col-xs-12" ng-show="campaign_data.user.profile.website">
-        <h4>{{campaign_data.user.profile.website}}</h4>
+        <h4><a href="{{campaign_data.user.profile.website}}" target="_blank">{{campaign_data.user.profile.website}}</a></h4>
       </div>
       <div class="col-xs-12">
         <h5>{{campaign_data.user.profile.biography}}</h5>
@@ -142,14 +159,10 @@
 <!--End Row-->
 <div class="row">
   <img src="https://s3-us-west-2.amazonaws.com/tappyn/campaign-banner.jpg" class="img-responsive" alt="Genesus banner">
-    <div class="row">
-      email : {{campaign_data.user.email}} Brand Name: {{campaign_data.user.profile.brand_name}} Biography: {{campaign_data.user.profile.biography}} Website: {{campaign_data.user.profile.website}} First Name {{campaign_data.user.profile.first_name}} Instagram {{campaign_data.user.profile.instagram}}
-      <hr>
+    <div class="row ng-hide">
       <div>
         {{campaign_data}}
       </div>
-      <hr>
-      {{campaign_data.user.profile.photo}}
   </div>
 </div>
 
@@ -184,74 +197,7 @@
 		cursor: default;
 }
 
-.smalltext{
-    padding-top: 0px;
-    font-size: 14px;
-		color:#777;
-		cursor: default;
-    display: block;
-}
 
-.numtext {
-  display: block;
-}
-
-.contest-share {
-  padding-top: 15px;
-}
-
-.contest-share p {
-  font-size: 12px;
-    color: #777;
-}
-
-.descript h2 {
-  font-size: 26px;
-  margin-bottom: 0px;
-}
-
-.descript h5 {
-  font-size: 12px;
-  font-weight: 600;
-  color: #777;
-}
-
-.descript p {
-  font-size: 12px;
-}
-
-.blue-row {
-  background-color: #24BCD3;
-}
-
-.science h2 {
-  color:#fff;
-}
-
-.science h4 {
-  color:#F0E9E9;
-}
-
-.d-key h4 {
-  color:#fff;
-}
-
-.d-key h5 {
-  color:#F0E9E9;
-  font-weight: 300;
-}
-
-.case-study {
-  font-size:16px;
-}
-
-.d-key a {
-  color: #fff;
-}
-
-.d-key a:hover {
-  color: #F0E9E9;
-}
 
 </style>
 <script type="text/ng-template" id="ingredient_tooltip.html">
