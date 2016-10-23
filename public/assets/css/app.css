@@ -1421,6 +1421,11 @@ a {
     padding: 5px;
 }
 
+.pay-input label {
+  font-size: 16px;
+  color: #777;
+}
+
 .fivemarbottom {
     margin-bottom: 5px;
 }
@@ -1449,4 +1454,12 @@ a {
     border-radius: 3px;
     background: #fff;
     cursor: default;
+}
+
+.payment-back {
+  padding-left: 10px;
+  margin-top: -20px;
+  position: relative;
+  top: -10px;
+  cursor: pointer;
 }
