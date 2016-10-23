@@ -1,29 +1,90 @@
-<div class="container modal_actions col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3" style="background-color: white">
-    <div ng-show="__user.card_brand">
+<div class="payment-container modal_actions col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 payment-modal">
+  <div class="col-xs-12 modal-top text-center">
+    <h2>Checkout (2/2)</h2>
+  </div>
+    <div class="col-xs-12" ng-show="__user.card_brand">
         <button ng-click="submit_payment()">use saved payment ({{__user.card_brand}} ,card last four{{__user.card_last_four}})</button>
     </div>
-    <form method="POST" id="payment-form" ng-submit="stripe_get_token()">
-        <span class="payment-errors"></span>
-        <div class="form-row">
-            <label>
-                <span>Card Number</span>
-                <input type="text" size="20" data-stripe="number">
-            </label>
-        </div>
-        <div class="form-row">
-            <label>
-                <span>Expiration (MM/YY)</span>
-                <input type="text" size="2" data-stripe="exp_month">
-            </label>
-            <span> / </span>
-            <input type="text" size="2" data-stripe="exp_year">
-        </div>
-        <div class="form-row">
-            <label>
-                <span>CVC</span>
-                <input type="text" size="4" data-stripe="cvc">
-            </label>
-        </div>
-        <input type="submit" class="submit" value="Submit Payment">
-    </form>
+    <div class="col-xs-12 lil-pad-bottom payment-2">
+      <div class="col-xs-12 col-sm-6">
+        <h3 class="border-bottom">Order Summary</h3>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <h3 class="fivemarbottom">Payment Info</h3>
+        <div class="payment-border">
+        <form method="POST" id="payment-form" ng-submit="stripe_get_token()">
+          <span class="payment-errors"></span>
+            <div class="form-row pay-input">
+              <label>
+                <input placeholder="Card Number" type="text" data-stripe="number">
+              </label>
+            </div>
+            <div class="form-row pay-input">
+              <label>
+                <input placeholder="(MM)" type="text" size="4" data-stripe="exp_month" style="text-align:center;">
+                <input placeholder="(YY)" type="text" size="4" data-stripe="exp_year" style="text-align:center;">
+                <input placeholder="CVC" type="text" size="4" data-stripe="cvc" style="text-align:center;">
+              </label>
+            </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-xs-12 text-center lil-pad">
+      <input class="col-xs-12 col-sm-8 col-sm-offset-2 btn btn-gn btn-sm" type="submit" class="submit" value="Submit Payment">
+    </div>
+  </div>
 </div>
+
+<style>
+.payment-modal {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.modal-top {
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #F5F5F5;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-top h2 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.payment-container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.payment-2 h3 {
+  font-size: 16px;
+  color: #777;
+  margin-top: 10px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.payment-border {
+  border:1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.pay-input input {
+  max-width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.fivemarbottom {
+  margin-bottom: 5px;
+}
+</style>
