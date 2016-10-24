@@ -1,23 +1,23 @@
-<div class="payment-container modal_actions col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 payment-modal">
+<div class="payment-container modal_actions col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-3 payment-modal">
     <div ng-show="__payment.step == '1'">
         <div class="col-xs-12 modal-top text-center">
             <h2>Checkout (1 of 2)</h2>
         </div>
         <div class="col-xs-12 lil-pad-bottom pay-input">
             <form ng-submit="set_payment_step('2')">
-                <label>Contact Info
-                <input type="email" placeholder="Email" required="required" ng-model="__payment.email" style="display:block;width:100%;margin-bottom:5px;">
-                </label>
-                <label>Shipping Info
-                <input type="text" placeholder="Full Name" required="required" ng-model="__payment.full_name" style="display:block;width:100%;margin-bottom:5px;">
-                <input type="text" placeholder="Street Address" required="required" ng-model="__payment.street_address" style="margin-bottom:5px;">
-                <input type="text" placeholder="2nd Street Address"required="required" ng-model="__payment.street_address2" style="margin-bottom:5px;">
-                <input type="text" placeholder="State"required="required" ng-model="__payment.state" style="margin-bottom:5px;">
-                <input type="text" placeholder="Country"required="required" ng-model="__payment.country" style="margin-bottom:5px;">
-                <input type="text" placeholder="Zip"required="required" ng-model="__payment.zipcode" style="margin-bottom:5px;">
-                </label>
-                <div class="col-xs-12 text-center">
-                <button class="btn btn-gn btn-sm">Next</button>
+                <label style="padding-top:15px;">Contact Info</label>
+                <input type="email" placeholder="Email Address" required="required" ng-model="__payment.email" style="display:block;width:100%;margin-bottom:5px;">
+
+                <label style="padding-top:15px;">Shipping Info</label>
+                <input class="shipping-info" type="text" placeholder="Full Name" required="required" ng-model="__payment.full_name">
+                <input class="shipping-info" type="text" placeholder="Street Address" required="required" ng-model="__payment.street_address">
+                <input class="shipping-info" type="text" placeholder="City"required="required" ng-model="__payment.street_address2">
+                <input class="shipping-info" type="text" placeholder="State"required="required" ng-model="__payment.state">
+                <input class="shipping-info" type="text" placeholder="Country"required="required" ng-model="__payment.country">
+                <input class="shipping-info" type="text" placeholder="Zip"required="required" ng-model="__payment.zipcode">
+
+                <div class="col-xs-12 text-center" style="padding-top:15px;">
+                <button class="btn btn-gn btn-sm" style="padding-top:5px;padding-bottom:5px;">Continue</button>
               </div>
             </form>
         </div>
@@ -35,27 +35,32 @@
                 <div class="col-xs-12 col-sm-6">
                     <h3 class="border-bottom">Order Summary</h3>
                     <div ng-if="__payment.type == 'buy_campaign'">
-                      <div class="col-xs-12 col-sm-4">
+                      <!--<div class="col-xs-12 col-sm-4">
                         <img class="img-responsive" ng-src="{{__payment.data.bottle_img}}" style="max-width:50px;display:inline-block;">
                       </div>
                       <div class="col-xs-12 col-sm-8">
                         <span style="font-size:10px;float:left;">{{__payment.data.title}}</span>
                         <span style="font-size:10px;float:right;">{{__payment.data.sale_price | currency}}</span>
+                      </div>-->
+                      <div class="col-xs-12">
+                        <span style="font-size:14px;float:left;">{{__payment.data.title}}</span>
+                        <span style="font-size:14px;float:right;">{{__payment.data.sale_price | currency}}</span>
                       </div>
                       <div class="col-xs-12" style="padding-top:5px;">
-                        <span style="float:left;font-size:10px;">Shipping:</span> <span style="float:right;font-size:10px;">$0.00</span>
+                        <span style="float:left;font-size:14px;">Shipping:</span> <span style="float:right;font-size:14px;">$0.00</span>
                     </div>
                     <div class="col-xs-12 border-bottom" style="padding-top:5px;">
-                      <span style="float:left;font-size:10px;">Sub-Total:</span> <span style="float:right;font-size:10px;">{{__payment.data.sale_price | currency}}</span>
+                      <span style="float:left;font-size:14px;">Sub-Total:</span> <span style="float:right;font-size:14px;">{{__payment.data.sale_price | currency}}</span>
                   </div>
                   <div class="col-xs-12" style="padding-top:5px;">
-                    <span style="float:left;font-size:12px;">Total:</span> <span style="float:right;font-size:12px;">{{__payment.data.sale_price | currency}}</span>
+                    <span style="float:left;font-size:20px;">Total:</span> <span style="float:right;font-size:20px;color:#70CE66;">{{__payment.data.sale_price | currency}}</span>
                 </div>
                 </div>
               </div>
                 <div class="col-xs-12 col-sm-6">
-                    <h3 class="fivemarbottom">Payment Info</h3>
+                    <h3 class="fivemarbottom"><span class="glyphicon glyphicon-lock" style="font-size:12px;"></span> Payment Info</h3>
                     <div class="payment-border">
+                      <img class="pull-right" src="img/credit-card-logos.png" style="padding-bottom:5px;max-height:20px;opacity:0.5;">
                         <div class="form-row pay-input">
                             <label>
                                 <input placeholder="Card Number" type="text" data-stripe="number">
@@ -63,21 +68,21 @@
                         </div>
                         <div class="form-row pay-input">
                             <label>
-                                <input placeholder="(MM)" type="text" size="4" data-stripe="exp_month" style="text-align:center;">
-                                <input placeholder="(YY)" type="text" size="4" data-stripe="exp_year" style="text-align:center;">
-                                <input placeholder="CVC" type="text" size="4" data-stripe="cvc" style="text-align:center;">
+                                <input placeholder="(MM)" type="text" size="5" data-stripe="exp_month" style="text-align:center;">
+                                <input placeholder="(YY)" type="text" size="5" data-stripe="exp_year" style="text-align:center;">
+                                <input placeholder="CVC" type="text" size="5" data-stripe="cvc" style="text-align:center;">
                             </label>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 text-center lil-pad">
-                    <input class="col-xs-12 col-sm-8 col-sm-offset-2 btn btn-gn btn-sm" type="submit" class="submit" value="Place Your Order">
+                    <input class="col-xs-12 col-sm-8 col-sm-offset-2 btn btn-gn btn-sm" type="submit" class="submit" value="Place Your Order" style="padding-top:5px;padding-bottom:5px;">
                     <span class="payment-errors"></span>
                 </div>
             </form>
             <div class="col-xs-12" style="padding-top:15px;">
-              <p style="font-size:12px;"><em>By clicking "Place Your Order", you agree to our privacy policy and terms of service.
-              You also agree to receive periodic email updates, discounts, and special offers.</em></p>
+              <p style="font-size:12px;font-weight:200;">By clicking "Place Your Order", you agree to our privacy policy and terms of service.
+              You also agree to receive periodic email updates, discounts, and special offers.</p>
             </div>
             <div class="col-xs-12">
               <img class="img-responsive" src="img/norton.png" style="max-width:100px;display:inline-block;">
