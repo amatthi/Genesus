@@ -49,7 +49,8 @@
                         </span>
                     </div>
                 </div>
-                <div class="container bigger-pad">
+                <div class="col-xs-12">
+                <div class="container lil-pad">
                     <h1 ng-click="test()" style="display:none;">test</h1>
                     <!-- custom -->
                     <div class='darken' ng-show="now_module != ''"></div>
@@ -70,6 +71,7 @@
                     <div class="col-xs-12 col-sm-3" ng-include="'/html/templates/launch/step_right.html?'+template_v"></div>
                     <!-- step END -->
                 </div>
+              </div>
             </div>
         </div>
         <script src="assets/angular.js"></script>

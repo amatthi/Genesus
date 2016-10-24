@@ -797,7 +797,6 @@ md-tab-content {
 .canvas_sub_image ul li {
   cursor: pointer;
   display: inline-block;
-  margin: 0 10px;
   padding: 5px;
 }
 

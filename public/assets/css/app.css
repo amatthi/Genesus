@@ -9,7 +9,7 @@
 **/
 
 header {
-    height: 40px;
+    height: 60px;
     padding: 7px 0;
     background: #fff;
     border-bottom: 1px solid #CCC;
@@ -56,7 +56,7 @@ header nav ul li.login-li {
 header nav ul li {
     display: inline-block;
     font-size: 16px;
-    padding: 0 26px;
+    padding: 10px 26px;
     font-weight: 400;
 }
 
@@ -251,17 +251,15 @@ position: relative;
 }
 
 .btn-gn {
-    background: #70CE66;
-    color: #fff;
-    font-weight: 400;
-    border: 1px solid #70CE66;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: 22px;
-    border-radius: 6px;
-    font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: #70CE66;
+  border: 1px solid #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .btn-gn:hover {
@@ -287,34 +285,57 @@ position: relative;
 }
 
 .btn-wj {
-    background: #07B9FF;
-    color: #fff;
-    font-weight: 400;
-    border: 1px solid #fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: 16px;
-    border-radius: 6px;
-    font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: #70CE66;
+  border: 1px solid #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .btn-wj:hover {
-    background: #fff;
-    color: #07B9FF;
-    border: 1px solid #07B9FF;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-family: 'Roboto', sans-serif;
+  color: #70CE66;
+  background: #fff;
+  border: 1px solid #70CE66;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .btn-wj:focus {
-    color: #07B9FF;
+  color: #70CE66;
+  background: #fff;
+  border: 1px solid #70CE66;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-bl {
+  color: #fff;
+  background: #4BAEE8;
+  border: 1px solid #4BAEE8;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-bl:hover {
     background: #fff;
-    border: 1px solid #07B9FF;
+    color: #4BAEE8;
+    border: 1px solid #4BAEE8;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 50px;
@@ -322,29 +343,15 @@ position: relative;
     font-family: 'Roboto', sans-serif;
 }
 
-.btn-jj {
-    background: #07B9FF;
-    color: #fff;
-    font-weight: 400;
-    border: 1px solid #07B9FF;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.btn-jj:hover {
+.btn-bl:focus {
+    color: #4BAEE8;
     background: #fff;
-    color: #07B9FF;
-    border: 1px solid #07B9FF;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.btn-jj:focus {
-    color: #07B9FF;
-    background: #fff;
-    border: 1px solid #07B9FF;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border: 1px solid #4BAEE8;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-secondary {
@@ -365,7 +372,7 @@ position: relative;
 
 .new-campaign {
     display:inline;
-    font-size:14px;
+    font-size:16px;
     font-weight:400;
     padding-left:15px;
 }
@@ -539,8 +546,14 @@ footer {
 }
 
 .up-down-pad {
-  padding: 10px 0 10px;
+  padding: 30px 0 10px;
   border-bottom: 1px solid hsla(0, 0%, 80%, 0.61);
+}
+
+@media (min-width:1200px) {
+.button-switch {
+  padding-left: 65px !important;
+  }
 }
 
 .launch-current-step {
@@ -627,6 +640,10 @@ footer {
   color: #fff;
   border-radius: 50%;
   padding: 2px 6px 2px 6px;
+}
+
+.progress {
+  margin-bottom: 0px;
 }
 
 .tab-content {
@@ -1217,17 +1234,8 @@ a {
 }
 
 .campaign-info h5 {
-  font-size: 24px;
+  font-size: 16px;
   color: #555F6D;
-}
-
-.campaign-button {
-  margin-top: 20px;
-}
-
-.campaign-button button {
-  padding-left: 100px;
-  padding-right: 100px;
 }
 
 .campaign-share p {

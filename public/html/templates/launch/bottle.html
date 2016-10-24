@@ -462,19 +462,21 @@
                     </div>
                 </div>
             </div>
-            <div class="canvas_sub_image" ng-show="campaign_data.formula.back_image">
-                <ul>
-                    <li ng-repeat="prodImg in productImages" style="margin-right:-5px;">
+            <div class="col-xs-12 canvas_sub_image" ng-show="campaign_data.formula.back_image">
+              <center>
+                <ul class="no-pad-left button-switch" style="max-width:550px;">
+                    <li ng-repeat="prodImg in productImages" style="display:inline-block;">
                       <a ng-click='loadProduct(defaultProductTitle, prodImg, defaultProductId, defaultPrice, defaultCurrency, $index)'class="btn btn-gy btn-sm">Front
                         <img ng-click='loadProduct(defaultProductTitle, prodImg, defaultProductId, defaultPrice, defaultCurrency, $index)' data-ng-src="{{prodImg}}" alt="" width="120px;" style="display:none;">
                       </a>
                     </li>
-                    <li style="margin-left:-5px;">
+                    <li style="display:inline-block;">
                       <a ng-click="loadProduct(defaultProductTitle, add_back_image_path(campaign_data.formula.back_image), defaultProductId, defaultPrice, defaultCurrency, $index+1)" class="btn btn-gy btn-sm">Back
                         <img ng-click="loadProduct(defaultProductTitle, add_back_image_path(campaign_data.formula.back_image), defaultProductId, defaultPrice, defaultCurrency, $index+1)" data-ng-src="{{add_back_image_path(campaign_data.formula.back_image)}}" alt="" width="120px;" style="display:none;">
                       </a>
                     </li>
                 </ul>
+              </center>
             </div>
             <!--<div class="canvas_details clearfix">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">

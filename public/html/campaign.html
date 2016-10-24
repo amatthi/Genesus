@@ -1,7 +1,7 @@
 <script src="/instashow/instashow/jquery.instashow.packaged.js"></script>
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top:25px;">
   <div class="container" style="background-color:#F3F3F3;padding:10px;margin-top:10px;border-radius:4px;">
-    <div class="col-xs-1">
+    <div class="col-xs-1" style="background-color:#fff;">
     <img ng-src="{{campaign_data.user.profile.photo}}" style="max-width:75px;padding-top:15px;">
   </div>
   <div class="col-xs-8" style="padding-top:15px;color:#555F6D;">
@@ -37,13 +37,13 @@
             <div class="col-xs-4 col-xs-offset-1">
                 <center style="float:right;">
                     <img ng-src="img/Wellness.jpg" style="max-height:75px;">
-                    <h5 style="margin-top:0px;color: #555F6D;">Designed For Wellness</h5>
+                    <h5 style="margin-top:0px;color: #555F6D;">Designed For <span style="font-weight:600;">Wellness</span></h5>
                 </center>
             </div>
             <div class="col-xs-4">
                 <center style="float:left;">
                     <img ng-src="img/Male.jpg" style="max-height:75px;">
-                    <h5 style="margin-top:0px;margin-left:-20px;color: #555F6D;">Made For Men</h5>
+                    <h5 style="margin-top:0px;margin-left:-20px;color: #555F6D;">Made For <span style="font-weight:600;">Men</span></h5>
                 </center>
             </div>
         </div>
@@ -66,7 +66,7 @@
             </div>
             <!--<div>end at : {{campaign_data.end_at}}</div>-->
             <div class="col-xs-12 col-sm-8 text-center campaign-button">
-                <button class="col-xs-12 btn btn-gn btn-sm btn-buy" ng-click="buy_campaign()">Buy It Now</a>
+                <button class="btn btn-wj btn-sm btn-buy" ng-click="buy_campaign()">Buy It Now</a>
             </div>
             <div class="col-xs-12 col-sm-8">
                 <div class="col-xs-12" id="clockdiv">
@@ -127,14 +127,14 @@
                     <span style="color: #555F6D;">In Boston, MA</span>
                 </div>
                 <div class="col-xs-12">
-                    <h5 style="color: #555F6D;">{{campaign_data.user.profile.biography}}</h5>
+                    <h5 style="color:#555F6D;font-size:12px;">{{campaign_data.user.profile.biography}}</h5>
                 </div>
-                <div class="col-xs-12" ng-show="campaign_data.user.profile.instagram">
+                <!--<div class="col-xs-12" ng-show="campaign_data.user.profile.instagram">
                     <h4><a href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank">@{{campaign_data.user.profile.instagram}}</a></h4>
                 </div>
                 <div class="col-xs-12" ng-show="campaign_data.user.profile.website" style="padding-bottom:15px;overflow:hidden;">
                     <h4><a href="{{campaign_data.user.profile.website}}" target="_blank">{{campaign_data.user.profile.website}}</a></h4>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
@@ -143,7 +143,9 @@
     <div class="row">
         <div class="container" style="padding-bottom:40px;">
             <div class="col-xs-12 descript">
-              <h4 class="lil-pad-bottom" style="color:#555F6D;font-size:38px;font-weight:400;">Meet our sponsors</h4>
+              <h4 style="color:#555F6D;font-size:38px;font-weight:400;">Who's using {{campaign_data.user.profile.brand_name}}?</h4>
+              <h4 style="color:#555F6D;font-size:28px;font-weight:300;">{{campaign_data.user.profile.first_name}}</h4>
+              <h4 style="color:#555F6D;font-size:18px;font-weight:300;"><a style="color:#555F6D;" href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank">@{{campaign_data.user.profile.instagram}}</a></h4>
               <div data-is data-is-api="instashow/api/" data-is-source="@jonrfranco"></div>
         </div>
       </div>
@@ -152,11 +154,11 @@
     <div class="row blue-row">
         <div class="container science">
           <div class="col-xs-4 lil-pad">
-            <img src="img/science.png" class="img-responsive" alt="Genesus Science">
+            <img src="img/science.png" class="img-responsive" alt="Genesus Science" style="max-width:300px;">
           </div>
           <div class="col-xs-8">
             <div class="col-xs-12">
-                <h2>The Science Behind {{campaign_data.blend_name}}</h2>
+                <h2>The Science Behind {{campaign_data.title}}</h2>
             </div>
             <div class="col-xs-12">
                 <h4>We formulate our products based on clinical studies. Below are the clinical studies for the main
@@ -208,8 +210,7 @@
 			<div id="footer">
 				<footer>
 					<div class="row">
-						<div class="col-xs-12 col-sm-8 col-sm-offset-2" style=
-						"padding-bottom:25px;">
+						<div class="col-xs-12 col-sm-8" style="padding-bottom:25px;">
 							<div class='col-xs-12'>
 								<ul class="footer-nav" style="font-size:14px;">
 									<li class='col-xs-6 col-sm-3 pull-left'>
