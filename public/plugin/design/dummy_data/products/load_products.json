@@ -429,6 +429,19 @@
 
          ],
          "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":34,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/evolve.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/evolve.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
       }
    ],
    "message":"Products Loaded Successfully"

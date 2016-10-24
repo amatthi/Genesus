@@ -1191,6 +1191,7 @@ a {
 .campaign-info h2 {
   font-size: 36px;
   margin-top: 0px;
+  margin-bottom: 0px;
   font-weight: 600;
 }
 
@@ -1333,15 +1334,18 @@ a {
 
 .science h4 {
   color:#F0E9E9;
+  line-height: 1.3;
 }
 
 .d-key h4 {
   color:#fff;
+  font-size: 22px;
 }
 
 .d-key h5 {
   color:#F0E9E9;
   font-weight: 300;
+  line-height: 1.3;
 }
 
 .case-study {
@@ -1439,14 +1443,48 @@ a {
     padding-top: 15px;
     cursor: default;
 }
-
+@media (min-width: 1423px) {
+  #clockdiv > timer > div {
+      padding: 10px;
+      border-radius: 4px;
+      background: #fff;
+      display: inline-block;
+      border: 1px solid #ddd;
+      cursor: default;
+  }
+}
+@media (min-width: 1150px) and (max-width: 1422px) {
 #clockdiv > timer > div {
-    padding: 10px;
+    padding: 2px;
     border-radius: 4px;
     background: #fff;
     display: inline-block;
     border: 1px solid #ddd;
     cursor: default;
+  }
+  .numtext {
+    font-size: 18px;
+  }
+  .smalltext {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1149px) {
+  #clockdiv > timer > div {
+      padding: 2px;
+      border-radius: 4px;
+      background: #fff;
+      display: inline-block;
+      border: 1px solid #ddd;
+      cursor: default;
+    }
+    .numtext {
+      font-size: 14px;
+    }
+    .smalltext {
+      font-size: 10px;
+    }
 }
 
 #clockdiv > timer > div > span {
