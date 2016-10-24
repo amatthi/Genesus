@@ -1189,15 +1189,17 @@ a {
 }
 
 .campaign-info h2 {
-  font-size: 28px;
+  font-size: 38px;
   margin-top: 0px;
   margin-bottom: 0px;
-  font-weight: 600;
+  font-weight: 500;
+  color: #555F6D;
 }
 
 .campaign-info h4 {
   font-size: 14px;
-  color: #777;
+  color: #555F6D;
+  font-weight: 400;
 }
 
 .campaign-info h4 span {
@@ -1216,6 +1218,7 @@ a {
 
 .campaign-info h5 {
   font-size: 24px;
+  color: #555F6D;
 }
 
 .campaign-button {
@@ -1331,16 +1334,20 @@ a {
 
 .science h2 {
   color:#fff;
+  font-weight: 300;
 }
 
 .science h4 {
   color:#F0E9E9;
   line-height: 1.3;
+  font-weight: 200;
+  font-size: 14px;
 }
 
 .d-key h4 {
   color:#fff;
   font-size: 22px;
+  font-weight: 300;
 }
 
 .d-key h5 {
@@ -1363,6 +1370,8 @@ a {
 
 .bio-info a {
   font-size:14px;
+  font-weight: 500;
+  color: #555F6D;
 }
 
 .bio-info h4 {

@@ -1,7 +1,16 @@
 <script src="/instashow/instashow/jquery.instashow.packaged.js"></script>
 <div class="container-fluid">
+  <div class="container" style="background-color:#F3F3F3;padding:10px;margin-top:10px;border-radius:4px;">
+    <div class="col-xs-1">
+    <img ng-src="{{campaign_data.user.profile.photo}}" style="max-height:75px;border-radius:50%;">
+  </div>
+  <div class="col-xs-8" style="padding-top:15px;color:#555F6D;">
+    <h5 style="margin-top:0px;margin-bottom:0px;font-size:22px;font-weight:600;">{{campaign_data.user.profile.brand_name}}</h5>
+    <span>In Los Angeles, CA</span>
+  </div>
+  </div>
     <div class="row">
-        <div class="col-xs-12 col-sm-6 text-center big-pad">
+        <div class="col-xs-12 col-sm-6 text-center lil-pad">
             <div class="col-xs-12">
                 <center>
                     <img class="img-responsive" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement" style="max-height:350px;">
@@ -25,25 +34,25 @@
                   <h5 style="margin-top:0px;color:#777;">{{campaign_data.user.profile.first_name}}</h5>
                 </center>
             </div>-->
-            <div class="col-xs-4 col-xs-offset-2">
+            <div class="col-xs-4 col-xs-offset-1">
                 <center style="float:right;">
                     <img ng-src="img/Wellness.jpg" style="max-height:75px;">
-                    <h5 style="margin-top:0px;color:#777;">Wellness</h5>
+                    <h5 style="margin-top:0px;color: #555F6D;">Designed For Wellness</h5>
                 </center>
             </div>
             <div class="col-xs-4">
                 <center style="float:left;">
                     <img ng-src="img/Male.jpg" style="max-height:75px;">
-                    <h5 style="margin-top:0px;margin-left:-20px;color:#777;">For Men</h5>
+                    <h5 style="margin-top:0px;margin-left:-20px;color: #555F6D;">Made For Men</h5>
                 </center>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6 campaign-info big-pad">
+        <div class="col-xs-12 col-sm-6 campaign-info lil-pad">
             <div class="col-xs-12">
                 <h2>{{campaign_data.title}}</h2>
                 <!--<h5 style="margin-top:0px;color:#777;font-size:14px;">from <em>{{campaign_data.user.profile.first_name}}</em></h5>-->
-                <h4 style="color:#333;font-size:18px;font-weight:400;">{{campaign_data.description}}</h4>
-                <h3>{{campaign_data.sale_price | currency}} <span style="color:#333;font-size:16px;font-weight:300;">& FREE Shipping</span></h3>
+                <h4 style="color:#555F6D;font-size:18px;font-weight:400;line-height:1.2;">{{campaign_data.description}}</h4>
+                <h3>{{campaign_data.sale_price | currency}} <span style="color: #555F6D;font-size:16px;font-weight:300;">& FREE Shipping</span></h3>
                 <h4><span class="glyphicon glyphicon-ok"></span> Purifies Toxins</h4>
                 <h4><span class="glyphicon glyphicon-ok"></span> Replenishes Nutrients</h4>
                 <h4><span class="glyphicon glyphicon-ok"></span> Re-enforces Hydration</h4>
@@ -95,37 +104,38 @@
     <div class="row">
         <div class="container">
             <div class="col-xs-12 col-sm-8 descript">
-                <h2>About this product</h2>
+                <h4 style="color:#555F6D;font-size:38px;font-weight:400;">About</h4>
                 <div class="col-xs-12 no-pad-left">
-                    <h4 style="font-size:14px;font-weight:400;">{{campaign_data.description}}</h4>
+                    <h4 style="font-size:14px;font-weight:400;color:#555F6D;">{{campaign_data.description}}</h4>
                 </div>
                 <div class="col-xs-12 no-pad-left">
                     <h5 style="font-size:14px;">Shipping Info</h5>
-                    <p style="font-size:14px;">Orders are packaged and shipped when the time expires. You can expect your package to arrive around 4-7 business days after the campaign finishes.</p>
+                    <p style="font-size:14px;color: #555F6D;">Orders are packaged and shipped when the time expires. You can expect your package to arrive around 4-7 business days after the campaign finishes.</p>
                 </div>
                 <div class="col-xs-12 no-pad-left">
-                    <p style="font-size:14px;">Shipping is completely free if an order is placed before the campaign ends.</p>
+                    <p style="font-size:14px;color: #555F6D;">Shipping is completely free if an order is placed before the campaign ends.</p>
                 </div>
                 <div class="col-xs-12 no-pad-left">
                     <h5 style="font-size:14px;">Return Policy</h5>
-                    <p style="font-size:14px;">If you're not 100% satisfied, let us know and we'll make it right.</p>
+                    <p style="font-size:14px;color: #555F6D;">If you're not 100% satisfied, let us know and we'll make it right.</p>
                 </div>
             </div>
-            <!--<div class="col-xs-12 col-sm-4 bio-info">
-                <h2>About {{campaign_data.user.profile.first_name}}</h2>
-                <div class="col-xs-12">
+            <div class="col-xs-12 col-sm-4 bio-info" style="border:5px solid #24BCD3;border-radius:4px;">
+                <div class="col-xs-12 text-center">
                     <img ng-src="{{campaign_data.user.profile.photo}}" style="max-height:200px;">
+                    <h5 style="margin-top:0px;margin-bottom:0px;font-size:22px;font-weight:600;">{{campaign_data.user.profile.brand_name}}</h5>
+                    <span style="color: #555F6D;">In Boston, MA</span>
+                </div>
+                <div class="col-xs-12">
+                    <h5 style="color: #555F6D;">{{campaign_data.user.profile.biography}}</h5>
                 </div>
                 <div class="col-xs-12" ng-show="campaign_data.user.profile.instagram">
                     <h4><a href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank">@{{campaign_data.user.profile.instagram}}</a></h4>
                 </div>
-                <div class="col-xs-12" ng-show="campaign_data.user.profile.website">
+                <div class="col-xs-12" ng-show="campaign_data.user.profile.website" style="padding-bottom:15px;">
                     <h4><a href="{{campaign_data.user.profile.website}}" target="_blank">{{campaign_data.user.profile.website}}</a></h4>
                 </div>
-                <div class="col-xs-12">
-                    <h5>{{campaign_data.user.profile.biography}}</h5>
-                </div>
-            </div>-->
+            </div>
         </div>
     </div>
     <!--End Row-->
@@ -133,7 +143,7 @@
     <div class="row">
         <div class="container" style="padding-bottom:40px;">
             <div class="col-xs-12 descript">
-              <h2 class="lil-pad-bottom">Meet our sponsors</h2>
+              <h4 class="lil-pad-bottom" style="color:#555F6D;font-size:38px;font-weight:400;">Meet our sponsors</h4>
               <div data-is data-is-api="instashow/api/" data-is-source="@jonrfranco"></div>
         </div>
       </div>
@@ -164,21 +174,21 @@
                 <div>
                   <h4>Prickly Pear Extract</h4>
                   <h5>As your body tries to break down alcohol, it inevitably produces free-radicals that can damage your cells. Prickly Pear Extract has been used for centuries to protect your proteins and lipids from damage when your body breaks down alcohol.</h5>
-                  <h4 class="case-study" style="font-size:18px;">The Clinical Studies To Support It</h4>
+                  <h4 class="case-study" style="font-size:14px;font-weight:300;">The Clinical Studies To Support It</h4>
                   <h5>JAMA Internal Medicine Network</h5>
                   <h5><a href="http://jamanetwork.com/journals/jamainternalmedicine/fullarticle/217133" target="_blank">http://jamanetwork.com/journals/jamainternalmedicine/fullarticle/217133</a></h5>
                 </div>
                 <div>
                   <h4>Milk Thistle</h4>
                   <h5>Home to the planes of Southern Europe, Milk Thistle is an herb revered by traditional cultures for it's anti-oxident and anti-inflammatory properties. Milk thistle, and its silymarin component, increases the activity of your antioxidant enzymes to combat the free-radicals produced when your body breaks down alcohol. </h5>
-                  <h4 class="case-study" style="font-size:18px;">The Clinical Studies To Support It</h4>
+                  <h4 class="case-study" style="font-size:14px;font-weight:300;">The Clinical Studies To Support It</h4>
                   <h5>National Center for Biotechnology Information, U.S. National Library of Medicine</h5>
                   <h5><a href="https://www.ncbi.nlm.nih.gov/books/NBK11896/" target="_blank">https://www.ncbi.nlm.nih.gov/books/NBK11896/</a></h5>
                 </div>
                 <div>
                   <h4>Thiamine</h4>
                   <h5>Commonly known as Thiamine, B Vitamins improve signs of alcohol intoxication by reversing the depletion of your protective enzymes as your body breaks down alcohol. B vitamin intake may also prevent the depletion of glutathione, an antioxidant that protects you from oxidative stress.</h5>
-                  <h4 class="case-study" style="font-size:18px;">The Clinical Studies To Support It</h4>
+                  <h4 class="case-study" style="font-size:14px;font-weight:300;">The Clinical Studies To Support It</h4>
                   <h5>National Center for Biotechnology Information, U.S. National Library of Medicine<</h5>
                   <h5><a href="https://www.ncbi.nlm.nih.gov/pubmed/21905094" target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/21905094</a></h5>
                 </div>
@@ -190,6 +200,9 @@
     <!--End Row-->
     <div class="row">
         <img src="https://s3-us-west-2.amazonaws.com/tappyn/campaign-banner.jpg" class="img-responsive" alt="Genesus banner">
+        <center>
+        <img src="/img/nutrifacts.jpg" class="img-responsive" alt="Genesus Nutrition Facts" style="width:100%;max-width:1200px;">
+      </center>
     </div>
     <section>
 			<div id="footer">
@@ -228,10 +241,10 @@
 						<div class='col-xs-12 pull-left'>
 							<span class="glyphicon glyphicon-copyright-mark" style=
 							"font-size:10px;color:#8E8E8E;padding-left:25px;"><span style=
-							"font-size:14px;padding-left:2px;color:#8E8E8E;">Genesus, LLC.<a href=
+							"font-size:14px;padding-left:2px;color:#8E8E8E;">Genesus, LLC. <a href=
 							"/terms" style="color:#8E8E8E;">Terms & Conditions</a> <a href="/privacy" style=
 							"color:#8E8E8E;">Privacy Policy</a></span></span>
-              <span style="font-size:14px;padding-left:25px;color:#8E8E8E;font-weight:300;">
+              <span style="font-size:14px;padding-left:25px;color:#8E8E8E;font-weight:300;font-family:'Glyphicons Halflings';">
                 Secure Shopping with 100% Industry Standard SSL
               </span>
 						</div>
