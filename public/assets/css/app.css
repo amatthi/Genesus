@@ -1206,11 +1206,11 @@ a {
 }
 
 .campaign-info h2 {
-  font-size: 38px;
+  font-size: 48px;
   margin-top: 0px;
   margin-bottom: 0px;
-  font-weight: 500;
-  color: #555F6D;
+  font-weight: 600;
+  color: #434343;
 }
 
 .campaign-info h4 {
@@ -1236,6 +1236,7 @@ a {
 .campaign-info h5 {
   font-size: 16px;
   color: #555F6D;
+  font-weight: 600;
 }
 
 .campaign-share p {
@@ -1538,6 +1539,8 @@ a {
     border-radius: 3px;
     background: #fff;
     cursor: default;
+    color #434343;
+    font-weight: 400;
 }
 
 .payment-back {
