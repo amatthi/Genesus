@@ -31,8 +31,11 @@ class ProfileController extends Controller
         $this->validate($request, [
             'email'      => 'required|email|max:255|unique:users,email,' . $user->id,
             'biography'  => 'max:500',
+            'brand_description'  => 'max:500',
             'website'    => 'max:255',
             'brand_name' => 'max:255',
+            'first_name' => 'max:255',
+            'instagram' => 'max:255',
             'password'   => 'min:6|confirmed',
         ]);
 
@@ -57,6 +60,7 @@ class ProfileController extends Controller
         $profile->instagram  = $request->input('instagram');
         $profile->website    = $request->input('website');
         $profile->brand_name = $request->input('brand_name');
+        $profile->brand_description = $request->input('brand_description');
         $profile->biography  = ($request->input('biography')) ? $request->input('biography') : '';
         $profile->save();
 

@@ -3,10 +3,10 @@
         <ul class="nav nav-pills nav-stacked dash-nav lil-pad">
             <li role="presentation" ng-class="{'dash-a' : dash_view == 'campaigns'}" ng-click="dash_set('campaigns')"><a>Campaigns</a></li>
             <!--<li role="presentation"><a href="#">Payouts</a></li>-->
-            <li role="presentation" ng-class="{'dash-a' : dash_view == 'settings'}" ng-click="dash_set('settings')"><a>Settings</a></li>
+            <li role="presentation" ng-class="{'dash-a' : dash_view == 'settings'}" ng-click="dash_set('settings')"><a>Profile</a></li>
         </ul>
     </div>
-    <div class="col-xs-12 col-sm-10 lil-pad dash-campaigns dash-style">
+    <div class="col-xs-12 col-sm-10 lil-pad dash-campaigns dash-style" style="padding-top:50px;">
         <div id="campaigns" ng-show="dash_view == 'campaigns'">
             <div class="alert alert-warning alert-dismissible" role="alert">
                 <button class="close" data-dismiss="alert" type="button">
@@ -77,8 +77,23 @@
             </div>
         </div>
         <div ng-show="dash_view == 'settings'" id="settings">
-            <h2>Profile</h2>
-            <div class="col-xs-12 col-sm-10 campaign-overview">
+
+            <div class="col-xs-12 col-sm-10 campaign-overview pay-input">
+              <h2 style="border-bottom:1px solid #ddd;margin-right:-15px;margin-left:-15px;font-size:16px;padding:10px 0px 20px 25px;">
+                Change Your Info
+              </h2>
+              <div class="col-xs-12 col-sm-4 lil-pad">
+                  <label style="font-weight:400;">Brand Name</label>
+                  <input class="col-xs-12" type="text" ng-model="profile_data.brand_name">
+              </div>
+              <div class="col-xs-12 col-sm-4 lil-pad">
+                  <label style="font-weight:400;">Instagram</label>
+                  <input class="col-xs-12" type="text" placeholder="Instagram Handle Without '@'" ng-model="profile_data.instagram">
+              </div>
+              <div class="col-xs-12 col-sm-8 lil-pad">
+                  <label style="font-weight:400;">Brand Description</label>
+                  <input class="col-xs-12" type="text" ng-model="profile_data.brand_description">
+              </div>
                 <div class="col-xs-12 lil-pad">
                     <label class="col-xs-12 col-sm-3">Profile Picture</label>
                     <input accept="image/*" class="col-xs-12 col-sm-6 inputfile" id="profile-photo" name="file" type="file">
@@ -88,10 +103,7 @@
                     <label class="col-xs-12 col-sm-3">First Name</label>
                     <input type="text" class="col-xs-12 col-sm-3" ng-model="profile_data.first_name">
                 </div>
-                <div class="col-xs-12 lil-pad">
-                    <label class="col-xs-12 col-sm-3">Brand Name</label>
-                    <input type="text" class="col-xs-12 col-sm-3" ng-model="profile_data.brand_name">
-                </div>
+
                 <div class="col-xs-12 lil-pad">
                     <label class="col-xs-12 col-sm-3">Biography</label>
                     <textarea class="col-xs-12 col-sm-3" ng-model="profile_data.biography"></textarea>
@@ -100,10 +112,7 @@
                     <label class="col-xs-12 col-sm-3">Website</label>
                     <input type="text" class="col-xs-12 col-sm-3" ng-model="profile_data.website">
                 </div>
-                <div class="col-xs-12 lil-pad">
-                    <label class="col-xs-12 col-sm-3">Instagram</label>
-                    <input type="text" placeholder="Instagram Handle Without '@'"class="col-xs-12 col-sm-3" ng-model="profile_data.instagram">
-                </div>
+
                 <div class="col-xs-12 lil-pad">
                     <label class="col-xs-12 col-sm-3">Email</label>
                     <input class="col-xs-12 col-sm-3" type="email" ng-model="profile_data.email">
