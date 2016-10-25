@@ -34,7 +34,7 @@
                   <h5 style="margin-top:0px;color:#777;">{{campaign_data.user.profile.first_name}}</h5>
                 </center>
             </div>-->
-            <<div class="col-xs-3 col-xs-offset-1">
+            <div class="col-xs-3 col-xs-offset-1">
                 <center style="float:right;">
                   <img ng-src="img/toxins.jpg" style="max-height:75px;">
                   <h5 style="margin-top:0px;color:#777;font-size:18px;">Purifies Toxins</h5>
@@ -218,30 +218,72 @@
       </center>
     </div>
     <section>
+      <div class="col-xs-12 text-center">
+      <h3>Get New Supplements Delivered To You Daily</h3>
+    </div>
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4 lil-pad text-center">
+          <input id="email" type="email" placeholder="Email" class="form-control" name="email" ng-model="register_data.email" value="">
+      </div>
+        <div class="col-xs-12 col-sm-4 col-sm-offset-4 text-center" style="padding-top:15px;">
+          <button type="submit" class="btn btn-primary">
+              <i class="fa fa-btn fa-user"></i>
+              <a onClick="alert('Thanks for subscribing!')" style="color:#fff;">
+                Subscribe
+              </a>
+          </button>
+        </div>
 			<div id="footer">
 				<footer>
 					<div class="row">
-						<div class="col-xs-12 col-sm-8" style="padding-bottom:25px;">
-							<div class='col-xs-12'>
+						<div class="container col-xs-12" style="padding-bottom:25px;padding-top:15px;">
+							<div class='col-xs-12 col-sm-10 col-sm-offset-1'>
 								<ul class="footer-nav" style="font-size:14px;">
-									<li class='col-xs-6 col-sm-3 pull-left'>
-										<a href="/contact_us">Contact Us</a>
+                  <div class='col-xs-6 col-sm-3 pull-left'>
+									<li>
+										<h5 style="font-weight:600;cursor:default;">Turn your passion into a business.</h5>
 									</li>
-									<li class='col-xs-6 col-sm-3 pull-left'>
-										<a href="/faq">FAQ</a>
+									<li>
+										<a href="/faq">Create & Sell</a>
 									</li>
-									<li class='col-xs-6 col-sm-3 pull-left'>
-										<a href="/terms">Terms of Use</a>
-									</li>
-									<li class='col-xs-6 col-sm-3 pull-left'>
-										<a href="/privacy">Privacy Policy</a>
-									</li>
-									<li class='col-xs-6 col-sm-3 pull-left'>
-										<a href="/contact_us">About</a>
-									</li>
-									<li class='col-xs-6 col-sm-3 pull-left'>
-										<a href="/home">Manufacturing</a>
-									</li>
+                </div>
+                <div class='col-xs-6 col-sm-2 pull-left'>
+                <li>
+                  <h5 style="font-weight:600;cursor:default;">Join the community</h5>
+                </li>
+                <li>
+                  <a href="/contact_us">Contact Us</a>
+                </li>
+              </div>
+              <div class='col-xs-6 col-sm-2 pull-left'>
+              <li>
+                <h5 style="font-weight:600;cursor:default;">Discover & shop</h5>
+              </li>
+              <li>
+                <a href="/contact_us">Shop</a>
+              </li>
+            </div>
+            <div class='col-xs-6 col-sm-2 pull-left'>
+            <li>
+              <h5 style="font-weight:600;cursor:default;">Get to know us</h5>
+            </li>
+            <li>
+              <a href="/faq">FAQ</a>
+            </li>
+            <li>
+              <a href="/faq">About</a>
+            </li>
+          </div>
+          <div class='col-xs-6 col-sm-2 pull-left'>
+          <li>
+            <h5 style="font-weight:600;cursor:default;">Follow Genesus</h5>
+          </li>
+          <li>
+            <a href="/contact_us">Facebook</a>
+          </li>
+          <li>
+            <a href="/contact_us">Instagram</a>
+          </li>
+        </div>
 								</ul>
 							</div>
 						</div>
@@ -251,14 +293,15 @@
                                 <a style='padding:15px;' href="https://www.instagram.com/therealfabel/" target="_blank"><img src="public/img/ico-insta.svg"></a>
             </div>-->
 						<div class='col-xs-12 pull-left'>
+              <span>
+                <img src="img/us.jpg" class="img-responsive" style="max-height:50px;display:inline;">
+              </span>
 							<span class="glyphicon glyphicon-copyright-mark" style=
 							"font-size:10px;color:#8E8E8E;padding-left:25px;"><span style=
 							"font-size:14px;padding-left:2px;color:#8E8E8E;">Genesus, LLC. <a href=
 							"/terms" style="color:#8E8E8E;">Terms & Conditions</a> <a href="/privacy" style=
 							"color:#8E8E8E;">Privacy Policy</a></span></span>
-              <span style="font-size:14px;padding-left:25px;color:#8E8E8E;font-weight:300;font-family:'Glyphicons Halflings';">
-                Secure Shopping with 100% Industry Standard SSL
-              </span>
+
 						</div>
 					</div>
 				</footer>
