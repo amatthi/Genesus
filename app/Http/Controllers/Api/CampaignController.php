@@ -29,6 +29,7 @@ class CampaignController extends Controller
             'length'          => 'required',
             'status'          => 'required|in:public,draft',
             //'slug'            => 'required|max:255',
+            //'blurb'            => 'required|max:255',
             //'title'           => 'required|max:255',
         ]);
         $db_cols = ['goal', 'status'];
@@ -58,6 +59,7 @@ class CampaignController extends Controller
         $data                = $request->only($db_cols);
         $data['title']       = ($request->input('title')) ? $request->input('title') : '';
         $data['description'] = ($request->input('description')) ? $request->input('description') : '';
+        $data['blurb']       = ($request->input('blurb')) ? $request->input('blurb') : '';
         $data['user_id']     = Auth::user()->id;
         $data['slug']        = $slug;
         $data['end_at']      = date('Y-m-d H:i:s', strtotime('+' . $request->input('length') . 'days'));

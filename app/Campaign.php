@@ -9,7 +9,7 @@ class Campaign extends Model
 {
     use CampaignTrait;
 
-    protected $fillable = ['title', 'goal', 'slug', 'description', 'end_at', 'others', 'user_id'];
+    protected $fillable = ['title', 'goal', 'slug', 'description', 'blurb', 'end_at', 'others', 'user_id'];
     protected $appends  = ['cost_per_bottle', 'purpose', 'formula', 'sale_price', 'length', 'bottle_img', 'blend_name'];
     protected $dates    = ['end_at'];
 

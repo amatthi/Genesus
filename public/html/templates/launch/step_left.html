@@ -74,9 +74,14 @@
             <input class="input-width border-rad input-border" type="text" placeholder="" ng-model="campaign_data.title">
         </div>
         <div class="col-xs-12 lil-pad-bottom">
-            <label>Description</label>
+            <label>Summary</label>
             <h4 class="grey-info-2" style="cursor:default;">Let people know why they should buy your product and how it will help them.</h4>
-            <textarea class="input-width border-rad input-border" ng-model="campaign_data.description"></textarea>
+            <input type="text" class="input-width border-rad input-border" ng-model="campaign_data.description">
+        </div>
+        <div class="col-xs-12 lil-pad-bottom">
+            <label>Blurb</label>
+            <h4 class="grey-info-2" style="cursor:default;">Let people know why they should buy your product and how it will help them.</h4>
+            <textarea class="input-width border-rad input-border" ng-model="campaign_data.blurb"></textarea>
         </div>
         <div class="col-xs-12 lil-pad-bottom">
             <label>Campaign length</label>
@@ -93,7 +98,7 @@
             <label>Url</label>
             <h4 class="grey-info-2" style="cursor:default;">This is where you'll send buyers to view your campaign.</h4>
             <div class="input-group">
-                <span class="input-group-addon" id="basic-addon2" style="cursor:default;">genesus.co/</span>
+                <span class="input-group-addon" id="basic-addon2" style="cursor:default;">genesus.co/campaign/</span>
                 <input class="input-width border-rad input-border form-control" type="text" ng-model="campaign_data.slug" aria-describedby="basic-addon2">
             </div>
         </div>

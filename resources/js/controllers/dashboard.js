@@ -9,6 +9,9 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
         $scope.profile_data.biography = $scope.__user.profile.biography;
         $scope.profile_data.old_photo = $scope.__user.profile.photo;
         $scope.profile_data.brand_name = $scope.__user.profile.brand_name;
+        $scope.profile_data.brand_city = $scope.__user.profile.brand_city;
+        $scope.profile_data.brand_state = $scope.__user.profile.brand_state;
+        $scope.profile_data.brand_zip = $scope.__user.profile.brand_zip;
         $scope.profile_data.website = $scope.__user.profile.website;
         $scope.profile_data.first_name = $scope.__user.profile.first_name;
         $scope.profile_data.brand_description = $scope.__user.profile.brand_description;
@@ -32,7 +35,7 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
 
     $scope.update_profile = function(profile_data) {
         mainFactory.update_profile(profile_data).then(function(r) {
-            alert('update profile success');
+            alert('Your profile has been updated!');
             $scope.is_login();
         }, $scope.handle_error);
     }
