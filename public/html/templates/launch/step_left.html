@@ -1,6 +1,6 @@
 <!-- step goal-->
 <div class="col-xs-12 col-sm-5 col-sm-offset-1" ng-show="launch_step_goal()">
-    <div class="launch-step-goal">
+    <div class="launch-step-goal launch-input">
         <div class="col-xs-12 no-pad-left">
             <label>Sales goal</label>
             <rzslider rz-slider-model="campaign_data.goal" rz-slider-options="goal_slider.options"></rzslider>
@@ -67,21 +67,21 @@
 <!-- END step goal-->
 <!-- step desc-->
 <div class="col-xs-12 col-sm-5 col-sm-offset-1" ng-show="launch_step_desc()">
-    <div class="col-xs-12 launch-step-desc">
+    <div class="col-xs-12 launch-step-desc launch-input">
         <div class="col-xs-12 lil-pad-bottom">
             <label>Product name</label>
-            <h4 class="grey-info-2" style="cursor:default;">Focus on how this product will help your audience.</h4>
-            <input class="input-width border-rad input-border" type="text" placeholder="" ng-model="campaign_data.title">
+            <!--<h4 class="grey-info-2" style="cursor:default;">Focus on how this product will help your audience.</h4>-->
+            <input class="input-width border-rad input-border" type="text" placeholder="e.g., PeakBrain" ng-model="campaign_data.title">
         </div>
         <div class="col-xs-12 lil-pad-bottom">
             <label>Summary</label>
-            <h4 class="grey-info-2" style="cursor:default;">Let people know why they should buy your product and how it will help them.</h4>
-            <input type="text" class="input-width border-rad input-border" ng-model="campaign_data.description">
+            <!--<h4 class="grey-info-2" style="cursor:default;">Let people know why they should buy your product and how it will help them.</h4>-->
+            <input type="text" class="input-width border-rad input-border" placeholder="e.g., Shown to help healthy individuals support memory, focus, and processing speed." ng-model="campaign_data.description">
         </div>
         <div class="col-xs-12 lil-pad-bottom">
             <label>Blurb</label>
-            <h4 class="grey-info-2" style="cursor:default;">Let people know why they should buy your product and how it will help them.</h4>
-            <textarea class="input-width border-rad input-border" ng-model="campaign_data.blurb"></textarea>
+            <!--<h4 class="grey-info-2" style="cursor:default;">Let people know why they should buy your product and how it will help them.</h4>-->
+            <textarea class="input-width border-rad input-border" size="4" placeholder="e.g., PeakBrain may help you remember names and places, focus on complex tasks, and improve your mental speed in response to stimuli. Whether it is a work project, a social gathering, or an athletic performance, taking PeakBrain is like another gear for your brain." ng-model="campaign_data.blurb"></textarea>
         </div>
         <div class="col-xs-12 lil-pad-bottom">
             <label>Campaign length</label>
