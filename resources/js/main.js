@@ -28,6 +28,9 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
         .when('/contact_us', {
             templateUrl: 'html/contact_us.html',
         })
+        .when('/thank_you', {
+            templateUrl: 'html/thank_you.html',
+        })
         .when('/campaign/:slug', {
             templateUrl: 'html/campaign.html',
             controller: 'campaignController',
