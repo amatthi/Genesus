@@ -11035,6 +11035,10 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
         return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
     }
 
+    $scope.add_benefit1_path = function(benefit_1) {
+        return '/plugin/design/images/benefits_1/' + benefit_1.replace(/ /g, '_') + '.jpg';
+    }
+
     $scope.buy_campaign = function() {
         $scope.__payment.type = 'buy_campaign';
         $scope.__payment.data = $scope.campaign_data;

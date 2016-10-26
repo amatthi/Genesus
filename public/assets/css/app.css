@@ -1502,7 +1502,7 @@ a {
 }
 @media (min-width: 1423px) {
   #clockdiv > timer > div {
-      padding: 10px;
+      padding: 5px;
       border-radius: 4px;
       background: #fff;
       display: inline-block;
