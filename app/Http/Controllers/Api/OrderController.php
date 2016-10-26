@@ -6,11 +6,13 @@ use App\Campaign;
 use App\Http\Controllers\Controller;
 use App\Log;
 use App\Order;
+use App\User;
 use Auth;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
+    private $user;
     public function __construct()
     {
 
@@ -18,11 +20,13 @@ class OrderController extends Controller
 
     public function pay(Request $request)
     {
-        $user   = Auth::user();
-        $result = false;
-        $post   = $request->all();
+        $this->user = (Auth::user()) ? Auth::user() : new User;
+        $result     = false;
+        $post       = $request->all();
         if (isset($post['token'])) {
-            $this->check_token($post['token']);
+            if ($this->user->exists) {
+                $this->check_token($post['token']);
+            }
         } else if (!$user->hasStripeId()) {
             return response(['stripe' => ['Payment method not found']], 422);
         }
@@ -38,7 +42,7 @@ class OrderController extends Controller
                     'zipcode'         => 'required|max:255',
                 ]);
                 $campaign = Campaign::where('id', $post['data']['id'])->firstOrFail();
-                $this->charge_and_log($campaign);
+                $this->charge_and_log($campaign, $post);
                 $result = $this->buy_campaign($campaign, $request);
                 break;
 
@@ -54,7 +58,7 @@ class OrderController extends Controller
     {
         $order              = new Order;
         $order->campaign_id = $campaign->id;
-        $order->user_id     = Auth::user()->id;
+        $order->user_id     = ($this->user->id) ? $this->user->id : 0;
         $order->status      = 'paid';
         $order->others      = $request->only(['email', 'street_address', 'state', 'country', 'street_address2', 'zipcode']);
         $order->save();
@@ -67,12 +71,15 @@ class OrderController extends Controller
         $customer = $user->createAsStripeCustomer($token);
     }
 
-    public function charge_and_log(Campaign $campaign)
+    public function charge_and_log(Campaign $campaign, array $post)
     {
         $description = 'Charge for Camapign#' . $campaign->id;
-        $user        = Auth::user();
-        $charge      = $user->charge($campaign->sale_price * 100, ['description' => $description]);
-        $content     = [
+        $option      = ['description' => $description];
+        if (!$this->user->exists) {
+            $option['source'] = $post['token'];
+        }
+        $charge  = $this->user->charge($campaign->sale_price * 100, $option);
+        $content = [
             'id'          => $charge->id,
             'amount'      => $charge->amount,
             'currency'    => $charge->currency,
@@ -83,7 +90,7 @@ class OrderController extends Controller
         ];
         // dd($content, $charge);
         $log          = new Log;
-        $log->user_id = $user->id;
+        $log->user_id = ($this->user->id) ? $this->user->id : 0;
         $log->type    = 'charge';
         $log->type_id = $campaign->id;
         $log->content = $content;
