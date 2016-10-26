@@ -1199,6 +1199,17 @@ a {
   color:#0698D1;
 }
 
+.products-style-1 option {
+  border: 1px solid #d8dddf;
+  background-color: #fff;
+  height: 50px;
+  width: 56px;
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 4px;
+}
+
 .products-style option {
   border: 1px solid #d8dddf;
   background-color: #fff;

@@ -56,17 +56,17 @@ chisel_launch.controller('CustomCtrl', [
                 $scope.set_module();
             }, $scope.handle_error);
         }
-        $scope.handle_error = function(response) {
+        //$scope.handle_error = function(response) {
             // console.log(response);
-            if (response.status == 422) {
-                var data = response.data;
-                for (var i in data) {
-                    alert(data[i]);
-                }
-            } else if (response.status == 401) {
-                alert('must login');
-            }
-        }
+            //if (response.status == 422) {
+                //var data = response.data;
+                //for (var i in data) {
+                    //alert(data[i]);
+                //}
+            //} else if (response.status == 401) {
+                //alert('must login');
+            //}
+        //}
         $scope.is_login = function() {
             mainFactory.is_login().then(function(r) {
                 $scope.__user = (r.data.user) ? r.data.user : {};
