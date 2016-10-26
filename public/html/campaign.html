@@ -4,7 +4,7 @@
     <div class="col-xs-12 col-sm-1" style="background-color:#fff;">
     <img ng-src="{{campaign_data.user.profile.photo}}" style="max-width:75px;padding:30px 10px 30px 0px;">
   </div>
-  <div class="col-xs-12 col-sm-8" style="padding-top:15px;color:#555F6D;">
+  <div class="col-xs-12 col-sm-8" style="padding-top:25px;color:#555F6D;">
     <h5 style="margin-top:0px;margin-bottom:0px;font-size:22px;font-weight:600;color:#434343;">{{campaign_data.user.profile.brand_name}}</h5>
     <!--<span>In Los Angeles, CA</span>-->
   </div>
@@ -37,19 +37,19 @@
             <div class="col-xs-3 col-xs-offset-1">
                 <center style="float:right;">
                   <img ng-src="img/toxins.jpg" style="max-height:75px;">
-                  <h5 style="margin-top:0px;color:#777;font-size:18px;">Purifies Toxins</h5>
+                  <h5 style="padding-top:10px;color:#555F6D;font-size:18px;">Purifies Toxins</h5>
                 </center>
             </div>
             <div class="col-xs-3">
                 <center>
                     <img ng-src="img/memory.jpg" style="max-height:75px;">
-                    <h5 style="margin-top:0px;color: #555F6D;font-size:18px;">Increases Working Memory</h5>
+                    <h5 style="padding-top:10px;color: #555F6D;font-size:18px;">Increases Working Memory</h5>
                 </center>
             </div>
             <div class="col-xs-3">
                 <center style="float:left;">
                     <img ng-src="img/mental.jpg" style="max-height:75px;">
-                    <h5 style="margin-top:0px;color: #555F6D;font-size:18px;">Boosts Mental Performance</h5>
+                    <h5 style="padding-top:10px;color: #555F6D;font-size:18px;">Boosts Mental Performance</h5>
                 </center>
             </div>
         </div>
@@ -59,13 +59,13 @@
                 <!--<h5 style="margin-top:0px;color:#777;font-size:14px;">from <em>{{campaign_data.user.profile.first_name}}</em></h5>-->
                 <h4 style="color:#555F6D;font-size:18px;font-weight:400;line-height:1.2;">{{campaign_data.description}}</h4>
                 <h3>{{campaign_data.sale_price | currency}} <span style="color: #555F6D;font-size:16px;font-weight:300;">& FREE Shipping</span></h3>
-                <h4><span class="glyphicon glyphicon-ok"></span> Purifies Toxins</h4>
+                <!--<h4><span class="glyphicon glyphicon-ok"></span> Purifies Toxins</h4>
                 <h4><span class="glyphicon glyphicon-ok"></span> Replenishes Nutrients</h4>
-                <h4><span class="glyphicon glyphicon-ok"></span> Re-enforces Hydration</h4>
+                <h4><span class="glyphicon glyphicon-ok"></span> Re-enforces Hydration</h4>-->
                 <!--<h4 ng-show="campaign_data.purpose.name"><span class="glyphicon glyphicon-ok"></span> {{campaign_data.purpose.name}}</h4>-->
                 <!--<h4 ng-show="campaign_data.formula.name"><span class="glyphicon glyphicon-ok"></span> {{campaign_data.formula.name}}</h4>-->
             </div>
-            <div class="col-xs-12 col-sm-8 campaign-progress lil-pad">
+            <div class="col-xs-12 col-sm-8 campaign-progress" style="padding-top:15px;">
                 <uib-progressbar class="progress-striped active" value="campaign_data.goal_count" max='campaign_data.goal'></uib-progressbar>
                 <!--<uib-progressbar class="progress-striped active" value="10" max='campaign_data.goal'></uib-progressbar>-->
                 <h5 class="text-center">{{campaign_data.goal_count}} of {{campaign_data.goal}} sold</h5>
@@ -73,6 +73,9 @@
             <!--<div>end at : {{campaign_data.end_at}}</div>-->
             <div class="col-xs-12 col-sm-8 text-center campaign-button">
                 <button class="col-xs-12 btn btn-wj btn-sm btn-buy" ng-click="buy_campaign()" style="padding-top:10px;padding-bottom:10px;">Buy It Now</a>
+            </div>
+            <div class="col-xs-12 col-sm-8" stle="padding-top:10px;">
+              <h4 style="font-size:18px;font-weight:300;">Available until <span style="font-weight:400;color:#555F6D;">Tuesday!</span></h4>
             </div>
             <div class="col-xs-12 col-sm-8">
                 <div class="col-xs-12" id="clockdiv">
@@ -110,7 +113,7 @@
     <div class="row">
         <div class="container">
             <div class="col-xs-12 col-sm-8 descript">
-                <h4 style="color:#434343;font-size:48px;font-weight:600;">About</h4>
+                <h4 style="color:#434343;font-size:38px;font-weight:600;">About</h4>
                 <div class="col-xs-12 no-pad-left">
                   <h4 style="font-size:14px;font-weight:400;color:#555F6D;line-height:1.47;">
                     Most people don't realize alcohol is a severe diuretic and losing more than 5% of body weight from dehydration can decrease the ability to workout by close to 30%. If you've ever felt a weak workout after a night of drinking, now you know why.
@@ -131,13 +134,15 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 bio-info" style="border:5px solid #24BCD3;border-radius:4px;">
-                <div class="col-xs-12 text-center" style="padding-top:15px;">
+                <div class="col-xs-12 text-center" style="padding-top:15px;background-color:#fff;">
                     <img ng-src="{{campaign_data.user.profile.photo}}" style="max-width:200px;padding-bottom:15px;">
+                    </div>
+                    <div class="col-xs-12 text-center">
                     <h5 style="color:#434343;margin-top:0px;margin-bottom:0px;font-size:22px;font-weight:600;">{{campaign_data.user.profile.brand_name}}</h5>
                     <span style="color:#434343;font-weight:300;font-size:16px;">In Los Angeles, CA</span>
-                </div>
+                  </div>
                 <div class="col-xs-12">
-                    <h5 style="color:#434343;font-size:14px;">{{campaign_data.user.profile.biography}}</h5>
+                    <h5 style="color:#434343;font-size:16px;">{{campaign_data.user.profile.biography}}</h5>
                 </div>
                 <!--<div class="col-xs-12" ng-show="campaign_data.user.profile.instagram">
                     <h4><a href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank">@{{campaign_data.user.profile.instagram}}</a></h4>
@@ -153,7 +158,7 @@
     <div class="row">
         <div class="container" style="padding-bottom:40px;">
             <div class="col-xs-12 descript">
-              <h4 style="color:#434343;font-size:48px;font-weight:600;">Meet the customers who love {{campaign_data.title}}</h4>
+              <h4 style="color:#434343;font-size:38px;font-weight:600;">Meet the customers who love {{campaign_data.title}}</h4>
               <!--<h4 style="color:#555F6D;font-size:28px;font-weight:300;">{{campaign_data.user.profile.first_name}}</h4>-->
               <h4 style="color:#555F6D;font-size:28px;font-weight:300;">Jon Franco</h4>
               <h4 style="color:#555F6D;font-size:18px;font-weight:300;"><a style="color:#555F6D;font-size:20px;" href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank">@<span style="color:#51A1F4;">{{campaign_data.user.profile.instagram}}</span></a></h4>
@@ -222,10 +227,8 @@
       <h3>Get New Supplements Delivered To You Daily</h3>
     </div>
       <div class="col-xs-12 col-sm-4 col-sm-offset-4 lil-pad text-center">
-          <input id="email" type="email" placeholder="Email" class="form-control" name="email" ng-model="register_data.email" value="">
-      </div>
-        <div class="col-xs-12 col-sm-4 col-sm-offset-4 text-center" style="padding-top:15px;">
-          <button type="submit" class="btn btn-primary">
+          <input id="email" type="email" placeholder="Email" class="form-control" name="email" ng-model="register_data.email" value="" style="display:inline-block;width:auto;">
+          <button type="submit" class="btn btn-primary" style="display:inline-block;">
               <i class="fa fa-btn fa-user"></i>
               <a onClick="alert('Thanks for subscribing!')" style="color:#fff;">
                 Subscribe
