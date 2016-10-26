@@ -11247,16 +11247,20 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     }
 
     $scope.open_payment = function() {
-        mainFactory.get_payment().then(function(r) {
-            $scope.__user = (r.data.user) ? r.data.user : $scope.__user;
+        if ($scope.__user.email) {
+            mainFactory.get_payment().then(function(r) {
+                $scope.__user = (r.data.user) ? r.data.user : $scope.__user;
+                $scope.set_module('payment');
+            }, $scope.handle_error);
+        } else {
             $scope.set_module('payment');
-        }, $scope.handle_error);
+        }
     }
 
     $scope.stripe_get_token = function() {
         var $form = $('#payment-form');
         $form.find('.submit').prop('disabled', true);
-        console.log($form);
+        //console.log($form);
         Stripe.card.createToken($form, $scope.stripeResponseHandler);
         return false;
     }
