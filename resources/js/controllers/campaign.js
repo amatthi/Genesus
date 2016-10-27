@@ -17,7 +17,18 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
     }
 
     $scope.add_benefit1_path = function(benefit_1) {
+       benefit_1 = $scope.campaign_data.formula.benefit_1;
         return '/plugin/design/images/benefits_1/' + benefit_1.replace(/ /g, '_') + '.jpg';
+    }
+
+    $scope.add_benefit2_path = function(benefit_2) {
+       benefit_2 = $scope.campaign_data.formula.benefit_2;
+        return '/plugin/design/images/benefits_2/' + benefit_2.replace(/ /g, '_') + '.jpg';
+    }
+
+    $scope.add_benefit3_path = function(benefit_3) {
+       benefit_3 = $scope.campaign_data.formula.benefit_3;
+        return '/plugin/design/images/benefits_3/' + benefit_3.replace(/ /g, '_') + '.jpg';
     }
 
     $scope.buy_campaign = function() {

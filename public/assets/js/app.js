@@ -11045,7 +11045,7 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
         return '/plugin/design/images/benefits_2/' + benefit_2.replace(/ /g, '_') + '.jpg';
     }
 
-    $scope.add_benefit1_path = function(benefit_3) {
+    $scope.add_benefit3_path = function(benefit_3) {
        benefit_3 = $scope.campaign_data.formula.benefit_3;
         return '/plugin/design/images/benefits_3/' + benefit_3.replace(/ /g, '_') + '.jpg';
     }
