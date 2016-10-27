@@ -38,7 +38,7 @@
 <script type="text/javascript" src="/assets/js/app.js"></script>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
-  Stripe.setPublishableKey('pk_live_7pvwxUk7LgLK7ktBllGA7fjv');
+  Stripe.setPublishableKey('{{$stripe_key}}');
 </script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580c34729ce0967a"></script>
 <script type='text/javascript'>
