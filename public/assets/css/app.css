@@ -374,7 +374,8 @@ position: relative;
     display:inline;
     font-size:16px;
     font-weight:400;
-    padding-left:15px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
 }
 
 .pull-right {
