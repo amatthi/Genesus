@@ -29,17 +29,17 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         $this->validate($request, [
-            'email'      => 'required|email|max:255|unique:users,email,' . $user->id,
-            'biography'  => 'max:500',
-            'brand_description'  => 'max:500',
-            'website'    => 'max:255',
-            'brand_name' => 'max:255',
-            'brand_city' => 'max:255',
-            'brand_state' => 'max:255',
-            'brand_zip' => 'max:255',
-            'first_name' => 'max:255',
-            'instagram' => 'max:255',
-            'password'   => 'min:6|confirmed',
+            'email'             => 'required|email|max:255|unique:users,email,' . $user->id,
+            'biography'         => 'max:500',
+            'brand_description' => 'max:500',
+            'website'           => 'max:255',
+            'brand_name'        => 'max:255',
+            'brand_city'        => 'max:255',
+            'brand_state'       => 'max:255',
+            'brand_zip'         => 'max:255',
+            'first_name'        => 'max:255',
+            'instagram'         => 'max:255',
+            'password'          => 'min:6|confirmed',
         ]);
 
         $profile = $user->profile;
@@ -59,12 +59,12 @@ class ProfileController extends Controller
             $profile->photo = $s3->url($filePath);
         }
 
-        $profile->first_name = $request->input('first_name');
-        $profile->instagram  = $request->input('instagram');
-        $profile->website    = $request->input('website');
-        $profile->brand_name = $request->input('brand_name');
-        $profile->brand_description = $request->input('brand_description');
-        $profile->biography  = ($request->input('biography')) ? $request->input('biography') : '';
+        $profile->first_name        = $request->input('first_name', '');
+        $profile->instagram         = $request->input('instagram', '');
+        $profile->website           = $request->input('website', '');
+        $profile->brand_name        = $request->input('brand_name', '');
+        $profile->brand_description = $request->input('brand_description', '');
+        $profile->biography         = $request->input('biography', '');
         $profile->save();
 
         $user->email = $request->input('email');
