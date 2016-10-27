@@ -5,46 +5,24 @@
             <label>Goal</label>
             <div>
               <center>
-                <div ng-class="{'purpose-selected':campaign_data.purpose == purpose}" ng-repeat="purpose in purposes" ng-click="purpose_change(purpose)" ng-bind="purpose.name" style="height:50px;width:50px;background-image:url(images/goals/{{purpose.name}}.jpg);background-size:cover;font-size:0px;float:left;"></div>
+                <div ng-class="{'purpose-selected':campaign_data.purpose == purpose}" ng-repeat="purpose in purposes" ng-click="purpose_change(purpose)" ng-bind="purpose.name" style="height:50px;width:50px;cursor:pointer;background-image:url(images/goals/{{purpose.name}}.jpg);background-size:cover;font-size:0px;float:left;border-radius:4px;"></div>
               </center>
             </div>
-            <!--<select size="2" class="tab-select-1 input-width-1 border-rad products-style-1" ng-model="campaign_data.purpose" ng-change="purpose_change()" ng-options="purpose.name for purpose in purposes">
-            </select>-->
         </div>
-        <!--<div class="form-group">
-            <label>Product</label>
-            <select class="tab-select input-width border-rad" ng-model="campaign_data.formula" ng-change="formula_change()" ng-options="formula.name for formula in campaign_data.purpose.formulas">
-            </select>
-        </div>-->
         <div class="form-group" style="padding-top:50px;">
             <label>Supplement</label>
-            <div style="max-height:300px;overflow:auto;">
+            <div class="formula-box">
                 <div class="CLA_1" ng-class="{'formula-selected':campaign_data.formula == formula}" ng-repeat="formula in campaign_data.purpose.formulas" ng-click="formula_change(formula)">
                   <h4>{{formula.name}}</h4>
                   <img src="/img/Formula_Bottle.jpg">
-                  <span style="font-size:12px;">{{formula.formula_desc}}</span>
+                  <span>{{formula.formula_desc}}</span>
                 </div>
             </div>
-            <!--<select size="3" class="tab-select-1 input-width-1 border-rad products-style" ng-model="campaign_data.formula" ng-change="formula_change()" ng-options="formula.name for formula in campaign_data.purpose.formulas">
-            </select>-->
         </div>
         <div ng-show="campaign_data.formula">
-          <!--<label>Ingredients</label>
-            <div class="ingredients">
-                <div ng-repeat="(key,ingredient) in campaign_data.formula.ingredients" class="CLA_1">
-                  <span class="glyphicon glyphicon-info-sign" style="top: 32px;left: 180px;font-size: 10px;color:#777;"></span>
-                    <h4 uib-tooltip-template="'ingredient_tooltip.html'" tooltip-placement="top"><img style="width:50px;padding-right:5px;" ng-src="{{add_ingredient_path(ingredient)}}">{{ingredient}}</h4>
-                </div>
-            </div>-->
             <div class="ing-ex" style="cursor:default;">
                 <h3>Base Cost @ 30 Bottles:</h3>
                 <h2 ng-bind="campaign_data.formula.cost30 | currency"></h2>
-                <!--
-                <h3>Base Cost @ 100 Bottles:</h3>
-                <h2 ng-bind="campaign_data.formula.cost100 | currency"></h2>
-                <h3>Base Cost @ 200 Bottles:</h3>
-                <h2 ng-bind="campaign_data.formula.cost200 | currency"></h2>
-              -->
             </div>
         </div>
     </div>

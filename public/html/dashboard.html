@@ -100,7 +100,8 @@
               </div>
               <div class="col-xs-12 col-sm-8 lil-lil-pad">
                   <label style="font-weight:400;">Brand / Personal Biography</label>
-                  <input class="col-xs-12" type="text" ng-model="profile_data.brand_description">
+                  <textarea class="col-xs-12" id="text" name="text" ng-model="profile_data.brand_description" maxlength="200"></textarea>
+                  <h6 class="pull-right" id="count_message"></h6>
               </div>
               <div class="col-xs-12 col-sm-8 lil-lil-pad">
                   <label style="font-weight:400;">Brand Location</label>
@@ -122,33 +123,6 @@
                     <input accept="image/*" class="inputfile" id="profile-photo" name="file" type="file" style="border:none;">
                     <img ng-src="{{profile_data.old_photo}}" style="max-height:150px;">
                 </div>
-                <!--
-                <div class="col-xs-12 lil-lil-pad">
-                    <label class="col-xs-12 col-sm-3">First Name</label>
-                    <input type="text" class="col-xs-12 col-sm-3" ng-model="profile_data.first_name">
-                </div>
-                <div class="col-xs-12 lil-lil-pad">
-                    <label class="col-xs-12 col-sm-3">Biography</label>
-                    <textarea class="col-xs-12 col-sm-3" ng-model="profile_data.biography"></textarea>
-                </div>
-                <div class="col-xs-12 lil-lil-pad">
-                    <label class="col-xs-12 col-sm-3">Website</label>
-                    <input type="text" class="col-xs-12 col-sm-3" ng-model="profile_data.website">
-                </div>
-
-                <div class="col-xs-12 lil-lil-pad">
-                    <label class="col-xs-12 col-sm-3">Email</label>
-                    <input class="col-xs-12 col-sm-3" type="email" ng-model="profile_data.email">
-                </div>
-                <div class="col-xs-12 lil-lil-pad">
-                    <label class="col-xs-12 col-sm-3">Password</label>
-                    <input class="col-xs-12 col-sm-3" type="password" ng-model="profile_data.password">
-                </div>
-                <div class="col-xs-12 lil-lil-pad">
-                    <label class="col-xs-12 col-sm-3">Confirm Password</label>
-                    <input class="col-xs-12 col-sm-3" type="password" ng-model="profile_data.password_confirmation">
-                </div>
-                -->
                 <div class="col-xs-12 lil-pad text-center lil-pad-bottom">
                     <button class="btn btn-bl btn-sm" ng-click="update_profile(profile_data)">Update</button>
                 </div>
@@ -156,3 +130,14 @@
         </div>
     </div>
 </div>
+<script>
+var text_max = 200;
+$('#count_message').html(text_max + ' remaining');
+
+$('#text').keyup(function() {
+  var text_length = $('#text').val().length;
+  var text_remaining = text_max - text_length;
+
+  $('#count_message').html(text_remaining + ' remaining');
+});
+</script>
