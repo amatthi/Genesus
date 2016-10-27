@@ -64,6 +64,9 @@ class ProfileController extends Controller
         $profile->website           = $request->input('website', '');
         $profile->brand_name        = $request->input('brand_name', '');
         $profile->brand_description = $request->input('brand_description', '');
+        $profile->brand_city        = $request->input('brand_city', '');
+        $profile->brand_state       = $request->input('brand_state', '');
+        $profile->brand_zip         = $request->input('brand_zip', '');
         $profile->biography         = $request->input('biography', '');
         $profile->save();
 
