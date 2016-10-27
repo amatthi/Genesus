@@ -20,8 +20,9 @@
             <label>Supplement</label>
             <div>
                 <div class="CLA_1" ng-class="{'formula-selected':campaign_data.formula == formula}" ng-repeat="formula in campaign_data.purpose.formulas" ng-click="formula_change(formula)">
-                  <img src="/img/Formula_Bottle.jpg">
                   <h4>{{formula.name}}</h4>
+                  <img src="/img/Formula_Bottle.jpg">
+                  <span style="font-size:12px;">{{formula.formula_desc}}</span>
                 </div>
             </div>
             <!--<select size="3" class="tab-select-1 input-width-1 border-rad products-style" ng-model="campaign_data.formula" ng-change="formula_change()" ng-options="formula.name for formula in campaign_data.purpose.formulas">

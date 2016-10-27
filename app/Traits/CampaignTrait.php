@@ -34,6 +34,7 @@ trait CampaignTrait
             $purpose           = $row[0];
             $sku               = $row[1];
             $formula           = $row[2];
+            $formula_desc      = $row[3];
             $benefit_1         = $row[4];
             $benefit_2         = $row[5];
             $benefit_3         = $row[6];
@@ -48,7 +49,7 @@ trait CampaignTrait
             $study_name        = $row[17];
             $study_url         = $row[18];
             if ($formula) {
-                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'capsules' => $capsules, 'recommended_price' => $recommended_price, 'form_type' => $form_type, 'sku' => $sku, 'back_image' => $back_image, 'benefit_1' => $benefit_1, 'benefit_2' => $benefit_2, 'benefit_3' => $benefit_3, 'description' => [$description], 'study_name' => [$study_name], 'study_url' => [$study_url]];
+                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'capsules' => $capsules, 'recommended_price' => $recommended_price, 'form_type' => $form_type, 'sku' => $sku, 'back_image' => $back_image, 'formula_desc' => $formula_desc, 'benefit_1' => $benefit_1, 'benefit_2' => $benefit_2, 'benefit_3' => $benefit_3, 'description' => [$description], 'study_name' => [$study_name], 'study_url' => [$study_url]];
             } else if ($ingredients) {
                 $ingredients_i++;
                 $result[$purpose_i]['formulas'][$formula_i]['ingredients'][$ingredients_i] = $ingredients;
