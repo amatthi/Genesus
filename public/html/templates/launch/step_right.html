@@ -3,8 +3,11 @@
     <div class="launch-step-create launch-input">
         <div class="form-group lil-lil-pad">
             <label>Goal</label>
-            <select size="2" class="tab-select-1 input-width-1 border-rad products-style-1" ng-model="campaign_data.purpose" ng-change="purpose_change()" ng-options="purpose.name for purpose in purposes">
-            </select>
+            <div>
+                <div ng-class="{'purpose-selected':campaign_data.purpose == purpose}" ng-repeat="purpose in purposes" ng-click="purpose_change(purpose)" ng-bind="purpose.name" style="height:100px;background-image:url(images/goals/{{purpose.name}}.jpg)"></div>
+            </div>
+            <!--<select size="2" class="tab-select-1 input-width-1 border-rad products-style-1" ng-model="campaign_data.purpose" ng-change="purpose_change()" ng-options="purpose.name for purpose in purposes">
+            </select>-->
         </div>
         <!--<div class="form-group">
             <label>Product</label>
@@ -13,8 +16,11 @@
         </div>-->
         <div class="form-group">
             <label>Supplement</label>
-            <select size="3" class="tab-select-1 input-width-1 border-rad products-style" ng-model="campaign_data.formula" ng-change="formula_change()" ng-options="formula.name for formula in campaign_data.purpose.formulas">
-            </select>
+            <div>
+                <div ng-class="{'formula-selected':campaign_data.formula == formula}" ng-repeat="formula in campaign_data.purpose.formulas" ng-click="formula_change(formula)" ng-bind="formula.name"></div>
+            </div>
+            <!--<select size="3" class="tab-select-1 input-width-1 border-rad products-style" ng-model="campaign_data.formula" ng-change="formula_change()" ng-options="formula.name for formula in campaign_data.purpose.formulas">
+            </select>-->
         </div>
         <div ng-show="campaign_data.formula">
           <!--<label>Ingredients</label>

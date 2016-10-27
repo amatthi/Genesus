@@ -218,7 +218,8 @@ chisel_launch.controller('CustomCtrl', [
             return (price - bottle) * goal;
         }
 
-        $scope.purpose_change = function() {
+        $scope.purpose_change = function(purpose) {
+            $scope.campaign_data.purpose = purpose;
             $scope.campaign_data.formula = $scope.campaign_data.purpose['formulas'][0];
             $scope.formula_change();
         }
@@ -227,7 +228,8 @@ chisel_launch.controller('CustomCtrl', [
             return 'dummy_data/products/bottle/back/' + back_image;
         }
 
-        $scope.formula_change = function() {
+        $scope.formula_change = function(formula) {
+            $scope.campaign_data.formula = formula;
             if ($scope.campaign_data.formula.back_image && $scope.activeDesignObject == 1) {
                 $scope.loadProduct($scope.defaultProductTitle, $scope.add_back_image_path($scope.campaign_data.formula.back_image), $scope.defaultProductId, $scope.defaultPrice, $scope.defaultCurrency, 1);
             } else {
