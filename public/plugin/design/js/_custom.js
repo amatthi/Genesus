@@ -251,6 +251,10 @@ chisel_launch.controller('CustomCtrl', [
             return 'images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
         }
 
+        $scope.add_benefit1_path = function(benefit_1) {
+            return 'images/benefits_1/' + benefit_1.replace(/ /g, '_') + '.jpg';
+        }
+
         $scope.test = function() {
             console.log($scope.fabric.canvasLayers());
         }

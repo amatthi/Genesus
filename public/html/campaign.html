@@ -19,21 +19,27 @@
             </div>
             <div class="col-xs-3 col-xs-offset-1" ng-if="campaign_data.formula.benefit_1" style="cursor:default;">
                 <center style="float:right;">
-                  <img ng-src="{{add_ingredient_path(benefit_1)}}" style="max-height:75px;">
-                    <h5 style="padding-top:10px;color:#555F6D;font-size:18px;" ng-bind="campaign_data.formula.benefit_1">{{benefit_1}}</h5>
+                  <img ng-src="{{add_benefit1_path(benefit_1)}}" style="max-height:75px;">
+                    <h5 style="padding-top:10px;color:#555F6D;font-size:18px;">
+                      {{campaign_data.formula.benefit_1}}
+                    </h5>
                 </center>
             </div>
             <div class="col-xs-3" ng-if="campaign_data.formula.benefit_2" style="cursor:default;">
-                <center>
-                    <img ng-src="{{add_ingredient_path(benefit_2)}}" style="max-height:75px;">
-                    <h5 style="padding-top:10px;color:#555F6D;font-size:18px;" ng-bind="campaign_data.formula.benefit_2">{{benefit_2}}</h5>
-                </center>
+              <center style="float:right;">
+                <img ng-src="{{add_benefit2_path(benefit_2)}}" style="max-height:75px;">
+                  <h5 style="padding-top:10px;color:#555F6D;font-size:18px;">
+                    {{campaign_data.formula.benefit_2}}
+                  </h5>
+              </center>
             </div>
             <div class="col-xs-3" ng-if="campaign_data.formula.benefit_3" style="cursor:default;">
-                <center style="float:left;">
-                    <img ng-src="{{add_ingredient_path(benefit_3)}}" style="max-height:75px;">
-                    <h5 style="padding-top:10px;color:#555F6D;font-size:18px;" ng-bind="campaign_data.formula.benefit_2">{{benefit_2}}</h5>
-                </center>
+              <center style="float:right;">
+                <img ng-src="{{add_benefit3_path(benefit_3)}}" style="max-height:75px;">
+                  <h5 style="padding-top:10px;color:#555F6D;font-size:18px;">
+                    {{campaign_data.formula.benefit_3}}
+                  </h5>
+              </center>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 campaign-info lil-pad">
