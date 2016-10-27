@@ -771,6 +771,12 @@ footer {
   font-size: 14px;
   padding: 0px 0 10px 10px;
   margin-top: 0px;
+  display: inline-block;
+}
+
+.CLA_1 img {
+  display: inline-block;
+  height:50px;
 }
 
 .CLA_1 h5 {
@@ -1565,4 +1571,14 @@ a {
 .shipping-info {
   margin-bottom: 5px;
   margin-right: 10px;
+}
+
+.purpose-selected {
+  border:2px solid #ddd;
+  border-radius: 4px;
+}
+
+.formula-selected {
+  border:2px solid #ddd;
+  border-radius: 4px;
 }
