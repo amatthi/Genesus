@@ -127,8 +127,9 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
             $form.find('.submit').prop('disabled', false);
             $scope.__payment.r = r.data;
             $scope.$broadcast('payment_done');
-        }, $scope.handle_error);
             $window.location.href = '/thank_you.html';
+        }, $scope.handle_error);
+
 
     }
 

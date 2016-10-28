@@ -11184,7 +11184,7 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
     });
 });
 
-chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
+chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory, $window) {
     $scope.now_module = '';
     $scope.template_v = '1.10';
     $scope.__user = {};

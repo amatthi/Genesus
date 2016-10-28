@@ -1,9 +1,10 @@
 <div class="container-fluid" style="background-color:#F5F7F6;">
     <div class="col-xs-12 col-sm-2 lil-pad dash-style-standard">
         <ul class="nav nav-pills nav-stacked dash-nav lil-pad">
-            <li role="presentation" ng-class="{'dash-a' : dash_view == 'campaigns'}" ng-click="dash_set('campaigns')"><a>Campaigns</a></li>
+            <li role="presentation" ng-class="{'dash-a' : dash_view == 'campaigns'}" ng-click="dash_set('campaigns')" style="text-align:left;"><a> <img src="/img/campaigns.jpg" style="height:25px;"> Campaigns</a></li>
             <!--<li role="presentation"><a href="#">Payouts</a></li>-->
-            <li role="presentation" ng-class="{'dash-a' : dash_view == 'settings'}" ng-click="dash_set('settings')"><a>Profile</a></li>
+            <li role="presentation" ng-class="{'dash-a' : dash_view == 'settings'}" ng-click="dash_set('settings')" style="text-align:left;"><a><img src="/img/storefront.jpg" style="height:25px;"> Profile</a></li>
+            <li role="presentation" ng-class="{'dash-a' : dash_view == 'payouts'}" ng-click="dash_set('payouts')" style="text-align:left;"><a><img src="/img/payouts.jpg" style="height:25px;"> Payouts</a></li>
         </ul>
     </div>
     <div class="col-xs-12 col-sm-10 lil-pad dash-campaigns dash-style" style="padding-top:50px;">
