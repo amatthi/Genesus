@@ -40,7 +40,6 @@
 <script type="text/javascript">
   Stripe.setPublishableKey('{{$stripe_key}}');
 </script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580c34729ce0967a"></script>
 <script type='text/javascript'>
 window.__lo_site_id = 67462;
 	(function() {

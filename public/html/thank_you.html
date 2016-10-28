@@ -1,27 +1,27 @@
 <div class="container-fluid">
     <br />
     <br />
-  <br />
-  <br />
-</div>
     <br />
-    <div class="container" style="border:2px solid #8BCC8C;border-radius:4px;">
-      <div class="col-xs-12 col-sm-6">
-    <h3 style="color:#8BCC8C;font-weight:600;">
+    <br />
+</div>
+<br />
+<div class="container" style="border:2px solid #8BCC8C;border-radius:4px;">
+    <div class="col-xs-12 col-sm-6">
+        <h3 style="color:#8BCC8C;font-weight:600;">
       <span class="glyphicon glyphicon-ok"></span>
       Thank you, your order has been placed.
     </h3>
-    <h5 style="padding-left:25px;">An email confirmation will be sent to you within 24 hours.</h5>
-    <h5 style="padding-left:25px;font-weight:600;padding-top:25px;">Order Number: 113-4252562-3439843</h5>
-    <h5 style="padding-left:50px;font-weight:600;padding-top:25px;">Guaranteed Delivery: <span style="color:#8BCC8C;">3 Days After Campaign Ends</span></h5>
-  </div>
-  <div class="col-xs-12 col-sm-6" style="padding-top:50px;">
-    <div class="col-xs-12 text-center">
-        <p><em>Share this campaign on</em></p>
+        <h5 style="padding-left:25px;">An email confirmation will be sent to you within 24 hours.</h5>
+        <h5 style="padding-left:25px;font-weight:600;padding-top:25px;">Order Number: {{__payment.r.id}}</h5>
+        <h5 style="padding-left:50px;font-weight:600;padding-top:25px;">Guaranteed Delivery: <span style="color:#8BCC8C;">3 Days After Campaign Ends</span></h5>
     </div>
-    <div class=" col-xs-12 text-center contest-share-socials">
-        <div class="addthis_inline_share_toolbox" data-title="{{campaign_data.title}}" data-description="{{campaign_data.description}}" data-media="{{campaign_data.bottle_img}}"></div>
+    <div class="col-xs-12 col-sm-6" style="padding-top:50px;">
+        <div class="col-xs-12 text-center">
+            <p><em>Share this campaign on</em></p>
+        </div>
+        <div class=" col-xs-12 text-center contest-share-socials">
+            <div class="addthis_inline_share_toolbox" data-title="{{__payment.data.title}}" data-description="{{__payment.data.description}}" data-media="{{__payment.data.bottle_img}}" data-url="http://genesus.co/campaign/{{__payment.data.slug}}"></div>
+        </div>
     </div>
-  </div>
-
-    </div>
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580c34729ce0967a"></script>

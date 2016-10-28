@@ -11017,7 +11017,7 @@ chisel.filter('capitalize', function() {
     }
 });
 
-chisel.controller("campaignController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
+chisel.controller("campaignController", function($scope, $rootScope, $routeParams, $location, mainFactory, chisel_var) {
     $scope.campaign_data = {};
     $scope.purchase_count = '10';
 
@@ -11040,11 +11040,6 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
 
     $scope.add_ingredient_path = function(ingredient) {
         return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
-    }
-
-    $scope.add_nutrition_path = function(formula) {
-        formula = $scope.campaign_data.formula;
-        return '/plugin/design/images/nutrition_facts/' + formula.name.replace(/ /g, '_') + '.jpg';
     }
 
     $scope.add_benefit1_path = function(benefit_1) {
@@ -11077,7 +11072,8 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
     $scope.$on('payment_done', function() {
         $scope.set_module();
         alert('buy campaign complete!');
-        $scope.get_campaign();
+        $location.path('/thank_you');
+        // $scope.get_campaign();
     });
 });
 
@@ -11184,7 +11180,7 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
     });
 });
 
-chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory, $window) {
+chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
     $scope.now_module = '';
     $scope.template_v = '1.10';
     $scope.__user = {};
@@ -11314,6 +11310,8 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
             $scope.__payment.r = r.data;
             $scope.$broadcast('payment_done');
         }, $scope.handle_error);
+
+
     }
 
     $scope.set_payment_step = function(step) {

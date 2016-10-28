@@ -1,4 +1,4 @@
-chisel.controller("campaignController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
+chisel.controller("campaignController", function($scope, $rootScope, $routeParams, $location, mainFactory, chisel_var) {
     $scope.campaign_data = {};
     $scope.purchase_count = '10';
 
@@ -53,6 +53,7 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
     $scope.$on('payment_done', function() {
         $scope.set_module();
         alert('buy campaign complete!');
-        $scope.get_campaign();
+        $location.path('/thank_you');
+        // $scope.get_campaign();
     });
 });
