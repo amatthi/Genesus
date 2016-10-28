@@ -57,7 +57,7 @@ header nav ul li {
     display: inline-block;
     font-size: 16px;
     padding: 10px 26px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 header nav ul li .btn:hover {
@@ -376,6 +376,8 @@ position: relative;
     font-weight:400;
     padding-left: 15px !important;
     padding-right: 15px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
 }
 
 .pull-right {
