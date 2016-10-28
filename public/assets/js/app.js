@@ -11042,6 +11042,11 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
         return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
     }
 
+    $scope.add_nutrition_path = function(formula) {
+        formula = $scope.campaign_data.formula.name;
+        return '/plugin/design/images/nutrition_facts/' + name.replace(/ /g, '_') + '.jpg';
+    }
+
     $scope.add_benefit1_path = function(benefit_1) {
         benefit_1 = $scope.campaign_data.formula.benefit_1;
         return '/plugin/design/images/benefits_1/' + benefit_1.replace(/ /g, '_') + '.jpg';

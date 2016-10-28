@@ -140,7 +140,7 @@
                     <h4 style="color:#434343;font-size:32px;font-weight:600;">Meet the owner</h4>
                     <!--<h4 style="color:#555F6D;font-size:28px;font-weight:300;">{{campaign_data.user.profile.first_name}}</h4>-->
                     <h4 style="color:#555F6D;font-size:28px;font-weight:300;">{{campaign_data.user.profile.brand_name}}</h4>
-                    <h4 style="color:#555F6D;font-size:18px;font-weight:300;"><a style="color:#555F6D;font-size:20px;" href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank">@<span style="color:#51A1F4;">{{campaign_data.user.profile.instagram}}</span></a></h4>
+                    <h4 style="color:#555F6D;font-size:18px;font-weight:300;"><a style="color:#51A1F4;font-size:20px;" href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank">@<span style="color:#51A1F4;">{{campaign_data.user.profile.instagram}}</span></a></h4>
                     <div id="my-instashow"></div>
                 </div>
             </div>
@@ -179,7 +179,7 @@
     <div class="row">
         <img src="https://s3-us-west-2.amazonaws.com/tappyn/campaign-banner.jpg" class="img-responsive" alt="Genesus banner">
         <center>
-            <img src="/img/nutrifacts.jpg" class="img-responsive" alt="Genesus Nutrition Facts" style="width:100%;max-width:1200px;">
+            <img ng-src="{{add_nutrition_path(formula)}}" class="img-responsive" alt="Genesus Nutrition Facts" style="width:100%;max-width:1200px;">
         </center>
     </div>
     <section>
