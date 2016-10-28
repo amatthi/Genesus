@@ -467,7 +467,8 @@ position: relative;
 }
 
 img.img-test {
-  max-height: 400px;
+  max-height: 450px;
+  min-height: 450px;
 }
 
 img.img-woman {
