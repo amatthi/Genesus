@@ -5,22 +5,30 @@
     <br />
 </div>
 <br />
-<div class="container" style="border:2px solid #8BCC8C;border-radius:4px;">
-    <div class="col-xs-12 col-sm-6">
-        <h3 style="color:#8BCC8C;font-weight:600;">
-      <span class="glyphicon glyphicon-ok"></span>
-      Thank you, your order has been placed.
-    </h3>
-        <h5 style="padding-left:25px;">An email confirmation will be sent to you within 24 hours.</h5>
-        <h5 style="padding-left:25px;font-weight:600;padding-top:25px;">Order Number: {{__payment.r.id}}</h5>
-        <h5 style="padding-left:50px;font-weight:600;padding-top:25px;">Guaranteed Delivery: <span style="color:#8BCC8C;">3 Days After Campaign Ends</span></h5>
+<div class="container">
+    <div class="col-xs-12 text-center">
+        <h3 style="color:#333;font-weight:600;">
+          We're setting up your campaign.
+        </h3>
     </div>
-    <div class="col-xs-12 col-sm-6" style="padding-top:50px;">
+    <div class="col-xs-10 col-xs-offset-1 text-center">
+        <h5>
+          After taking that first step of putting up your design, here are
+          a few more steps to help you succeed.
+        </h5>
+    </div>
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1" style="border:2px solid #ddd;border-radius:4px;">
         <div class="col-xs-12 text-center">
-            <p><em>Share this campaign on</em></p>
+            <h4 style="font-weight:600;">Get the word out</h4>
+        </div>
+        <div class="col-xs-12 text-center">
+          <h5>
+            Now that your amazing design is set up, it's time to let people around the world know. The best way is to start
+            with your own network.
+          </h5>
         </div>
         <div class=" col-xs-12 text-center contest-share-socials">
-            <div class="addthis_inline_share_toolbox" data-title="{{__payment.data.title}}" data-description="{{__payment.data.description}}" data-media="{{__payment.data.bottle_img}}" data-url="http://genesus.co/campaign/{{__payment.data.slug}}"></div>
+            <div class="addthis_inline_share_toolbox" data-title="{{launch_.title}}" data-description="{{campaign_data.description}}" data-media="{{campaign_data.bottle_img}}"></div>
         </div>
     </div>
 </div>
