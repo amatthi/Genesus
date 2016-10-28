@@ -128,6 +128,8 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
             $scope.__payment.r = r.data;
             $scope.$broadcast('payment_done');
         }, $scope.handle_error);
+            $window.location.href = '/thank_you.html';
+
     }
 
     $scope.set_payment_step = function(step) {
