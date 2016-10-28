@@ -27,7 +27,7 @@
                 </h3>
                 <hr>
                 <div class="col-xs-12 col-sm-4 text-center overview-data">
-                    <h4>{{campaign.goal_count}}</h4>
+                    <h4>$0</h4>
                     <h5>Products Ordered</h5>
                 </div>
                 <div class="col-xs-12 col-sm-4 text-center overview-data">
@@ -76,7 +76,7 @@
                 <div class="col-sm-2 hidden-xs">
                 </div>
                 <div class="col-xs-12 col-sm-2">
-                    <a href="/launch/{{campaign.id}}" style="cursor:pointer;" target="_self">
+                    <a ng-click="dash_set('edit')" style="cursor:pointer;" target="_self">
                         <span class="glyphicon glyphicon-pencil" style="margin-top:10px;color:#777;padding-top:7px;"></span>
                     </a>
                     <a onClick="alert('Please contact us to complete the deletion of your campaign!')" style="cursor:pointer;">
@@ -130,6 +130,26 @@
                     <button class="btn btn-bl btn-sm" ng-click="update_profile(profile_data)">Update</button>
                 </div>
             </div>
+        </div>
+        <div ng-show="dash_view == 'payouts'" id="payouts">
+          <h2 style="font-size:16px;">
+            Payouts
+          </h2>
+          <div class="col-xs-12 col-sm-10 campaign-overview">
+              <h2 style="border-bottom:1px solid #ddd;margin-right:-15px;margin-left:-15px;font-size:16px;padding:10px 0px 20px 25px;color:#777;">
+                Current Payout Amount
+              </h2>
+              <div class="col-xs-12 col-sm-4 lil-lil-pad lil-pad-bottom">
+                  <h4 style="font-size:14px;">Please <a href="contact_us" style="color:#4BAEE8;">contact us</a> for your payout.</h4>
+              </div>
+            </div>
+        </div>
+        <div ng-show="dash_view == 'edit'" id="edit">
+          <div class="col-xs-12 lil-pad-bottom">
+              <center>
+                  <img class="img-responsive" ng-src="{{campaign_data.bottle_img}}" alt="Image Of Custom Supplement" style="max-height:350px;">
+              </center>
+          </div>
         </div>
     </div>
 </div>
