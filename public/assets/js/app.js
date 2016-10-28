@@ -10946,6 +10946,9 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
         .when('/thank_you', {
             templateUrl: 'html/thank_you.html',
         })
+        .when('/share', {
+            templateUrl: 'html/share.html',
+        })
         .when('/campaign/:slug', {
             templateUrl: 'html/campaign.html',
             controller: 'campaignController',
