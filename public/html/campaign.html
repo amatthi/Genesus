@@ -3,10 +3,10 @@
 <link href="cfgen-form-2/css/form.css" rel="stylesheet" type="text/css">
 <div class="container-fluid" style="margin-top:25px;">
     <div class="container" style="background-color:#F3F3F3;padding:10px;margin-top:10px;border-radius:4px;">
-        <div style="background-color:#fff;display:inline-block;border-radius:4px;">
-            <img ng-src="{{campaign_data.user.profile.photo}}" style="max-width:75px;padding:10px 5px 10px 5px;">
+        <div style="background-color:#fff;display:inline-block;border-radius:4px;padding:5px;">
+            <img ng-src="{{campaign_data.user.profile.photo}}" style="max-width:75px;">
         </div>
-        <div style="display:inline-block;">
+        <div style="display:inline-block;padding-left:15px;">
             <h5 style="margin-top:0px;margin-bottom:0px;font-size:22px;font-weight:600;color:#434343;">{{campaign_data.user.profile.brand_name}}</h5>
         </div>
     </div>
@@ -17,35 +17,49 @@
                     <img class="img-responsive" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement" style="max-height:350px;">
                 </center>
             </div>
-            <div class="col-xs-3 col-xs-offset-1" ng-if="campaign_data.formula.benefit_1" style="cursor:default;">
-                <center style="float:right;">
-                    <img ng-src="{{add_benefit1_path(benefit_1)}}" style="max-height:75px;">
-                    <h5 style="padding-top:10px;color:#555F6D;font-size:18px;">
-                      {{campaign_data.formula.benefit_1}}
-                    </h5>
-                </center>
+            <div class="col-xs-12 contest-share">
+                <div class="col-xs-12 text-center">
+                    <p><em>Share this campaign on</em></p>
+                </div>
+                <div class=" col-xs-12 text-center contest-share-socials">
+                    <div class="addthis_inline_share_toolbox" data-title="{{campaign_data.title}}" data-description="{{campaign_data.description}}" data-media="{{campaign_data.bottle_img}}"></div>
+                </div>
             </div>
-            <div class="col-xs-3" ng-if="campaign_data.formula.benefit_2" style="cursor:default;">
-                <center style="float:right;">
-                    <img ng-src="{{add_benefit2_path(benefit_2)}}" style="max-height:75px;">
-                    <h5 style="padding-top:10px;color:#555F6D;font-size:18px;">
-                    {{campaign_data.formula.benefit_2}}
-                  </h5>
-                </center>
-            </div>
-            <div class="col-xs-3" ng-if="campaign_data.formula.benefit_3" style="cursor:default;">
-                <center style="float:right;">
-                    <img ng-src="{{add_benefit3_path(benefit_3)}}" style="max-height:75px;">
-                    <h5 style="padding-top:10px;color:#555F6D;font-size:18px;">
-                    {{campaign_data.formula.benefit_3}}
-                  </h5>
-                </center>
-            </div>
+
         </div>
         <div class="col-xs-12 col-sm-6 campaign-info lil-pad">
             <div class="col-xs-12 col-sm-10">
                 <h2>{{campaign_data.title}}</h2>
                 <h4 style="color:#555F6D;font-size:18px;font-weight:400;line-height:1.2;">{{campaign_data.description}}</h4>
+              </div>
+              <div class="col-xs-12 col-sm-6" style="padding-top:10px;padding-bottom:10px;">
+                <div class="col-xs-4" ng-if="campaign_data.formula.benefit_1" style="cursor:default;">
+                <center style="float:right;">
+                    <img ng-src="{{add_benefit1_path(benefit_1)}}" style="max-height:30px;">
+                    <h5 style="color:#555F6D;font-size:12px;">
+                      {{campaign_data.formula.benefit_1}}
+                    </h5>
+                </center>
+            </div>
+            <div class="col-xs-4" ng-if="campaign_data.formula.benefit_2" style="cursor:default;">
+                <center style="float:right;">
+                    <img ng-src="{{add_benefit2_path(benefit_2)}}" style="max-height:30px;">
+                    <h5 style="color:#555F6D;font-size:12px;">
+                    {{campaign_data.formula.benefit_2}}
+                  </h5>
+                </center>
+            </div>
+            <div class="col-xs-4" ng-if="campaign_data.formula.benefit_3" style="cursor:default;">
+                <center style="float:right;">
+                    <img ng-src="{{add_benefit3_path(benefit_3)}}" style="max-height:30px;">
+                    <h5 style="color:#555F6D;font-size:12px;">
+                    {{campaign_data.formula.benefit_3}}
+                  </h5>
+                </center>
+            </div>
+
+              </div>
+              <div class="col-xs-12 col-sm-10">
                 <h3>{{campaign_data.sale_price | currency}} <span style="color: #555F6D;font-size:16px;font-weight:300;">& FREE Shipping</span></h3>
             </div>
             <div class="col-xs-12 col-sm-8 campaign-progress" style="padding-top:15px;">
@@ -79,14 +93,7 @@
             <div class="col-xs-12 col-sm-8 text-center">
                 <img src="https://s3-us-west-2.amazonaws.com/tappyn/keepit.jpg " style="height:50px;"> <span>Keep It</span>™<span>&nbsp;</span><span><a style="color:#1DC068;" href="/faq" target="_blank">MONEY BACK GUARANTEE</a></span>
             </div>
-            <div class="col-xs-12 col-sm-8 contest-share">
-                <div class="col-xs-12 text-center">
-                    <p><em>Share this campaign on</em></p>
-                </div>
-                <div class=" col-xs-12 text-center contest-share-socials">
-                    <div class="addthis_inline_share_toolbox" data-title="{{campaign_data.title}}" data-description="{{campaign_data.description}}" data-media="{{campaign_data.bottle_img}}"></div>
-                </div>
-            </div>
+
         </div>
     </div>
     <!--End Row-->
