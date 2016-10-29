@@ -11133,12 +11133,6 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
         }, $scope.handle_error);
     }
 
-    $scope.dash_share = function() {
-        window.location = '/dashboard';
-        $scope.dash_view = 'settings';
-
-    }
-
     $scope.dash_set = function(view, campaign_data) {
         $scope.dash_view = view;
         if (view == 'edit' && campaign_data) {
@@ -11275,6 +11269,12 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
         mainFactory.aws_key(bucket).success(function(r) {
             $scope.__s.aws = r;
         });
+    }
+
+    $scope.dash_share = function() {
+        window.location = '/dashboard';
+        $scope.dash_view = 'settings';
+
     }
 
     $scope.amazon_upload = function($files, arg) {
