@@ -31,8 +31,9 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
         .when('/thank_you', {
             templateUrl: 'html/thank_you.html',
         })
-        .when('/share', {
+        .when('/share/:id', {
             templateUrl: 'html/share.html',
+            controller: 'shareController',
         })
         .when('/campaign/:slug', {
             templateUrl: 'html/campaign.html',

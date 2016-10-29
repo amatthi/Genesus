@@ -13,7 +13,7 @@
 
 Route::auth();
 Route::bind('campaign_slug', function ($value) {
-    return App\Campaign::where('slug', $value)->first();
+    return App\Campaign::where('slug', $value)->firstOrFail();
 });
 Route::bind('campaign_id', function ($value) {
     return App\Campaign::where('id', $value)->firstOrFail();

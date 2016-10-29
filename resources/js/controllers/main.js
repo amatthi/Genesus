@@ -34,6 +34,9 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
         } else if (response.status == 401) {
             alert('must login');
         }
+        else if(response.status == 404){
+            alert('404 page not found');
+        }
     }
 
     $scope.is_login = function() {

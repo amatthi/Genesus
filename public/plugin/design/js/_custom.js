@@ -165,7 +165,7 @@ chisel_launch.controller('CustomCtrl', [
                 window.onbeforeunload = null;
                 window.onhashchange = null;
                 alert('Your campaign has been saved!');
-                window.location = '/dashboard';
+                window.location = '/share/' + r.data.id;
             }, $scope.handle_error);
         }
 
@@ -216,8 +216,7 @@ chisel_launch.controller('CustomCtrl', [
             var goal = Number($scope.campaign_data.goal);
             if (goal == 200) {
                 bottle = Number($scope.campaign_data.formula.cost200);
-            }
-            else if(goal >= 100){
+            } else if (goal >= 100) {
                 bottle = Number($scope.campaign_data.formula.cost100);
             }
 

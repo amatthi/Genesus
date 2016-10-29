@@ -112,5 +112,13 @@ chisel.factory("mainFactory", function($http) {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         })
     }
+
+    fact.get_campaign_by_id = function(id) {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/get_by_id/' + id,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+    }
     return fact;
 })
