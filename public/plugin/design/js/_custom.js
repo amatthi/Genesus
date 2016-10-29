@@ -188,10 +188,10 @@ chisel_launch.controller('CustomCtrl', [
                         return;
                     }
                     $scope.campaign_data = r.data;
-                    $scope.campaign_data.purpose = $scope.purposes.find(function(purpose){
+                    $scope.campaign_data.purpose = $scope.purposes.find(function(purpose) {
                         return purpose.key == $scope.campaign_data.purpose.key;
                     });
-                    $scope.campaign_data.formula = $scope.campaign_data.purpose.formulas.find(function(formula){
+                    $scope.campaign_data.formula = $scope.campaign_data.purpose.formulas.find(function(formula) {
                         return formula.sku == $scope.campaign_data.formula.sku;
                     });
 
@@ -214,14 +214,19 @@ chisel_launch.controller('CustomCtrl', [
             var price = Number($scope.campaign_data.sale_price);
             var bottle = Number($scope.campaign_data.formula.cost30);
             var goal = Number($scope.campaign_data.goal);
+            if (goal == 200) {
+                bottle = Number($scope.campaign_data.formula.cost200);
+            }
+            else if(goal >= 100){
+                bottle = Number($scope.campaign_data.formula.cost100);
+            }
 
             return (price - bottle) * goal;
         }
 
         $scope.purpose_change = function(purpose) {
             $scope.campaign_data.purpose = purpose;
-            $scope.campaign_data.formula = $scope.campaign_data.purpose['formulas'][0];
-            $scope.formula_change();
+            $scope.formula_change($scope.campaign_data.purpose['formulas'][0]);
         }
 
         $scope.add_back_image_path = function(back_image) {
@@ -254,17 +259,17 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         $scope.add_benefit1_path = function(benefit_1) {
-           benefit_1 = $scope.campaign_data.formula.benefit_1;
+            benefit_1 = $scope.campaign_data.formula.benefit_1;
             return 'images/benefits_1/' + benefit_1.replace(/ /g, '_') + '.jpg';
         }
 
         $scope.add_benefit2_path = function(benefit_2) {
-           benefit_2 = $scope.campaign_data.formula.benefit_2;
+            benefit_2 = $scope.campaign_data.formula.benefit_2;
             return 'images/benefits_2/' + benefit_2.replace(/ /g, '_') + '.jpg';
         }
 
         $scope.add_benefit3_path = function(benefit_3) {
-           benefit_3 = $scope.campaign_data.formula.benefit_3;
+            benefit_3 = $scope.campaign_data.formula.benefit_3;
             return 'images/benefits_3/' + benefit_3.replace(/ /g, '_') + '.jpg';
         }
 
