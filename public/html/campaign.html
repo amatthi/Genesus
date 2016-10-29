@@ -30,6 +30,8 @@
         <div class="col-xs-12 col-sm-6 campaign-info lil-pad">
             <div class="col-xs-12 col-sm-10">
                 <h2>{{campaign_data.title}}</h2>
+            </div>
+            <div class="col-xs-12 col-sm-8">
                 <h4 style="color:#555F6D;font-size:18px;font-weight:400;line-height:1.2;">{{campaign_data.description}}</h4>
               </div>
               <div class="col-xs-12 col-sm-6" style="padding-top:10px;padding-bottom:10px;">
@@ -59,7 +61,7 @@
             </div>
 
               </div>
-              <div class="col-xs-12 col-sm-10">
+              <div class="col-xs-12 col-sm-8">
                 <h3>{{campaign_data.sale_price | currency}} <span style="color: #555F6D;font-size:16px;font-weight:300;">& FREE Shipping</span></h3>
             </div>
             <div class="col-xs-12 col-sm-8 campaign-progress" style="padding-top:15px;">
@@ -69,9 +71,9 @@
             <div class="col-xs-12 col-sm-8 text-center campaign-button">
                 <button class="col-xs-12 btn btn-wj btn-sm btn-buy" ng-click="buy_campaign()" style="padding-top:10px;padding-bottom:10px;">Buy It Now</a>
             </div>
-            <div class="col-xs-12 col-sm-8" stle="padding-top:10px;">
+            <!--<div class="col-xs-12 col-sm-8" stle="padding-top:10px;">
                 <h4 style="font-size:18px;font-weight:300;">Available until <span style="font-weight:400;color:#555F6D;">{{campaign_data.end_at}}!</span></h4>
-            </div>
+            </div>-->
             <div class="col-xs-12 col-sm-8">
                 <div class="col-xs-12" id="clockdiv">
                     <timer countdown="100000" interval="1000">
@@ -137,7 +139,7 @@
         <div class="row">
             <div class="container" style="padding-bottom:40px;">
                 <div class="col-xs-12 descript">
-                    <h4 style="color:#434343;font-size:32px;font-weight:600;">Meet the owner</h4>
+                    <h4 style="color:#434343;font-size:32px;font-weight:600;">Meet The Owner</h4>
                     <!--<h4 style="color:#555F6D;font-size:28px;font-weight:300;">{{campaign_data.user.profile.first_name}}</h4>-->
                     <h4 style="color:#555F6D;font-size:28px;font-weight:300;">{{campaign_data.user.profile.brand_name}}</h4>
                     <h4 style="color:#555F6D;font-size:18px;font-weight:300;"><a style="color:#51A1F4;font-size:20px;" href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank">@<span style="color:#51A1F4;">{{campaign_data.user.profile.instagram}}</span></a></h4>
