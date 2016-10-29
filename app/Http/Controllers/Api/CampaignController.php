@@ -26,7 +26,7 @@ class CampaignController extends Controller
             //'png64'           => 'required',
             'sale_price'      => 'required',
             //'description'     => 'required',
-            'length'          => 'required',
+            'length'          => 'required|in:3,4,5,7',
             'status'          => 'required|in:public,draft',
             //'slug'            => 'required|max:255',
             //'blurb'            => 'required|max:255',
@@ -57,9 +57,9 @@ class CampaignController extends Controller
         }
 
         $data                = $request->only($db_cols);
-        $data['title']       = ($request->input('title')) ? $request->input('title') : '';
-        $data['description'] = ($request->input('description')) ? $request->input('description') : '';
-        $data['blurb']       = ($request->input('blurb')) ? $request->input('blurb') : '';
+        $data['title']       = $request->input('title', '');
+        $data['description'] = $request->input('description', '');
+        $data['blurb']       = $request->input('blurb', '');
         $data['user_id']     = Auth::user()->id;
         $data['slug']        = $slug;
         $data['end_at']      = date('Y-m-d H:i:s', strtotime('+' . $request->input('length') . 'days'));
@@ -71,6 +71,17 @@ class CampaignController extends Controller
         unset($data['others']['others']);
         unset($data['others']['png64']);
         return Campaign::updateOrCreate(['id' => $update_id], $data);
+    }
+
+    public function update(Campaign $campaign, Request $request)
+    {
+        if ($campaign->user->id != Auth::user()->id) {
+            return response(['auth' => ['You are not the owner']], 422);
+        }
+        $campaign->title = $request->input('title', '');
+        $campaign->blurb = $request->input('blurb', '');
+        $campaign->save();
+        return $campaign;
     }
 
     public function get(Campaign $campaign)

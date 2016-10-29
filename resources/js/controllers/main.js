@@ -1,6 +1,6 @@
 chisel.controller("mainController", function($scope, $rootScope, $upload, mainFactory) {
     $scope.now_module = '';
-    $scope.template_v = '1.10';
+    $scope.template_v = '1.11';
     $scope.__user = {};
     $scope.__s = {};
     $scope.__payment = {};

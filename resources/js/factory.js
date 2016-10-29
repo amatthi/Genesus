@@ -120,5 +120,16 @@ chisel.factory("mainFactory", function($http) {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         })
     }
+
+    fact.update_campaign = function(data) {
+        return $http({
+            method: 'POST',
+            url: '/api/campaign/' + data.id + '/update',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            'data': $.param(data)
+        });
+    }
     return fact;
 })

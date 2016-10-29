@@ -36,6 +36,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
     Route::group(['middleware' => 'auth'], function () {
         Route::get('campaign/dashboard', 'CampaignController@dashboard');
         Route::post('campaign/launch', 'CampaignController@launch');
+        Route::post('campaign/{campaign_id}/update', 'CampaignController@update');
         Route::post('profile', 'ProfileController@updateProfile');
         Route::get('profile/payment', 'ProfileController@getPayment');
     });

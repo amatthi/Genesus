@@ -1,6 +1,7 @@
 chisel.controller("dashboardController", function($scope, $rootScope, $routeParams, mainFactory, chisel_var) {
     $scope.campaigns = [];
     $scope.profile_data = {};
+    $scope.campaign_data = {};
     $scope.dash_view = 'campaigns';
 
     $scope.$on('is_login_done', function(event) {
@@ -19,9 +20,12 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
     });
     $scope.is_login();
 
-    mainFactory.dashboard_campaigns().then(function(r) {
-        $scope.campaigns = r.data;
-    }, $scope.handle_error);
+    $scope.get_dashboard_campaigns = function() {
+        mainFactory.dashboard_campaigns().then(function(r) {
+            $scope.campaigns = r.data;
+        }, $scope.handle_error);
+    }
+    $scope.get_dashboard_campaigns();
 
     $scope.add_profile_photo = function() {
         var f = document.getElementById('profile-photo').files[0],
@@ -40,8 +44,17 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
         }, $scope.handle_error);
     }
 
-    $scope.dash_set = function(view) {
+    $scope.dash_set = function(view, campaign_data) {
         $scope.dash_view = view;
+        if (view == 'edit' && campaign_data) {
+            $scope.campaign_data = campaign_data;
+        }
     }
 
+    $scope.update_campaign = function(data) {
+        mainFactory.update_campaign(data).then(function(r) {
+            alert('Your campaign has been updated!');
+            $scope.get_dashboard_campaigns();
+        }, $scope.handle_error);
+    }
 });
