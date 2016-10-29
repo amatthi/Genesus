@@ -11133,7 +11133,7 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
         }, $scope.handle_error);
     }
 
-    $scope.dash_share = function(view, campaign_data) {
+    $scope.dash_share = function() {
         window.location = '/dashboard';
         $scope.dash_view = 'settings';
 
