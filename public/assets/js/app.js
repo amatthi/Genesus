@@ -10943,6 +10943,12 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
         .when('/contact_us', {
             templateUrl: 'html/contact_us.html',
         })
+        .when('/terms', {
+            templateUrl: 'html/terms.html',
+        })
+        .when('/privacy', {
+            templateUrl: 'html/privacy.html',
+        })
         .when('/thank_you', {
             templateUrl: 'html/thank_you.html',
         })

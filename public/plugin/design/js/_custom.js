@@ -31,6 +31,8 @@ chisel_launch.controller('CustomCtrl', [
                 showSelectionBar: true,
                 showTicksValues: true,
                 stepsArray: [
+                    { value: 1 },
+                    { value: 10 },
                     { value: 20 },
                     { value: 30 },
                     { value: 40 },
