@@ -355,19 +355,24 @@ position: relative;
 }
 
 .btn-secondary {
-    background: #fff;
-    color: #019F6E;
-    border: 1px solid #019F6E;
+    background: #F4F6F5;
+    color: #777;
+    border: 1px solid #F4F6F5;
     font-weight: 400;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 18px;
 }
 
 .btn-secondary:hover {
-    background: #eee;
-    color: #019F6E;
+    background: #F4F6F5;
+    color: #777;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .new-campaign {
@@ -547,6 +552,19 @@ footer {
     height: 100%;
     opacity: 1;
     transform-style: preserve-3d;
+}
+
+.campaign-icons a {
+  color:#777;
+}
+
+.campaign-icons a span:hover {
+  text-decoration: none;
+  color: #4BAEE8;
+}
+
+.campaign-icons a:hover {
+  text-decoration: none;
 }
 
 .up-down-pad {
@@ -799,6 +817,7 @@ footer {
   display: inline-block;
   height:50px;
   padding-bottom: 5px;
+  padding-left: 15px;
 }
 
 .CLA_1 h5 {

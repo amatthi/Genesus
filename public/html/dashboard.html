@@ -57,9 +57,9 @@
                 <hr>
             </div>
             <div class="col-xs-12 col-sm-10 campaign-overview text-center" ng-repeat="campaign in campaigns">
-                <div class="col-xs-12 col-sm-2">
+                <div class="col-xs-12 col-sm-2 campaign-icons">
                     <!--<h5 style="margin-bottom: 0px;"><a href="/campaign/{{campaign.slug}}">{{campaign.purpose.name}} - {{campaign.formula.name}}</a></h5>-->
-                    <h5 style="margin-bottom: 0px;padding-top:7px;float:left;"><a href="/campaign/{{campaign.slug}}" style="color:#777;">{{campaign.title}}</a></h5>
+                    <h5 style="margin-bottom: 0px;padding-top:7px;float:left;"><a href="/campaign/{{campaign.slug}}">{{campaign.title}}</a></h5>
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <h5 style="margin-bottom: 0px;color:#777;padding-top:7px;">{{campaign.goal_count}}/{{campaign.goal}}</h5>
@@ -75,12 +75,12 @@
                 </div>
                 <div class="col-sm-2 hidden-xs">
                 </div>
-                <div class="col-xs-12 col-sm-2">
-                    <a ng-click="dash_set('edit')" style="cursor:pointer;" target="_self">
-                        <span class="glyphicon glyphicon-pencil" style="margin-top:10px;color:#777;padding-top:7px;"></span>
+                <div class="col-xs-12 col-sm-2 campaign-icons">
+                    <a ng-click="dash_set('edit')" style="cursor:pointer;">
+                        <span class="glyphicon glyphicon-pencil" style="margin-top:10px;padding-top:7px;"></span>
                     </a>
                     <a onClick="alert('Please contact us to complete the deletion of your campaign!')" style="cursor:pointer;">
-                        <span class="glyphicon glyphicon-trash" style="color:#777;padding-top:7px;"></span>
+                        <span class="glyphicon glyphicon-trash" style="padding-top:7px;"></span>
                     </a>
                 </div>
             </div>
@@ -145,10 +145,32 @@
             </div>
         </div>
         <div ng-show="dash_view == 'edit'" id="edit">
-          <div class="col-xs-12 lil-pad-bottom">
+          <div class="col-xs-12 launch-input">
+            <div class="col-xs-12 col-sm-10 campaign-overview lil-pad-bottom" ng-repeat="campaign in campaigns">
+              <h2 style="border-bottom:1px solid #ddd;margin-right:-15px;margin-left:-15px;font-size:16px;padding:10px 0px 20px 25px;color:#777;">
+                Campaign {{campaign.slug | capitalize}}
+              </h2>
+              <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12 lil-lil-pad">
+                    <label style="font-weight:400;">Product Name</label>
+                    <input class="input-width border-rad input-border" type="text" ng-model="campaign_data.title">
+                </div>
+                <div class="col-xs-12 lil-lil-pad">
+                    <label style="font-weight:400;">Blurb</label>
+                    <textarea class="input-width border-rad input-border" id="text" name="text" maxlength="200" rows="6" ng-model="campaign_data.blurb"></textarea>
+                    <h6 class="pull-right" id="count_message"></h6>
+                </div>
+                <div class="col-xs-12 lil-pad text-center lil-pad-bottom" style="text-align:left;">
+                    <button class="btn btn-secondary btn-sm" ng-click="dash_set('campaigns')" style="margin-right:10px;">Cancel</button>
+                    <button class="btn btn-bl btn-sm" ng-click="update_campaign(campaign_data)">Save Changes</button>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
               <center>
-                  <img class="img-responsive" ng-src="{{campaign_data.bottle_img}}" alt="Image Of Custom Supplement" style="max-height:350px;">
+                  <img class="img-responsive" ng-src="{{campaign.bottle_img}}" alt="Image Of Custom Supplement" style="max-height:350px;">
               </center>
+            </div>
+            </div>
           </div>
         </div>
     </div>

@@ -14,7 +14,9 @@
             <div class="formula-box">
                 <div class="CLA_1" ng-class="{'formula-selected':campaign_data.formula == formula}" ng-repeat="formula in campaign_data.purpose.formulas" ng-click="formula_change(formula)">
                   <h4>{{formula.name}}</h4>
-                  <img src="/img/Formula_Bottle.jpg">
+                  <img ng-if="formula.name != 'Whey Protein Isolate (Vanilla)' && formula.name != 'Pre-Workout (Fruit Punch)'" src="/img/Formula_Bottle.jpg">
+                  <img ng-if="formula.name == 'Pre-Workout (Fruit Punch)'" src="/img/Formula_Bottle_Pre.jpg">
+                  <img ng-if="formula.name == 'Whey Protein Isolate (Vanilla)'" src="/img/Formula_Bottle_Protein.jpg">
                   <span>{{formula.formula_desc}}</span>
                 </div>
             </div>
