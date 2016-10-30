@@ -18,6 +18,10 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
     }
     $scope.get_campaign();
 
+    $scope.add_nutrition_path = function(formula) {
+      formula = $scope.campaign_data.formula;
+      return '/plugin/design/images/nutrition_facts/' + formula.name.replace(/ /g, '_') + '.jpg';
+    }
 
     $scope.add_ingredient_path = function(ingredient) {
         return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
@@ -52,7 +56,6 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
 
     $scope.$on('payment_done', function() {
         $scope.set_module();
-        alert('buy campaign complete!');
         $location.path('/thank_you');
         // $scope.get_campaign();
     });

@@ -5,17 +5,33 @@
         </div>
         <div class="col-xs-12 lil-pad-bottom pay-input">
             <form ng-submit="set_payment_step('2')">
-                <label style="padding-top:15px;">Contact Info</label>
+              <div class="col-xs-12">
+                <label style="padding-top:15px;padding-left:15px;">Contact Info</label>
+                <div class="col-xs-12">
                 <input type="email" placeholder="Email Address" required="required" ng-model="__payment.email" style="display:block;width:100%;margin-bottom:5px;">
-
-                <label style="padding-top:15px;">Shipping Info</label>
-                <input class="shipping-info" type="text" placeholder="Full Name" required="required" ng-model="__payment.full_name">
+              </div>
+              </div>
+              <div class="col-xs-12">
+                <label style="padding-top:15px;padding-left:15px;">Shipping Info</label>
+                <div class="col-xs-12 col-sm-4">
+                  <input class="shipping-info" type="text" placeholder="Full Name" required="required" ng-model="__payment.full_name">
+                </div>
+                <div class="col-xs-12 col-sm-4">
                 <input class="shipping-info" type="text" placeholder="Street Address" required="required" ng-model="__payment.street_address">
+                </div>
+                <div class="col-xs-12 col-sm-4">
                 <input class="shipping-info" type="text" placeholder="City"required="required" ng-model="__payment.street_address2">
+              </div>
+              <div class="col-xs-12 col-sm-4">
                 <input class="shipping-info" type="text" placeholder="State"required="required" ng-model="__payment.state">
+              </div>
+              <div class="col-xs-12 col-sm-4">
                 <input class="shipping-info" type="text" placeholder="Country"required="required" ng-model="__payment.country">
+              </div>
+              <div class="col-xs-12 col-sm-4">
                 <input class="shipping-info" type="text" placeholder="Zip"required="required" ng-model="__payment.zipcode">
-
+              </div>
+              </div>
                 <div class="col-xs-12 text-center" style="padding-top:15px;">
                 <button class="btn btn-gn btn-sm" style="padding-top:5px;padding-bottom:5px;">Continue</button>
               </div>
@@ -27,8 +43,8 @@
             <h2>Checkout (2 of 2)</h2>
             <p><a class="pull-left payment-back" ng-click="set_payment_step('1')">Back</a></p>
         </div>
-        <div class="col-xs-12" ng-show="__user.card_brand">
-            <button ng-click="submit_payment()">use saved payment ({{__user.card_brand}} ,card last four{{__user.card_last_four}})</button>
+        <div class="col-xs-12 text-center" ng-show="__user.card_brand" style="padding-top:15px;">
+            <button ng-click="submit_payment()">Use saved payment ({{__user.card_brand}} , last four digits: {{__user.card_last_four}})</button>
         </div>
         <div class="col-xs-12 lil-pad-bottom payment-2">
             <form method="POST" id="payment-form" ng-submit="stripe_get_token()">
@@ -76,10 +92,10 @@
                     </div>
                 </div>
                 <div class="col-xs-12 text-center lil-pad">
-            
+
                     <input class="col-xs-12 col-sm-8 col-sm-offset-2 btn btn-gn btn-sm" type="submit" class="submit" value="Place Your Order" style="padding-top:5px;padding-bottom:5px;">
 
-                    <span class="payment-errors"></span>
+                    <span class="payment-errors col-xs-12" style="color:red;font-size:12px;"></span>
                 </div>
             </form>
             <div class="col-xs-12" style="padding-top:15px;">
