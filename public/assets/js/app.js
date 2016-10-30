@@ -11271,12 +11271,6 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
         });
     }
 
-    $scope.dash_share = function() {
-        window.location = '/dashboard';
-        $scope.dash_view = 'settings';
-
-    }
-
     $scope.amazon_upload = function($files, arg) {
         arg = (arg) ? arg : '';
         var aws = $scope.__s.aws;

@@ -37,7 +37,7 @@ class CampaignController extends Controller
         $tmp     = Campaign::where('slug', $slug)->first();
         if ($tmp) {
             if ($tmp->id != $request->input('id')) {
-                return response(['slug' => ['Please enter a url on Step 3 to Save!']], 422);
+                return response(['slug' => ['It looks like you have entered a URL that is already taken or the field is not complete. Please enter a new URL (Step 3) to continue!']], 422);
             }
         }
         $update_id = $request->input('id');

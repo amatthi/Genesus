@@ -216,10 +216,14 @@ chisel_launch.controller('CustomCtrl', [
             var price = Number($scope.campaign_data.sale_price);
             var bottle = Number($scope.campaign_data.formula.cost30);
             var goal = Number($scope.campaign_data.goal);
-            if (goal == 200) {
-                bottle = Number($scope.campaign_data.formula.cost200);
-            } else if (goal >= 100) {
+            if (goal < 30) {
+                bottle = Number($scope.campaign_data.formula.cost1);
+            } else if (goal >= 30 && goal < 100) {
+                bottle = Number($scope.campaign_data.formula.cost30);
+            } else if (goal >= 100 && goal < 200) {
                 bottle = Number($scope.campaign_data.formula.cost100);
+            } else if (goal == 200) {
+                bottle = Number($scope.campaign_data.formula.cost200);
             }
 
             return (price - bottle) * goal;
