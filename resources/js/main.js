@@ -108,6 +108,14 @@ chisel.directive('customOnChange', function() {
 
 chisel.filter('capitalize', function() {
     return function(input) {
-      return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+        return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+    }
+});
+
+chisel.filter('dayName', function() {
+    return function(time) {
+        var d = new Date(time);
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        return day = days[d.getDay()];
     }
 });

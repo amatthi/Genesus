@@ -63,9 +63,9 @@
             <div class="col-xs-12 col-sm-10 text-center campaign-button">
                 <button class="col-xs-12 btn btn-wj btn-sm btn-buy" ng-click="buy_campaign()">Buy It Now</a>
             </div>
-            <!--<div class="col-xs-12 col-sm-8" stle="padding-top:10px;">
-                <h4 style="font-size:18px;font-weight:300;">Available until <span style="font-weight:400;color:#555F6D;">{{campaign_data.end_at}}!</span></h4>
-            </div>-->
+            <div class="col-xs-12 col-sm-8" stle="padding-top:10px;">
+                <h4 style="font-size:18px;font-weight:300;">Available until <span style="font-weight:400;color:#555F6D;">{{campaign_data.end_at | dayName}}!</span></h4>
+            </div>
             <div class="col-xs-12 col-sm-10">
                 <div class="col-xs-12" id="clockdiv">
                     <timer countdown="100000" interval="1000">
