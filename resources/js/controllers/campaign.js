@@ -19,8 +19,8 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
     $scope.get_campaign();
 
     $scope.add_nutrition_path = function(formula) {
-      formula = $scope.campaign_data.formula;
-      return '/plugin/design/images/nutrition_facts/' + formula.name.replace(/ /g, '_') + '.jpg';
+        if (!formula) return '';
+        return '/plugin/design/images/nutrition_facts/' + formula.name.replace(/ /g, '_') + '.jpg';
     }
 
     $scope.add_ingredient_path = function(ingredient) {
