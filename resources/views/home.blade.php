@@ -25,7 +25,7 @@
 		<div id="pop-module">
 			<div class="modal_actions2" ng-if="now_module == 'login'" ng-include="'/html/templates/login.html?'+template_v"></div>
 			<div class="modal_actions2" ng-if="now_module == 'register'" ng-include="'/html/templates/register.html?'+template_v"></div>
-			<div class="modal_actions2" ng-if="now_module == 'payment'" ng-include="'/html/templates/payment.html?'+template_v" style="padding-left:100px;"></div>
+			<div class="modal_actions2" ng-if="now_module == 'payment'" ng-include="'/html/templates/payment.html?'+template_v"></div>
 		</div>
 	<section class="innerpage" ng-view></section>
 	<div class='container-fluid'>

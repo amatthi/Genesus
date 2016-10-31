@@ -27,7 +27,6 @@
         <link href="/assets/css/app.css" rel="stylesheet">
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
     </head>
     <body>
         <div class="container-fluid ng-scope" ng-controller="ProductCtrl" ng-app="productApp" id="productApp">
@@ -49,8 +48,6 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-xs-12">
-                <div class="container lil-pad">
                     <h1 ng-click="test()" style="display:none;">test</h1>
                     <!-- custom -->
                     <div class='darken' ng-show="now_module != ''"></div>
@@ -61,6 +58,8 @@
                     </div>
                     <!-- custom END -->
                     <!-- step -->
+                    <div class="col-xs-12">
+                    <div class="container lil-pad">
                     <div ng-include="'/html/templates/launch/step_left.html?'+template_v"></div>
                     <!-- step END -->
                     <!-- bottle -->

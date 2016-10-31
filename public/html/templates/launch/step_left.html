@@ -34,7 +34,7 @@
                 <p>{{estimated_profit()/campaign_data.goal | currency}} profit/sale</p>
                 <!--<p ng-show="campaign_data.formula.recommended_price">Recommended Price {{campaign_data.formula.recommended_price}}</p>-->
             </div>
-            <div class="col-xs-12 col-sm-3 input-group">
+            <div class="col-xs-12 col-sm-3 input-group sale-price">
                 <span class="input-group-addon" id="basic-addon1">$</span>
                 <input class="form-control" type="number" ng-model="campaign_data.sale_price" aria-describedby="basic-addon1">
             </div>
@@ -72,7 +72,7 @@
             </select>
         </div>
         <div class="col-xs-12 launch-options">
-            <label>Url</label>
+            <label>URL</label>
             <h4 class="grey-info-2">This is where you'll send buyers to view your campaign.</h4>
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon2">genesus.co/campaign/</span>
