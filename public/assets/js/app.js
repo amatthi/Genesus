@@ -11193,7 +11193,7 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
 
     $scope.submit_campaign = function(data) {
         mainFactory.launch_campaign(data).then(function(r) {
-            alert('Your campaign has been saved!');
+            alert('Your campaign is now live!');
         }, $scope.handle_error);
     }
 

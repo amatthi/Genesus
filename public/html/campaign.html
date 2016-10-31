@@ -2,8 +2,8 @@
 <script src="cfgen-form-2/js/form.js"></script>
 <link href="cfgen-form-2/css/form.css" rel="stylesheet" type="text/css">
 <div class="container-fluid margin-top-25">
-    <div class="container campaign-top">
-        <div class="campaign-brand-pic">
+    <div class="container campaign-top" ng-if="campaign_data.user.profile.brand_name">
+        <div class="campaign-brand-pic" ng-show="campaign_data.user.profile.photo">
             <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus Brand Image" style="max-width:75px;">
         </div>
         <div class="campaign-brand-name">
@@ -111,21 +111,23 @@
                     <p>If you're not 100% satisfied, let us know and we'll make it right.</p>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-4 bio-info">
-                <div class="col-xs-12 text-center bio-pic">
+            <div class="col-xs-12 col-sm-4 bio-info" ng-if="campaign_data.user.profile.brand_name">
+                <div class="col-xs-12 text-center bio-pic" ng-show="campaign_data.user.profile.photo">
                     <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus User Profile Picture">
                 </div>
-                <div class="col-xs-12 text-center">
+                <div class="col-xs-12 text-center" ng-show="campaign_data.user.profile.brand_name">
                     <h4>{{campaign_data.user.profile.brand_name}}</h4>
+                </div>
+                <div class="col-xs-12 text-center" ng-show="campaign_data.user.profile.brand_city && campaign_data.user.profile.brand_state">
                     <p>In {{campaign_data.user.profile.brand_city}}, {{campaign_data.user.profile.brand_state}}</p>
                 </div>
-                <div class="col-xs-12" ng-if="campaign_data.user.profile.brand_description">
+                <div class="col-xs-12" ng-show="campaign_data.user.profile.brand_description">
                     <h5>{{campaign_data.user.profile.brand_description}}</h5>
                 </div>
             </div>
         </div>
     </div>
-    <div ng-show="campaign_data.user.profile.instagram">
+    <div ng-if="campaign_data.user.profile.instagram">
         <hr>
         <div class="row">
             <div class="container" style="padding-bottom:40px;">
