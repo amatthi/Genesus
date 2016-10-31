@@ -6,6 +6,7 @@
 		<base href="/">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="description" content="Genesus lets you create your own branded supplement line, risk free.">
+		<meta name="google-site-verification" content="6y7jyyC1B4MYvTde6xD71veT8X68pG6Ub3FhudYy9XQ" />
 		<meta http-equiv="Pragma" content="public">
 		<meta http-equiv="Cache-Control" content="public">
 		<meta http-equiv="Expires" content="Sat, 01 Dec 2018 00:00:00 GMT">
