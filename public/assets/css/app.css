@@ -591,7 +591,7 @@ footer {
 
 .modal_actions {
     z-index: 100000000 !important;
-    /**position: fixed !important;**/
+    position: fixed !important;
     height: 100%;
     opacity: 1;
     transform-style: preserve-3d;
@@ -1641,6 +1641,14 @@ a {
   text-align:left;
 }
 
+.login-head {
+  background-color: #fff !important;
+  border: none;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .current-payout img {
   max-height:350px;
 }
@@ -1684,6 +1692,10 @@ a {
 
 .pad-bottom-10 {
   padding-bottom:10px;
+}
+
+.pad-bottom-250 {
+  padding-bottom: 250px;
 }
 
 .pad-top-50 {
