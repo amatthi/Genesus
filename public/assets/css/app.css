@@ -444,8 +444,47 @@ position: relative;
   padding-bottom: 25px;
 }
 
+.home-lap h3 {
+  font-size:48px;
+  font-weight:200;
+}
+
+.home-lap h5 {
+  font-weight:200;
+  font-size:16px;
+  color:#646772;
+  line-height:1.6;
+}
+
+.home-lap span {
+  color:#07b9ff;
+  font-size:52px;
+}
+
 .home-lap img {
   max-height: 450px;
+}
+
+.home-lap p {
+  font-size:12px;
+  font-weight:200;
+  color:#646772;
+}
+
+.made-by h5 {
+  font-weight:200;
+  font-size:16px;
+  color:#646772;
+  line-height:1.6;
+}
+
+.discover h2 {
+  font-size:30px;
+  font-weight:600;
+}
+
+.discover h5 {
+  color:#646772;
 }
 
 .home-ex {
@@ -504,6 +543,10 @@ footer {
 
 .footer-banner {
   background:#F3F2F0;
+}
+
+.footer-banner img {
+  max-height:200px;
 }
 
 /** Footer End **/
@@ -629,6 +672,10 @@ footer {
     font-weight: 400;
     cursor: default;
     padding-top: 25px;
+  }
+
+  .dash-background {
+    background-color:#F5F7F6;
   }
 
   .step-default {
@@ -1124,6 +1171,14 @@ a {
   padding-bottom: 800px;
 }
 
+.dash-nav li {
+  text-align:left;
+}
+
+.dash-nav li a img {
+  height:25px;
+}
+
 .dash-campaigns h2 {
   margin-top: 10px;
   font-size: 18px;
@@ -1164,6 +1219,13 @@ a {
   border-right: 1px solid #ddd;
 }
 
+.overview-data-2 h4 {
+  font-size:28px;
+  font-weight: 600;
+  color: #333;
+  border-right: none;
+}
+
 .overview-data h5 {
   font-size:12px;
   color: #ccc;
@@ -1191,6 +1253,31 @@ a {
  .tooltip-inner {
    text-align: left;
  }
+
+ .margin-bottom-0 {
+   margin-bottom:0px;
+ }
+
+.dash-alert a {
+  cursor:pointer;
+  color:#4BAEE8;
+}
+
+.campaign-section {
+  cursor:pointer;
+}
+
+.campaign-section h2 {
+  color:#4BAEE8;
+}
+
+.campaign-overview h3 {
+  margin-right:-15px;
+  margin-left:-15px;
+  font-size:16px;
+  padding:10px 0px 10px 25px;
+  color:#777;
+}
 
  .bordered {
   border: dashed 4px #D91E18;
@@ -1479,8 +1566,133 @@ a {
   border-radius:4px;
 }
 
+.laptop {
+  max-height:350px;
+}
+
+.dash-campaign-title h5 {
+  margin-bottom: 0px;
+  padding-top:7px;
+  float:left;
+}
+
+.dash-campaign-goal h5 {
+  margin-bottom: 0px;
+  color:#777;
+  padding-top:7px;
+}
+
+.dash-campaign-goal p {
+  font-size:10px;
+  color:#777;
+}
+
+.dash-campaign-status h5 {
+  margin-bottom: 0px;
+  color:#777;
+  padding-top:7px;
+}
+
+.dash-campaign-status p {
+  font-size:10px;
+  color:#777;
+}
+
+.dash-na h5 {
+  color:#777;
+  padding-top:7px;
+}
+
+.edit-icon {
+  margin-top:10px;
+  padding-top:7px;
+}
+
+.delete-alert {
+  cursor:pointer;
+}
+
+.delete-icon {
+  padding-top:7px;
+}
+
+.dash-settings h2 {
+  border-bottom:1px solid #ddd;
+  margin-right:-15px;
+  margin-left:-15px;
+  font-size:16px;
+  padding:10px 0px 20px 25px;
+  color:#777;
+}
+
+.dash-settings label {
+  font-weight:400;
+}
+
+.dash-location small {
+  display:block;
+  font-size:10px;
+}
+
+.text-left {
+  text-align:left;
+}
+
+.current-payout img {
+  max-height:350px;
+}
+
+.current-payout h2 {
+  border-bottom:1px solid #ddd;
+  margin-right:-15px;
+  margin-left:-15px;
+  font-size:16px;
+  padding:10px 0px 20px 25px;
+  color:#777;
+}
+
+.current-payout h4 {
+  font-size:14px;
+}
+
+.current-payout h4 a {
+  color:#4BAEE8;
+}
+
+.current-payout label {
+  font-weight:400;
+}
+
+.dash-profile-pic img {
+  max-height:150px;
+}
+
+.dash-payouts h2 {
+  font-size:16px;
+}
+
+.no-border {
+  border:none;
+}
+
+.pad-left-0 {
+  padding-left:0px;
+}
+
+.pad-bottom-10 {
+  padding-bottom:10px;
+}
+
 .pad-top-50 {
   padding-top:50px;
+}
+
+.pad-top-100 {
+  padding-top:100px;
+}
+
+.pad-left-50 {
+  padding-left:50px;
 }
 
 .launch-terms small {
@@ -1785,9 +1997,14 @@ a {
   font-weight: 600;
 }
 
+.margin-right-10 {
+  margin-right:10px;
+}
+
 .fivemarbottom {
     margin-bottom: 5px;
 }
+
 #clockdiv {
     font-family: sans-serif;
     color: #333;
