@@ -11084,6 +11084,7 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
         $scope.__payment.data = $scope.campaign_data;
         $scope.__payment.step = '1';
         $scope.__payment.email = $scope.__user.email;
+        fbq('track', 'InitiateCheckout');
         $scope.open_payment();
     }
 
