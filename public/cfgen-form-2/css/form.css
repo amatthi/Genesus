@@ -11,6 +11,8 @@ body{
 	-ms-box-sizing:border-box;
 	box-sizing:border-box;
 	max-width:100%;
+	background-color:#f3f2f0;
+	padding-top:0px;
 }
 .ui-datepicker{
 	font-size:9pt !important;

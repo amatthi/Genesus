@@ -5,24 +5,24 @@
             <label>Goal</label>
             <div>
               <center>
-                <div ng-class="{'purpose-selected':campaign_data.purpose == purpose}" ng-repeat="purpose in purposes" ng-click="purpose_change(purpose)" ng-bind="purpose.name" style="height:50px;width:50px;cursor:pointer;background-image:url(images/goals/{{purpose.name}}.jpg);background-size:cover;font-size:0px;float:left;border-radius:4px;"></div>
+                <div class="goal-desc" ng-class="{'purpose-selected':campaign_data.purpose == purpose}" ng-repeat="purpose in purposes" ng-click="purpose_change(purpose)" ng-bind="purpose.name" style="background-image:url(images/goals/{{purpose.name}}.jpg);"></div>
               </center>
             </div>
         </div>
-        <div class="form-group" style="padding-top:50px;">
+        <div class="form-group pad-top-50">
             <label>Product</label>
             <div class="formula-box">
                 <div class="CLA_1" ng-class="{'formula-selected':campaign_data.formula == formula}" ng-repeat="formula in campaign_data.purpose.formulas" ng-click="formula_change(formula)">
                   <h4>{{formula.name}}</h4>
-                  <img ng-if="formula.name != 'Whey Protein Isolate (Vanilla)' && formula.name != 'Pre-Workout (Fruit Punch)'" src="/img/Formula_Bottle.jpg">
-                  <img ng-if="formula.name == 'Pre-Workout (Fruit Punch)'" src="/img/Formula_Bottle_Pre.jpg">
-                  <img ng-if="formula.name == 'Whey Protein Isolate (Vanilla)'" src="/img/Formula_Bottle_Protein.jpg">
+                  <img ng-if="formula.name != 'Whey Protein Isolate (Vanilla)' && formula.name != 'Pre-Workout (Fruit Punch)'" src="/img/Formula_Bottle.jpg" alt="Genesus Bottle Image">
+                  <img ng-if="formula.name == 'Pre-Workout (Fruit Punch)'" src="/img/Formula_Bottle_Pre.jpg" alt="Genesus Bottle Image">
+                  <img ng-if="formula.name == 'Whey Protein Isolate (Vanilla)'" src="/img/Formula_Bottle_Protein.jpg" alt="Genesus Bottle Image">
                   <span>{{formula.formula_desc}}</span>
                 </div>
             </div>
         </div>
-        <div ng-show="campaign_data.formula">
-            <div class="ing-ex" style="cursor:default;">
+        <div class="launch-options" ng-show="campaign_data.formula">
+            <div class="ing-ex">
                 <h3>Base Cost @ 30 Bottles:</h3>
                 <h2 ng-bind="campaign_data.formula.cost30 | currency"></h2>
             </div>
@@ -34,8 +34,5 @@
         </center>
     </div>
 </div>
-<small ng-show="launch_step_create()" style="font-size:10px;color:#777;">† These statements has not been evaluated by the FDA.</small>
+<small class="small-text" ng-show="launch_step_create()">† These statements has not been evaluated by the FDA.</small>
 <!-- step create END -->
-<script type="text/ng-template" id="ingredient_tooltip.html">
-    <span ng-bind="campaign_data.formula.description[key]"></span>
-</script>

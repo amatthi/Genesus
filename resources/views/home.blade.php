@@ -28,6 +28,9 @@
 			<div class="modal_actions2" ng-if="now_module == 'payment'" ng-include="'/html/templates/payment.html?'+template_v" style="padding-left:100px;"></div>
 		</div>
 	<section class="innerpage" ng-view></section>
+	<div class='container-fluid'>
+		<div ng-include src="'/html/templates/footer.html'"></div>
+	</div>
 	<script>
   window.intercomSettings = {
     app_id: "ifi52d9m"
