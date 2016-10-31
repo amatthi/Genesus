@@ -30,11 +30,10 @@
           </div>
             <img class="col-xs-12 col-sm-3" ng-src="/img/Formula_Bottle.jpg" alt="Genesus Bottle">
             <div class="col-xs-12 col-sm-5 launch-options-bottle">
-                <label>Bottle (30 Servings, 60 Capsules)</label>
+                <label>Bottle ({{campaign_data.formula.servings}} Servings, {{campaign_data.formula.capsules}} Capsules)</label>
                 <p>{{estimated_profit()/campaign_data.goal | currency}} profit/sale</p>
-                <!--<p ng-show="campaign_data.formula.recommended_price">Recommended Price {{campaign_data.formula.recommended_price}}</p>-->
             </div>
-            <div class="col-xs-12 col-sm-3 input-group sale-price">
+            <div class="col-xs-12 col-sm-3 input-group sale-price" uib-tooltip="Genesus Recommended Price: {{campaign_data.formula.recommended_price}}">
                 <span class="input-group-addon" id="basic-addon1">$</span>
                 <input class="form-control" type="number" ng-model="campaign_data.sale_price" aria-describedby="basic-addon1">
             </div>
