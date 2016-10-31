@@ -815,7 +815,7 @@ footer {
 }
 
 .step1_2 {
-  min-width: 222.5px !important;
+  min-width: 250.5px !important;
 }
 
 .design-img {
@@ -833,11 +833,12 @@ footer {
   max-height:300px;
   overflow:auto;
   border:1px solid #ddd;
-  border-radius:4px;"
+  border-radius:4px;
+  background: #ddd;
 }
 
 .CLA_1 {
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   cursor: pointer;
   min-height: 90px;
   background-color: #fff;
@@ -1564,6 +1565,8 @@ a {
   font-size:0px;
   float:left;
   border-radius:4px;
+  border: 2px solid #ddd;
+  margin: 3px;
 }
 
 .laptop {
