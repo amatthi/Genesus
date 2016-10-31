@@ -241,7 +241,9 @@ chisel_launch.controller('CustomCtrl', [
         $scope.formula_change = function(formula) {
             $scope.campaign_data.formula = formula;
             if ($scope.campaign_data.formula.back_image && $scope.activeDesignObject == 1) {
-                $scope.loadProduct($scope.defaultProductTitle, $scope.add_back_image_path($scope.campaign_data.formula.back_image), $scope.defaultProductId, $scope.defaultPrice, $scope.defaultCurrency, 1);
+                setTimeout(function() {
+                    $('#bottle-back-a').trigger('click');
+                }, 500);
             } else {
                 $scope.loadProduct($scope.defaultProductTitle, $scope.productImages[0], $scope.defaultProductId, $scope.defaultPrice, $scope.defaultCurrency, 0);
             }

@@ -38,7 +38,8 @@ trait CampaignTrait
             $benefit_1         = $row[4];
             $benefit_2         = $row[5];
             $benefit_3         = $row[6];
-            $back_image        = $row[7];
+            $back_image        = str_replace('%', '', $row[7]);
+            $back_image        = strpos($back_image, '.') === false ? '' : $back_image;
             $cost30            = (float) str_replace('$', '', $row[8]);
             $ingredients       = $row[11];
             $recommended_price = $row[12];
