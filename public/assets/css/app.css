@@ -116,7 +116,7 @@ strong {
   max-height:468px;
   width:100%;
   clear:both;
-  margin-bottom:100px;
+  margin-bottom:75px;
   background-color:#fff;
   background-size:cover;
 }
@@ -1275,6 +1275,22 @@ a {
 .dash-alert a {
   cursor:pointer;
   color:#4BAEE8;
+}
+
+@media (min-width:765px) {
+.home-icons {
+  float: right;
+  }
+}
+
+.home-description {
+  padding-top: 100px;
+}
+
+@media (max-width:500px) {
+.home-description {
+  padding-top: 25px;
+  }
 }
 
 .campaign-section {
