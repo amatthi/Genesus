@@ -11140,7 +11140,7 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
 
     $scope.update_profile = function(profile_data) {
         mainFactory.update_profile(profile_data).then(function(r) {
-            alert('Your profile has been updated!');
+            alert('Profile successfully updated! Head over to your campaigns to see how the change looks to the rest of the world.');
             $scope.is_login();
         }, $scope.handle_error);
     }

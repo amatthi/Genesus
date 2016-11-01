@@ -845,7 +845,7 @@ footer {
 }
 
 .CLA_1 {
-  border: 2px solid #ddd;
+  border: 1px solid #ddd;
   cursor: pointer;
   min-height: 90px;
   background-color: #fff;
@@ -1572,7 +1572,7 @@ a {
   font-size:0px;
   float:left;
   border-radius:4px;
-  border: 2px solid #ddd;
+  border: 1px solid #ddd;
   margin: 3px;
 }
 
@@ -1809,8 +1809,9 @@ a {
 }
 
 .small-text {
-  font-size:10px;
+  font-size:8px;
   color:#777;
+  cursor: default;
 }
 
 .science-small-text {
@@ -2195,11 +2196,13 @@ a {
 }
 
 .purpose-selected {
-  border:2px solid #07B9FF;
+  border:1px solid #07B9FF;
   border-radius: 4px;
+  box-shadow: 0 0 9px #07B9FF;
 }
 
 .formula-selected {
-  border:2px solid #07B9FF;
+  border:1px solid #07B9FF;
   border-radius: 4px;
+  box-shadow: 0 0 9px #07B9FF;
 }

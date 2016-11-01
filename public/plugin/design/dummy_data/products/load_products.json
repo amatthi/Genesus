@@ -41,19 +41,6 @@
          "description":"Lorium ipsum dolor sit amet"
       },
       {
-         "id":4,
-         "name":"Template",
-         "price":99,
-         "category": "Standard",
-         "currency":"USD",
-         "image":"dummy_data/products/bottle/Template_3.jpg",
-         "sub_images":[
-            "dummy_data/products/bottle/Template_3.jpg"
-
-         ],
-         "description":"Lorium ipsum dolor sit amet"
-      },
-      {
          "id":5,
          "name":"Template",
          "price":99,
@@ -132,27 +119,14 @@
          "description":"Lorium ipsum dolor sit amet"
       },
       {
-         "id":11,
-         "name":"Template",
-         "price":99,
-         "category": "Standard",
-         "currency":"USD",
-         "image":"dummy_data/products/bottle/Template_10.jpg",
-         "sub_images":[
-            "dummy_data/products/bottle/Template_10.jpg"
-
-         ],
-         "description":"Lorium ipsum dolor sit amet"
-      },
-      {
          "id":12,
          "name":"Template",
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/Template_11.jpg",
+         "image":"dummy_data/products/bottle/Template_12.jpg",
          "sub_images":[
-            "dummy_data/products/bottle/Template_11.jpg"
+            "dummy_data/products/bottle/Template_12.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -366,32 +340,6 @@
          "description":"Lorium ipsum dolor sit amet"
       },
       {
-         "id":29,
-         "name":"Template",
-         "price":99,
-         "category": "Standard",
-         "currency":"USD",
-         "image":"dummy_data/products/bottle/Template_27.jpg",
-         "sub_images":[
-            "dummy_data/products/bottle/Template_27.jpg"
-
-         ],
-         "description":"Lorium ipsum dolor sit amet"
-      },
-      {
-         "id":30,
-         "name":"Template",
-         "price":99,
-         "category": "Standard",
-         "currency":"USD",
-         "image":"dummy_data/products/bottle/Template_28.jpg",
-         "sub_images":[
-            "dummy_data/products/bottle/Template_28.jpg"
-
-         ],
-         "description":"Lorium ipsum dolor sit amet"
-      },
-      {
          "id":31,
          "name":"Template",
          "price":99,
@@ -403,46 +351,8 @@
 
          ],
          "description":"Lorium ipsum dolor sit amet"
-      },
-      {
-         "id":32,
-         "name":"Template",
-         "price":99,
-         "category": "Standard",
-         "currency":"USD",
-         "image":"dummy_data/products/bottle/Template_30.jpg",
-         "sub_images":[
-            "dummy_data/products/bottle/Template_30.jpg"
-
-         ],
-         "description":"Lorium ipsum dolor sit amet"
-      },
-      {
-         "id":33,
-         "name":"Template",
-         "price":99,
-         "category": "Standard",
-         "currency":"USD",
-         "image":"dummy_data/products/bottle/Template_31.jpg",
-         "sub_images":[
-            "dummy_data/products/bottle/Template_31.jpg"
-
-         ],
-         "description":"Lorium ipsum dolor sit amet"
-      },
-      {
-         "id":34,
-         "name":"Template",
-         "price":99,
-         "category": "Standard",
-         "currency":"USD",
-         "image":"dummy_data/products/bottle/evolve.jpg",
-         "sub_images":[
-            "dummy_data/products/bottle/evolve.jpg"
-
-         ],
-         "description":"Lorium ipsum dolor sit amet"
       }
+
    ],
    "message":"Products Loaded Successfully"
 }
