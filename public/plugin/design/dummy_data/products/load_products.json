@@ -15,19 +15,6 @@
          "description":"Lorium ipsum dolor sit amet"
       },
       {
-         "id":2,
-         "name":"Template",
-         "price":99,
-         "category": "Standard",
-         "currency":"USD",
-         "image":"dummy_data/products/bottle/Template_1.jpg",
-         "sub_images":[
-            "dummy_data/products/bottle/Template_1.jpg"
-
-         ],
-         "description":"Lorium ipsum dolor sit amet"
-      },
-      {
          "id":3,
          "name":"Template",
          "price":99,
