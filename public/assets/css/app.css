@@ -533,7 +533,6 @@ footer {
 }
 
 .footer-nav li a {
-    color: #8E8E8E;
     text-decoration: none;
 }
 
@@ -839,9 +838,8 @@ footer {
 .formula-box {
   max-height:300px;
   overflow:auto;
-  border:1px solid #ddd;
+  border:none;
   border-radius:4px;
-  background: #ddd;
 }
 
 .CLA_1 {
@@ -849,6 +847,7 @@ footer {
   cursor: pointer;
   min-height: 90px;
   background-color: #fff;
+  margin: 3px;
 }
 
 .CLA_1 h4 {

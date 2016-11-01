@@ -15,6 +15,19 @@
          "description":"Lorium ipsum dolor sit amet"
       },
       {
+         "id":2,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/Template_1.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/Template_1.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
          "id":3,
          "name":"Template",
          "price":99,
@@ -23,6 +36,19 @@
          "image":"dummy_data/products/bottle/Template_2.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_2.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":4,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/Template_3.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/Template_3.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -106,14 +132,27 @@
          "description":"Lorium ipsum dolor sit amet"
       },
       {
+         "id":11,
+         "name":"Template",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/Template_10.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/Template_10.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
          "id":12,
          "name":"Template",
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/Template_12.jpg",
+         "image":"dummy_data/products/bottle/Template_11.jpg",
          "sub_images":[
-            "dummy_data/products/bottle/Template_12.jpg"
+            "dummy_data/products/bottle/Template_11.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
@@ -288,19 +327,6 @@
          "description":"Lorium ipsum dolor sit amet"
       },
       {
-         "id":26,
-         "name":"Template",
-         "price":99,
-         "category": "Standard",
-         "currency":"USD",
-         "image":"dummy_data/products/bottle/Template_25.jpg",
-         "sub_images":[
-            "dummy_data/products/bottle/Template_25.jpg"
-
-         ],
-         "description":"Lorium ipsum dolor sit amet"
-      },
-      {
          "id":27,
          "name":"Pre-Workout (Fruit Punch)",
          "price":99,
@@ -326,19 +352,7 @@
          ],
          "description":"Lorium ipsum dolor sit amet"
       },
-      {
-         "id":31,
-         "name":"Template",
-         "price":99,
-         "category": "Standard",
-         "currency":"USD",
-         "image":"dummy_data/products/bottle/Template_29.jpg",
-         "sub_images":[
-            "dummy_data/products/bottle/Template_29.jpg"
 
-         ],
-         "description":"Lorium ipsum dolor sit amet"
-      }
 
    ],
    "message":"Products Loaded Successfully"
