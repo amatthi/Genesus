@@ -12,7 +12,7 @@ chisel_launch.controller('CustomCtrl', [
     '$timeout',
 
     function($scope, Fabric, FabricConstants, Keypress, $http, $timeout, $mdDialog, $mdToast, Upload, mainFactory, $timeout) {
-        $scope.template_v = '1.1.3';
+        $scope.template_v = '1.1.4';
         $scope.now_module = '';
         $scope.login_after = '';
         $scope.__user = {};
@@ -280,8 +280,17 @@ chisel_launch.controller('CustomCtrl', [
             return 'images/benefits_3/' + benefit_3.replace(/ /g, '_') + '.jpg';
         }
 
-        $scope.test = function() {
-            console.log($scope.fabric.canvasLayers());
+        $scope.test = function(data) {
+            // data.product_id = $scope.defaultProductId;
+            data.objectLayers = $scope.objectLayers;
+            data.status = 'draft';
+            mainFactory.launch_campaign(data).then(function(r) {
+                //console.log(r);
+                window.onbeforeunload = null;
+                window.onhashchange = null;
+                alert('Your campaign is now live!');
+                window.location = '/share/' + r.data.id;
+            }, $scope.handle_error);
         }
     }
 ]);

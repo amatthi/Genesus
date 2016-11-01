@@ -4,20 +4,20 @@
         <div class="form-group lil-lil-pad">
             <label>Goal</label>
             <div>
-              <center>
-                <div class="goal-desc" ng-class="{'purpose-selected':campaign_data.purpose == purpose}" ng-repeat="purpose in purposes" ng-click="purpose_change(purpose)" ng-bind="purpose.name" style="background-image:url(images/goals/{{purpose.name}}.jpg);"></div>
-              </center>
+                <center>
+                    <div class="goal-desc" ng-class="{'purpose-selected':campaign_data.purpose == purpose}" ng-repeat="purpose in purposes" ng-click="purpose_change(purpose)" ng-bind="purpose.name" style="background-image:url(images/goals/{{purpose.name}}.jpg);"></div>
+                </center>
             </div>
         </div>
         <div class="form-group pad-top-50">
             <label>Product</label>
             <div class="formula-box">
                 <div class="CLA_1" ng-class="{'formula-selected':campaign_data.formula == formula}" ng-repeat="formula in campaign_data.purpose.formulas" ng-click="formula_change(formula)">
-                  <h4>{{formula.name}}</h4>
-                  <img ng-if="formula.name != 'Whey Protein Isolate (Vanilla)' && formula.name != 'Pre-Workout (Fruit Punch)'" src="/img/Formula_Bottle.jpg" alt="Genesus Bottle Image">
-                  <img ng-if="formula.name == 'Pre-Workout (Fruit Punch)'" src="/img/Formula_Bottle_Pre.jpg" alt="Genesus Bottle Image">
-                  <img ng-if="formula.name == 'Whey Protein Isolate (Vanilla)'" src="/img/Formula_Bottle_Protein.jpg" alt="Genesus Bottle Image">
-                  <span>{{formula.formula_desc}}</span>
+                    <h4>{{formula.name}}</h4>
+                    <img ng-if="formula.name != 'Whey Protein Isolate (Vanilla)' && formula.name != 'Pre-Workout (Fruit Punch)'" src="/img/Formula_Bottle.jpg" alt="Genesus Bottle Image">
+                    <img ng-if="formula.name == 'Pre-Workout (Fruit Punch)'" src="/img/Formula_Bottle_Pre.jpg" alt="Genesus Bottle Image">
+                    <img ng-if="formula.name == 'Whey Protein Isolate (Vanilla)'" src="/img/Formula_Bottle_Protein.jpg" alt="Genesus Bottle Image">
+                    <span>{{formula.formula_desc}}</span>
                 </div>
             </div>
         </div>
@@ -29,6 +29,9 @@
         </div>
     </div>
     <div class="lil-pad">
+        <center>
+            <div class="btn btn-gn btn-sm" ng-click="test(campaign_data)">Save Design and ajax submit form</div>
+        </center>
         <center>
             <div class="btn btn-gn btn-sm" ng-click="set_step('goal')">Continue</div>
         </center>
