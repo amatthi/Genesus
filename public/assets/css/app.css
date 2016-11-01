@@ -1266,6 +1266,12 @@ a {
    margin-bottom:0px;
  }
 
+ .dash-alert-launch {
+   left:0px;
+   width:100%;
+   position:relative;
+ }
+
 .dash-alert a {
   cursor:pointer;
   color:#4BAEE8;
