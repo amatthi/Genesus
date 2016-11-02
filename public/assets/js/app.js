@@ -11084,7 +11084,6 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
         $scope.__payment.data = $scope.campaign_data;
         $scope.__payment.step = '1';
         $scope.__payment.email = $scope.__user.email;
-        fbq('track', 'InitiateCheckout');
         $scope.open_payment();
     }
 
@@ -11140,7 +11139,7 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
 
     $scope.update_profile = function(profile_data) {
         mainFactory.update_profile(profile_data).then(function(r) {
-            alert('Profile successfully updated! Head over to your campaigns to see how the change looks to the rest of the world.');
+            alert('Your profile has been updated!');
             $scope.is_login();
         }, $scope.handle_error);
     }
