@@ -261,6 +261,11 @@ chisel_launch.controller('CustomCtrl', [
             return false;
         }
 
+        $scope.add_formula_path = function(formula) {
+            //formula = $scope.campaign_data.formula.name;
+            return 'images/formula/' + formula.name.replace(/ /g, '_') + '.jpg';
+        }
+
         $scope.add_ingredient_path = function(ingredient) {
             return 'images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
         }
