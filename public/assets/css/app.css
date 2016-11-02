@@ -844,43 +844,39 @@ footer {
 }
 
 .CLA_1 {
+  display: table;
   border: 1px solid #ddd;
   cursor: pointer;
   min-height: 90px;
   background-color: #fff;
   margin: 3px;
+  width: 98%;
 }
 
 .CLA_1 h4 {
-  font-weight: 400;
-  font-size: 14px;
-  padding-bottom: 0px;
-  padding-left: 5px;
-  width: 100%;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  padding-right: 5px;
 }
 
 .CLA_1 span {
-  font-size: 10px;
   display: block;
-  margin-left: 60px;
-  margin-top: -50px;
+  font-size: 10px;
   padding-bottom: 5px;
   padding-right: 5px;
 }
 
 .CLA_1 img {
   display: inline-block;
-  height:50px;
-  padding-bottom: 5px;
-  padding-left: 5px;
+  height:80px;
+  padding: 5px;
+  padding-right: 25px;
 }
 
 .CLA_1 h5 {
-  font-weight: 300;
-  font-size: 14px;
-  padding: 0 0 0 10px;
-  color: #777;
-  margin-top: 0px;
+
 }
 
 .ing-ex h5 {
@@ -1591,8 +1587,8 @@ a {
 }
 
 .goal-desc {
-  height:60px;
-  width:60px;
+  height:85px;
+  width:85px;
   cursor:pointer;
   background-size:cover;
   font-size:0px;
