@@ -1,7 +1,7 @@
 <!-- step create-->
 <div class="tab-content-1 step1_2" ng-show="launch_step_create()">
     <div class="launch-step-create launch-input">
-        <div class="form-group lil-lil-pad">
+        <div class=" col-xs-12 form-group no-pad-right pad-left-10">
             <label>Made For</label>
             <div>
                 <center>
@@ -9,19 +9,19 @@
                 </center>
             </div>
         </div>
-        <div class="form-group pad-top-50">
+        <div class="form-group col-xs-12 pad-right-10 pad-left-10">
             <label>Product</label>
             <div class="formula-box">
                 <div class="CLA_1" ng-class="{'formula-selected':campaign_data.formula == formula}" ng-repeat="formula in campaign_data.purpose.formulas" ng-click="formula_change(formula)">
                   <div style="display:table-row">
-                    <div style="display:table-cell;position:relative;top:10px;width:50px;padding:5px;">
+                    <div style="display:table-cell;position:relative;width:50px;padding:5px;">
                       <img ng-src="{{add_formula_path(formula)}}" alt="Genesus Bottle Image">
                     </div>
                     <div style="display:table-cell;position:relative;top:-20px;">
                       <h4>{{formula.name}}</h4>
-                      <span>&#8226 {{formula.benefit_1}}</span>
-                      <span>&#8226 {{formula.benefit_2}}</span>
-                      <span>&#8226 {{formula.benefit_2}}</span>
+                      <span ng-show="formula.benefit_1">&#8226 {{formula.benefit_1}}</span>
+                      <span ng-show="formula.benefit_2">&#8226 {{formula.benefit_2}}</span>
+                      <span ng-show="formula.benefit_3">&#8226 {{formula.benefit_3}}</span>
                     </div>
                   </div>
                 </div>
