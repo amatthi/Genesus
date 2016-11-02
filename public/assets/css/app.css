@@ -859,20 +859,19 @@ footer {
   font-weight: 600;
   margin-bottom: 3px;
   padding-right: 5px;
+  color: #444;
 }
 
 .CLA_1 span {
   display: block;
-  font-size: 10px;
-  padding-bottom: 5px;
+  font-size: 12px;
+  color:#777;
   padding-right: 5px;
 }
 
 .CLA_1 img {
   display: inline-block;
   height:80px;
-  padding: 5px;
-  padding-right: 25px;
 }
 
 .CLA_1 h5 {
@@ -1014,7 +1013,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .no-pad-left {
-  padding-left: 0px;
+  padding-left: 0px !important;
 }
 
 @media (max-width:992px) {
@@ -1587,15 +1586,16 @@ a {
 }
 
 .goal-desc {
-  height:85px;
+  height:45px;
   width:85px;
   cursor:pointer;
   background-size:cover;
-  font-size:0px;
   float:left;
   border-radius:4px;
   border: 1px solid #ddd;
   margin: 3px;
+  font-size: 18px;
+  padding-top: 8px;
 }
 
 .laptop {
@@ -2132,7 +2132,7 @@ a {
 }
 
 .launch-input label {
-  font-size: 16px;
+  font-size: 14px;
   color: #777;
   font-weight: 600;
 }

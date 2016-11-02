@@ -59,7 +59,7 @@
                     <!-- custom END -->
                     <!-- step -->
                     <div class="col-xs-12">
-                    <div class="container lil-pad">
+                    <div class="container-fluid lil-pad">
                     <div ng-include="'/html/templates/launch/step_left.html?'+template_v"></div>
                     <!-- step END -->
                     <!-- bottle -->

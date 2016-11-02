@@ -253,12 +253,12 @@
             <div class="col-xs-12 canvas_sub_image" ng-show="campaign_data.formula.back_image">
                 <img style="display:none" ng-src="{{add_back_image_path(campaign_data.formula.back_image)}}">
                 <center>
-                    <ul class="no-pad-left button-switch" style="max-width:550px;">
+                    <ul class="no-pad-left button-switch">
                         <li ng-repeat="prodImg in productImages" style="display:inline-block;">
                             <a ng-click='loadProduct(defaultProductTitle, prodImg, defaultProductId, defaultPrice, defaultCurrency, $index)' class="btn btn-gy btn-sm">Front</a>
                         </li>
                         <li style="display:inline-block;">
-                            <a id="bottle-back-a" ng-click="loadProduct(defaultProductTitle, add_back_image_path(campaign_data.formula.back_image), defaultProductId, defaultPrice, defaultCurrency, $index+1)" class="btn btn-gy btn-sm">Back</a>
+                            <a id="bottle-back-a" ng-click="loadProduct(defaultProductTitle, add_back_image_path(campaign_data.formula.back_image), defaultProductId, defaultPrice, defaultCurrency, $index+1)" class="btn btn-gy btn-sm">Nutrition Facts</a>
                         </li>
                     </ul>
                 </center>
