@@ -821,7 +821,7 @@ footer {
 }
 
 .step1_2 {
-  min-width: 250.5px !important;
+  min-width: 300.5px !important;
 }
 
 .design-img {
@@ -1575,6 +1575,10 @@ a {
   cursor: default;
 }
 
+.pad-top-70 {
+  padding-top: 70px;
+}
+
 .launch-options-bottle label {
   font-weight:300;
 }
@@ -1586,8 +1590,8 @@ a {
 }
 
 .goal-desc {
-  height:50px;
-  width:50px;
+  height:60px;
+  width:60px;
   cursor:pointer;
   background-size:cover;
   font-size:0px;
@@ -2131,8 +2135,8 @@ a {
 }
 
 .launch-input label {
-  font-size: 13px;
-  color: #333;
+  font-size: 16px;
+  color: #777;
   font-weight: 600;
 }
 

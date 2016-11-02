@@ -141,7 +141,7 @@
             </div>
         </div>
         <div class="col-lg-12 tab-content" ng-class="fabric.selectedObject ? 'activeControlsElem' : ''" ng-if='fabric.selectedObject.type' ng-switch='fabric.selectedObject.type'>
-            <div class="close-circle"><i class="fa fa-angle-left" ng-click="deactivateAll();"><span>Back</span></i></div>
+            <div class="close-circle"><i class="fa fa-angle-left" ng-click="deactivateAll();"><span>New Text Layer</span></i></div>
             <div class="well">
                 <div class="row form-group" ng-show="fabric.selectedObject.type == 'text' || fabric.selectedObject.type == 'curvedText'">
                     <md-input-container flex>
@@ -243,6 +243,13 @@
                     </div>
                 </div>
             </div>
+            <!--<div class="canvas_sub_image">
+                <ul>
+                    <li ng-repeat="prodImg in productImages">
+                        <img ng-click='loadProduct(defaultProductTitle, prodImg, defaultProductId, defaultPrice, defaultCurrency, $index)' data-ng-src="{{prodImg}}" alt="" width="120px;">
+                    </li>
+                </ul>
+            </div>-->
             <div class="col-xs-12 canvas_sub_image" ng-show="campaign_data.formula.back_image">
                 <img style="display:none" ng-src="{{add_back_image_path(campaign_data.formula.back_image)}}">
                 <center>
