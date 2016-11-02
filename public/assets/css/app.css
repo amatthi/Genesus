@@ -858,8 +858,8 @@ footer {
 
 .CLA_1 h4 {
   display: block;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
   margin-bottom: 3px;
   padding-right: 5px;
   color: #444;
@@ -1604,6 +1604,7 @@ a {
   margin: 2px;
   font-size: 18px;
   padding-top: 8px;
+  color: #444;
 }
 
 .laptop {
