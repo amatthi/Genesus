@@ -59,3 +59,13 @@
         </div>
     </div>
 </div>
+<script>
+        $("#sign-up").click(function() {
+            ga("send", {
+                hitType: "event",
+                eventCategory: "Registration",
+                eventAction: "Sign Up",
+                eventLabel: "User Has Signed Up"
+            });
+        });
+</script>
