@@ -194,8 +194,7 @@ position: relative;
 .hero-content h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 60px;
-    margin-top: 50px;
+    font-size: 80px;
     color:#07B9FF;
     cursor: default;
     }
@@ -421,7 +420,7 @@ position: relative;
 }
 
 .home-section img {
-  max-height: 400px;
+  max-width: 600px;
 }
 
 .home-section h4 a:hover {
