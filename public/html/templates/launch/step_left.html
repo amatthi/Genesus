@@ -48,10 +48,11 @@
 </div>
 <!-- END step goal-->
 <!-- step desc-->
-<div class="col-xs-12 col-sm-5 col-sm-offset-1" ng-show="launch_step_desc()">
+<div class="col-xs-12 col-sm-4 col-sm-offset-1" ng-show="launch_step_desc()">
     <div class="col-xs-12 launch-step-desc launch-input">
         <div class="col-xs-12 lil-pad-bottom">
             <label>Product name</label>
+            <h4 class="grey-info-2" style="cursor:default;">Summarize your product in 40 characters or less.</h4>
             <input class="input-width border-rad input-border" type="text" placeholder="e.g., PeakBrain" ng-model="campaign_data.title">
         </div>
         <div class="col-xs-12 lil-pad-bottom blurb-desc">
@@ -63,7 +64,7 @@
             <label>Campaign length</label>
             <h4 class="grey-info-2" style="cursor:default;">U.S. orders will arrive 10-14 days after the end of the campagin.
             </h4>
-            <select class="input-width border-rad input-border" ng-init="campaign_data.length = '7'" ng-model="campaign_data.length">
+            <select class="input-width border-rad input-border goal-select" ng-init="campaign_data.length = '7'" ng-model="campaign_data.length">
                 <option value="3">3 days</option>
                 <option value="4">4 days</option>
                 <option value="5">5 days</option>
