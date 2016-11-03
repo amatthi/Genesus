@@ -5,14 +5,14 @@
             <label>Sales goal</label>
             <rzslider rz-slider-model="campaign_data.goal" rz-slider-options="goal_slider.options"></rzslider>
         </div>
-        <div class="col-xs-12 no-pad-left lil-pad">
-            <div class="col-xs-12 col-md-4 tab-content-style">
-                <div class="goal-output input-group unit-number">
-                    <span class="input-group-addon" id="basic-addon3" style="cursor:default;"># of units</span>
-                    <input class="form-control" type="text" ng-model="campaign_data.goal" placeholder="30" readonly="readonly" aria-describedby="basic-addon3">
+        <div class="col-xs-12 no-pad-left lil-pad" style="padding-bottom:25px;">
+            <div class="col-xs-12 col-md-4 no-pad-left">
+                <div class="unit-number">
+                    <h4 style="color:#777;cursor:default;display:inline-block;border-right:2px solid #777;font-weight:600;padding-right:5px;"># of units</h4>
+                    <h4 style="color:#777;cursor:default;display:inline-block;font-weight:600;padding-left:5px;">{{campaign_data.goal}}</h4>
                 </div>
             </div>
-            <div class="col-xs-12 col-md-7 col-md-offset-1" style="cursor:default;">
+            <div class="col-xs-12 col-md-8" style="cursor:default;">
                 <h4 class="grey-info">Your goal is the number of units you're aiming to sell, but as long as you make a profit, we'll manufacture your campaign.</h4>
             </div>
         </div>
@@ -26,11 +26,11 @@
         </div>
         <div class="col-xs-12 tab-content-1 no-pad-left launch-options">
           <div class="col-xs-12">
-            <label>Set Your Price</label>
+            <label style="font-size:16px;padding-top:5px;padding-bottom:5px;">Set Your Price</label>
           </div>
             <img class="col-xs-12 col-sm-3" ng-src="/img/Formula_Bottle.jpg" alt="Genesus Bottle" style="max-width:100px;">
-            <div class="col-xs-12 col-sm-6 launch-options-bottle">
-                <label>{{campaign_data.formula.name}} ({{campaign_data.formula.servings}} Servings, {{campaign_data.formula.capsules}} Capsules)</label>
+            <div class="col-xs-12 col-sm-5 launch-options-bottle">
+                <label style="font-size:16px;color:#444;">{{campaign_data.formula.name}} ({{campaign_data.formula.servings}} Servings, {{campaign_data.formula.capsules}} Capsules)</label>
                 <p>{{estimated_profit()/campaign_data.goal | currency}} profit/sale</p>
             </div>
             <div class="col-xs-12 col-sm-3 input-group sale-price" uib-tooltip="Genesus Recommended Price: {{campaign_data.formula.recommended_price}}">
@@ -39,9 +39,9 @@
             </div>
         </div>
         </div>
-        <div class="lil-pad col-xs-12">
+        <div class="lil-pad col-xs-12" style="padding-left:0px;padding-right:0px;">
             <center>
-                <div class="btn btn-gn btn-sm" ng-click="set_step('desc')">Continue</div>
+                <div class="btn btn-gn btn-sm" ng-click="set_step('desc')" style="width:100%;">Continue</div>
             </center>
         </div>
     </div>
@@ -79,8 +79,8 @@
             </div>
         </div>
         <div class="col-xs-12 lil-pad text-center launch-terms">
-            <a ng-show="!__user.email" class="btn btn-gn btn-lg" ng-click="set_module('login','launch')">Launch</a>
-            <a ng-show="__user.email" class="btn btn-gn btn-lg" ng-click="submit_campaign(campaign_data)">Launch</a>
+            <a ng-show="!__user.email" class="btn btn-gn btn-lg" ng-click="set_module('login','launch')" style="width:100%;">Launch</a>
+            <a ng-show="__user.email" class="btn btn-gn btn-lg" ng-click="submit_campaign(campaign_data)" style="width:100%;">Launch</a>
             <center>
             <small>
               By clicking this button, I accept Genesus's <a href="/terms">Terms of Service</a>.
