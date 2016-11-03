@@ -850,6 +850,10 @@ footer {
   padding-bottom: 100px;
 }
 
+.pad-bottom-200 {
+  padding-bottom: 200px;
+}
+
 .CLA_1 {
   display: table;
   border: 1px solid #ddd;
