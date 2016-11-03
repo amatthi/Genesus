@@ -121,21 +121,28 @@ strong {
   background-size:cover;
 }
 
-  @media (max-width:640px) {
+@media (max-width:586px) {
+  .hero-bg {
+  background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbannermobile.jpg) no-repeat center center;
+  background-size:cover;
+    }
+}
+
+  @media (min-width:587px) and (max-width:882px) {
     .hero-bg {
-    background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbannermobile.jpg) no-repeat center center;
+    background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbanner-sm.jpg) no-repeat center center;
     background-size:cover;
       }
   }
 
-  @media (min-width:641px) and (max-width:1024px) {
+  @media (min-width:883px) and (max-width:1077px) {
     .hero-bg {
-    background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbanner.jpg) no-repeat center center;
+    background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbanner-md.jpg) no-repeat center center;
     background-size:cover;
       }
   }
 
-  @media (min-width:1025px) and (max-width:1500px) {
+  @media (min-width:1078px) and (max-width:1500px) {
     .hero-bg {
     background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbanner.jpg) no-repeat center center;
     background-size:cover;
@@ -185,7 +192,7 @@ position: relative;
 .hero-content h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 60px;
+    font-size: 80px;
     color:#07B9FF;
     cursor: default;
 }
@@ -195,14 +202,32 @@ position: relative;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 80px;
+    padding-top: 25px;
     color:#07B9FF;
     cursor: default;
     }
 }
 
-@media (max-width:640px) {
+@media (min-width:1078px) {
+.hero-content h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+    padding-top: 80px;
+    color:#07B9FF;
+    cursor: default;
+    }
+}
+
+@media (min-width:600px) and (max-width:882px) {
   .hero-content h3 {
-    color:#333 !important;
+    color:#444 !important;
+  }
+}
+
+@media (max-width:559px) {
+  .hero-content h3 {
+    display: none !important;
   }
 }
 

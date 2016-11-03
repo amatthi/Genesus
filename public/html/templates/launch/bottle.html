@@ -252,18 +252,22 @@
                     </li>
                 </ul>
             </div>-->
-            <div class="col-xs-12 canvas_sub_image" ng-show="campaign_data.formula.back_image">
-                <img style="display:none" ng-src="{{add_back_image_path(campaign_data.formula.back_image)}}">
-                <center>
+            <div class="col-xs-12 canvas_sub_image text-center">
+              <div ng-show="campaign_data.formula.name != 'Pre-Workout (Fruit Punch)' || campaign_data.formula.name != 'Whey Protein Isolate (Vanilla)'">
+                <h4 class="grey-info-2" style="cursor:default;">2.5" x 2.0" Printable Area</h4>
+              </div>
+                <div ng-show="campaign_data.formula.back_image">
+                  <center>
                     <ul class="no-pad-left button-switch">
                         <li ng-repeat="prodImg in productImages" style="display:inline-block;padding-right:0px;margin-right:-2px;">
                             <a ng-click='loadProduct(defaultProductTitle, prodImg, defaultProductId, defaultPrice, defaultCurrency, $index)' class="btn btn-gy btn-sm" style="border-top-right-radius:0px;border-bottom-right-radius:0px;">Front</a>
                         </li>
                         <li style="display:inline-block;padding-left:0px;margin-left:-2px;">
-                            <a id="bottle-back-a" ng-click="loadProduct(defaultProductTitle, add_back_image_path(campaign_data.formula.back_image), defaultProductId, defaultPrice, defaultCurrency, $index+1)" class="btn btn-gy btn-sm" style="border-top-left-radius:0px;border-bottom-left-radius:0px;border-left:1px solid #ddd;">Back</a>
+                            <a id="bottle-back-a" ng-click="loadProduct(defaultProductTitle, add_back_image_path(campaign_data.formula.back_image), defaultProductId, defaultPrice, defaultCurrency, $index+1)" class="btn btn-gy btn-sm" style="border-top-left-radius:0px;border-bottom-left-radius:0px;border-left:1px solid #6c7478;">Back</a>
                         </li>
                     </ul>
                 </center>
+              </div>
             </div>
         </div>
     </div>
