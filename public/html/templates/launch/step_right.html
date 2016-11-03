@@ -1,16 +1,12 @@
 <!-- step create-->
 <div class="tab-content-1 step1_2" ng-show="launch_step_create()">
-    <div class="launch-step-create launch-input">
-        <div class=" col-xs-12 form-group no-pad-right pad-left-10">
-            <label>Made For</label>
-            <div>
-                <center>
-                    <div class="goal-desc" ng-class="{'purpose-selected':campaign_data.purpose == purpose}" ng-repeat="purpose in purposes" ng-click="purpose_change(purpose)" ng-bind="purpose.name" style="background-color:#fff;"></div>
-                </center>
-            </div>
-        </div>
+    <div class="launch-step-create" style="margin-top:-10px;">
+      <div class="form-group col-xs-12 pad-right-10 pad-left-10">
+          <label>Made For</label>
+          <select class="input-width goal-select" theme="selectize" ng-model="campaign_data.purpose" ng-change="purpose_change()" ng-options="purpose.name for purpose in purposes">
+          </select>
+      </div>
         <div class="form-group col-xs-12 pad-right-10 pad-left-10">
-            <label>Product</label>
             <div class="formula-box">
                 <div class="CLA_1" ng-class="{'formula-selected':campaign_data.formula == formula}" ng-repeat="formula in campaign_data.purpose.formulas" ng-click="formula_change(formula)">
                   <div style="display:table-row">
@@ -27,10 +23,14 @@
                 </div>
             </div>
         </div>
-        <div class="launch-options" ng-show="campaign_data.formula">
-            <div class="ing-ex">
+        <div class="launch-options">
+            <div class="ing-ex" ng-show="campaign_data.formula">
                 <h3>Base Cost @ 30 Bottles:</h3>
                 <h2 ng-bind="campaign_data.formula.cost30 | currency"></h2>
+            </div>
+            <div class="ing-ex" ng-show="!campaign_data.formula">
+                <h3>Base Cost @ 30 Bottles:</h3>
+                <h2>$0</h2>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
             <div class="btn btn-gn btn-sm" ng-click="test(campaign_data)">Save Design and ajax submit form</div>
         </center>-->
         <center>
-            <div class="btn btn-gn btn-sm" ng-click="set_step('goal')" style="width:100%;">Continue</div>
+            <div class="btn btn-gn btn-sm" ng-click="set_step('goal')" style="width:100%;">Sell this</div>
         </center>
     </div>
 </div>

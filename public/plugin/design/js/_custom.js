@@ -229,9 +229,9 @@ chisel_launch.controller('CustomCtrl', [
             return (price - bottle) * goal;
         }
 
-        $scope.purpose_change = function(purpose) {
-            $scope.campaign_data.purpose = purpose;
-            $scope.formula_change($scope.campaign_data.purpose['formulas'][0]);
+        $scope.purpose_change = function() {
+            $scope.campaign_data.formula = $scope.campaign_data.purpose['formulas'][0];
+            $scope.formula_change();
         }
 
         $scope.add_back_image_path = function(back_image) {

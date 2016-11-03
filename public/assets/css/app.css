@@ -838,7 +838,7 @@ footer {
 }
 
 .formula-box {
-  max-height:175px;
+  max-height:205px;
   overflow:auto;
   border: 0.1px solid #ddd;
   border-left: none;
@@ -1075,6 +1075,14 @@ input[type=range]:focus::-ms-fill-upper {
 .tab-content-1 label {
   font-size: 14px;
   font-weight: 600;
+}
+
+.goal-select {
+  border: 2px solid #ddd;
+  height: 35px;
+  background-color: #fff;
+  font-size: 18px;
+  color: #444;
 }
 
 .btn-group-1 {
