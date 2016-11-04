@@ -5,10 +5,10 @@
             <label>Sales goal</label>
             <rzslider rz-slider-model="campaign_data.goal" rz-slider-options="goal_slider.options"></rzslider>
         </div>
-        <div class="col-xs-12 no-pad-left lil-pad" style="padding-bottom:25px;">
+        <div class="col-xs-12 no-pad-left lil-pad">
             <div class="col-xs-12 col-md-4 no-pad-left">
                 <div class="unit-number">
-                    <h4 style="color:#777;cursor:default;display:inline-block;border-right:2px solid #777;font-weight:600;padding-right:5px;"># of units</h4>
+                    <h4 style="color:#777;cursor:default;display:inline-block;border-right:2px solid #777;font-weight:600;padding-right:10px;"># of units</h4>
                     <h4 style="color:#777;cursor:default;display:inline-block;font-weight:600;padding-left:5px;">{{campaign_data.goal}}</h4>
                 </div>
             </div>
@@ -30,18 +30,23 @@
           </div>
             <img class="col-xs-12 col-sm-3" ng-src="/img/Formula_Bottle.jpg" alt="Genesus Bottle" style="max-width:100px;">
             <div class="col-xs-12 col-sm-5 launch-options-bottle">
-                <label style="font-size:16px;color:#444;">{{campaign_data.formula.name}} ({{campaign_data.formula.servings}} Servings, {{campaign_data.formula.capsules}} Capsules)</label>
-                <p>{{estimated_profit()/campaign_data.goal | currency}} profit/sale</p>
+                <label style="font-size:16px;color:#444;">{{campaign_data.formula.name}}</label>
+                <h5 style="font-size:14px;color:#777;margin-top:0px;">({{campaign_data.formula.servings}} Servings)</h5>
+                <h5 class="step-2-desc" style="padding-top:10px;">{{campaign_data.formula.formula_desc}}</h5>
             </div>
-            <div class="col-xs-12 col-sm-3 input-group sale-price" uib-tooltip="Genesus Recommended Price: {{campaign_data.formula.recommended_price}}">
+            <div class="col-xs-12 col-sm-4 sale-price" uib-tooltip="Genesus Recommended Price: {{campaign_data.formula.recommended_price}}">
+              <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">$</span>
-                <input class="form-control" type="number" ng-model="campaign_data.sale_price" aria-describedby="basic-addon1">
+                <input class="form-control" type="number" ng-model="campaign_data.sale_price" aria-describedby="basic-addon1" style="color:#444;">
+              </div>
+                <p ng-show="campaign_data.sale_price > 0" style="font-size:12px;padding-top:5px;">{{estimated_profit()/campaign_data.goal | currency}} profit/sale</p>
             </div>
         </div>
+        <small class="small-text">† These statements have not been evaluated by the FDA.</small>
         </div>
         <div class="lil-pad col-xs-12" style="padding-left:0px;padding-right:0px;">
             <center>
-                <div class="btn btn-gn btn-sm" ng-click="set_step('desc')" style="width:100%;">Continue</div>
+                <div class="btn btn-gn btn-sm" ng-click="set_step('desc')" style="width:100%;">Next</div>
             </center>
         </div>
     </div>

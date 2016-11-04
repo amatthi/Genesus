@@ -125,7 +125,7 @@ chisel_launch.controller('CustomCtrl', [
 
         $scope.location = '/launch';
         $scope.launch_step = 'create';
-        $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75, sale_price: 24.99 };
+        $scope.campaign_data = { goal: 30, cost_per_bottle: 5.75, sale_price: 39.99 };
         // $scope.amazon_connect('tappyn');
 
         $scope.launch_step_create = function() {
@@ -216,9 +216,9 @@ chisel_launch.controller('CustomCtrl', [
             var price = Number($scope.campaign_data.sale_price);
             var bottle = Number($scope.campaign_data.formula.cost30);
             var goal = Number($scope.campaign_data.goal);
-            if (goal < 30) {
+            if (goal < 20) {
                 bottle = Number($scope.campaign_data.formula.cost1);
-            } else if (goal >= 30 && goal < 100) {
+            } else if (goal >= 20 && goal < 100) {
                 bottle = Number($scope.campaign_data.formula.cost30);
             } else if (goal >= 100 && goal < 200) {
                 bottle = Number($scope.campaign_data.formula.cost100);
