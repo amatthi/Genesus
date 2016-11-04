@@ -541,7 +541,7 @@ img.img-test {
 }
 
 img.img-woman {
-  max-height: 400px !important;
+  max-width: 550px !important;
 }
 
 /** Footer **/
