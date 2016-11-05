@@ -7,11 +7,12 @@ use File;
 
 trait CampaignTrait
 {
-    protected $purposes_key = 'purposes-array4';
+    protected $purposes_cache = false;
+    protected $purposes_key   = 'purposes-array4';
 
     protected function _get_purposes()
     {
-        if (Cache::has($this->purposes_key)) {
+        if ($this->purposes_cache && Cache::has($this->purposes_key)) {
             return Cache::get($this->purposes_key);
         }
         $file  = File::get(storage_path("csv/Genesus Data & Formula's - Input Data Sheet.csv"));
@@ -42,7 +43,7 @@ trait CampaignTrait
             $back_image        = strpos($back_image, '.') === false ? '' : $back_image;
             $cost30            = (float) str_replace('$', '', $row[8]);
             $ingredients       = $row[11];
-            $recommended_price = $row[12];
+            $recommended_price = (float) str_replace('$', '', $row[12]);
             $servings          = $row[13];
             $capsules          = $row[14];
             $form_type         = $row[15];
@@ -76,7 +77,10 @@ trait CampaignTrait
         }
 
         //var_dump($result);
-        //Cache::put($this->purposes_key, $result, 100);
+        if ($this->purposes_cache) {
+            Cache::put($this->purposes_key, $result, 100);
+        }
+
         return $result;
     }
 
