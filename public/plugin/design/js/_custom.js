@@ -240,6 +240,7 @@ chisel_launch.controller('CustomCtrl', [
 
         $scope.formula_change = function(formula) {
             $scope.campaign_data.formula = formula;
+            $scope.campaign_data.sale_price = formula.recommended_price;
             if ($scope.campaign_data.formula.back_image && $scope.activeDesignObject == 1) {
                 setTimeout(function() {
                     $('#bottle-back-a').trigger('click');
