@@ -6,23 +6,22 @@
         <span aria-hidden="true">&times;</span>
         <span class="sr-only">Close</span>
     </button>
-    It looks like you're about to use our label designer on a mobile device. While it will work just fine, it's much easier
-    to design a high quality label using our designer on a larger screen.
+    It looks like you're about to use our label designer on a mobile device. While it will work just fine, it's much easier to design a high quality label using our designer on a larger screen.
     <br> -Austin (Co-Founder Genesus)
 </div>
 <div class="row clearfix" ng-cloak>
     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 editor_section">
         <div id="content" class="tabing">
             <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                <li class="active"><a ng-click="deactivateAll()" href="#Products" class="products" data-toggle="tab" style="padding-top:10px;">Templates</a></li>
-                <li><a ng-click="addTextByAction()" href="#Text" class="text" data-toggle="tab" style="padding-top:10px;">Text</a></li>
+                <li><a ng-click="deactivateAll()" href="#Products" class="products" data-toggle="tab" style="padding-top:10px;">Templates</a></li>
+                <li class="active"><a ng-click="addTextByAction()" href="#Text" class="text" data-toggle="tab" style="padding-top:10px;">Text</a></li>
                 <li><a ng-click="deactivateAll()" href="#Graphics" class="graphics" data-toggle="tab" style="padding-top:10px;margin-right:0px;">Art</a></li>
             </ul>
             <div id="my-tab-content" class="tab-content action_tabs">
-                <div class="tab-pane active clearfix" id="Products">
-                  <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-                    <h1 style="font-size:18px;">Select a template to get started:</h1>
-                  </div>
+                <div class="tab-pane clearfix" id="Products">
+                    <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+                        <h1 style="font-size:18px;">Select a template to get started:</h1>
+                    </div>
                     <div class="col-lg-10 col-lg-offset-1 col-xs-12 thumb_listing scrollme" rebuild-on="rebuild:me" ng-scrollbar is-bar-shown="barShown" ng-class="fabric.selectedObject ? 'activeControls' : ''">
                         <ul>
                             <li ng-repeat="prod in products | orderBy:predicate:reverse" ng-class="(defaultProductId == prod.id) ? 'selected' : ''" ng-if="hasCategory(prod) && hasFormula(prod)">
@@ -108,7 +107,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane clearfix" id="Text">
+                <div class="tab-pane active clearfix" id="Text">
                     <div class="tab-content-3">
                         <div role="tabpanel" class="tab-pane fade in active" id="text_design">
                             <div class="col-lg-12 thumb_listing">
@@ -253,21 +252,21 @@
                 </ul>
             </div>-->
             <div class="col-xs-12 canvas_sub_image text-center">
-              <div ng-show="campaign_data.formula.name != 'Pre-Workout (Fruit Punch)' && campaign_data.formula.name != 'Whey Protein Isolate (Vanilla)'">
-                <h4 class="grey-info-2" style="cursor:default;margin-top:0px;">2.5" x 2.0" Printable Area</h4>
-              </div>
+                <div ng-show="campaign_data.formula.name != 'Pre-Workout (Fruit Punch)' && campaign_data.formula.name != 'Whey Protein Isolate (Vanilla)'">
+                    <h4 class="grey-info-2" style="cursor:default;margin-top:0px;">2.5" x 2.0" Printable Area</h4>
+                </div>
                 <div ng-show="campaign_data.formula.back_image">
-                  <center>
-                    <ul class="no-pad-left button-switch">
-                        <li ng-repeat="prodImg in productImages" style="display:inline-block;padding-right:0px;margin-right:-2px;">
-                            <a ng-click='loadProduct(defaultProductTitle, prodImg, defaultProductId, defaultPrice, defaultCurrency, $index)' class="btn btn-gy btn-sm" style="border-top-right-radius:0px;border-bottom-right-radius:0px;">Front</a>
-                        </li>
-                        <li style="display:inline-block;padding-left:0px;margin-left:-2px;">
-                            <a id="bottle-back-a" ng-click="loadProduct(defaultProductTitle, add_back_image_path(campaign_data.formula.back_image), defaultProductId, defaultPrice, defaultCurrency, $index+1)" class="btn btn-gy btn-sm" style="border-top-left-radius:0px;border-bottom-left-radius:0px;border-left:1px solid #6c7478;">Back</a>
-                        </li>
-                    </ul>
-                </center>
-              </div>
+                    <center>
+                        <ul class="no-pad-left button-switch">
+                            <li ng-repeat="prodImg in productImages" style="display:inline-block;padding-right:0px;margin-right:-2px;">
+                                <a ng-click='loadProduct(defaultProductTitle, prodImg, defaultProductId, defaultPrice, defaultCurrency, $index)' class="btn btn-gy btn-sm" style="border-top-right-radius:0px;border-bottom-right-radius:0px;">Front</a>
+                            </li>
+                            <li style="display:inline-block;padding-left:0px;margin-left:-2px;">
+                                <a id="bottle-back-a" ng-click="loadProduct(defaultProductTitle, add_back_image_path(campaign_data.formula.back_image), defaultProductId, defaultPrice, defaultCurrency, $index+1)" class="btn btn-gy btn-sm" style="border-top-left-radius:0px;border-bottom-left-radius:0px;border-left:1px solid #6c7478;">Back</a>
+                            </li>
+                        </ul>
+                    </center>
+                </div>
             </div>
         </div>
     </div>
