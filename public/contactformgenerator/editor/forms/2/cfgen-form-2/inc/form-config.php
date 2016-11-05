@@ -31,7 +31,7 @@ $cfg['form_id'] = '';
 
 $cfg['form_name'] = 'My Contact Form';
 
-$cfg['form_validationmessage'] = 'Thank you, your message has been sent to us.<br />We will get back to you as soon as possible.';
+$cfg['form_validationmessage'] = 'BOOM!<br />Pat yourself on the back for making the best decision since casual Friday.';
 
 $cfg['form_errormessage_captcha'] = '';
 
