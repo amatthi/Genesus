@@ -65,7 +65,7 @@
               </div>
             </div>
             <div class="col-xs-12 col-sm-4 text-center" ng-if="campaign_data.user.profile.brand_name">
-                <div class="campaign-brand-pic" ng-show="campaign_data.user.profile.photo">
+                <div class="campaign-brand-pic" ng-show="campaign_data.user.profile.photo" style="padding-bottom:5px;">
                     <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus Brand Image" style="max-width:75px;">
                 </div>
                 <div class="campaign-brand-name text-center">
@@ -131,7 +131,7 @@
                     <p>{{campaign_data.user.profile.brand_city}} {{campaign_data.user.profile.brand_state}}</p>
                 </div>
                 <div class="col-xs-12" ng-show="campaign_data.user.profile.brand_description">
-                    <h5 style="font-size:16px;">{{campaign_data.user.profile.brand_description}}</h5>
+                    <h5 style="font-size:16px;font-weight:300;">{{campaign_data.user.profile.brand_description}}</h5>
                 </div>
             </div>
         </div>
