@@ -268,7 +268,7 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         $scope.add_ingredient_path = function(ingredient) {
-            return 'images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
+            return 'images/ingredients/' + ingredient.replace(/ /g, '_') + '.png';
         }
 
         $scope.add_benefit1_path = function(benefit_1) {

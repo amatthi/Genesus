@@ -11061,7 +11061,7 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
     }
 
     $scope.add_ingredient_path = function(ingredient) {
-        return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.jpg';
+        return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.png';
     }
 
     $scope.add_benefit1_path = function(benefit_1) {
