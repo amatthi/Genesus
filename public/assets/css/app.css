@@ -2097,11 +2097,6 @@ a {
     color:#777;
 }
 
-.campaign-brand-name {
-  display:inline-block;
-  padding-left:15px;
-}
-
 .campaign-brand-name h5 {
   margin-top:0px;
   margin-bottom:0px;
@@ -2113,9 +2108,7 @@ a {
 
 .campaign-brand-pic {
   background-color:#fff;
-  display:inline-block;
   border-radius:4px;
-  padding:5px;
 }
 
 .campaign-top {
