@@ -1923,7 +1923,7 @@ a {
 }
 
 .bio-info {
-  border:5px solid #24BCD3;
+  border:2px solid #ddd;
   border-radius:4px;
   cursor: default;
 }
@@ -2104,6 +2104,13 @@ a {
   font-weight:600;
   color:#434343;
   cursor:default;;
+}
+
+@media (min-width:992px) {
+.ing-images {
+  position:relative;
+  top:-50px;
+  }
 }
 
 .campaign-brand-pic {
