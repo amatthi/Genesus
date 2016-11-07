@@ -10952,6 +10952,10 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
         .when('/thank_you', {
             templateUrl: 'html/thank_you.html',
         })
+        .when('/post_share/:id', {
+            templateUrl: 'html/post_share.html',
+            controller: 'shareController',
+        })
         .when('/share/:id', {
             templateUrl: 'html/share.html',
             controller: 'shareController',
@@ -11358,6 +11362,7 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
 });
 
 chisel.controller("shareController", function($scope, $rootScope, $routeParams, mainFactory) {
+    $scope.share_step = 1;
     $scope.campaign_data = {};
     $scope.get_campaign = function() {
             mainFactory.get_campaign_by_id($routeParams.id).then(function(r) {
@@ -11373,6 +11378,7 @@ chisel.controller("shareController", function($scope, $rootScope, $routeParams, 
     if ($routeParams.id) {
         $scope.get_campaign();
     }
+
 });
 
 chisel.factory("mainFactory", function($http) {

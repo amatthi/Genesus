@@ -1,15 +1,5 @@
 <div class="container pad-bottom-250" style="padding-top:75px;">
-    <div class="col-xs-12 text-center">
-        <h3 style="color:#333;font-weight:600;padding-bottom:5px;">
-          We're setting up your campaign.
-        </h3>
-    </div>
-    <div class="col-xs-6 col-xs-offset-3 text-center">
-        <h5 style="color:#777;margin-top:0px;line-height:1.6;padding-bottom:25px;">
-          After taking that first step of putting up your design,<br>
-          here are a few more steps to help you succeed.
-        </h5>
-    </div>
+  <div class="col-xs-12" ng-show="share_step == 1">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="border:1px solid #ddd;border-radius:4px;padding-left:0px;padding-right:0px;">
       <div class="col-xs-12 text-center" style="padding-top:25px;">
         <center>
@@ -21,16 +11,76 @@
         </div>
         <div class="col-xs-10 col-xs-offset-1 text-center">
             <h5 style="color:#777;line-height:1.6;">
-            Now that your amazing design is set up, it's time to let people around the world know. The best way is to start
-            with your own network.
+            Now that your amazing product is up, it's time to let people know. The best way is to start
+            with your own network!
           </h5>
         </div>
         <div class=" col-xs-12 text-center contest-share-socials lil-pad" style="padding-bottom:25px;">
-            <div class="addthis_inline_share_toolbox" data-title="{{campaign_data.title}}" data-description="{{campaign_data.description}}" data-media="{{campaign_data.bottle_img}}" data-url="http://genesus.co/campaign/{{campaign_data.data.slug}}"></div>
+
+            <div class="addthis_inline_share_toolbox" data-title="{{campaign_data.title}}" data-description="{{campaign_data.description}}" data-media="{{campaign_data.bottle_img}}" data-url="http://genesus.co/campaign/{{campaign_data.data.slug}}">
+            </div>
+
         </div>
         <div class="col-xs-12" style="padding-left: 0px;padding-right: 0px;border-top: 1px solid #ddd;">
-          <h5 style="text-align:right;padding-right:25px;padding-top:10px;padding-bottom:10px;"><a style="color:#bbb;" href="/dashboard">Skip</a></h5>
+          <h5 style="text-align:right;padding-right:25px;padding-top:10px;padding-bottom:10px;cursor:pointer;"><a style="color:#bbb;" ng-click="share_step = 2">Next</a></h5>
         </div>
     </div>
+  </div>
+  <div class="col-xs-12" ng-show="share_step == 2">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="border:1px solid #ddd;border-radius:4px;padding-left:0px;padding-right:0px;">
+      <div class="col-xs-12 text-center" style="padding-top:25px;">
+        <center>
+          <img src="/img/email.jpg" class="img-responsive" style="max-height:40px;">
+        </center>
+      </div>
+        <div class="col-xs-12 text-center" style="padding-top:15px;">
+            <h4 style="font-weight:600;">Notify your contacts</h4>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 text-center">
+            <h5 style="color:#777;line-height:1.6;">
+            Emailing your friends and community is the next best way to share the amazing product you launched!
+          </h5>
+        </div>
+        <div class=" col-xs-12 text-center contest-share-socials lil-pad" style="padding-bottom:25px;">
+            <div class="addthis_inline_share_toolbox_yw58" data-title="{{campaign_data.title}}" data-description="{{campaign_data.description}}" data-media="{{campaign_data.bottle_img}}" data-url="http://genesus.co/campaign/{{campaign_data.data.slug}}"></div>
+        </div>
+        <div class="col-xs-12" style="padding-left: 0px;padding-right: 0px;border-top: 1px solid #ddd;">
+          <h5 style="text-align:right;padding-right:25px;padding-top:10px;padding-bottom:10px;cursor:pointer;"><a style="color:#bbb;" ng-click="share_step = 3">Next</a></h5>
+        </div>
+    </div>
+  </div>
+  <div class="col-xs-12" ng-show="share_step == 3">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="border:1px solid #ddd;border-radius:4px;padding-left:0px;padding-right:0px;">
+      <div class="col-xs-12 text-center" style="padding-top:25px;">
+        <center>
+          <img src="/img/check.jpg" class="img-responsive" style="max-height:40px;">
+        </center>
+      </div>
+        <div class="col-xs-12 text-center" style="padding-top:15px;">
+            <h4 style="font-weight:600;">Great Job!</h4>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 text-center">
+            <h5 style="color:#777;line-height:1.6;">
+            If you ever wish to share later on, you can access these features on your product listing page.
+          </h5>
+          <h5 style="color:#777;line-height:1.6;">
+          It looks like you're still missing some information that would help buyers get to know you better.
+          Head over to your profile to tell them about your brand.
+        </h5>
+        </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
+          <a class="btn btn-bl btn-sm" href="/dashboard">Go to Profile</a>
+        </div>
+        <div class=" col-xs-12 text-center contest-share-socials lil-pad" style="padding-bottom:25px;">
+
+            <div class="addthis_inline_share_toolbox" data-title="{{campaign_data.title}}" data-description="{{campaign_data.description}}" data-media="{{campaign_data.bottle_img}}" data-url="http://genesus.co/campaign/{{campaign_data.data.slug}}">
+            </div>
+
+        </div>
+        <div class="col-xs-12" style="padding-left: 0px;padding-right: 0px;border-top: 1px solid #ddd;">
+          <h5 style="text-align:right;padding-right:25px;padding-top:10px;padding-bottom:10px;cursor:pointer;"><a style="color:#bbb;" href="/campaign/{{campaign_data.id}}">View Campaign</a></h5>
+        </div>
+    </div>
+  </div>
 </div>
 <div id="addthis-script"></div>
