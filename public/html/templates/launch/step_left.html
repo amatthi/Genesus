@@ -8,8 +8,8 @@
         <div class="col-xs-12 no-pad-left lil-pad">
             <div class="col-xs-12 col-md-4 no-pad-left">
                 <div class="unit-number">
-                    <h4 style="color:#777;cursor:default;display:inline-block;border-right:2px solid #777;font-weight:600;padding-right:10px;"># of units</h4>
-                    <h4 style="color:#777;cursor:default;display:inline-block;font-weight:600;padding-left:5px;">{{campaign_data.goal}}</h4>
+                    <h4 style="color:#777;cursor:default;display:inline-block;border-right:2px solid #777;font-weight:600;padding-right:10px;font-size:14px;"># of units</h4>
+                    <h4 style="color:#444;cursor:default;display:inline-block;font-weight:600;padding-left:5px;">{{campaign_data.goal}}</h4>
                 </div>
             </div>
             <div class="col-xs-12 col-md-8" style="cursor:default;">
@@ -20,26 +20,27 @@
             <label>Estimated profit</label>
             <h3>${{estimated_profit() | number:0 }}+</h3>
         </div>
-        <div class="col-xs-12no-pad-left lil-pad launch-options">
+        <!--<div class="col-xs-12no-pad-left lil-pad launch-options">
             <label>Supplement Options</label>
             <hr class="bor-bot">
-        </div>
+        </div>-->
         <div class="col-xs-12 tab-content-1 no-pad-left launch-options">
           <div class="col-xs-12">
             <label style="font-size:16px;padding-top:5px;padding-bottom:5px;">Set Your Price</label>
           </div>
-            <img class="col-xs-12 col-sm-3" ng-src="/img/Formula_Bottle.jpg" alt="Genesus Bottle" style="max-width:100px;">
-            <div class="col-xs-12 col-sm-5 launch-options-bottle">
-                <label style="font-size:16px;color:#444;">{{campaign_data.formula.name}}</label>
-                <h5 style="font-size:14px;color:#777;margin-top:0px;">({{campaign_data.formula.servings}} Servings)</h5>
-                <h5 class="step-2-desc" style="padding-top:10px;">{{campaign_data.formula.formula_desc}}</h5>
+            <img class="col-xs-12 col-sm-2" ng-src="/img/Formula_Bottle.jpg" alt="Genesus Bottle" style="max-width:100px;padding-left:2px;padding-right:2px;">
+            <div class="col-xs-12 col-sm-5 launch-options-bottle" style="padding-left:2px;">
+                <label style="font-size:16px;color:#444;margin-bottom:0px;">{{campaign_data.formula.name}}</label>
+                <h5 style="font-size:12px;color:#777;margin-top:0px;margin-bottom:2px;padding-top:5px;">({{campaign_data.formula.servings}} Servings)</h5>
+                <p ng-show="campaign_data.sale_price > 0" style="font-size:12px;">{{estimated_profit()/campaign_data.goal | currency}} profit/sale</p>
+                <h5 class="step-2-desc" style="padding-top:10px;margin-top:0px;">{{campaign_data.formula.formula_desc}}</h5>
             </div>
-            <div class="col-xs-12 col-sm-4 sale-price" uib-tooltip="Genesus Recommended Price">
+            <div class="col-xs-12 col-sm-5 sale-price no-pad-left" uib-tooltip="Genesus Recommended Price">
               <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">$</span>
                 <input class="form-control" type="number" ng-model="campaign_data.sale_price" aria-describedby="basic-addon1" style="color:#444;">
               </div>
-                <p ng-show="campaign_data.sale_price > 0" style="font-size:12px;padding-top:5px;">{{estimated_profit()/campaign_data.goal | currency}} profit/sale</p>
+
             </div>
         </div>
         <small class="small-text">† These statements have not been evaluated by the FDA.</small>
@@ -57,11 +58,12 @@
     <div class="col-xs-12 launch-step-desc launch-input">
         <div class="col-xs-12 lil-pad-bottom">
             <label>Product name</label>
-            <h4 class="grey-info-2" style="cursor:default;">Summarize your product in 40 characters or less.</h4>
+            <h4 class="grey-info-2" style="cursor:default;margin-top:0px;color:#aaa;font-size:10px;">Summarize your product in 40 characters or less.</h4>
             <input class="input-width border-rad input-border" type="text" placeholder="" ng-model="campaign_data.title">
         </div>
         <div class="col-xs-12 lil-pad-bottom blurb-desc" style="padding-bottom:0px;">
             <label>Blurb</label>
+            <h4 class="grey-info-2" style="cursor:default;margin-top:0px;color:#aaa;font-size:10px;">Let your buyers know why they should buy your product.</h4>
             <textarea class="input-width border-rad input-border" id="text" name="text" maxlength="1500" rows="6" placeholder="Let your buyers know why they should buy your product. 300 characters is recommended." ng-model="campaign_data.blurb"></textarea>
             <h6 class="pull-right" id="count_message" ng-bind="(1500-campaign_data.blurb.length)+' characters remaining'"></h6>
         </div>

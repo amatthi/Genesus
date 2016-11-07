@@ -1099,9 +1099,15 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 0px 0px 10px !important;
 }
 
-@media (min-width:667px) {
+@media (min-width:667px) and (max-width:1178px) {
 .step-2-desc {
   margin-right: -100px;
+  }
+}
+
+@media (min-width:1179px) {
+.step-2-desc {
+  margin-right: -140px;
   }
 }
 
@@ -1727,7 +1733,7 @@ a {
 }
 
 .sale-price input {
-  font-size: 16px !important;
+  font-size: 22px !important;
 }
 
 .login-head {
@@ -2109,7 +2115,7 @@ a {
 @media (min-width:992px) {
 .ing-images {
 
-  
+
   }
 }
 
@@ -2197,7 +2203,7 @@ a {
 
 .launch-input label {
   font-size: 14px;
-  color: #777;
+  color: #444;
   font-weight: 600;
 }
 

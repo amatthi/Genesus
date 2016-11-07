@@ -1,3 +1,21 @@
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add A Product</h4>
+        </div>
+        <div class="modal-body text-center">
+          <p>We're expanding our product selection every day, but if you'd like us to offer a specific product,
+          please <a href="/contact_us" style="color:#07B9FF;">contact us</a>, and we'll get back to you within 24 hours.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- step create-->
 <div class="tab-content-1 step1_2" ng-show="launch_step_create()">
     <div class="launch-step-create" style="margin-top:-10px;">
@@ -44,4 +62,6 @@
     </div>
 </div>
 <small class="small-text" ng-show="launch_step_create()">† These statements have not been evaluated by the FDA.</small>
+<br />
+ <small ng-show="launch_step_create()" style="color:#777;"><a data-toggle="modal" data-target="#myModal" style="font-size:10px;cursor:pointer;">Looking for more products?</a></small>
 <!-- step create END -->
