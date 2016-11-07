@@ -24,18 +24,18 @@
             <label>Supplement Options</label>
             <hr class="bor-bot">
         </div>-->
-        <div class="col-xs-12 tab-content-1 no-pad-left launch-options">
-          <div class="col-xs-12">
-            <label style="font-size:16px;padding-top:5px;padding-bottom:5px;">Set Your Price</label>
-          </div>
-            <img class="col-xs-12 col-sm-2" ng-src="/img/Formula_Bottle.jpg" alt="Genesus Bottle" style="max-width:100px;padding-left:2px;padding-right:2px;">
-            <div class="col-xs-12 col-sm-5 launch-options-bottle" style="padding-left:2px;">
+        <div class="col-xs-12 no-pad-left">
+          <label>Set Your Price</label>
+        </div>
+        <div class="col-xs-12 tab-content-1 no-pad-left launch-options" style="padding-top:15px;">
+            <img class="col-xs-12 col-sm-3" ng-src="/img/Formula_Bottle.jpg" alt="Genesus Bottle" style="max-width:100px;">
+            <div class="col-xs-12 col-sm-5 launch-options-bottle">
                 <label style="font-size:16px;color:#444;margin-bottom:0px;">{{campaign_data.formula.name}}</label>
                 <h5 style="font-size:12px;color:#777;margin-top:0px;margin-bottom:2px;padding-top:5px;">({{campaign_data.formula.servings}} Servings)</h5>
                 <p ng-show="campaign_data.sale_price > 0" style="font-size:12px;">{{estimated_profit()/campaign_data.goal | currency}} profit/sale</p>
-                <h5 class="step-2-desc" style="padding-top:10px;margin-top:0px;">{{campaign_data.formula.formula_desc}}</h5>
+                <h5 class="step-2-desc" style="padding-top:10px;margin-top:0px;color:#444;">{{campaign_data.formula.formula_desc}}</h5>
             </div>
-            <div class="col-xs-12 col-sm-5 sale-price no-pad-left" uib-tooltip="Genesus Recommended Price">
+            <div class="col-xs-12 col-sm-4 sale-price no-pad-left" uib-tooltip="Genesus Recommended Price" style="max-width:120px;">
               <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">$</span>
                 <input class="form-control" type="number" ng-model="campaign_data.sale_price" aria-describedby="basic-addon1" style="color:#444;">
@@ -62,14 +62,14 @@
             <input class="input-width border-rad input-border" type="text" placeholder="" ng-model="campaign_data.title">
         </div>
         <div class="col-xs-12 lil-pad-bottom blurb-desc" style="padding-bottom:0px;">
-            <label>Blurb</label>
+            <label>Description</label>
             <h4 class="grey-info-2" style="cursor:default;margin-top:0px;color:#aaa;font-size:10px;">Let your buyers know why they should buy your product.</h4>
-            <textarea class="input-width border-rad input-border" id="text" name="text" maxlength="1500" rows="6" placeholder="300 characters is recommended." ng-model="campaign_data.blurb"></textarea>
+            <textarea class="input-width border-rad input-border" id="text" name="text" maxlength="1500" rows="6" placeholder="" ng-model="campaign_data.blurb"></textarea>
             <h6 class="pull-right" id="count_message" ng-bind="(1500-campaign_data.blurb.length)+' characters remaining'"></h6>
         </div>
         <div class="col-xs-12 lil-pad-bottom">
             <label>Campaign length</label>
-            <h4 class="grey-info-2" style="cursor:default;">U.S. orders will arrive 10-14 days after the end of the campagin.
+            <h4 class="grey-info-2" style="cursor:default;margin-top:0px;color:#aaa;font-size:10px;">U.S. orders will arrive 10-14 days after the end of the campagin.
             </h4>
             <select class="input-width border-rad input-border goal-select" ng-init="campaign_data.length = '7'" ng-model="campaign_data.length">
                 <option value="3">3 days</option>
@@ -80,7 +80,7 @@
         </div>
         <div class="col-xs-12 launch-options">
             <label>URL</label>
-            <h4 class="grey-info-2">This is where you'll send buyers to view your campaign.</h4>
+            <h4 class="grey-info-2" style="cursor:default;margin-top:0px;color:#aaa;font-size:10px;">This is where you'll send buyers to view your campaign.</h4>
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon2">genesus.co/campaign/</span>
                 <input class="input-width border-rad input-border form-control" type="text" ng-model="campaign_data.slug" aria-describedby="basic-addon2">
