@@ -10,8 +10,11 @@
           <h4 class="modal-title">Nutritional Facts</h4>
         </div>
         <div class="modal-body text-center">
-          <center>
-          <img class="img-responsive" ng-src="{{add_back_image_path(campaign_data.formula.back_image)}}" style="max-width:350px;">
+          <center ng-show="campaign_data.formula.back_image">
+          <img class="img-responsive launch-nutri-img" ng-src="{{add_back_image_path(campaign_data.formula.back_image)}}">
+        </center>
+        <center ng-hide="campaign_data.formula.back_image">
+          <p>Please select a product to begin.</p>
         </center>
         </div>
         <div class="modal-footer">
@@ -276,7 +279,7 @@
                     <h4 class="grey-info-2" style="cursor:default;margin-top:0px;">2.5" x 2.0" Printable Area</h4>
                 </div>
                 <div>
-                  <a data-toggle="modal" data-target="#nutri-facts" style="cursor:pointer;font-size:22px;">See Nutrition Facts</a>
+                  <a data-toggle="modal" data-target="#nutri-facts">See Nutrition Facts</a>
                 </div>
                 <!--<div ng-show="campaign_data.formula.back_image">
                     <center>

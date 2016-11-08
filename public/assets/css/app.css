@@ -1063,6 +1063,7 @@ input[type=range]:focus::-ms-fill-upper {
       font-size: 14px;
       line-height: 1.3;
       margin-top: 10px !important;
+      cursor:default;
   }
 }
 
@@ -1071,6 +1072,7 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 14px;
     line-height: 1.3;
     margin-top: 0px;
+    cursor:default;
 }
 
 .grey-info-2 {
@@ -1866,6 +1868,24 @@ a {
   font-size: 14px;
 }
 
+.unit-numbers {
+  color:#777;
+  cursor:default;
+  display:inline-block;
+  border-right:2px solid #777;
+  font-weight:600;
+  padding-right:10px;
+  font-size:14px;
+}
+
+.unit-numbers-2 {
+  color:#444;
+  cursor:default;
+  display:inline-block;
+  font-weight:600;
+  padding-left:5px;
+}
+
 .design-cat li {
   float:none;
   display:inline;
@@ -1934,6 +1954,15 @@ a {
 
 .d-key a:hover {
   color: #fff;
+}
+
+.launch-nutri-img {
+  max-width: 350px;
+}
+
+.canvas_sub_image a {
+  cursor:pointer;
+  font-size:22px;
 }
 
 .bio-info {
