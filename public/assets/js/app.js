@@ -11359,6 +11359,7 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
 
 chisel.controller("shareController", function($scope, $rootScope, $routeParams, mainFactory) {
     $scope.campaign_data = {};
+    $scope.share_step = 1;
     $scope.get_campaign = function() {
             mainFactory.get_campaign_by_id($routeParams.id).then(function(r) {
                 $scope.campaign_data = r.data;
