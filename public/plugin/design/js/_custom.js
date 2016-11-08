@@ -251,7 +251,7 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         $scope.hasFormula = function(product) {
-            var hide_standard = ['Pre-Workout (Fruit Punch)', 'Whey Protein Isolate (Vanilla)'];
+            var hide_standard = ['Pre-Workout Complex', 'Whey Protein Isolate'];
             if ((product.name == 'Template' || product.name == 'Standard Bottle') && $.inArray($scope.campaign_data.formula.name, hide_standard) == -1) {
                 return true;
             }
