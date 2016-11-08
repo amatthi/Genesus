@@ -277,7 +277,7 @@ position: relative;
 
 .btn-gn {
   color: #fff;
-  background: #70CE66;
+  background: #579541;
   border: 1px solid #fff;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -289,8 +289,8 @@ position: relative;
 
 .btn-gn:hover {
     background: #fff;
-    color: #70CE66;
-    border: 1px solid #70CE66;
+    color: #579541;
+    border: 1px solid #579541;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 50px;
@@ -299,9 +299,9 @@ position: relative;
 }
 
 .btn-gn:focus {
-    color: #70CE66;
+    color: #579541;
     background: #fff;
-    border: 1px solid #70CE66;
+    border: 1px solid #579541;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 50px;
@@ -311,7 +311,7 @@ position: relative;
 
 .btn-wj {
   color: #fff;
-  background: #70CE66;
+  background: #579541;
   border: 1px solid #fff;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -322,9 +322,9 @@ position: relative;
 }
 
 .btn-wj:hover {
-  color: #70CE66;
+  color: #579541;
   background: #fff;
-  border: 1px solid #70CE66;
+  border: 1px solid #579541;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 25px;
@@ -334,9 +334,9 @@ position: relative;
 }
 
 .btn-wj:focus {
-  color: #70CE66;
+  color: #579541;
   background: #fff;
-  border: 1px solid #70CE66;
+  border: 1px solid #579541;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 25px;
@@ -1093,7 +1093,7 @@ input[type=range]:focus::-ms-fill-upper {
 .min-width-2 h3 {
   font-size: 52px;
   font-weight: 600;
-  color: #8bbf4f;
+  color: #579541;
   margin-top: 10px;
 }
 
@@ -1460,9 +1460,11 @@ a {
 }
 
 .campaign-info h3 {
-  color: #71CE66;
+  color: #444;
   margin-top: 10px;
   cursor: default;
+  font-weight: 600;
+  font-size: 28px;
 }
 
 .progress-bar {
@@ -1569,15 +1571,15 @@ a {
 }
 
 .descript h3 {
-  color:#434343;
+  color:#444;
   font-size:32px;
   font-weight:600;
 }
 
 .descript h4 {
   font-size:16px;
-  font-weight:400;
-  color:#555F6D;
+  font-weight:300;
+  color:#444;
   line-height:1.47;
 }
 
@@ -1624,7 +1626,7 @@ a {
 }
 
 .blue-row {
-  background-color: #24BCD3;
+  background-color: #579541;
 }
 
 .newsletter {
@@ -1914,13 +1916,14 @@ a {
 .d-key h4 {
   color:#fff;
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .d-key h5 {
-  color:#F0E9E9;
-  font-weight: 200;
+  color:#E5E5E6;
+  font-weight: 300;
   line-height: 1.3;
+  font-size: 16px;
 }
 
 .margin-top-0 {
@@ -1928,7 +1931,7 @@ a {
 }
 
 .case-study {
-  font-size:14px !important;
+  font-size:16px !important;
   font-weight:300;
 }
 
@@ -1966,8 +1969,6 @@ a {
 }
 
 .bio-info {
-  border:2px solid #ddd;
-  border-radius:4px;
   cursor: default;
 }
 
@@ -2196,8 +2197,8 @@ a {
 }
 
 .campaign-price h3 span {
-  color: #555F6D;
-  font-size:16px;
+  color: #444;
+  font-size:24px;
   font-weight:300;
 }
 
@@ -2207,17 +2208,17 @@ a {
 }
 
 .campaign-button button {
-  padding-top:10px;
-  padding-bottom:10px;
+  padding-top:15px;
+  padding-bottom:15px;
 }
 
 .campaign-button button:hover {
-  padding-top:10px;
-  padding-bottom:10px;
+  padding-top:15px;
+  padding-bottom:15px;
 }
 
 .campaign-guarantee img {
-  height:50px;
+  height:70px;
 }
 
 .campaign-guarantee span {
@@ -2225,8 +2226,14 @@ a {
 }
 
 .campaign-guarantee span a {
-  color:#1DC068;
+  color:#579541;
   cursor: pointer;
+}
+
+.campaign-guarantee span a:hover {
+  color:#579541;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .launch-input textarea {
