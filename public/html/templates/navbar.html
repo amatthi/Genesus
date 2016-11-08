@@ -9,7 +9,7 @@
             <nav class='hidden-xs'>
                 <ul class="pull-right">
                     <li class="outline" style='cursor:pointer' ng-show="location != '/launch'">
-                        <a class="new-campaign btn btn-bl" href="/launch" target="_self">Make a Product</a>
+                        <a data-toggle="modal" data-target="#launch-interest" class="new-campaign btn btn-bl">Make a Product</a>
                     </li>
                     <li ng-show="!__user.email">
                         <a class="new-campaign" href="javascript:void(0)" ng-click="set_module('login')">Login</a>
@@ -31,7 +31,7 @@
                         <a href uib-dropdown-toggle> Menu <span class="caret"></span></a>
                         <ul uib-dropdown-menu role='menu'>
                             <li>
-                                <a href="/launch">Make A Product</a>
+                                <a data-toggle="modal" data-target="#launch-interest">Make A Product</a>
                             </li>
                             <li ng-show="!__user.email">
                                 <a href="javascript:void(0)" ng-click="set_module('login')">Login</a>
@@ -51,4 +51,4 @@
             </nav>
         </div>
     </header>
-</div>
+    </div>
