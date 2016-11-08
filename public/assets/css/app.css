@@ -1223,6 +1223,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 a:hover {
   color: #07B9FF;
+  text-decoration: none;
 }
 
 a {

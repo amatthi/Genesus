@@ -1,6 +1,26 @@
 <div ng-show="loading" class="loading">
     <h1 class="lodingMessage">Loading Genesus Product Designer<img src="images/ajax-loader.gif"></h1>
 </div>
+<!-- Modal -->
+  <div class="modal fade" id="nutri-facts" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Nutritional Facts</h4>
+        </div>
+        <div class="modal-body text-center">
+          <center>
+          <img class="img-responsive" ng-src="{{add_back_image_path(campaign_data.formula.back_image)}}" style="max-width:350px;">
+        </center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
 <div class="col-xs-12 alert alert-warning alert-dismissible margin-top-0 dash-alert-launch hidden-sm hidden-md hidden-lg" role="alert">
     <button class="close" data-dismiss="alert" type="button">
         <span aria-hidden="true">&times;</span>
@@ -255,7 +275,10 @@
                 <div ng-show="campaign_data.formula.name != 'Pre-Workout (Fruit Punch)' && campaign_data.formula.name != 'Whey Protein Isolate (Vanilla)'">
                     <h4 class="grey-info-2" style="cursor:default;margin-top:0px;">2.5" x 2.0" Printable Area</h4>
                 </div>
-                <div ng-show="campaign_data.formula.back_image">
+                <div>
+                  <a data-toggle="modal" data-target="#nutri-facts" style="cursor:pointer;font-size:22px;">See Nutrition Facts</a>
+                </div>
+                <!--<div ng-show="campaign_data.formula.back_image">
                     <center>
                         <ul class="no-pad-left button-switch">
                             <li ng-repeat="prodImg in productImages" style="display:inline-block;padding-right:0px;margin-right:-2px;">
@@ -266,7 +289,7 @@
                             </li>
                         </ul>
                     </center>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
