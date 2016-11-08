@@ -328,7 +328,7 @@
       },
       {
          "id":27,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -341,7 +341,7 @@
       },
       {
          "id":28,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Whey Protein Isolate",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -354,7 +354,7 @@
       },
       {
          "id":29,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Whey Protein Isolate",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -367,7 +367,7 @@
       },
       {
          "id":30,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Whey Protein Isolate",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -380,7 +380,7 @@
       },
       {
          "id":31,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Whey Protein Isolate",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -393,7 +393,7 @@
       },
       {
          "id":32,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Whey Protein Isolate",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -406,7 +406,7 @@
       },
       {
          "id":33,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Whey Protein Isolate",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -419,7 +419,7 @@
       },
       {
          "id":34,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Whey Protein Isolate",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -432,7 +432,7 @@
       },
       {
          "id":35,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Whey Protein Isolate",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -445,7 +445,7 @@
       },
       {
          "id":36,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Whey Protein Isolate",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -458,7 +458,7 @@
       },
       {
          "id":37,
-         "name":"Whey Protein Isolate (Vanilla)",
+         "name":"Whey Protein Isolate",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -471,7 +471,7 @@
       },
       {
          "id":38,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -484,7 +484,7 @@
       },
       {
          "id":39,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -497,7 +497,7 @@
       },
       {
          "id":40,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -510,7 +510,7 @@
       },
       {
          "id":41,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -523,7 +523,7 @@
       },
       {
          "id":42,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -536,7 +536,7 @@
       },
       {
          "id":43,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -549,7 +549,7 @@
       },
       {
          "id":44,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -562,7 +562,7 @@
       },
       {
          "id":45,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -575,7 +575,7 @@
       },
       {
          "id":46,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -588,7 +588,7 @@
       },
       {
          "id":47,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -601,7 +601,7 @@
       },
       {
          "id":48,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -614,7 +614,7 @@
       },
       {
          "id":49,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -627,7 +627,7 @@
       },
       {
          "id":50,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -640,7 +640,7 @@
       },
       {
          "id":51,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -653,7 +653,7 @@
       },
       {
          "id":52,
-         "name":"Pre-Workout (Fruit Punch)",
+         "name":"Pre-Workout Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
