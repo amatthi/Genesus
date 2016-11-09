@@ -23,6 +23,11 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
         return '/plugin/design/images/nutrition_facts/' + formula.name.replace(/ /g, '_') + '.jpg';
     }
 
+    $scope.add_side_quality = function(formula) {
+        if (!formula) return '';
+        return '/plugin/design/images/side_qualities/' + formula.name.replace(/ /g, '_') + '.jpg';
+    }
+
     $scope.add_ingredient_path = function(ingredient) {
         return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.png';
     }

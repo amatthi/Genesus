@@ -11060,6 +11060,11 @@ chisel.controller("campaignController", function($scope, $rootScope, $routeParam
         return '/plugin/design/images/nutrition_facts/' + formula.name.replace(/ /g, '_') + '.jpg';
     }
 
+    $scope.add_side_quality = function(formula) {
+        if (!formula) return '';
+        return '/plugin/design/images/side_qualities/' + formula.name.replace(/ /g, '_') + '.jpg';
+    }
+
     $scope.add_ingredient_path = function(ingredient) {
         return '/plugin/design/images/ingredients/' + ingredient.replace(/ /g, '_') + '.png';
     }
@@ -11168,6 +11173,7 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
     $scope.var = 'var is here';
     $scope.fonts = chisel_var.get('fonts');
     $scope.campaign_data = {};
+    $scope.share_step = 1;
     $scope.amazon_connect('tappyn');
 
     $scope.init = function() {

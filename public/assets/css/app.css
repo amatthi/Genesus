@@ -311,7 +311,7 @@ position: relative;
 
 .btn-wj {
   color: #fff;
-  background: #579541;
+  background: #00992f;
   border: 1px solid #fff;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -322,9 +322,9 @@ position: relative;
 }
 
 .btn-wj:hover {
-  color: #579541;
+  color: #00992f;
   background: #fff;
-  border: 1px solid #579541;
+  border: 1px solid #00992f;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 25px;
@@ -334,9 +334,9 @@ position: relative;
 }
 
 .btn-wj:focus {
-  color: #579541;
+  color: #00992f;
   background: #fff;
-  border: 1px solid #579541;
+  border: 1px solid #00992f;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 25px;
@@ -1626,7 +1626,7 @@ a {
 }
 
 .blue-row {
-  background-color: #579541;
+  background-color: #00992f;
 }
 
 .newsletter {
@@ -2226,12 +2226,12 @@ a {
 }
 
 .campaign-guarantee span a {
-  color:#579541;
+  color:#00992f;
   cursor: pointer;
 }
 
 .campaign-guarantee span a:hover {
-  color:#579541;
+  color:#00992f;
   cursor: pointer;
   text-decoration: underline;
 }
