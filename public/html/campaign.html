@@ -116,8 +116,8 @@
     <hr>
     <div class="row">
         <div class="container lil-pad-bottom">
-            <div class="col-xs-12 col-sm-12 descript text-center">
-                <h3 style="margin-top:0px;">How {{campaign_data.title}} Optimizes You</h3>
+            <div class="col-xs-12 col-sm-12 descript">
+                <h3 class="text-center" style="margin-top:0px;">How {{campaign_data.title}} Optimizes You</h3>
                 <div class="col-xs-12 no-pad-left">
                     <h4 style="font-size:24px;">{{campaign_data.formula.product_info}}</h4>
                 </div>
@@ -143,9 +143,9 @@
             </div>-->
             <div class="col-xs-12">
                 <div class="col-xs-12 text-center" style="margin-top:40px;">
-                    <h2 style="font-weight:400;font-size:32px;">The Engineering Behind {{campaign_data.title}}</h2>
+                    <h2 style="font-weight:400;font-size:32px;">Made With Earth Grown Nutrients</h2>
                 </div>
-                <div class="col-xs-12 text-center">
+                <div class="col-xs-12">
                     <h4 style="font-weight:300;font-size:24px;color:#E5E5E6;">We formulate our products based on clinical studies. Below are the clinical
                     studies for the main ingredients found in {{campaign_data.title}}.</h4>
                 </div>
@@ -172,23 +172,19 @@
       <div class="container-fluid">
         <img src="img/certified.jpg" class="img-responsive" alt="Genesus Quality Banner">
       </div>
-        <div class="container-fluid" style="padding-top:50px;">
-        <center>
-            <img class="nutrition-facts" ng-src="{{add_nutrition_path(campaign_data.formula)}}" class="img-responsive" alt="Genesus Nutrition Facts">
-        </center>
-      </div>
-      <hr>
+
     </div>
+    <hr>
     <div class="row lil-pad-bottom" ng-if="campaign_data.user.profile.brand_name">
       <div class="container">
         <div class="col-xs-12 col-sm-12 descript text-center lil-pad-bottom">
             <h3 style="margin-top:0px;">Founder's Recommendation</h3>
         </div>
-        <div class="col-xs-12 col-sm-4 descript bio-pic">
+        <div class="col-xs-12 col-sm-3 descript bio-pic">
           <center>
           <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus User Profile Picture">
         </center>
-            <h3 style="margin-top:0px;color:#444;margin-bottom:0px;text-align:center;">{{campaign_data.user.profile.brand_name}}</h3>
+            <h3 style="margin-top:0px;color:#444;margin-bottom:0px;text-align:center;font-size:24px;">{{campaign_data.user.profile.brand_name}}</h3>
             <div class="col-xs-12 no-pad-left" ng-show="campaign_data.user.profile.brand_city || campaign_data.user.profile.brand_state">
                 <h4 style="font-size:16px;font-weight:300;color:#777;text-align:center;">{{campaign_data.user.profile.brand_city}}, {{campaign_data.user.profile.brand_state}}</h4>
             </div>
@@ -204,7 +200,20 @@
         </div>
     </div>
   </div>
+
 </div>
+<hr>
+    <div class="row">
+        <div class="container-fluid">
+          <div class="col-xs-12 col-sm-12 descript text-center lil-pad-bottom">
+              <h3 style="margin-top:0px;">Serving Size And Use</h3>
+          </div>
+        <center>
+            <img class="nutrition-facts" ng-src="{{add_nutrition_path(campaign_data.formula)}}" class="img-responsive" alt="Genesus Nutrition Facts">
+        </center>
+      </div>
+    </div>
+
     <div class="row newsletter">
         <div class="col-xs-12 text-center">
             <h3 style="font-weight:300;">Get the most innovated products delivered to your inbox daily.</h3>
