@@ -277,7 +277,7 @@ position: relative;
 
 .btn-gn {
   color: #fff;
-  background: #579541;
+  background: #00992F;
   border: 1px solid #fff;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -289,8 +289,8 @@ position: relative;
 
 .btn-gn:hover {
     background: #fff;
-    color: #579541;
-    border: 1px solid #579541;
+    color: #00992F;
+    border: 1px solid #00992F;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 50px;
@@ -299,9 +299,9 @@ position: relative;
 }
 
 .btn-gn:focus {
-    color: #579541;
+    color: #00992F;
     background: #fff;
-    border: 1px solid #579541;
+    border: 1px solid #00992F;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 50px;
