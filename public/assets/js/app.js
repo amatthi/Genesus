@@ -11120,7 +11120,7 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
         $scope.profile_data.brand_zip = $scope.__user.profile.brand_zip;
         $scope.profile_data.website = $scope.__user.profile.website;
         $scope.profile_data.first_name = $scope.__user.profile.first_name;
-        $scope.profile_data.brand_description = $scope.__user.profile.brand_description;
+        $scope.profile_data.career = $scope.__user.profile.career;
         $scope.profile_data.instagram = $scope.__user.profile.instagram;
     });
     $scope.is_login();
@@ -11173,7 +11173,6 @@ chisel.controller("launchController", function($scope, $rootScope, mainFactory, 
     $scope.var = 'var is here';
     $scope.fonts = chisel_var.get('fonts');
     $scope.campaign_data = {};
-    $scope.share_step = 1;
     $scope.amazon_connect('tappyn');
 
     $scope.init = function() {

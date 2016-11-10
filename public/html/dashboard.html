@@ -14,7 +14,7 @@
     </div>
     <div class="col-xs-12 col-sm-10 lil-pad dash-campaigns dash-style pad-top-50">
         <div class="campaign-section" id="campaigns" ng-show="dash_view == 'campaigns'">
-            <div class="alert alert-warning alert-dismissible margin-bottom-0 dash-alert" role="alert" ng-show="!profile_data.brand_description">
+            <div class="alert alert-warning alert-dismissible margin-bottom-0 dash-alert" role="alert" ng-show="!profile_data.career">
                 <button class="close" data-dismiss="alert" type="button">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
@@ -99,9 +99,8 @@
                     <h6><small>Make sure your Instagram account is set to public!</small></h6>
                 </div>
                 <div class="col-xs-12 col-sm-8 lil-lil-pad">
-                    <label>About Yourself</label>
-                    <h6><small>Write a sentence or two about who you are and what you'd like to accomplish.</small></h6>
-                    <textarea class="col-xs-12" id="text" name="text" ng-model="profile_data.brand_description" maxlength="200"></textarea>
+                    <label>Your Profession</label>
+                    <input class="col-xs-12" type="text "id="text" name="text" ng-model="profile_data.career" maxlength="200">
                     <h6 class="pull-right" id="count_message"></h6>
                 </div>
                 <div class="col-xs-12 col-sm-8 lil-lil-pad dash-location">

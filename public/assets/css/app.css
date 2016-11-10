@@ -2,11 +2,11 @@
   padding:0px;
 }
 
-/**
+
 .row {
     margin: 0;
 }
-**/
+
 
 header {
     height: 60px;
@@ -560,15 +560,11 @@ footer {
 .footer-nav li a {
     text-decoration: none;
     font-size: 16px;
-    border:1px solid #333;
-    border-radius:4px;
     padding:5px;
 }
 
 .footer-nav li a:hover {
     text-decoration: none;
-    border:1px solid #07B9FF;
-    border-radius:4px;
     padding:5px;
 }
 
@@ -1451,7 +1447,7 @@ a {
   margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 600;
-  color: #434343;
+  color: #444;
   cursor: default;
 }
 
@@ -1465,12 +1461,20 @@ a {
   color: #71CE66;
 }
 
-.campaign-info h3 {
+.campaign-price h3 {
   color: #444;
   margin-top: 10px;
   cursor: default;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 32px;
+}
+
+.campaign-price h5 {
+  font-size:16px;
+  color:#444;
+  margin-top:0px;
+  font-weight:400;
+  cursor:default;
 }
 
 .progress-bar {
@@ -1852,6 +1856,10 @@ a {
   padding-bottom: 250px;
 }
 
+.pad-top-15 {
+  padding-top: 15px;
+}
+
 .pad-top-50 {
   padding-top:50px;
 }
@@ -2008,11 +2016,12 @@ a {
 .bio-pic {
   padding-top:15px;
   background-color:#fff;
+
 }
 
 .bio-pic img {
   max-width:400px;
-  padding-bottom:15px;
+  border-radius: 4px;
 }
 
 .timer-box {
@@ -2169,6 +2178,11 @@ a {
   border-radius:4px;
 }
 
+.campaign-brand-pic img {
+  border-radius:4px;
+  max-width: 175px;
+}
+
 .campaign-top {
   background-color:#F3F3F3;
   padding:10px;
@@ -2181,8 +2195,8 @@ a {
 }
 
 .formula-description h4 {
-  color:#555F6D;
-  font-size:18px;
+  color:#444;
+  font-size:22px;
   font-weight:400;
   line-height:1.2;
   cursor: default;
@@ -2199,8 +2213,13 @@ a {
 }
 
 .campaign-benefits h5 {
-  color:#555F6D;
-  font-size:12px;
+  font-size:18px;
+  color:#444;
+  font-weight:400;
+}
+
+.campaign-benefits h5 span {
+  color:#00992f;
 }
 
 .campaign-price h3 span {

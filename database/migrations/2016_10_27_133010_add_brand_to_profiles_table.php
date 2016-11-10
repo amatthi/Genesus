@@ -12,11 +12,11 @@ class AddBrandToProfilesTable extends Migration
      */
     public function up()
     {
-        if (Schema::hasColumn('profiles', 'brand_description')) {
+        if (Schema::hasColumn('profiles', 'career')) {
             return;
         }
         Schema::table('profiles', function (Blueprint $table) {
-            $table->text('brand_description')->nullable();
+            $table->text('career')->nullable();
             $table->text('brand_city')->nullable();
             $table->text('brand_state')->nullable();
             $table->text('brand_zip')->nullable();
@@ -31,7 +31,7 @@ class AddBrandToProfilesTable extends Migration
     public function down()
     {
         Schema::table('profiles', function (Blueprint $table) {
-            $table->dropColumn(['brand_description', 'brand_city', 'brand_state', 'brand_zip']);
+            $table->dropColumn(['career', 'brand_city', 'brand_state', 'brand_zip']);
         });
     }
 }
