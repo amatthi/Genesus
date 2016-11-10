@@ -90,16 +90,17 @@
             <div class="col-xs-12 col-sm-10 campaign-overview pay-input dash-settings">
                 <h2>Change Your Info</h2>
                 <div class="col-xs-12 col-sm-4 lil-lil-pad">
-                    <label>Name</label>
+                    <label>Your Name</label>
                     <input class="col-xs-12" type="text" ng-model="profile_data.brand_name">
                 </div>
                 <div class="col-xs-12 col-sm-4 lil-lil-pad">
-                    <label>Instagram</label>
+                    <label>Your Instagram (Optional)</label>
                     <input class="col-xs-12" type="text" placeholder="Instagram Handle Without '@'" ng-model="profile_data.instagram">
                     <h6><small>Make sure your Instagram account is set to public!</small></h6>
                 </div>
                 <div class="col-xs-12 col-sm-8 lil-lil-pad">
-                    <label>Biography</label>
+                    <label>About Yourself</label>
+                    <h6><small>Write a sentence or two about who you are and what you'd like to accomplish.</small></h6>
                     <textarea class="col-xs-12" id="text" name="text" ng-model="profile_data.brand_description" maxlength="200"></textarea>
                     <h6 class="pull-right" id="count_message"></h6>
                 </div>
@@ -113,15 +114,15 @@
                         <input type="text" ng-model="profile_data.brand_state">
                         <small>State</small>
                     </div>
-                    <div class="col-xs-12 col-sm-4" style="padding-left:0px;">
+                    <!--<div class="col-xs-12 col-sm-4" style="padding-left:0px;">
                         <input type="text" ng-model="profile_data.brand_zip">
                         <small>Zip</small>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="col-xs-12 lil-lil-pad dash-profile-pic">
                     <label>Profile Picture</label>
                     <input accept="image/*" class="inputfile no-border" id="profile-photo" name="file" type="file">
-                    <h6><small>*Upload square images for best results.</small></h6>
+                    <h6><small>Please upload a high quality square or circle image for best results.</small></h6>
                     <img ng-src="{{profile_data.old_photo}}">
                 </div>
                 <div class="col-xs-12 lil-pad text-center lil-pad-bottom">
