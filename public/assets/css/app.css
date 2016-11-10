@@ -547,7 +547,7 @@ img.img-woman {
 /** Footer **/
 
 footer {
-    background: #F3F2F0;
+    background: rgba(243, 242, 240, 0.59);
     font-size: 12px;
     padding: 50px 0;
 }
@@ -1577,9 +1577,10 @@ a {
 }
 
 .descript h3 {
-  color:#444;
-  font-size:32px;
-  font-weight:600;
+  color:#00992F;
+  font-size:52px;
+  font-weight:300;
+  text-transform: uppercase;
 }
 
 .descript h4 {
@@ -2203,7 +2204,7 @@ a {
 }
 
 .campaign-price h3 span {
-  color: #444;
+  color: #777;
   font-size:24px;
   font-weight:300;
 }
