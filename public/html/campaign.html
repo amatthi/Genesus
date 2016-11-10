@@ -181,17 +181,17 @@
     <div class="row lil-pad-bottom" ng-if="campaign_data.user.profile.brand_name">
       <div class="container">
         <div class="col-xs-12 col-sm-12 owner-insta text-center lil-pad-bottom text-center">
-            <h3 style="margin-top:0px;color:#777;">Meet The Owner</h3>
+            <h3 style="margin-top:0px;color:#777;font-weight:400;">Meet The Owner</h3>
         </div>
         <div class="col-xs-12 col-sm-6 descript bio-pic">
           <center>
           <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus User Profile Picture">
         </center>
-            <h3 style="margin-top:0px;color:#444;margin-bottom:0px;text-align:center;font-size:24px;">{{campaign_data.user.profile.brand_name}}</h3>
+            <h3 style="margin-top:0px;color:#444;margin-bottom:0px;text-align:center;font-size:32px;font-weight:400;">{{campaign_data.user.profile.brand_name}}</h3>
             <div class="col-xs-12 no-pad-left" ng-show="campaign_data.user.profile.brand_city || campaign_data.user.profile.brand_state">
-                <h4 style="font-size:14px;font-weight:300;color:#777;text-align:center;">{{campaign_data.user.profile.brand_city}}, {{campaign_data.user.profile.brand_state}}</h4>
+                <h4 style="font-size:14px;font-weight:300;color:#777;text-align:center;margin-top:0px;"><em>{{campaign_data.user.profile.brand_city}}, {{campaign_data.user.profile.brand_state}}</em></h4>
             </div>
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 no-pad-left" ng-show="campaign_data.user.profile.brand_description">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3 no-pad-left" ng-show="campaign_data.user.profile.brand_description">
                 <h5 style="font-size:16px;font-weight:300;color:#444;">{{campaign_data.user.profile.brand_description}}</h5>
 
             </div>
@@ -199,7 +199,7 @@
     <div class="col-xs-12 col-sm-6">
         <div class="col-xs-12" style="text-aling:left;">
 
-            <h4 style="font-size:24px;"><em>"{{campaign_data.blurb}}"</em></h4>
+            <h4 style="font-size:24px;font-weight:400;">"{{campaign_data.blurb}}"</h4>
         </div>
     </div>
   </div>
@@ -209,7 +209,7 @@
     <div class="row">
         <div class="container-fluid">
           <div class="col-xs-12 col-sm-12 owner-insta text-center lil-pad-bottom">
-              <h3 style="margin-top:0px;color:#777;">Serving Size And Use</h3>
+              <h3 style="margin-top:0px;color:#777;font-weight:400;">Serving Size And Use</h3>
           </div>
         <center>
             <img class="nutrition-facts" ng-src="{{add_nutrition_path(campaign_data.formula)}}" class="img-responsive" alt="Genesus Nutrition Facts">
