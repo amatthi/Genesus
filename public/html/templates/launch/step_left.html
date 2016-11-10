@@ -58,12 +58,13 @@
     <div class="col-xs-12 launch-step-desc launch-input">
         <div class="col-xs-12 lil-pad-bottom">
             <label>Product name</label>
-            <h4 class="grey-info-2" style="cursor:default;margin-top:0px;color:#aaa;font-size:10px;">Summarize your product in 40 characters or less.</h4>
-            <input class="input-width border-rad input-border" type="text" placeholder="" ng-model="campaign_data.title">
+            <h4 class="grey-info-2" style="cursor:default;margin-top:0px;color:#aaa;font-size:10px;">Write a simple, yet powerful name in less than 15 characters.</h4>
+            <input class="input-width border-rad input-border" type="text" placeholder="" ng-model="campaign_data.title" maxlength="15">
+            <h6 class="pull-right" id="count_message" ng-bind="(15-campaign_data.title.length)+' characters remaining'" style="font-size:10px;margin-top:5px;color:#777;"></h6>
         </div>
         <div class="col-xs-12 lil-pad-bottom blurb-desc" style="padding-bottom:0px;">
-            <label>Description</label>
-            <h4 class="grey-info-2" style="cursor:default;margin-top:0px;color:#aaa;font-size:10px;">Let your buyers know why they should buy your product.</h4>
+            <label>Recommendation</label>
+            <h4 class="grey-info-2" style="cursor:default;margin-top:0px;color:#aaa;font-size:10px;">Describe why you love this product and how you hope buyers use it.</h4>
             <textarea class="input-width border-rad input-border" id="text" name="text" maxlength="1500" rows="6" placeholder="" ng-model="campaign_data.blurb"></textarea>
             <h6 class="pull-right" id="count_message" ng-bind="(1500-campaign_data.blurb.length)+' characters remaining'"></h6>
         </div>
