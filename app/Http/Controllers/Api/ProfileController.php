@@ -31,14 +31,16 @@ class ProfileController extends Controller
         $this->validate($request, [
             'email'             => 'required|email|max:255|unique:users,email,' . $user->id,
             'biography'         => 'max:500',
-            'career' => 'max:500',
+            'career'            => 'max:500',
             'website'           => 'max:255',
             'brand_name'        => 'max:255',
             'brand_city'        => 'max:255',
             'brand_state'       => 'max:255',
             'brand_zip'         => 'max:255',
-            'first_name'        => 'max:255',
+            'last_name'         => 'max:255',
             'instagram'         => 'max:255',
+            'facebook'          => 'max:255',
+            'twitter'           => 'max:255',
             'password'          => 'min:6|confirmed',
         ]);
 
@@ -59,8 +61,10 @@ class ProfileController extends Controller
             $profile->photo = $s3->url($filePath);
         }
 
-        $profile->first_name        = $request->input('first_name', '');
+        $profile->last_name         = $request->input('last_name', '');
         $profile->instagram         = $request->input('instagram', '');
+        $profile->facebook          = $request->input('facebook', '');
+        $profile->twitter           = $request->input('twitter', '');
         $profile->website           = $request->input('website', '');
         $profile->brand_name        = $request->input('brand_name', '');
         $profile->career            = $request->input('career', '');

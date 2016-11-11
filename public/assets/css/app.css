@@ -1095,7 +1095,7 @@ input[type=range]:focus::-ms-fill-upper {
 .min-width-2 h3 {
   font-size: 52px;
   font-weight: 600;
-  color: #579541;
+  color: #00992F;
   margin-top: 10px;
 }
 
@@ -1610,7 +1610,7 @@ a {
 }
 
 .owner-insta h3 {
-  color:#434343;
+  color:#444;
   font-size:32px;
   font-weight:600;
 }
@@ -1681,7 +1681,6 @@ a {
 }
 
 .dash-campaign-title h5 {
-  margin-bottom: 0px;
   padding-top:7px;
   float:left;
 }

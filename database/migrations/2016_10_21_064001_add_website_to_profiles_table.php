@@ -15,6 +15,7 @@ class AddWebsiteToProfilesTable extends Migration
         Schema::table('profiles', function (Blueprint $table) {
             $table->string('website')->nullable();
             $table->string('brand_name')->nullable();
+            $table->string('last_name')->nullable();
         });
     }
 
@@ -26,7 +27,7 @@ class AddWebsiteToProfilesTable extends Migration
     public function down()
     {
         Schema::table('profiles', function (Blueprint $table) {
-            $table->dropColumn(['website', 'brand_name']);
+            $table->dropColumn(['website', 'brand_name', 'last_name']);
         });
     }
 }

@@ -1,6 +1,7 @@
 chisel.controller("campaignController", function($scope, $rootScope, $routeParams, $location, mainFactory, chisel_var) {
     $scope.campaign_data = {};
     $scope.purchase_count = '10';
+    $scope.location = '/campaign';
 
     $scope.get_campaign = function() {
         mainFactory.get_campaign($routeParams.slug).then(function(r) {

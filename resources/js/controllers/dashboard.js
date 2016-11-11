@@ -14,9 +14,11 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
         $scope.profile_data.brand_state = $scope.__user.profile.brand_state;
         $scope.profile_data.brand_zip = $scope.__user.profile.brand_zip;
         $scope.profile_data.website = $scope.__user.profile.website;
-        $scope.profile_data.first_name = $scope.__user.profile.first_name;
+        $scope.profile_data.last_name = $scope.__user.profile.last_name;
         $scope.profile_data.career = $scope.__user.profile.career;
         $scope.profile_data.instagram = $scope.__user.profile.instagram;
+        $scope.profile_data.facebook = $scope.__user.profile.facebook;
+        $scope.profile_data.twitter = $scope.__user.profile.twitter;
     });
     $scope.is_login();
 
