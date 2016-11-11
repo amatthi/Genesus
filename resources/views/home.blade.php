@@ -14,7 +14,8 @@
 		<meta name="google-site-verification" content="pqwiId01A3wp5QfmFmK2hskliqxeOkGkcUa03aV2Loc" />
 		<link rel="shortcut icon" href="/favicon2.ico?v=2.0" type="image/x-icon">
 		<link rel="icon" href="/favicon2.ico" type="image/x-icon">
-		<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link href="/assets/css/rzslider.min.css" rel="stylesheet">
 		<link href="/assets/css/dev.css" rel="stylesheet">

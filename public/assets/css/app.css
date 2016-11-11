@@ -80,7 +80,7 @@ label {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
     padding-top: 40px;
 }
 
@@ -157,7 +157,7 @@ strong {
   }
 
 .testimonials h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
     color: #fff;
     font-weight: 100;
     font-size: 30px;
@@ -182,7 +182,7 @@ position: relative;
 }
 
 .hero-content h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
     color: #fff;
     font-weight: 300;
     font-size: 37px;
@@ -190,7 +190,7 @@ position: relative;
 }
 
 .hero-content h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-weight: 400;
     font-size: 80px;
     color:#07B9FF;
@@ -199,7 +199,7 @@ position: relative;
 
 @media (min-width:641px) {
 .hero-content h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-weight: 400;
     font-size: 80px;
     padding-top: 25px;
@@ -210,7 +210,7 @@ position: relative;
 
 @media (min-width:1078px) {
 .hero-content h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-weight: 400;
     font-size: 80px;
     padding-top: 80px;
@@ -232,7 +232,7 @@ position: relative;
 }
 
 .hero-content h3 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-weight: 400;
     color:#646772;
     cursor: default;
@@ -251,28 +251,28 @@ position: relative;
     border: 1px solid #6c7478;
     font-size: 16px;
     border-radius: 6px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .btn-gy:hover {
     background: #6c7478;
     color: #fff;
     border: 1px solid #6c7478;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .btn-gy:focus {
     color: #fff;
     background: #6c7478;
     border: 1px solid #6c7478;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .btn-gy:active {
     color: #fff;
     background: #6c7478;
     border: 1px solid #6c7478;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .btn-gn {
@@ -284,7 +284,7 @@ position: relative;
   padding-left: 50px;
   padding-right: 50px;
   font-size: 22px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
 .btn-gn:hover {
@@ -295,7 +295,7 @@ position: relative;
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .btn-gn:focus {
@@ -306,43 +306,53 @@ position: relative;
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
+}
+
+.campaign-descript {
+  padding-top: 15px;
+}
+
+@media (min-width:1095px) {
+  .campaign-descript {
+    padding-top: 50px !important;
+  }
 }
 
 .btn-wj {
   color: #fff;
-  background: #00992f;
+  background: #3ac395;
   border: 1px solid #fff;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 25px;
   padding-right: 25px;
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
 .btn-wj:hover {
-  color: #00992f;
+  color: #3ac395;
   background: #fff;
-  border: 1px solid #00992f;
+  border: 1px solid #3ac395;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 25px;
   padding-right: 25px;
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
 .btn-wj:focus {
-  color: #00992f;
+  color: #3ac395;
   background: #fff;
-  border: 1px solid #00992f;
+  border: 1px solid #3ac395;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 25px;
   padding-right: 25px;
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
 .btn-bl {
@@ -354,7 +364,7 @@ position: relative;
   padding-left: 50px;
   padding-right: 50px;
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
 .btn-bl:hover {
@@ -365,7 +375,7 @@ position: relative;
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .btn-bl:focus {
@@ -376,7 +386,7 @@ position: relative;
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .btn-secondary {
@@ -547,7 +557,7 @@ img.img-woman {
 /** Footer **/
 
 footer {
-    background: rgba(243, 242, 240, 0.59);
+    background: #F3F2F0;
     font-size: 12px;
     padding: 50px 0;
 }
@@ -1143,21 +1153,21 @@ input[type=range]:focus::-ms-fill-upper {
     color: #333;
     background-color: #fff;
     border-color: #333;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .btn-primary-1.active {
     color: #fff;
     background-color: #6C7477;
     border-color: #6C7477;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .btn-primary-1:hover {
     color: #fff;
     background-color: #6C7477;
     border-color: #6C7477;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .bigger-pad {
@@ -1465,8 +1475,9 @@ a {
   color: #444;
   margin-top: 10px;
   cursor: default;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 32px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .campaign-price h5 {
@@ -1482,9 +1493,10 @@ a {
 }
 
 .campaign-info h5 {
-  font-size: 16px;
-  color: #555F6D;
-  font-weight: 600;
+  font-size: 28px;
+  color: #777;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .campaign-share p {
@@ -1581,7 +1593,7 @@ a {
 }
 
 .descript h3 {
-  color:#00992F;
+  color:#444;
   font-size:52px;
   font-weight:300;
   text-transform: uppercase;
@@ -1612,7 +1624,7 @@ a {
 .owner-insta h3 {
   color:#444;
   font-size:32px;
-  font-weight:600;
+  font-weight:400;
 }
 
 .owner-insta h4 {
@@ -2194,10 +2206,11 @@ a {
 }
 
 .formula-description h4 {
-  color:#444;
-  font-size:22px;
+  color:#777;
+  font-size:28px;
   font-weight:400;
   line-height:1.2;
+  font-family:'Source Sans Pro', sans-serif;
   cursor: default;
 }
 
@@ -2222,9 +2235,10 @@ a {
 }
 
 .campaign-price h3 span {
-  color: #777;
-  font-size:24px;
-  font-weight:300;
+  color: #3ac395;
+  font-size:32px;
+  font-weight:400;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .campaign-progress {
@@ -2251,12 +2265,12 @@ a {
 }
 
 .campaign-guarantee span a {
-  color:#00992f;
+  color:#3AC395;
   cursor: pointer;
 }
 
 .campaign-guarantee span a:hover {
-  color:#00992f;
+  color:#3AC395;
   cursor: pointer;
   text-decoration: underline;
 }
