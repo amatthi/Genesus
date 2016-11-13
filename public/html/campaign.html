@@ -32,7 +32,8 @@
           </div>
             <div class="col-xs-12 campaign-price no-pad-left no-pad-right lil-pad">
               <div class="col-xs-12 col-sm-6">
-                <div class="lil-pad campaign-descript">
+                <div class="campaign-descript">
+                  <img src="/img/stars.jpg" class="img-responsive" style="max-height:50px;position:relative;left:-6px;">
                   <h5>{{campaign_data.formula.servings}} Servings</h5>
                 </div>
                 <div>
@@ -125,7 +126,9 @@
       </div>
     </div>
   </div>
-    <hr>
+  <center>
+    <hr style="width:75%;">
+  </center>
   <!--<div class="row" ng-show="campaign_data.formula">
     <div class="container">
       <img src="img/certified.jpg" class="img-responsive" alt="Genesus Quality Banner">
@@ -153,32 +156,42 @@
                     <h5>
                       <a href="{{campaign_data.formula.study_url[key]}}" target="_blank" style="color:#777;">{{campaign_data.formula.study_url[key]}}</a>
                     </h5>
-                  </div>
-                </div>
+                    <hr>
+              </div>
+
+              </div>
+
               </div>
             </div>
-            <small class="science-small-text">† This statement has not been evaluated by the FDA.<br>This product is not intended to diagnose, treat, cure, or prevent any disease.</small>
+
           </div>
         </div>
-        <hr>
+        <center>
+          <hr style="width:75%;">
+        </center>
       <div class="row lil-pad">
         <div class="container-fluid">
           <div class="col-xs-12 col-sm-12 science text-center lil-pad-bottom">
-              <h2>SERVING SIZE & USE</h2>
+              <h2>Creation</h2>
           </div>
 
       <div class="col-xs-12 col-sm-3 col-sm-offset-2">
       <div class="col-xs-12">
         <h4 style="color: #444;font-weight: 600;font-size: 24px;">Transparent</h4>
         <h5 style="color: #777;line-height: 1.3;font-size: 18px;">We are committed to providing customers with what they need to make informed decisions.</h5>
+        <hr>
       </div>
+
       <div class="col-xs-12">
       <h4 style="color: #444;font-weight: 600;font-size: 24px;">Optimized</h4>
       <h5 style="color: #777;line-height: 1.3;font-size: 18px;">Each formula is optimized to include all of the nutrients you need - and none of the ingredients you don't.</h5>
+      <hr>
     </div>
+
     <div class="col-xs-12">
     <h4 style="color: #444;font-weight: 600;font-size: 24px;">Committed</h4>
     <h5 style="color: #777;line-height: 1.3;font-size: 18px;">FDA Registered / GMP Compliant facilities are used to build the nutrients in each and every one of our formulas.</h5>
+    <hr>
   </div>
       </div>
       <div class="col-xs-12 col-sm-6">
@@ -186,8 +199,11 @@
         <img class="nutrition-facts" ng-src="{{add_nutrition_path(campaign_data.formula)}}" class="img-responsive" alt="Genesus Nutrition Facts">
     </center>
   </div>
-        <div class="col-xs-12 lil-pad shipping-info">
-          <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-left">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-2 lil-pad shipping-info">
+          <div class="col-xs-12">
+          <small style="font-size:10px;color:#444;"><em><strong>† Disclaimer:</strong> This statement has not been evaluated by the FDA.<br>This product is not intended to diagnose, treat, cure, or prevent any disease.</em></small>
+        </div>
+          <!--<div class="col-xs-12 col-sm-10 col-sm-offset-1 text-left">
               <h5>Shipping Info</h5>
               <p>Orders are packaged and shipped when the time expires. You can expect your package to arrive around 4-7 business days after the campaign finishes.</p>
           </div>
@@ -197,25 +213,29 @@
           <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-left">
               <h5>Return Policy</h5>
               <p>If you're not 100% satisfied, let us know and we'll make it right.</p>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
-    <hr>
+    <center>
+      <hr style="width:75%;">
+    </center>
 
       <div class="row" ng-show="campaign_data.user.profile.instagram">
         <div class="container lil-pad-bottom">
           <div class="col-xs-12 owner-insta">
             <h3>Meet The Owner</h3>
               <h5>
-                <a href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank">@<span>{{campaign_data.user.profile.instagram}}</span></a>
+                <a href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank" style="color:#3AC395;">@<span style="color:#3AC395;">{{campaign_data.user.profile.instagram}}</span></a>
               </h5>
               <div id="my-instashow"></div>
           </div>
         </div>
       </div>
 
-    <hr>
+      <center>
+        <hr style="width:75%;">
+      </center>
     <div class="row newsletter">
         <div class="col-xs-12 text-center">
             <h3 style="font-weight:300;">Get new products from this company delivered to your inbox.</h3>

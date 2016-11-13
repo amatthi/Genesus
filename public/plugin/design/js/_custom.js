@@ -265,6 +265,11 @@ chisel_launch.controller('CustomCtrl', [
             return 'images/formula/' + formula.name.replace(/ /g, '_') + '.jpg';
         }
 
+        $scope.add_formula_path_2 = function(formula) {
+            formula = $scope.campaign_data.formula;
+            return 'images/formula/' + formula.name.replace(/ /g, '_') + '.jpg';
+        }
+
         $scope.add_ingredient_path = function(ingredient) {
             return 'images/ingredients/' + ingredient.replace(/ /g, '_') + '.png';
         }
@@ -282,6 +287,21 @@ chisel_launch.controller('CustomCtrl', [
         $scope.add_benefit3_path = function(benefit_3) {
             benefit_3 = $scope.campaign_data.formula.benefit_3;
             return 'images/benefits_3/' + benefit_3.replace(/ /g, '_') + '.jpg';
+        }
+
+        $scope.add_benefit4_path = function(benefit_4) {
+            benefit_4 = $scope.campaign_data.formula.benefit_4;
+            return '/plugin/design/images/benefits_4/' + benefit_4.replace(/ /g, '_') + '.jpg';
+        }
+
+        $scope.add_benefit5_path = function(benefit_5) {
+            benefit_5 = $scope.campaign_data.formula.benefit_5;
+            return '/plugin/design/images/benefits_5/' + benefit_5.replace(/ /g, '_') + '.jpg';
+        }
+
+        $scope.add_benefit6_path = function(benefit_6) {
+            benefit_6 = $scope.campaign_data.formula.benefit_6;
+            return '/plugin/design/images/benefits_6/' + benefit_6.replace(/ /g, '_') + '.jpg';
         }
 
         $scope.test = function(data) {
