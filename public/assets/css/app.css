@@ -111,7 +111,7 @@ strong {
 }
 
 .hero-bg {
-  background:#222;
+  /**background:#222;**/
   /**height:100%;**/
   height:600px;
   max-height:600px;
@@ -119,10 +119,11 @@ strong {
   clear:both;
   margin-bottom:75px;
   background-color:#fff;
+  background:url(https://s3-us-west-2.amazonaws.com/tappyn/genesus_banner.jpg) no-repeat center center;
   background-size:cover;
 }
 
-@media (max-width:586px) {
+/**@media (max-width:586px) {
   .hero-bg {
   background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbannermobile.jpg) no-repeat center center;
   background-size:cover;
@@ -155,7 +156,7 @@ strong {
     background:url(https://s3-us-west-2.amazonaws.com/tappyn/genesus_banner.jpg) no-repeat center center;
     background-size:cover;
       }
-  }
+  }**/
 
 .testimonials h2 {
     font-family: 'Source Sans Pro', sans-serif;
@@ -220,7 +221,7 @@ position: relative;
     }
 }
 
-@media (min-width:600px) and (max-width:882px) {
+/**@media (min-width:600px) and (max-width:882px) {
   .hero-content h3 {
     color:#444 !important;
   }
@@ -230,7 +231,7 @@ position: relative;
   .hero-content h3 {
     display: none !important;
   }
-}
+}**/
 
 .hero-content h3 {
     font-family: 'Source Sans Pro', sans-serif;
@@ -1379,7 +1380,7 @@ a {
 }
 
 .campaign-section h2 {
-  color:#4BAEE8;
+  color:#3AC395;
 }
 
 .campaign-overview h3 {
@@ -1407,7 +1408,7 @@ a {
 }
 
 .faq-head {
-  background-color: #83dcff;
+  background-color: #3AC395;
 }
 
 .faq-head h3 {
@@ -1417,7 +1418,7 @@ a {
 }
 
 .dash-a a {
-  color:#07B9FF;
+  color:#3AC395;
   cursor: default;
 }
 
@@ -1483,7 +1484,7 @@ a {
   color: #444;
   cursor: default;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 28px;
   position:relative;
 }
 
@@ -1500,7 +1501,7 @@ a {
 }
 
 .campaign-info h5 {
-  font-size: 28px;
+  font-size: 22px;
   color: #777;
   font-weight: 400;
   font-family: 'Source Sans Pro', sans-serif;
@@ -1803,8 +1804,8 @@ a {
 
 .login-button button {
   padding: 10px 25px 10px 25px;
-  background-color: #07B9FF;
-  border-color: #07B9FF;
+  background-color: #3AC395;
+  border-color: #3AC395;
 }
 
 .login-input input {
@@ -1818,7 +1819,7 @@ a {
 }
 
 .login-body h5 a {
-  color: #07B9FF;
+  color: #3AC395;
 }
 
 .current-payout img {
@@ -1839,7 +1840,7 @@ a {
 }
 
 .current-payout h4 a {
-  color:#4BAEE8;
+  color:#3AC395;
 }
 
 .current-payout label {

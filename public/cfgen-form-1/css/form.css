@@ -86,7 +86,7 @@ body{
 	width:16px;
 	height:16px;
 }
-#cfgen-form-1 .cfgen-errormessage, 
+#cfgen-form-1 .cfgen-errormessage,
 #cfgen-form-1 .cfgen-validationmessage{
 	padding:8px 8px;
 	line-height:normal;
@@ -108,7 +108,7 @@ body{
 #cfgen-form-1 .cfgen-option-checkbox{
 	margin-bottom:2px;
 }
-#cfgen-form-1 .cfgen-option-content input[type=radio], 
+#cfgen-form-1 .cfgen-option-content input[type=radio],
 #cfgen-form-1 .cfgen-option-content input[type=checkbox]{
 	margin-right:2px;
 	margin-left:1px;
@@ -129,34 +129,34 @@ body{
 #cfgen-form-1 .cfgen-rating-c .fa{
 	cursor:pointer;
 }
-#cfgen-form-1 .cfgen-input-c input[type="text"], 
-#cfgen-form-1 .cfgen-input-c select, 
-#cfgen-form-1 .cfgen-input-c input[type="submit"], 
+#cfgen-form-1 .cfgen-input-c input[type="text"],
+#cfgen-form-1 .cfgen-input-c select,
+#cfgen-form-1 .cfgen-input-c input[type="submit"],
 #cfgen-form-1 .cfgen-input-c textarea{
 	outline-style:none;
 }
-#cfgen-form-1 .cfgen-input-c input[type="text"], 
-#cfgen-form-1 .cfgen-input-c textarea, 
+#cfgen-form-1 .cfgen-input-c input[type="text"],
+#cfgen-form-1 .cfgen-input-c textarea,
 #cfgen-form-1 .cfgen-input-c input[type="submit"]{
 	width:100%;
 }
-#cfgen-form-1 .cfgen-input-c input[type="text"], 
-#cfgen-form-1 .cfgen-input-c select, 
-#cfgen-form-1 .cfgen-input-c input[type="submit"], 
-#cfgen-form-1 .cfgen-input-c textarea, 
-#cfgen-form-1 .cfgen-icon-c, 
-#cfgen-form-1 .cfgen-label, 
-#cfgen-form-1 .cfgen-paragraph, 
-#cfgen-form-1 .cfgen-errormessage, 
+#cfgen-form-1 .cfgen-input-c input[type="text"],
+#cfgen-form-1 .cfgen-input-c select,
+#cfgen-form-1 .cfgen-input-c input[type="submit"],
+#cfgen-form-1 .cfgen-input-c textarea,
+#cfgen-form-1 .cfgen-icon-c,
+#cfgen-form-1 .cfgen-label,
+#cfgen-form-1 .cfgen-paragraph,
+#cfgen-form-1 .cfgen-errormessage,
 #cfgen-form-1 .cfgen-validationmessage{
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-ms-box-sizing:border-box;
 	box-sizing:border-box;
 }
-#cfgen-form-1 .cfgen-label, 
-#cfgen-form-1 .cfgen-paragraph, 
-#cfgen-form-1 .cfgen-errormessage, 
+#cfgen-form-1 .cfgen-label,
+#cfgen-form-1 .cfgen-paragraph,
+#cfgen-form-1 .cfgen-errormessage,
 #cfgen-form-1 .cfgen-validationmessage{
 	max-width:100%;
 }
@@ -190,7 +190,7 @@ body{
 	font-weight:700;
 	font-style:normal;
 	font-size:16px;
-	color:#4DBCE9;
+	color:#3AC395;
 	margin-bottom:2px;
 }
 #cfgen-form-1 .cfgen-input-group textarea,
@@ -227,7 +227,7 @@ body{
 	font-weight:bold;
 	font-style:normal;
 	font-size:34px;
-	color:#26ADE4;
+	color:#3AC395;
 }
 #cfgen-element-1-2-paragraph{
 	font-family:Arial;
