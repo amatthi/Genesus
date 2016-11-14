@@ -249,7 +249,7 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         $scope.hasFormula = function(product) {
-            var hide_standard = ['Pre-Workout Complex', 'Whey Protein Isolate', 'Evolve Pure Hangover Prevention'];
+            var hide_standard = ['Pre-Workout', 'Whey Protein Isolate', 'Evolve Pure Hangover Prevention'];
             if ((product.name == 'Template' || product.name == 'Standard Bottle') && $.inArray($scope.campaign_data.formula.name, hide_standard) == -1) {
                 return true;
             }
