@@ -12,8 +12,8 @@
 		<meta http-equiv="Expires" content="Sat, 01 Dec 2018 00:00:00 GMT">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="google-site-verification" content="pqwiId01A3wp5QfmFmK2hskliqxeOkGkcUa03aV2Loc" />
-		<link rel="shortcut icon" href="/favicon3.ico?v=3.0" type="image/x-icon">
-		<link rel="icon" href="/favicon3.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="/favicon.ico?v=4.0" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
