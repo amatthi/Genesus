@@ -27,10 +27,10 @@
                 <h2>{{campaign_data.title}}</h2>
             </div>
           </div>
-          <div class="col-xs-12 formula-description pad-top-15">
+          <div class="col-xs-12 formula-description">
               <h4>{{campaign_data.formula.formula_desc}}</h4>
           </div>
-            <div class="col-xs-12 campaign-price no-pad-left no-pad-right lil-pad">
+            <div class="col-xs-12 campaign-price no-pad-left no-pad-right">
               <div class="col-xs-12 col-sm-6">
                 <div class="campaign-descript">
                   <img src="/img/stars.jpg" class="img-responsive" style="max-height:40px;position:relative;left:-6px;">
@@ -101,8 +101,11 @@
       </div>
         <div class="col-xs-12 descript lil-pad">
         <div class="col-xs-12 col-sm-6 descript bio-pic lil-pad">
-          <center>
+          <center ng-show="campaign_data.user.profile.photo">
             <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus User Profile Picture">
+          </center>
+          <center ng-hide="campaign_data.user.profile.photo">
+            <img src="/img/avatar.png" alt="Genesus User Profile Picture">
           </center>
           <h3>{{campaign_data.user.profile.brand_name}} {{campaign_data.user.profile.last_name}}</h3>
           <div class="col-xs-12 no-pad-left" ng-show="campaign_data.user.profile.brand_city || campaign_data.user.profile.brand_state">
@@ -126,8 +129,8 @@
       </div>
     </div>
   </div>
-  <center>
-    <hr style="width:75%;">
+  <center class="home-hr">
+    <hr>
   </center>
   <!--<div class="row" ng-show="campaign_data.formula">
     <div class="container">
@@ -166,31 +169,31 @@
 
           </div>
         </div>
-        <center>
-          <hr style="width:75%;">
+        <center class="home-hr">
+          <hr>
         </center>
       <div class="row lil-pad">
         <div class="container-fluid">
           <div class="col-xs-12 col-sm-12 science text-center lil-pad-bottom">
-              <h2>Creation</h2>
+              <h2>Origin</h2>
           </div>
 
-      <div class="col-xs-12 col-sm-3 col-sm-offset-2">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-2">
       <div class="col-xs-12">
         <h4 style="color: #444;font-weight: 600;font-size: 24px;">Transparent</h4>
-        <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">We are committed to providing customers with what they need to make informed decisions.</h5>
+        <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">We are committed to total transparency and disclosure when it comes to your nutrition. Say goodbye to additives and hello to clarity.</h5>
         <hr>
       </div>
 
       <div class="col-xs-12">
       <h4 style="color: #444;font-weight: 600;font-size: 24px;">Optimized</h4>
-      <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">Each formula is optimized to include all of the nutrients you need - and none of the ingredients you don't.</h5>
+      <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">Nestled in plant-based formula's, our ingredients are carefully tailored to maximize effectiveness. This gives you all the nutrients you need - and none of the one's you don't.</h5>
       <hr>
     </div>
 
     <div class="col-xs-12">
     <h4 style="color: #444;font-weight: 600;font-size: 24px;">Committed</h4>
-    <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">FDA Registered / GMP Compliant facilities are used to build the nutrients in each and every one of our formulas. As standard procedure we test all incoming raw materials, as well as finished products, and test each group for disintegration time.</h5>
+    <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">FDA Registered & cGMP facilities in the United State facilities are used to create all of our products. Organic, Non-GMO, and Double Gluten-Free Certifications are just a few of the processes we handle everyday. All packaging is from biodegradable materials and shipped in corrugated cartons with an overall recycled content of 65% (considered to be the highest recycled content possible while maintaining box integrity during packing and shipping).</h5>
     <hr>
   </div>
       </div>
@@ -217,8 +220,8 @@
         </div>
       </div>
     </div>
-    <center ng-show="campaign_data.user.profile.instagram">
-      <hr style="width:75%;">
+    <center class="home-hr" ng-show="campaign_data.user.profile.instagram">
+      <hr>
     </center>
 
       <div class="row" ng-show="campaign_data.user.profile.instagram">
@@ -233,8 +236,8 @@
         </div>
       </div>
 
-      <center>
-        <hr style="width:75%;">
+      <center class="home-hr">
+        <hr>
       </center>
     <div class="row newsletter">
         <div class="col-xs-12 text-center">

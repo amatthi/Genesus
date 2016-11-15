@@ -1252,8 +1252,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 a:hover {
-  color: #3AC395;
-  text-decoration: none;
+  color: ##63d1ab;
 }
 
 a {
@@ -1359,9 +1358,15 @@ a {
    position:relative;
  }
 
+ .btn-primary:hover {
+   color:#fff;
+   background: #63d1ab;
+   border-color: #63d1ab;
+ }
+
 .dash-alert a {
   cursor:pointer;
-  color:#4BAEE8;
+  color:#3AC395;
 }
 
 @media (min-width:765px) {
@@ -1380,9 +1385,6 @@ a {
   }
 }
 
-.campaign-section {
-  cursor:pointer;
-}
 
 .campaign-section h2 {
   color:#3AC395;

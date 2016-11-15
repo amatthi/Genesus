@@ -147,18 +147,18 @@
                 <div class="col-xs-12">
                   <div class="col-xs-12 col-sm-4 lil-lil-pad">
                     <label>Your First Name/Brand Name</label>
-                    <input class="col-xs-12" type="text" ng-model="profile_data.brand_name">
+                    <input class="col-xs-12" type="text" ng-model="profile_data.brand_name" maxlength="15">
                   </div>
                   <div class="col-xs-12 col-sm-4 lil-lil-pad">
                     <label>Your Last Name (Optional)</label>
-                    <input class="col-xs-12" type="text" ng-model="profile_data.last_name">
+                    <input class="col-xs-12" type="text" ng-model="profile_data.last_name" maxlength="15">
                   </div>
                 </div>
                 <div class="col-xs-12">
                   <div class="col-xs-12 col-sm-4 lil-lil-pad">
                     <label>Your Occupation</label>
                     <input class="col-xs-12" type="text "id="text" name="text" ng-model="profile_data.career" maxlength="200">
-                    <h6 class="pull-right" id="count_message"></h6>
+                    <h6 class="pull-right" id="count_message" ng-bind="(200-campaign_data.blurb.length)+' characters remaining'"></h6>
                   </div>
 
                 <div class="col-xs-12 col-sm-4 lil-lil-pad">
