@@ -63,9 +63,9 @@ chisel_launch.controller('CustomCtrl', [
                 for (var i in data) {
                     alert(data[i]);
                 }
-            } else if (response.status == 401) {
-                alert('must login');
-            }
+            } //else if (response.status == 401) {
+                //alert('must login');
+            //}
         }
         $scope.is_login = function() {
             mainFactory.is_login().then(function(r) {
