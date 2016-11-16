@@ -28,7 +28,7 @@ class CampaignController extends Controller
             //'description'     => 'required',
             'length'          => 'required|in:3,4,5,7',
             'status'          => 'required|in:public,draft',
-            //'slug'            => 'required|max:255',
+            'slug'            => 'required|max:255',
             //'blurb'            => 'required|max:255',
             //'title'           => 'required|max:255',
         ]);
@@ -37,7 +37,7 @@ class CampaignController extends Controller
         $tmp     = Campaign::where('slug', $slug)->first();
         if ($tmp) {
             if ($tmp->id != $request->input('id')) {
-                return response(['slug' => ['It looks like you have entered a URL that is already taken or the field is not complete. Please enter a new URL (Step 3) to continue!']], 422);
+                return response(['slug' => ['It looks like you have entered a Product Title that is already taken or the field is not complete. Please enter a new Product Title to continue!']], 422);
             }
         }
         $update_id = $request->input('id');

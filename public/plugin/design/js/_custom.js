@@ -157,15 +157,17 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         $scope.submit_campaign = function(data) {
+            $scope.campaign_data.png64 = $scope.fabric.saveCanvasObjectAsPng();
             // data.product_id = $scope.defaultProductId;
             // data.objectLayers = $scope.objectLayers;
             data.status = 'draft';
+            data.slug = $scope.campaign_data.slug;
             mainFactory.launch_campaign(data).then(function(r) {
                 //console.log(r);
                 window.onbeforeunload = null;
                 window.onhashchange = null;
-                alert('Your campaign is now live!');
-                window.location = '/share/' + r.data.id;
+                //alert('Your campaign is now live!');
+                window.location = '/campaign/' + r.data.slug;
             }, $scope.handle_error);
         }
 

@@ -2,6 +2,11 @@
 <script src="cfgen-form-2/js/form.js"></script>
 <link href="cfgen-form-2/css/form.css" rel="stylesheet" type="text/css">
 <div class="container-fluid margin-top-25 lil-pad">
+  <div class="col-xs-12 col-sm-7">
+      <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">1</span> Create</span>
+      <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_goal() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_goal() }">2</span> Details</span>
+      <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">3</span> Add a description</span>
+  </div>
     <div class="row lil-pad-bottom">
         <div class="col-xs-12 col-sm-6 text-center lil-pad no-pad-right">
           <div class="col-xs-12">
