@@ -10960,10 +10960,10 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
             templateUrl: 'html/campaign.html',
             controller: 'campaignController',
         })
-        .when('/dashboard', {
+        /**.when('/dashboard', {
             templateUrl: 'html/dashboard.html',
             controller: 'dashboardController',
-        })
+        })**/
         .otherwise({ redirectTo: '/home' });
 
     $locationProvider.html5Mode(true);
