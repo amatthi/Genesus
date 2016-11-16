@@ -28,7 +28,7 @@ class CampaignController extends Controller
             //'description'     => 'required',
             'length'          => 'required|in:3,4,5,7',
             'status'          => 'required|in:public,draft',
-            'slug'            => 'required|max:255',
+            //'slug'            => 'required|max:255',
             //'blurb'            => 'required|max:255',
             //'title'           => 'required|max:255',
         ]);

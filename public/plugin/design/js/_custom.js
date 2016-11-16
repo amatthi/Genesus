@@ -219,7 +219,7 @@ chisel_launch.controller('CustomCtrl', [
             if (goal < 20) {
                 bottle = Number($scope.campaign_data.formula.cost1);
             } else if (goal >= 20 && goal < 100) {
-                bottle = Number($scope.campaign_data.formula.cost30);
+                bottle = Number($scope.campaign_data.formula.recommended_price);
             } else if (goal >= 100 && goal < 200) {
                 bottle = Number($scope.campaign_data.formula.cost100);
             } else if (goal == 200) {

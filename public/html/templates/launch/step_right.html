@@ -36,10 +36,14 @@
                       <img ng-src="{{add_formula_path(formula)}}" alt="Genesus Bottle Image">
                     </div>
                     <div style="display:table-cell;position:relative;top:-20px;">
-                      <h4>{{formula.name}}</h4>
-                      <span ng-show="formula.benefit_1">&#8226 {{formula.benefit_1}}</span>
-                      <span ng-show="formula.benefit_2">&#8226 {{formula.benefit_2}}</span>
-                      <span ng-show="formula.benefit_3">&#8226 {{formula.benefit_3}}</span>
+                      <h4 style="font-weight:600;">{{formula.name}}</h4>
+                      <img src="/img/stars.jpg" class="img-responsive" style="max-height:20px;position:relative;left:-3px;margin-top:0px;">
+                      <h5 style="margin-top:0px;">{{campaign_data.formula.servings}} Servings</h5>
+                      <div class="text-center" style="position: relative;left: -80px;margin-right: -85px;padding-top: 10px;margin-bottom:-10px;">
+                      <span ng-show="formula.benefit_1" style="display:inline;">&#8226 {{formula.benefit_1}}</span>
+                      <span ng-show="formula.benefit_2" style="display:inline;">&#8226 {{formula.benefit_2}}</span>
+                      <span ng-show="formula.benefit_3" style="display:inline;">&#8226 {{formula.benefit_3}}</span>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -47,11 +51,11 @@
         </div>
         <div class="launch-options">
             <div class="ing-ex" ng-show="campaign_data.formula">
-                <h3>Base Cost @ 30 Bottles:</h3>
+                <h3>Cost Per Bottle:</h3>
                 <h2 ng-bind="campaign_data.formula.cost30 | currency"></h2>
             </div>
             <div class="ing-ex" ng-show="!campaign_data.formula">
-                <h3>Base Cost @ 30 Bottles:</h3>
+                <h3>Cost Per Bottle:</h3>
                 <h2>$0</h2>
             </div>
         </div>
@@ -66,7 +70,7 @@
         </center>
     </div>
 </div>
-<small class="small-text" ng-show="launch_step_create()">† These statements have not been evaluated by the FDA.</small>
+<!--<small class="small-text" ng-show="launch_step_create()">† These statements have not been evaluated by the FDA.</small>-->
 <br />
  <small ng-show="launch_step_create()" style="color:#777;"><a data-toggle="modal" data-target="#myModal" style="font-size:10px;cursor:pointer;">Looking for more products?</a></small>
 <!-- step create END -->
