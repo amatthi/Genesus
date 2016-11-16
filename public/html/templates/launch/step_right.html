@@ -52,7 +52,7 @@
         <div class="launch-options">
             <div class="ing-ex" ng-show="campaign_data.formula">
                 <h3>Cost Per Bottle:</h3>
-                <h2 ng-bind="campaign_data.formula.cost30 | currency"></h2>
+                <h2 ng-bind="campaign_data.formula.recommended_price | currency"></h2>
             </div>
             <div class="ing-ex" ng-show="!campaign_data.formula">
                 <h3>Cost Per Bottle:</h3>
