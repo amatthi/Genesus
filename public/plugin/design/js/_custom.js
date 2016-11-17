@@ -63,9 +63,9 @@ chisel_launch.controller('CustomCtrl', [
                 for (var i in data) {
                     alert(data[i]);
                 }
-            } //else if (response.status == 401) {
-                //alert('must login');
-            //}
+            } else if (response.status == 401) {
+                alert('must login');
+            }
         }
         $scope.is_login = function() {
             mainFactory.is_login().then(function(r) {
@@ -251,7 +251,7 @@ chisel_launch.controller('CustomCtrl', [
         }
 
         $scope.hasFormula = function(product) {
-            var hide_standard = ['Pre-Workout', 'Whey Protein Isolate', 'Evolve Pure Hangover Prevention', 'Greens Complex'];
+            var hide_standard = ['Pre-Workout', 'Whey Protein', 'Evolve Pure Hangover Prevention', 'Supergreens Complex'];
             if ((product.name == 'Template' || product.name == 'Standard Bottle') && $.inArray($scope.campaign_data.formula.name, hide_standard) == -1) {
                 return true;
             }

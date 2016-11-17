@@ -29,7 +29,7 @@
       },
       {
          "id":28,
-         "name":"Whey Protein Isolate",
+         "name":"Whey Protein",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -42,7 +42,7 @@
       },
       {
          "id":29,
-         "name":"Whey Protein Isolate",
+         "name":"Whey Protein",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -55,7 +55,7 @@
       },
       {
          "id":30,
-         "name":"Whey Protein Isolate",
+         "name":"Whey Protein",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -68,7 +68,7 @@
       },
       {
          "id":31,
-         "name":"Whey Protein Isolate",
+         "name":"Whey Protein",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -81,7 +81,7 @@
       },
       {
          "id":32,
-         "name":"Whey Protein Isolate",
+         "name":"Whey Protein",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -94,7 +94,7 @@
       },
       {
          "id":33,
-         "name":"Whey Protein Isolate",
+         "name":"Whey Protein",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -107,7 +107,7 @@
       },
       {
          "id":34,
-         "name":"Whey Protein Isolate",
+         "name":"Whey Protein",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -120,7 +120,7 @@
       },
       {
          "id":35,
-         "name":"Whey Protein Isolate",
+         "name":"Whey Protein",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -133,7 +133,7 @@
       },
       {
          "id":36,
-         "name":"Whey Protein Isolate",
+         "name":"Whey Protein",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -146,7 +146,7 @@
       },
       {
          "id":37,
-         "name":"Whey Protein Isolate",
+         "name":"Whey Protein",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -367,7 +367,7 @@
       },
       {
          "id":54,
-         "name":"Greens Complex",
+         "name":"Supergreens Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -380,7 +380,7 @@
       },
       {
          "id":55,
-         "name":"Greens Complex",
+         "name":"Supergreens Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -393,7 +393,7 @@
       },
       {
          "id":56,
-         "name":"Greens Complex",
+         "name":"Supergreens Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -406,7 +406,7 @@
       },
       {
          "id":57,
-         "name":"Greens Complex",
+         "name":"Supergreens Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -419,7 +419,7 @@
       },
       {
          "id":58,
-         "name":"Greens Complex",
+         "name":"Supergreens Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -432,7 +432,7 @@
       },
       {
          "id":59,
-         "name":"Greens Complex",
+         "name":"Supergreens Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -445,7 +445,7 @@
       },
       {
          "id":60,
-         "name":"Greens Complex",
+         "name":"Supergreens Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -458,7 +458,7 @@
       },
       {
          "id":61,
-         "name":"Greens Complex",
+         "name":"Supergreens Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -471,7 +471,7 @@
       },
       {
          "id":62,
-         "name":"Greens Complex",
+         "name":"Supergreens Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",
@@ -484,7 +484,7 @@
       },
       {
          "id":63,
-         "name":"Greens Complex",
+         "name":"Supergreens Complex",
          "price":99,
          "category": "Standard",
          "currency":"USD",

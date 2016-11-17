@@ -277,8 +277,14 @@
                 </ul>
             </div>-->
             <div class="col-xs-12 canvas_sub_image text-center" style="margin-top:-20px;">
-                <div ng-show="campaign_data.formula.name != 'Pre-Workout' && campaign_data.formula.name != 'Whey Protein Isolate'">
+                <div ng-show="campaign_data.formula.name != 'Supergreens Complex' && campaign_data.formula.name != 'Whey Protein'">
                     <h4 class="grey-info-2" style="cursor:default;margin-top:0px;margin-bottom:0px;font-weight:400;">2.0" x 2.5" Printable Area</h4>
+                </div>
+                <div ng-show="campaign_data.formula.name == 'Whey Protein'">
+                    <h4 class="grey-info-2" style="cursor:default;margin-top:0px;margin-bottom:0px;font-weight:400;">3.0" x 4.0" Printable Area</h4>
+                </div>
+                <div ng-show="campaign_data.formula.name == 'Supergreens Complex'">
+                    <h4 class="grey-info-2" style="cursor:default;margin-top:0px;margin-bottom:0px;font-weight:400;">3.5" x 6.0" Printable Area</h4>
                 </div>
                 <!--<div>
                   <a data-toggle="modal" data-target="#nutri-facts">See Nutrition Facts</a>
