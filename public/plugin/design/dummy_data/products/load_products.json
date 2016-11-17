@@ -364,6 +364,136 @@
 
          ],
          "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":54,
+         "name":"Greens Complex",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/whey-protein.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/whey-protein.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":55,
+         "name":"Greens Complex",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/whey-protein-1.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/whey-protein-1.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":56,
+         "name":"Greens Complex",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/whey-protein-2.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/whey-protein-2.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":57,
+         "name":"Greens Complex",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/whey-protein-3.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/whey-protein-3.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":58,
+         "name":"Greens Complex",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/whey-protein-4.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/whey-protein-4.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":59,
+         "name":"Greens Complex",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/whey-protein-5.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/whey-protein-5.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":60,
+         "name":"Greens Complex",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/whey-protein-6.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/whey-protein-6.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":61,
+         "name":"Greens Complex",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/whey-protein-7.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/whey-protein-7.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":62,
+         "name":"Greens Complex",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/whey-protein-8.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/whey-protein-8.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":63,
+         "name":"Greens Complex",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/whey-protein-9.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/whey-protein-9.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
       }
 
 
