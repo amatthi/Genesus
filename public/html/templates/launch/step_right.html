@@ -32,17 +32,17 @@
             <div class="formula-box">
                 <div class="CLA_1" ng-class="{'formula-selected':campaign_data.formula == formula}" ng-repeat="formula in campaign_data.purpose.formulas" ng-click="formula_change(formula)">
                   <div style="display:table-row">
-                    <div style="display:table-cell;position:relative;width:50px;padding:5px;">
+                    <div style="display:table-cell;position:relative;width:50px;padding:5px;padding-right:25px;left:10px;">
                       <img ng-src="{{add_formula_path(formula)}}" alt="Genesus Bottle Image">
                     </div>
-                    <div style="display:table-cell;position:relative;top:-20px;">
+                    <div style="display:table-cell;position:relative;top:-10px;">
                       <h4 style="font-weight:600;">{{formula.name}}</h4>
                       <img src="/img/stars.jpg" class="img-responsive" style="max-height:20px;position:relative;left:-3px;margin-top:0px;">
-                      <h5 style="margin-top:0px;">{{campaign_data.formula.servings}} Servings</h5>
-                      <div class="text-center" style="position: relative;left: -80px;margin-right: -85px;padding-top: 10px;margin-bottom:-10px;">
-                      <span ng-show="formula.benefit_1" style="display:inline;">{{formula.benefit_1}}</span>
-                      <span ng-show="formula.benefit_2" style="display:inline;">&#8226 {{formula.benefit_2}}</span>
-                      <span ng-show="formula.benefit_3" style="display:inline;">&#8226 {{formula.benefit_3}}</span>
+                      <h5 style="margin-top:0px;font-size:12px;margin-bottom:0px;">{{campaign_data.formula.servings}} Servings</h5>
+                      <div class="text-center" style="position: relative;left: -80px;margin-right: -85px;margin-bottom:-10px;">
+                      <span ng-show="formula.benefit_1" style="display:inline;font-size:12px;">{{formula.benefit_1}}</span>
+                      <span ng-show="formula.benefit_2" style="display:inline;font-size:12px;">&#8226 {{formula.benefit_2}}</span>
+                      <span ng-show="formula.benefit_3" style="display:inline;font-size:12px;">&#8226 {{formula.benefit_3}}</span>
                     </div>
                     </div>
                   </div>

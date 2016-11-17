@@ -911,7 +911,7 @@ footer {
 }
 
 .formula-box {
-  max-height:405px;
+  max-height:280px;
   overflow:auto;
   border: 0.1px solid #ddd;
   border-left: none;
@@ -955,7 +955,7 @@ footer {
 
 .CLA_1 img {
   display: inline-block;
-  height:80px;
+  height:40px;
   margin-top: 10px;
 }
 
