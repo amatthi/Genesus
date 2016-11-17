@@ -384,7 +384,7 @@ position: relative;
   padding-bottom: 15px;
   padding-left: 50px;
   padding-right: 50px;
-  font-size: 28px;
+  font-size: 22px;
   font-family: 'Dosis', sans-serif;
 }
 
@@ -911,7 +911,7 @@ footer {
 }
 
 .formula-box {
-  max-height:205px;
+  max-height:405px;
   overflow:auto;
   border: 0.1px solid #ddd;
   border-left: none;
@@ -933,7 +933,7 @@ footer {
   cursor: pointer;
   min-height: 90px;
   background-color: #fff;
-  margin: 3px;
+  margin: 2px;
   width: 98%;
 }
 

@@ -10,7 +10,7 @@
           <h4 class="modal-title">Sell This Product</h4>
         </div>
         <div class="modal-body text-center">
-          <p>If you'd like to sell this product as an affiliate,
+          <p>If you'd like to sell your product as an affiliate,
           please <a href="/contact_us" style="color:#3AC395;">contact us</a>, and we'll get back to you within 24 hours.</p>
         </div>
         <div class="modal-footer">
@@ -59,11 +59,11 @@
               <div class="col-xs-12 col-sm-6">
                 <div class="campaign-descript">
                   <h5 style="display:inline;padding-right:10px;">{{campaign_data.formula.servings}} Servings</h5>
-                  <img src="/img/stars.jpg" class="img-responsive" style="max-height:40px;display:inline;position:relative;top:-5px;">
+                  <img src="/img/stars.jpg" class="img-responsive" style="max-height:40px;display:inline;position:relative;top:-5px;padding-top:5px;">
 
                 </div>
                 <div>
-                  <h3>Our Price: <span>{{campaign_data.sale_price | currency}}</span></h3>
+                  <h3><span>{{campaign_data.sale_price | currency}}</span> <span style="color:#777;font-size:18px;">per bottle</span></h3>
                 </div>
               </div>
 
@@ -80,9 +80,11 @@
                 <uib-progressbar class="active" value="campaign_data.goal_count" max='campaign_data.goal'></uib-progressbar>
                 <h5 class="text-center pad-top-15">{{campaign_data.goal_count}} of {{campaign_data.goal}} sold</h5>
             </div>-->
-            <div class="col-xs-12 text-center campaign-button lil-pad">
-                <button class="col-xs-12 col-sm-6 btn btn-wj btn-sm btn-buy" ng-click="buy_campaign()">Buy It Now</a>
-                <button class="col-xs-12 col-sm-6 btn btn-wj btn-sm btn-sell" data-toggle="modal" data-target="#sellThis">Sell This</a>
+            <div class="col-xs-12 col-sm-5 text-center campaign-button lil-pad">
+                <button class="col-xs-12 col-sm-offset-2 btn btn-wj btn-sm btn-buy" ng-click="buy_campaign()">Buy This</button>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-sm-offset-1 text-center campaign-button lil-pad">
+                <button class="col-xs-12 btn btn-sm btn-sell" data-toggle="modal" data-target="#sellThis">Sell This</button>
             </div>
             <div class="col-xs-12 text-center campaign-guarantee">
                 <h4>FREE & FAST SHIPPING</h4>
@@ -208,7 +210,7 @@
       <div class="col-xs-12 col-sm-4 col-sm-offset-2">
       <div class="col-xs-12">
         <h4 style="color: #444;font-weight: 600;font-size: 24px;">Transparent</h4>
-        <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">We are committed to total transparency and disclosure when it comes to your nutrition. Say goodbye to additives and hello to clarity.</h5>
+        <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">Hiding ingredients isn't in our playbook, so we'll make sure to articulate each and every ingredient in our products.</h5>
         <hr>
       </div>
 
@@ -220,7 +222,7 @@
 
     <div class="col-xs-12">
     <h4 style="color: #444;font-weight: 600;font-size: 24px;">Committed</h4>
-    <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">FDA Registered & cGMP facilities in the United State facilities are used to create all of our products. Organic, Non-GMO, and Double Gluten-Free Certifications are just a few of the processes we handle everyday. All packaging is from biodegradable materials and shipped in corrugated cartons with an overall recycled content of 65% (considered to be the highest recycled content possible while maintaining box integrity during packing and shipping).</h5>
+    <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">FDA Registered & cGMP facilities in the United State facilities are used to create all of our products. All of our products go through double gluten free certification and many meet USDA Organic and Non GMO guidelines.</h5>
     <hr>
   </div>
       </div>
