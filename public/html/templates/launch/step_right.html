@@ -65,8 +65,8 @@
             <div class="btn btn-gn btn-sm" ng-click="test(campaign_data)">Save Design and ajax submit form</div>
         </center>-->
         <center>
-          <!--<a ng-show="!__user.email" class="btn btn-gn btn-lg" ng-click="set_module('register','launch')" style="width:100%;">Launch</a>-->
-          <a class="btn btn-gn btn-lg" ng-click="submit_campaign(campaign_data)" style="width:100%;">Launch</a>
+          <a ng-show="!__user.email" class="btn btn-gn btn-lg" ng-click="set_module('register','launch')" style="width:100%;">Launch</a>
+          <a ng-show="__user.email" class="btn btn-gn btn-lg" ng-click="submit_campaign(campaign_data)" style="width:100%;">Launch</a>
             <!--<div class="btn btn-gn btn-sm" ng-click="set_step('goal')" style="width:100%;">Sell this</div>-->
         </center>
     </div>
