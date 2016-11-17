@@ -364,15 +364,15 @@ position: relative;
 
 .btn-sell:hover {
   color: #fff;
-  background: #3ac395;
-  border: 1px solid #3AC395;
+  background: #777;
+  border: 1px solid #777;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 .btn-sell:focus {
   color: #fff;
-  background: #3ac395;
-  border: 1px solid #3AC395;
+  background: #777;
+  border: 1px solid #777;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
