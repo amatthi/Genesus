@@ -88,8 +88,10 @@ class CampaignController extends Controller
     {
         $campaign->orders;
         $campaign->goal_count = count($campaign->orders);
-        $campaign->user->profile;
-        $campaign->countdown = $campaign->end_at->getTimestamp() - time();
+        $campaign->countdown  = $campaign->end_at->getTimestamp() - time();
+        if ($campaign->user) {
+            $campaign->user->profile;
+        }
         return $campaign;
     }
 
