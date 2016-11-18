@@ -32,6 +32,7 @@ class CampaignController extends Controller
             //'blurb'            => 'required|max:255',
             //'title'           => 'required|max:255',
         ]);
+        $user    = Auth::user();
         $db_cols = ['goal', 'status'];
         $slug    = str_slug($request->input('slug'), '-');
         $tmp     = Campaign::where('slug', $slug)->first();
@@ -60,7 +61,7 @@ class CampaignController extends Controller
         $data['title']       = $request->input('title', '');
         $data['description'] = $request->input('description', '');
         $data['blurb']       = $request->input('blurb', '');
-        $data['user_id']     = Auth::user()->id;
+        $data['user_id']     = ($user) ? $user->id : 0;
         $data['slug']        = $slug;
         $data['end_at']      = date('Y-m-d H:i:s', strtotime('+' . $request->input('length') . 'days'));
 
