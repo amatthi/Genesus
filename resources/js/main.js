@@ -37,6 +37,9 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
         .when('/selling', {
             templateUrl: 'html/selling.html',
         })
+        .when('/our_story', {
+            templateUrl: 'html/our_story.html',
+        })
         .when('/terms', {
             templateUrl: 'html/terms.html',
         })
