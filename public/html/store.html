@@ -33,23 +33,28 @@
 	<section class="store">
 		<div class="container">
 			<div class="col-xs-12">
-				<div class="col-xs-12 col-sm-4 lil-pad-bottom" ng-repeat="formula.name for formula in formulas">
-					<div class="col-xs-12">
-						<img class="img-responsive" style="max-width:250px;padding-right:5px;float:right;" ng-src="{{add_formula_path(formula)}}">
-					</div>
-					<div class="col-xs-12">
-						<h4 style="color:#444;">{{formula.name}}</h4>
-						<img src="/img/stars.jpg" class="img-responsive" style="max-height:50px;">
-						<h5 style="color:#777;" ng-bind="campaign_data.formula.description[key]"></h5>
-						<h5>{{campaign_data.formula.servings}} Servings</h5>
-					</div>
-					<div class="col-xs-12">
-						<span ng-show="formula.benefit_1" style="display:inline;font-size:12px;">{{formula.benefit_1}}</span>
-						<span ng-show="formula.benefit_2" style="display:inline;font-size:12px;">&#8226 {{formula.benefit_2}}</span>
-						<span ng-show="formula.benefit_3" style="display:inline;font-size:12px;">&#8226 {{formula.benefit_3}}</span>
-					</div>
+				<section>
+					<div class="col-xs-12 col-sm-4 lil-pad-bottom" ng-repeat="purpose in purposes">
+						<div class="CLA_1" ng-repeat="formula in purpose.formulas" style="border:1px solid #eee;border-radius:4px;">
+							<div class="col-xs-12">
+								<img class="img-responsive" style="max-width:150px;" ng-src="{{add_formula_path(formula)}}">
+							</div>
+							<div class="col-xs-12">
+							<h3>{{formula.name}}</h3>
+							<img src="/img/stars.jpg" class="img-responsive" style="max-height:50px;">
+							<h5 style="color:#777;" ng-bind="formula.description"></h5>
+							<h5>{{formula.servings}} Servings</h5>
+						</div>
+						<div class="col-xs-12">
+							<span ng-show="formula.benefit_1" style="display:inline;font-size:12px;">{{formula.benefit_1}}</span>
+							<span ng-show="formula.benefit_2" style="display:inline;font-size:12px;">&#8226 {{formula.benefit_2}}</span>
+							<span ng-show="formula.benefit_3" style="display:inline;font-size:12px;">&#8226 {{formula.benefit_3}}</span>
+						</div>
+						</div>
 				</div>
-			</div>
-		</div>
-	</section>
+				</section>
+
+
+
+
 </div>

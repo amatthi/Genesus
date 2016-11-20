@@ -1,7 +1,6 @@
 <script src="cfgen-form-2/js/form.js"></script>
 <link href="cfgen-form-2/css/form.css" rel="stylesheet" type="text/css">
 <div class='container-fluid'>
-<<<<<<< HEAD
 		<!-- Hero Banner -->
 		<section class="hero-bg pad-bottom-200">
 			<div class="container" style="margin-left:50px;margin-right:50px;">
@@ -91,14 +90,13 @@
 				</div>
 			</div>
 		</section>
-		<!-- for agmatthi formulas here -->
 	<section>
-		<h4>formulas</h4>
-		<span ng-repeat="purpose in purposes">
-			<span ng-repeat="formula in purpose.formulas" ng-bind="formula.name"></span>
-		</span>
+		<div class="col-xs-12 col-sm-4 lil-pad-bottom" ng-repeat="purpose in purposes">
+			<div class="CLA_1" ng-repeat="formula in purpose.formulas">
+				<h3>{{formula.name}}</h3>
+			</div>
+	</div>
 	</section>
-	<!-- end for agmatthi -->
 		<section>
 			<div class="row lil-pad-bottom">
 				<div class="container home-section">
@@ -233,15 +231,14 @@
 					</div>
 				</div>
 			</section>
-=======
-	<!-- for agmatthi formulas here -->
+	<!-- for agmatthi formulas here
 	<section>
 		<h4>formulas</h4>
-		<span ng-repeat="purpose in purposes">
-			<span ng-repeat="formula in purpose.formulas" ng-bind="formula.name"></span>
-		</span>
+		<div ng-repeat="purpose in purposes">
+			<div class="CLA_1" ng-repeat="formula in purpose.formulas" ng-bind="formula.name"></div>
+		</div>
 	</section>
-	<!-- end for agmatthi -->
+	 end for agmatthi -->
     <!-- Hero Banner -->
     <section class="hero-bg pad-bottom-200">
         <div class="container" style="margin-left:50px;margin-right:50px;">
