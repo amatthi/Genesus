@@ -116,9 +116,20 @@ strong {
   max-height:600px;
   width:100%;
   clear:both;
-  margin-bottom:75px;
+  margin-bottom:50px;
   background-color:#fff;
   background:url(https://s3-us-west-2.amazonaws.com/tappyn/genesus_banner.jpg) no-repeat center center;
+  background-size:cover;
+}
+
+.store-bg {
+  background:#3AC395;
+  /**height:100%;**/
+  height:600px;
+  max-height:600px;
+  width:100%;
+  clear:both;
+  margin-bottom:25px;
   background-size:cover;
 }
 
@@ -156,6 +167,20 @@ strong {
     background-size:cover;
       }
   }**/
+
+.store-bg h1 {
+  color: #fff;
+  font-size:72px;
+  font-family:'Dosis', sans-serif;
+  padding-bottom:35px;
+}
+
+.store-bg h3 {
+  color:#fff;
+  font-weight:400;
+  font-size:26px;
+  line-height:1.3;
+}
 
 .testimonials h2 {
     font-family: 'Source Sans Pro', sans-serif;
@@ -458,6 +483,22 @@ position: relative;
 
 .home-section h3 {
   font-size: 30px;
+  font-weight: 300;
+  cursor: default;
+  font-family: 'Sans Source Pro', sans-serif;
+}
+
+.home-section-buy h3 {
+  padding-top: 25px;
+  min-height: 104px;
+  font-size: 22px;
+  font-weight: 400;
+  cursor: default;
+  font-family: 'Sans Source Pro', sans-serif;
+}
+
+.home-section-buy h4 {
+  font-size: 18px;
   font-weight: 300;
   cursor: default;
   font-family: 'Sans Source Pro', sans-serif;
@@ -1830,6 +1871,17 @@ a {
   font-weight: 600;
 }
 
+.store {
+  margin-bottom: 25px;
+}
+
+.store h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #3AC395;
+  font-family: 'Dosis', sans-serif;
+}
+
 .login-body {
   padding-top: 0px;
 }
@@ -1929,6 +1981,10 @@ a {
 
 .pad-top-100 {
   padding-top:100px;
+}
+
+.pad-top-200 {
+  padding-top: 200px;
 }
 
 .pad-left-50 {

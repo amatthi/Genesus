@@ -10940,6 +10940,9 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
         .when('/faq', {
             templateUrl: 'html/faq.html',
         })
+        .when('/store', {
+            templateUrl: 'html/store.html',
+        })
         .when('/contact_us', {
             templateUrl: 'html/contact_us.html',
         })
@@ -11289,6 +11292,8 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
             alert('404 page not found');
         }
     }
+
+
 
     $scope.is_login = function() {
         mainFactory.is_login().then(function(r) {
