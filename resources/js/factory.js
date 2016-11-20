@@ -131,5 +131,15 @@ chisel.factory("mainFactory", function($http) {
             'data': $.param(data)
         });
     }
+
+    fact.campaign_purposes = function() {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/purposes',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            }
+        });
+    }
     return fact;
 })

@@ -11197,8 +11197,10 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
     }
 });
 
-chisel.controller("homeController", function($scope, $rootScope) {
-    $scope.var = 'var is here';
+chisel.controller("homeController", function($scope, $rootScope, mainFactory) {
+    mainFactory.campaign_purposes().then(function(r) {
+        $scope.purposes = r.data;
+    });
 });
 
 chisel.controller("launchController", function($scope, $rootScope, mainFactory, chisel_var) {
@@ -11547,6 +11549,16 @@ chisel.factory("mainFactory", function($http) {
                 'Content-type': 'application/x-www-form-urlencoded'
             },
             'data': $.param(data)
+        });
+    }
+
+    fact.campaign_purposes = function() {
+        return $http({
+            method: 'GET',
+            url: '/api/campaign/purposes',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            }
         });
     }
     return fact;
