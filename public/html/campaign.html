@@ -40,7 +40,7 @@
           </div>-->
             <div class="col-xs-12 contest-share">
                 <div class="col-xs-12 text-center">
-                    <p><em>Share this campaign on</em></p>
+                    <p><em>Share this product on</em></p>
                 </div>
                 <div class=" col-xs-12 text-center contest-share-socials">
                     <div class="addthis_inline_share_toolbox" data-title="{{campaign_data.title}}" data-description="{{campaign_data.formula.formula_desc}}" data-media="{{campaign_data.bottle_img}}"></div>
@@ -58,14 +58,14 @@
           </div>
             <div class="col-xs-12 campaign-price no-pad-left no-pad-right">
               <div class="col-xs-12">
-                <div class="campaign-descript">
-                  <h5 style="display:inline;padding-right:10px;">{{campaign_data.formula.servings}} Servings</h5>
+                <div>
+                  <h5 style="display:inline;padding-right:10px;font-weight:300;">{{campaign_data.formula.servings}} Servings</h5>
                   <img src="/img/stars.jpg" class="img-responsive" style="max-height:40px;display:inline;position:relative;top:-5px;padding-top:5px;" />
 
                 </div>
                 <div>
-                  <h3 style="text-decoration:line-through;color:#777;"><span style="color:#777;">${{campaign_data.formula.recommended_price}}</span></h3>
-                  <h3><span>{{campaign_data.formula.cost30 | currency}}</span> (Save {{campaign_data.formula.margin}}%)</h3>
+                  <h3 style="text-decoration:line-through;color:#777;margin-top:5px;"><span style="color:#777;">${{campaign_data.formula.recommended_price}}</span></h3>
+                  <h3 style="margin-top:5px;"><span>{{campaign_data.formula.cost30 | currency}}</span> (Save {{campaign_data.formula.margin}}%)</h3>
                 </div>
               </div>
 
@@ -183,7 +183,7 @@
           <hr>
         </center>
       <div class="row lil-pad">
-        <div class="container-fluid">
+        <div class="container-fluid lil-pad-bottom">
           <div class="col-xs-12 col-sm-12 science text-center lil-pad-bottom">
               <h2>Origin</h2>
           </div>
@@ -212,7 +212,7 @@
         <img class="nutrition-facts" ng-src="{{add_nutrition_path(campaign_data.formula)}}" class="img-responsive" alt="Genesus Nutrition Facts">
     </center>
   </div>
-        <div class="col-xs-12 col-sm-10 col-sm-offset-2 lil-pad shipping-info">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-2 shipping-info">
           <div class="col-xs-12">
           <small style="font-size:10px;color:#444;"><em><strong>† Disclaimer:</strong> This statement has not been evaluated by the FDA.<br>This product is not intended to diagnose, treat, cure, or prevent any disease.</em></small>
         </div>
@@ -251,7 +251,7 @@
       </center>-->
     <div class="row newsletter">
         <div class="col-xs-12 text-center">
-            <h3 style="font-weight:300;">Get new products delivered to your inbox.</h3>
+            <h3 style="font-weight:400;font-family:'Dosis', sans-serif;font-size:28px;">Get new products delivered to your inbox.</h3>
         </div>
         <div class="col-xs-12 col-sm-4 col-sm-offset-4 lil-pad text-center">
             <div class="cfgen-form-container" id="cfgen-form-2">

@@ -179,9 +179,7 @@
 							<h3 style="font-family:'Dosis', sans-serif;font-size:28px;font-weight:400;">SHOP BY YOUR VALUES</h3>
 						</div>
 						<div class="col-xs-12 lil-pad-bottom" ng-repeat="purpose in purposes|limitTo:1">
-							<div id="slider" class="carousel slide" data-ride="carousel">
-								<div class="carousel-inner">
-							<div class="col-xs-12 col-sm-3 item" ng-class="{active:!$index}" ng-repeat="formula in purpose.formulas|limitTo:4" style="border:1px solid #eee;border-radius:4px;padding-bottom:15px;cursor:default;display:inline;background-color:#fff;">
+							<div class="col-xs-12 col-sm-3" ng-repeat="formula in purpose.formulas|limitTo:4" style="border:1px solid #eee;border-radius:4px;padding-bottom:15px;cursor:default;display:inline;background-color:#fff;">
 								<div class="col-xs-12" style="padding-top:15px;">
 									<center>
 										<a ng-if="formula.name == 'Green Tea'" href="http://genesus.co/campaign/green-tea" target="_self">
@@ -233,8 +231,9 @@
 								<a ng-if="formula.name == 'CLA'" href="http://genesus.co/campaign/cla" target="_self" class="btn btn-bl btn-sm">BUY IT</a>
 							</div>
 					</div>
-					<a class="carousel-control right" href="#slider" data-slide="next"></a>
-				</div>
+					<div class="col-xs-12">
+						<h4 class="pull-right"><a href="/store" target="_self" style="font-size: 22px;font-weight: 400;color: #3AC395;text-decoration:none;">See More<span aria-hidden="true" class="glyphicon glyphicon-arrow-right home-arrow"></span></a></h4>
+					</div>
 				</div>
 			</div>
 		</section>
