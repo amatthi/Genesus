@@ -206,6 +206,54 @@ position: relative;
  height: 100%;
 }
 
+.train {
+  background: url('/img/Train.jpg');
+  background-size: cover;
+  height: 300px;
+  border-radius: 4px;
+}
+
+.train:hover {
+  opacity: 0.7;
+  cursor:pointer;
+}
+
+.maintain {
+  background: url('/img/Maintain.jpg');
+  background-size: cover;
+  height: 300px;
+  border-radius: 4px;
+}
+
+.maintain:hover {
+  opacity: 0.7;
+  cursor:pointer;
+}
+
+.relieve {
+  background: url('/img/Relieve.jpg');
+  background-size: cover;
+  height: 300px;
+  border-radius: 4px;
+}
+
+.relieve:hover {
+  opacity: 0.7;
+  cursor:pointer;
+}
+
+.drive {
+  background: url('/img/Drive.jpg');
+  background-size: cover;
+  height: 300px;
+  border-radius: 4px;
+}
+
+.drive:hover {
+  opacity: 0.7;
+  cursor:pointer;
+}
+
 .hero-content h2 {
     font-family: 'Dosis', sans-serif;
     color: #fff;
@@ -511,22 +559,36 @@ position: relative;
   color: #646772;
 }
 
-.home-section h4 a {
-  color:#444;
+.train h4 {
+  color:#fff;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.maintain h4 {
+  color:#fff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.relieve h4 {
+  color:#fff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.drive h4 {
+  color:#fff;
+  text-decoration: none;
+  font-size: 32px;
   font-weight: 300;
 }
 
 .home-section img {
   max-width: 600px;
-}
-
-.home-section h4 a:hover {
-  color:#63d1ab;
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: 300;
 }
 
 .home-arrow {
