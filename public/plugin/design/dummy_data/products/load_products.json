@@ -813,7 +813,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label.jpg",
+         "image":"dummy_data/products/bottle/Label.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -826,7 +826,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-1.jpg",
+         "image":"dummy_data/products/bottle/Label-1.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -839,7 +839,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-2.jpg",
+         "image":"dummy_data/products/bottle/Label-2.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -852,7 +852,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-3.jpg",
+         "image":"dummy_data/products/bottle/Label-3.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -865,7 +865,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-4.jpg",
+         "image":"dummy_data/products/bottle/Label-4.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -878,7 +878,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-5.jpg",
+         "image":"dummy_data/products/bottle/Label-5.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -891,7 +891,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-6.jpg",
+         "image":"dummy_data/products/bottle/Label-6.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -904,7 +904,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-7.jpg",
+         "image":"dummy_data/products/bottle/Label-7.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -917,7 +917,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-8.jpg",
+         "image":"dummy_data/products/bottle/Label-8.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -930,7 +930,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-9.jpg",
+         "image":"dummy_data/products/bottle/Label-9.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -943,7 +943,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-10.jpg",
+         "image":"dummy_data/products/bottle/Label-10.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -956,7 +956,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-11.jpg",
+         "image":"dummy_data/products/bottle/Label-11.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -969,7 +969,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-12.jpg",
+         "image":"dummy_data/products/bottle/Label-12.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -982,7 +982,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-13.jpg",
+         "image":"dummy_data/products/bottle/Label-13.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
@@ -995,7 +995,7 @@
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/label-14.jpg",
+         "image":"dummy_data/products/bottle/Label-14.jpg",
          "sub_images":[
             "dummy_data/products/bottle/Template_9.jpg"
 
