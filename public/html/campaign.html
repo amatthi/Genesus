@@ -57,15 +57,15 @@
               <h4>{{campaign_data.formula.formula_desc}}</h4>
           </div>
             <div class="col-xs-12 campaign-price no-pad-left no-pad-right">
-              <div class="col-xs-12 col-sm-6">
+              <div class="col-xs-12">
                 <div class="campaign-descript">
                   <h5 style="display:inline;padding-right:10px;">{{campaign_data.formula.servings}} Servings</h5>
                   <img src="/img/stars.jpg" class="img-responsive" style="max-height:40px;display:inline;position:relative;top:-5px;padding-top:5px;">
 
                 </div>
                 <div>
-                  <h3><span>{{campaign_data.sale_price | currency}}</span></h3>
-                  <h3><span>{{campaign_data.sale_price | currency}}</span> (Save 31%)</h3>
+                  <h3 style="text-decoration:line-through;"><span style="color:#444;">${{campaign_data.formula.recommended_price}}</span></h3>
+                  <h3><span>{{campaign_data.formula.cost30 | currency}}</span> (Save {{campaign_data.formula.margin}}%)</h3>
                 </div>
               </div>
 
@@ -132,7 +132,7 @@
       </div>
           <div class="col-xs-12">
             <div class="col-xs-12 descript-blurb">
-              <h4>{{campaign_data.product_info}}</h4>
+              <h4>{{campaign_data.formula.pitch}}</h4>
             </div>
           </div>
         </div>

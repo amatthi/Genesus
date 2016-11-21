@@ -15,7 +15,7 @@
 		</div><!-- Hero Banner End -->
 	</section>
 </div>
-<div class="row">
+<div class="row lil-pad" style="background-color:#F3F3F3;">
 	<section class="store">
 		<div class="container">
 			<div class="col-xs-12 text-center">
@@ -29,26 +29,60 @@
 		</div>
 	</section>
 </div>
-<div class="row">
-	<section class="store">
+<div class="row lil-pad-bottom" style="background-color:#F3F3F3;">
+	<div class="container-fluid">
+		<div class="col-xs-12 lil-pad lil-pad-bottom">
+			<div class="col-xs-2 col-xs-offset-2">
+				<img src="/img/Gluten_Free.jpg" class="img-responsive" alt="Genesus product benefit 1">
+			</div>
+		<div class="col-xs-2">
+			<img src="/img/Certified_Organic.jpg" class="img-responsive" alt="Genesus product benefit 2">
+		</div>
+		<div class="col-xs-2">
+			<img src="/img/Vegan.jpg" class="img-responsive" alt="Genesus product benefit 3">
+		</div>
+		<div class="col-xs-2">
+			<img src="/img/Non_GMO.jpg" class="img-responsive" alt="Genesus product benefit 3">
+		</div>
+		</div>
+	</div>
+</div>
+<div class="row" style="background-color:#F3F3F3;">
+	<div class="col-xs-12 col-sm-10 col-sm-offset-1" style="border-bottom:1px solid #ddd;padding-left:0px;">
+		<h2 style="font-family:'Dosis', sans-serif;">TOP SELLERS</h2>
+	</div>
+</div>
+	<section style="background-color:#F3F3F3;">
 		<div class="container">
 			<div class="col-xs-12">
-				<section>
-					<div class="col-xs-12 col-sm-4 lil-pad-bottom" ng-repeat="purpose in purposes">
-						<div class="CLA_1" ng-repeat="formula in purpose.formulas" style="border:1px solid #eee;border-radius:4px;">
-							<div class="col-xs-12">
-								<img class="img-responsive" style="max-width:150px;" ng-src="{{add_formula_path(formula)}}">
-							</div>
-							<div class="col-xs-12">
-							<h3>{{formula.name}}</h3>
-							<img src="/img/stars.jpg" class="img-responsive" style="max-height:50px;">
-							<h5 style="color:#777;" ng-bind="formula.description"></h5>
-							<h5>{{formula.servings}} Servings</h5>
+					<div class="col-xs-12 lil-pad-bottom" ng-repeat="purpose in purposes">
+						<div class="col-xs-12 no-pad-left">
+							<h2 style="font-family:'Dosis', sans-serif;font-size:24px;">{{purpose.name}}</h2>
 						</div>
-						<div class="col-xs-12">
-							<span ng-show="formula.benefit_1" style="display:inline;font-size:12px;">{{formula.benefit_1}}</span>
-							<span ng-show="formula.benefit_2" style="display:inline;font-size:12px;">&#8226 {{formula.benefit_2}}</span>
-							<span ng-show="formula.benefit_3" style="display:inline;font-size:12px;">&#8226 {{formula.benefit_3}}</span>
+						<div class="col-xs-12 col-sm-3" ng-repeat="formula in purpose.formulas" style="border:1px solid #eee;border-radius:4px;padding-bottom:15px;cursor:default;display:inline;background-color:#fff;">
+							<div class="col-xs-12" style="padding-top:15px;">
+								<center>
+									<img class="img-responsive" style="max-height:150px;height:150px;" ng-src="{{add_formula_path(formula)}}">
+								</center>
+							</div>
+							<div class="col-xs-12 text-center">
+							<h3 style="font-size:18px;margin-bottom:5px;">{{formula.name}}</h3>
+							<h5 style="margin-bottom:0px;margin-top:0px;color:#777;">{{formula.servings}} Servings</h5>
+							<center>
+								<img src="/img/stars.jpg" class="img-responsive" style="max-height:30px;height:30px;margin-top:0px;">
+							</center>
+							<!--<h5 style="color:#777;" ng-bind="formula.description"></h5>-->
+						</div>
+						<div class="col-xs-12 text-center" style="text-transform:uppercase;">
+							<span ng-show="formula.benefit_1" style="display:inline;font-size:10px;">{{formula.benefit_1}}</span>
+							<span ng-show="formula.benefit_2" style="display:inline;font-size:10px;">&#8226 {{formula.benefit_2}}</span>
+							<span ng-show="formula.benefit_3" style="display:inline;font-size:10px;">&#8226 {{formula.benefit_3}}</span>
+						</div>
+						<div class="col-xs-12 text-center lil-pad-bottom">
+							<span style="color:#3AC395;font-size:16px;">{{formula.recommended_price | currency}}</span>
+						</div>
+						<div class="col-xs-12 text-center">
+							<a href="/launch" target="_self" class="btn btn-bl btn-sm">LEARN MORE</a>
 						</div>
 						</div>
 				</div>
