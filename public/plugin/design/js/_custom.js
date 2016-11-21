@@ -162,6 +162,7 @@ chisel_launch.controller('CustomCtrl', [
             // data.objectLayers = $scope.objectLayers;
             data.status = 'draft';
             data.slug = $scope.campaign_data.slug;
+            $campaign_data.sale_price = $campaign_data.formula.cost30;
             mainFactory.launch_campaign(data).then(function(r) {
                 //console.log(r);
                 window.onbeforeunload = null;
@@ -240,7 +241,7 @@ chisel_launch.controller('CustomCtrl', [
 
         $scope.formula_change = function(formula) {
             $scope.campaign_data.formula = formula;
-            $scope.campaign_data.sale_price = formula.recommended_price;
+            $scope.campaign_data.sale_price = formula.cost30;
             if ($scope.campaign_data.formula.back_image && $scope.activeDesignObject == 1) {
                 setTimeout(function() {
                     $('#bottle-back-a').trigger('click');
