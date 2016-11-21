@@ -3,9 +3,9 @@ chisel.controller("storeController", function($scope, $rootScope, mainFactory) {
         $scope.purposes = r.data;
     });
 
-    $scope.add_formula_path = function(formula) {
+    $scope.add_label_path = function(formula) {
         //formula = $scope.campaign_data.formula.name;
-        return '/plugin/design/images/formula/' + formula.name.replace(/ /g, '_') + '.jpg';
+        return '/plugin/design/images/labels/' + formula.name.replace(/ /g, '_') + '.jpg';
     }
 
     $scope.add_ingredient_path = function(ingredient) {
