@@ -40,6 +40,9 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
     .when('/feeling_guarantee', {
         templateUrl: 'html/feeling_guarantee.html',
     })
+    .when('/shipping', {
+        templateUrl: 'html/shipping.html',
+    })
     .when('/selling', {
         templateUrl: 'html/selling.html',
     })
