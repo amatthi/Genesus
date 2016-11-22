@@ -10,58 +10,64 @@ var chisel = angular.module('myApp', [
 
 chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
-        .when('/home', {
-            templateUrl: 'html/home.html',
-            controller: 'homeController',
-        })
-        //.when('/launch', {
-        //    templateUrl: 'html/launch.html',
-        //    controller: 'launchController',
-        //})
-        .when('/launch_old', {
-            templateUrl: 'html/launch.html',
-            controller: 'launchController',
-        })
-        .when('/faq', {
-            templateUrl: 'html/faq.html',
-        })
-        .when('/contact_us', {
-            templateUrl: 'html/contact_us.html',
-        })
-        .when('/how_it_works', {
-            templateUrl: 'html/how_it_works.html',
-        })
-        .when('/why_genesus', {
-            templateUrl: 'html/why_genesus.html',
-        })
-        .when('/selling', {
-            templateUrl: 'html/selling.html',
-        })
-        .when('/our_story', {
-            templateUrl: 'html/our_story.html',
-        })
-        .when('/terms', {
-            templateUrl: 'html/terms.html',
-        })
-        .when('/privacy', {
-            templateUrl: 'html/privacy.html',
-        })
-        .when('/thank_you', {
-            templateUrl: 'html/thank_you.html',
-        })
-        .when('/share/:id', {
-            templateUrl: 'html/share.html',
-            controller: 'shareController',
-        })
-        .when('/campaign/:slug', {
-            templateUrl: 'html/campaign.html',
-            controller: 'campaignController',
-        })
-        .when('/dashboard', {
-            templateUrl: 'html/dashboard.html',
-            controller: 'dashboardController',
-        })
-        .otherwise({ redirectTo: '/home' });
+    .when('/home', {
+        templateUrl: 'html/home.html',
+        controller: 'homeController',
+    })
+    //.when('/launch', {
+    //    templateUrl: 'html/launch.html',
+    //    controller: 'launchController',
+    //})
+    .when('/store', {
+        templateUrl: 'html/store.html',
+        controller: 'storeController',
+    })
+    .when('/faq', {
+        templateUrl: 'html/faq.html',
+    })
+    .when('/contact_us', {
+        templateUrl: 'html/contact_us.html',
+    })
+    .when('/how_it_works', {
+        templateUrl: 'html/how_it_works.html',
+    })
+    .when('/why_genesus', {
+        templateUrl: 'html/why_genesus.html',
+    })
+    .when('/non_gmo', {
+        templateUrl: 'html/non_gmo.html',
+    })
+    .when('/feeling_guarantee', {
+        templateUrl: 'html/feeling_guarantee.html',
+    })
+    .when('/selling', {
+        templateUrl: 'html/selling.html',
+    })
+    .when('/our_story', {
+        templateUrl: 'html/our_story.html',
+    })
+    .when('/terms', {
+        templateUrl: 'html/terms.html',
+    })
+    .when('/privacy', {
+        templateUrl: 'html/privacy.html',
+    })
+    .when('/thank_you', {
+        templateUrl: 'html/thank_you.html',
+    })
+    .when('/share/:id', {
+        templateUrl: 'html/share.html',
+        controller: 'shareController',
+    })
+    .when('/campaign/:slug', {
+        templateUrl: 'html/campaign.html',
+        controller: 'campaignController',
+    })
+    .when('/dashboard', {
+        templateUrl: 'html/dashboard.html',
+        controller: 'dashboardController',
+    })
+    .otherwise({ redirectTo: '/home' });
 
     $locationProvider.html5Mode(true);
     $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';

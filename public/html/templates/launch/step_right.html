@@ -20,10 +20,6 @@
 <div class="tab-content-1 step1_2" ng-show="launch_step_create()">
     <div class="launch-step-create" style="margin-top:-10px;">
       <div class="form-group col-xs-12 pad-right-10 pad-left-10">
-          <label>Product Name</label>
-              <input class="input-width border-rad input-border form-control" placeholder="ie. Jacob's Strength Blend" type="text" ng-model="campaign_data.slug">
-      </div>
-      <div class="form-group col-xs-12 pad-right-10 pad-left-10">
           <label>Made For</label>
           <select class="input-width goal-select" theme="selectize" ng-model="campaign_data.purpose" ng-change="purpose_change()" ng-options="purpose.name for purpose in purposes">
           </select>
@@ -65,9 +61,7 @@
             <div class="btn btn-gn btn-sm" ng-click="test(campaign_data)">Save Design and ajax submit form</div>
         </center>-->
         <center>
-          <a ng-show="!__user.email" class="btn btn-gn btn-lg" ng-click="set_module('register','launch')" style="width:100%;">Launch</a>
-          <a ng-show="__user.email" class="btn btn-gn btn-lg" ng-click="submit_campaign(campaign_data)" style="width:100%;">Launch</a>
-            <!--<div class="btn btn-gn btn-sm" ng-click="set_step('goal')" style="width:100%;">Sell this</div>-->
+            <div class="btn btn-gn btn-sm" ng-click="set_step('goal')" style="width:100%;">Sell this</div>
         </center>
     </div>
 </div>

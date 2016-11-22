@@ -2119,19 +2119,22 @@ a {
 .non_gmo {
   background: url('https://s3-us-west-2.amazonaws.com/tappyn/Non_GMO.jpg');
   background-size: cover;
-  height: 500px;
+  height: 400px;
+  max-height: 400px;
 }
 
 .non_gmo_mid {
   background: url('https://s3-us-west-2.amazonaws.com/tappyn/mid_slider.jpg');
   background-size: cover;
-  height: 500px;
+  height: 400px;
+  max-height: 400px;
 }
 
 .non_gmo_last {
   background: url('https://s3-us-west-2.amazonaws.com/tappyn/non_gmo_last.jpg');
   background-size: cover;
-  height: 500px;
+  height: 400px;
+  max-height: 400px;
 }
 
 .descript-blurb {
