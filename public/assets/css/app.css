@@ -2104,6 +2104,24 @@ a {
   font-size: 14px;
 }
 
+.why_genesus {
+  background: url('https://s3-us-west-2.amazonaws.com/tappyn/why_genesus.jpg');
+  background-size: cover;
+  height: 500px;
+}
+
+.our_story {
+  background: url('https://s3-us-west-2.amazonaws.com/tappyn/our_story.jpg');
+  background-size: cover;
+  height: 500px;
+}
+
+.non_gmo {
+  background: url('https://s3-us-west-2.amazonaws.com/tappyn/Non_GMO.jpg');
+  background-size: cover;
+  height: 500px;
+}
+
 .descript-blurb {
   text-align:left;
 }

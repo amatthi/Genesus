@@ -10949,6 +10949,9 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
         .when('/why_genesus', {
             templateUrl: 'html/why_genesus.html',
         })
+        .when('/non_gmo', {
+            templateUrl: 'html/non_gmo.html',
+        })
         .when('/selling', {
             templateUrl: 'html/selling.html',
         })
