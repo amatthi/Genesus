@@ -20,7 +20,12 @@
       </div>
     </div>
   </div>
-<div class="container-fluid lil-pad">
+  <div class="container-fluid hidden-sm hidden-md hidden-lg" style="background-color:#37495F;">
+    <div class="col-xs-12" style="padding:15px;">
+      <h3 style="font-family:'Dosis', sans-serif;color:#fff;">Get an EXTRA 15% OFF your next order. Plus get FREE shipping.</h3>
+    </div>
+  </div>
+<div class="container-fluid">
   <!--<div class="col-xs-12 up-down-pad" style="padding-top:5px;">
   <div class="col-xs-12 col-sm-7">
       <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">1</span> Create</span>
@@ -28,7 +33,7 @@
       <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">3</span> Checkout</span>
   </div>
 </div>-->
-    <div class="row lil-pad-bottom">
+    <div class="hidden-xs row lil-pad-bottom">
         <div class="col-xs-12 col-sm-6 text-center lil-pad no-pad-right">
           <div class="col-xs-12">
               <center>
@@ -94,7 +99,56 @@
         </div>
 
   </div>
-  <div class="row campaign-benefits">
+  <div class="hidden-sm hidden-md hidden-lg row lil-pad-bottom">
+      <div class="col-xs-12 col-sm-6 text-center">
+        <div class="col-xs-12 lil-pad-bottom">
+          <center>
+            <h2 style="margin-bottom:0px;font-size:24px;font-weight:600;">{{campaign_data.formula.name}}</h2>
+            <img src="/img/stars.jpg" class="img-responsive" style="max-height:30px;" />
+          </center>
+        </div>
+        <div class="col-xs-12">
+            <center>
+                <img class="img-responsive" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement" style="max-height:250px;">
+            </center>
+        </div>
+        <!--<div class="col-xs-12 text-center campaign-guarantee">
+            <img src="https://s3-us-west-2.amazonaws.com/tappyn/keepit.jpg" alt="Genesus Guarantee"> <span style="font-size:18px;">Keep It</span>™<span style="font-size:18px;">&nbsp;</span><span style="font-size:18px;"><a href="/faq" target="_blank">MONEY BACK GUARANTEE</a></span>
+        </div>-->
+        <div class="col-xs-12 lil-pad">
+          <h3 style="text-decoration:line-through;color:#777;font-size:18px;display:inline;padding-right:5px;"><span style="color:#777;">${{campaign_data.formula.recommended_price}}</span></h3>
+          <h3 style="margin-top:5px;color:#3AC395;font-size:18px;display:inline;"><span>{{campaign_data.formula.cost30 | currency}}</span> (Save {{campaign_data.formula.margin}}%)</h3>
+        </div>
+        <div class="col-xs-12">
+          <h5 style="font-weight:300;color:#777;">{{campaign_data.formula.servings}} Servings</h5>
+        </div>
+      </div>
+      <div class="col-xs-12 campaign-info">
+        <div class="col-xs-12 formula-description">
+            <h4 style="font-size:18px;font-weight:600;margin-top:0px;">{{campaign_data.formula.formula_desc}}</h4>
+        </div>
+          <div class="col-xs-12 campaign-price no-pad-left no-pad-right">
+            <div class="col-xs-12">
+
+            </div>
+          </div>
+          <div class="col-xs-12 text-center campaign-button lil-pad">
+              <button class="col-xs-12 btn btn-wj btn-sm btn-buy" ng-click="buy_campaign()">BUY IT NOW</button>
+          </div>
+          <div class="col-xs-12 text-center campaign-guarantee">
+              <h4>FREE & FAST SHIPPING</h4>
+          </div>
+      </div>
+      <div class="col-xs-12 contest-share">
+          <div class="col-xs-12 text-center">
+              <p><em>Share this product on</em></p>
+          </div>
+          <div class=" col-xs-12 text-center contest-share-socials">
+              <div class="addthis_inline_share_toolbox" data-title="{{campaign_data.title}}" data-description="{{campaign_data.formula.formula_desc}}" data-media="{{campaign_data.bottle_img}}"></div>
+          </div>
+      </div>
+</div>
+  <div class="row campaign-benefits hidden-xs">
     <div class="container lil-pad lil-pad-bottom">
       <div class="col-xs-12 text-center">
         <div class="col-xs-2" ng-if="campaign_data.formula.benefit_1">
@@ -124,8 +178,31 @@
     </div>
   </div>
 </div>
+<div class="row campaign-benefits hidden-sm hidden-md hidden-lg">
+  <div class="container-fluid lil-pad-bottom">
+    <div class="col-xs-12">
+    <div class="col-xs-12">
+      <h2 style="color:#444;text-align:left;font-family:'Dosis', sans-serif;font-size:22px;margin-top:5px;padding-bottom:15px;">VALUES</h2>
+    </div>
+  </div>
+    <div class="col-xs-12 text-center">
+      <div class="col-xs-3 no-pad-left no-pad-right" ng-if="campaign_data.formula.benefit_1">
+        <img class="img-responsive" ng-src="{{add_benefit1_path(benefit_1)}}" alt="Genesus product benefit 1">
+      </div>
+    <div class="col-xs-3 no-pad-left no-pad-right" ng-if="campaign_data.formula.benefit_2">
+      <img class="img-responsive" ng-src="{{add_benefit2_path(benefit_2)}}" alt="Genesus product benefit 2">
+    </div>
+    <div class="col-xs-3 no-pad-left no-pad-right" ng-if="campaign_data.formula.benefit_3">
+      <img class="img-responsive" ng-src="{{add_benefit3_path(benefit_3)}}" alt="Genesus product benefit 3">
+    </div>
+    <div class="col-xs-3 no-pad-left no-pad-right" ng-if="campaign_data.formula.benefit_4">
+      <img class="img-responsive" ng-src="{{add_benefit4_path(benefit_4)}}" alt="Genesus product benefit 4">
+    </div>
+  </div>
+</div>
+</div>
 
-  <div class="row">
+  <div class="row hidden-xs">
     <div class="container lil-pad-bottom lil-pad">
       <div class="col-xs-12 col-sm-12 descript lil-pad">
         <h2 class="text-center">WHY YOU'LL LOVE IT</h2>
@@ -139,15 +216,32 @@
       </div>
     </div>
   </div>
-  <center class="home-hr">
+  <div class="row hidden-sm hidden-md hidden-lg">
+    <div class="container lil-pad-bottom">
+      <div class="col-xs-12">
+        <h2 style="color:#444;text-align:left;font-family:'Dosis', sans-serif;font-size:22px;">WHY YOU'LL LOVE IT</h2>
+      </div>
+          <div class="col-xs-12">
+            <div class="col-xs-12 no-pad-left no-pad-right">
+              <h4 style="color:#777;font-size:18px;font-weight:400;margin-top:0px;">{{campaign_data.formula.pitch}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <center class="hidden-xs home-hr">
     <hr>
+  </center>
+  <center class="hidden-sm hidden-md hidden-lg home-hr">
+    <hr style="margin-top:0px !important;margin-bottom:0px !important;">
   </center>
   <!--<div class="row" ng-show="campaign_data.formula">
     <div class="container">
       <img src="img/certified.jpg" class="img-responsive" alt="Genesus Quality Banner">
     </div>
   </div>-->
-    <div class="row lil-pad">
+    <div class="row hidden-xs lil-pad">
       <div class="container science">
         <div class="col-xs-12">
           <div class="col-xs-12 text-center">
@@ -179,10 +273,29 @@
 
           </div>
         </div>
-        <center class="home-hr">
-          <hr>
-        </center>
-      <div class="row lil-pad">
+        <div class="row hidden-sm hidden-md hidden-lg">
+          <div class="container">
+            <div class="col-xs-12">
+              <div class="col-xs-12 text-center no-pad-left no-pad-right">
+                <h2 style="color:#444;text-align:left;font-family:'Dosis', sans-serif;font-size:22px;">Ingredients</h2>
+              </div>
+              <div class="col-xs-12 no-pad-left no-pad-right d-key lil-pad">
+                <div class="col-xs-12 lil-pad-bottom" ng-repeat="(key,ingredient) in campaign_data.formula.ingredients">
+                  <div class="col-xs-3" style="display:inline-block;">
+                    <img class="img-responsive" style="max-width:50px;float:right;" ng-src="{{add_ingredient_path(ingredient)}}">
+                  </div>
+                  <div class="col-xs-9 ing-images" style="display:inline-block;padding-top:5px;">
+                    <h4 style="color:#777;font-size:18px;">{{ingredient}}</h4>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <center class="hidden-xs home-hr">
+              <hr>
+            </center>
+      <div class="row hidden-xs lil-pad">
         <div class="container-fluid lil-pad-bottom">
           <div class="col-xs-12 col-sm-12 science text-center lil-pad-bottom">
               <h2>Origin</h2>
@@ -216,21 +329,39 @@
           <div class="col-xs-12">
           <small style="font-size:10px;color:#444;"><em><strong>† Disclaimer:</strong> This statement has not been evaluated by the FDA.<br>This product is not intended to diagnose, treat, cure, or prevent any disease.</em></small>
         </div>
-          <!--<div class="col-xs-12 col-sm-10 col-sm-offset-1 text-left">
-              <h5>Shipping Info</h5>
-              <p>Orders are packaged and shipped when the time expires. You can expect your package to arrive around 4-7 business days after the campaign finishes.</p>
-          </div>
-          <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-left">
-              <p>Shipping is completely free if an order is placed before the campaign ends.</p>
-          </div>
-          <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-left">
-              <h5>Return Policy</h5>
-              <p>If you're not 100% satisfied, let us know and we'll make it right.</p>
-          </div>-->
         </div>
       </div>
     </div>
-    <center class="home-hr" ng-show="campaign_data.user.profile.instagram">
+
+    <div class="row hidden-sm hidden-md hidden-lg" style="background-color:#f3f3f3;">
+      <div class="container lil-pad-bottom">
+        <div class="col-xs-12 lil-pad-bottom">
+            <h2 style="color:#444;text-align:left;font-family:'Dosis', sans-serif;font-size:22px;">AMOUNT PER SERVING</h2>
+        </div>
+    <div class="col-xs-12">
+  <center>
+      <img class="nutrition-facts" ng-src="{{add_nutrition_path(campaign_data.formula)}}" class="img-responsive" alt="Genesus Nutrition Facts">
+  </center>
+</div>
+      <div class="col-xs-12 col-sm-10 col-sm-offset-2 shipping-info">
+        <div class="col-xs-12">
+        <small style="font-size:10px;color:#444;"><em><strong>† Disclaimer:</strong> This statement has not been evaluated by the FDA.<br>This product is not intended to diagnose, treat, cure, or prevent any disease.</em></small>
+      </div>
+        <!--<div class="col-xs-12 col-sm-10 col-sm-offset-1 text-left">
+            <h5>Shipping Info</h5>
+            <p>Orders are packaged and shipped when the time expires. You can expect your package to arrive around 4-7 business days after the campaign finishes.</p>
+        </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-left">
+            <p>Shipping is completely free if an order is placed before the campaign ends.</p>
+        </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-left">
+            <h5>Return Policy</h5>
+            <p>If you're not 100% satisfied, let us know and we'll make it right.</p>
+        </div>-->
+      </div>
+    </div>
+  </div>
+    <center class="hidden-xs home-hr">
       <hr>
     </center>
 

@@ -7,28 +7,49 @@
             <form ng-submit="set_payment_step('2')">
               <div class="col-xs-12">
                 <label>Contact</label>
-                <div class="col-xs-12 pad-right-0">
+                <div class="hidden-xs col-sm-12 pad-right-0">
+                  <input type="email" placeholder="Email Address" required="required" ng-model="__payment.email" style="display:block;width:100%;margin-bottom:5px;">
+                </div>
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
                   <input type="email" placeholder="Email Address" required="required" ng-model="__payment.email" style="display:block;width:100%;margin-bottom:5px;">
                 </div>
               </div>
               <div class="col-xs-12">
                 <label>Shipping</label>
-                <div class="col-xs-12 col-sm-4 pad-right-0">
+                <div class="hidden-xs col-sm-4 pad-right-0">
                   <input class="shipping-info" type="text" placeholder="Full Name" required="required" ng-model="__payment.full_name">
                 </div>
-                <div class="col-xs-12 col-sm-4 pad-right-0 pad-left-5">
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                  <input class="shipping-info" type="text" placeholder="Full Name" required="required" ng-model="__payment.full_name">
+                </div>
+                <div class="hidden-xs col-sm-4 pad-right-0 pad-left-5">
                 <input class="shipping-info" type="text" placeholder="Street Address" required="required" ng-model="__payment.street_address">
                 </div>
-                <div class="col-xs-12 col-sm-4 pad-right-0 pad-left-5">
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                <input class="shipping-info" type="text" placeholder="Street Address" required="required" ng-model="__payment.street_address">
+                </div>
+                <div class="hidden-xs col-sm-4 pad-right-0 pad-left-5">
                 <input class="shipping-info" type="text" placeholder="City"required="required" ng-model="__payment.street_address2">
               </div>
-              <div class="col-xs-12 col-sm-4 pad-right-0">
+              <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+              <input class="shipping-info" type="text" placeholder="City"required="required" ng-model="__payment.street_address2">
+            </div>
+              <div class="hidden-xs col-sm-4 pad-right-0">
                 <input class="shipping-info" type="text" placeholder="State"required="required" ng-model="__payment.state">
               </div>
-              <div class="col-xs-12 col-sm-4 pad-right-0 pad-left-5">
+              <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                <input class="shipping-info" type="text" placeholder="State"required="required" ng-model="__payment.state">
+              </div>
+              <div class="hidden-xs col-sm-4 pad-right-0 pad-left-5">
                 <input class="shipping-info" type="text" placeholder="Country"required="required" ng-model="__payment.country">
               </div>
-              <div class="col-xs-12 col-sm-4 pad-right-0 pad-left-5">
+              <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                <input class="shipping-info" type="text" placeholder="Country"required="required" ng-model="__payment.country">
+              </div>
+              <div class="hidden-xs col-sm-4 pad-right-0 pad-left-5">
+                <input class="shipping-info" type="text" placeholder="Zip"required="required" ng-model="__payment.zipcode">
+              </div>
+              <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
                 <input class="shipping-info" type="text" placeholder="Zip"required="required" ng-model="__payment.zipcode">
               </div>
               </div>
