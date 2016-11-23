@@ -112,13 +112,12 @@ strong {
 .hero-bg {
   /**background:#222;**/
   /**height:100%;**/
-  height:600px;
-  max-height:600px;
+  max-height:700px;
   width:100%;
   clear:both;
-  margin-bottom:50px;
+  margin-top: 20px;
   background-color:#fff;
-  background:url(https://s3-us-west-2.amazonaws.com/tappyn/genesus_banner.jpg) no-repeat center center;
+  background:url(https://s3-us-west-2.amazonaws.com/tappyn/beach_banner.jpg) no-repeat center center;
   background-size:cover;
 }
 
@@ -132,14 +131,16 @@ strong {
   background-size:cover;
 }
 
-/**@media (max-width:586px) {
+@media (max-width:586px) {
   .hero-bg {
-  background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbannermobile.jpg) no-repeat center center;
+  background:url(https://s3-us-west-2.amazonaws.com/tappyn/beach_banner_small.jpg) no-repeat center center;
   background-size:cover;
+  margin-top: 0px;
+  height: 500px;
     }
 }
 
-  @media (min-width:587px) and (max-width:882px) {
+  /**@media (min-width:587px) and (max-width:882px) {
     .hero-bg {
     background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbanner-sm.jpg) no-repeat center center;
     background-size:cover;
@@ -457,6 +458,14 @@ position: relative;
   font-family: 'Dosis', sans-serif;
 }
 
+.btn-bl-sm {
+  color: #fff;
+  background: #3AC395;
+  border: 1px solid #3AC395;
+  font-size: 22px;
+  font-family: 'Dosis', sans-serif;
+}
+
 .btn-bl:hover {
     background: #fff;
     color: #3AC395;
@@ -468,6 +477,13 @@ position: relative;
     font-family: 'Dosis', sans-serif;
 }
 
+.btn-bl-sm:hover {
+    background: #fff;
+    color: #3AC395;
+    border: 1px solid #3AC395;
+    font-family: 'Dosis', sans-serif;
+}
+
 .btn-bl:focus {
     color: #3AC395;
     background: #fff;
@@ -476,6 +492,13 @@ position: relative;
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.btn-bl-sm:focus {
+    color: #3AC395;
+    background: #fff;
+    border: 1px solid #3AC395;
     font-family: 'Dosis', sans-serif;
 }
 
