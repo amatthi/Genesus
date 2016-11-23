@@ -2107,13 +2107,14 @@ a {
 .why_genesus {
   background: url('https://s3-us-west-2.amazonaws.com/tappyn/why_genesus.jpg');
   background-size: cover;
-  height: 500px;
+  height: 400px;
 }
 
 .our_story {
   background: url('https://s3-us-west-2.amazonaws.com/tappyn/our_story.jpg');
   background-size: cover;
-  height: 500px;
+  height: 400px;
+  opacity: 0.7;
 }
 
 .non_gmo {
