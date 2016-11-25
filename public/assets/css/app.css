@@ -129,6 +129,19 @@ strong {
   width:100%;
   clear:both;
   background-size:cover;
+  padding-bottom: 200px;
+}
+
+@media (max-width:586px) {
+  .store-bg {
+    background:#9CE2CA;
+    /**height:100%;**/
+    height:300px;
+    max-height:300px;
+    width:100%;
+    clear:both;
+    background-size:cover;
+  }
 }
 
 @media (max-width:586px) {

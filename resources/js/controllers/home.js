@@ -7,4 +7,5 @@ chisel.controller("homeController", function($scope, $rootScope, mainFactory) {
         //formula = $scope.campaign_data.formula.name;
         return '/plugin/design/images/labels/' + formula.name.replace(/ /g, '_') + '.jpg';
     }
+
 });

@@ -26,14 +26,7 @@
     </div>
   </div>
 <div class="container-fluid">
-  <!--<div class="col-xs-12 up-down-pad" style="padding-top:5px;">
-  <div class="col-xs-12 col-sm-7">
-      <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">1</span> Create</span>
-      <span class="launch-current-step" ng-class="{ 'launch-current-step' : launch_step_goal() }"><span class="step-number" ng-class="{ 'step-number' : launch_step_goal() }">2</span> Details</span>
-      <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">3</span> Checkout</span>
-  </div>
-</div>-->
-    <div class="hidden-xs row lil-pad-bottom">
+    <div class="hidden-xs row lil-pad-bottom lil-pad">
         <div class="col-xs-12 col-sm-6 text-center lil-pad no-pad-right">
           <div class="col-xs-12">
               <center>
@@ -180,11 +173,6 @@
 </div>
 <div class="row campaign-benefits hidden-sm hidden-md hidden-lg">
   <div class="container-fluid lil-pad-bottom">
-    <div class="col-xs-12">
-    <div class="col-xs-12">
-      <h2 style="color:#444;text-align:left;font-family:'Dosis', sans-serif;font-size:22px;margin-top:5px;padding-bottom:15px;">VALUES</h2>
-    </div>
-  </div>
     <div class="col-xs-12 text-center">
       <div class="col-xs-3 no-pad-left no-pad-right" ng-if="campaign_data.formula.benefit_1">
         <img class="img-responsive" ng-src="{{add_benefit1_path(benefit_1)}}" alt="Genesus product benefit 1">
@@ -202,34 +190,71 @@
 </div>
 </div>
 
-  <div class="row hidden-xs">
-    <div class="container lil-pad-bottom lil-pad">
-      <div class="col-xs-12 col-sm-12 descript lil-pad">
-        <h2 class="text-center">WHY YOU'LL LOVE IT</h2>
+<div class="row hidden-xs">
+  <div class="container lil-pad-bottom lil-pad">
+    <div class="col-xs-12 col-sm-12 descript">
+      <h2 class="text-center">WHY YOU'LL LOVE IT</h2>
+    </div>
+      <div class="col-xs-12 descript lil-pad">
+      <div class="col-xs-12 col-sm-6 descript bio-pic lil-pad">
+        <center>
+          <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus User Profile Picture">
+        </center>
+        <h3>{{campaign_data.user.profile.brand_name}} {{campaign_data.user.profile.last_name}}</h3>
+        <div class="col-xs-12 no-pad-left" ng-show="campaign_data.user.profile.brand_city || campaign_data.user.profile.brand_state">
+          <h4 class="state">{{campaign_data.user.profile.brand_city}}, {{campaign_data.user.profile.brand_state}}</h4>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center" ng-show="campaign_data.user.profile.career">
+          <h5 style="font-size:22px;font-weight:400;color:#444;margin-top:0px;">{{campaign_data.user.profile.career}}</h5>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center brand-social">
+          <a ng-show="campaign_data.profile.facebook" href="{{campaign_data.user.profile.facebook}}" target="_blank"><img src="/img/fb-seller.png"></a>
+          <a ng-show="campaign_data.profile.twitter" href="{{campaign_data.user.profile.twitter}}" target="_blank"><img src="/img/twitter-seller.png"></a>
+          <a ng-show="campaign_data.profile.website" href="{{campaign_data.user.profile.website}}" target="_blank"><img src="/img/website-seller.png"></a>
+        </div>
       </div>
-          <div class="col-xs-12">
-            <div class="col-xs-12 descript-blurb">
-              <h4>{{campaign_data.formula.pitch}}</h4>
-            </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12 descript-blurb">
+            <h4>"{{campaign_data.blurb}}"</h4>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row hidden-sm hidden-md hidden-lg">
-    <div class="container lil-pad-bottom">
-      <div class="col-xs-12">
-        <h2 style="color:#444;text-align:left;font-family:'Dosis', sans-serif;font-size:22px;">WHY YOU'LL LOVE IT</h2>
+</div>
+<div class="row hidden-sm hidden-md hidden-lg">
+  <div class="container lil-pad-bottom lil-pad">
+    <div class="col-xs-12 col-sm-12 descript">
+      <h2 style="color:#444;text-align:left;font-family:'Dosis', sans-serif;font-size:22px;">WHY YOU'LL LOVE IT</h2>
+    </div>
+      <div class="col-xs-12 descript lil-pad">
+      <div class="col-xs-12 col-sm-6">
+        <center>
+          <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus User Profile Picture" style="max-width:150px;border-radius:4px;">
+        </center>
+        <h3>{{campaign_data.user.profile.brand_name}} {{campaign_data.user.profile.last_name}}</h3>
+        <div class="col-xs-12 no-pad-left" ng-show="campaign_data.user.profile.brand_city || campaign_data.user.profile.brand_state">
+          <h4 class="state">{{campaign_data.user.profile.brand_city}}, {{campaign_data.user.profile.brand_state}}</h4>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center" ng-show="campaign_data.user.profile.career">
+          <h5 style="font-size:22px;font-weight:400;color:#444;margin-top:0px;">{{campaign_data.user.profile.career}}</h5>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center brand-social">
+          <a ng-show="campaign_data.profile.facebook" href="{{campaign_data.user.profile.facebook}}" target="_blank"><img src="/img/fb-seller.png"></a>
+          <a ng-show="campaign_data.profile.twitter" href="{{campaign_data.user.profile.twitter}}" target="_blank"><img src="/img/twitter-seller.png"></a>
+          <a ng-show="campaign_data.profile.website" href="{{campaign_data.user.profile.website}}" target="_blank"><img src="/img/website-seller.png"></a>
+        </div>
       </div>
-          <div class="col-xs-12">
-            <div class="col-xs-12 no-pad-left no-pad-right">
-              <h4 style="color:#777;font-size:18px;font-weight:400;margin-top:0px;">{{campaign_data.formula.pitch}}</h4>
-            </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12 descript-blurb">
+            <h4 style="color:#777;font-size:18px;font-weight:400;margin-top:0px;">{{campaign_data.formula.pitch}}</h4>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
   <center class="hidden-xs home-hr">
     <hr>
   </center>
@@ -361,11 +386,11 @@
       </div>
     </div>
   </div>
-    <center class="hidden-xs home-hr">
+    <center class="hidden-xs home-hr" ng-show="campaign_data.user.profile.instagram">
       <hr>
     </center>
 
-      <!--<div class="row" ng-show="campaign_data.user.profile.instagram">
+      <div class="row" ng-show="campaign_data.user.profile.instagram">
         <div class="container lil-pad-bottom">
           <div class="col-xs-12 owner-insta">
             <h3>Meet The Owner</h3>
@@ -379,7 +404,7 @@
 
       <center class="home-hr">
         <hr>
-      </center>-->
+      </center>
     <div class="row newsletter">
         <div class="col-xs-12 text-center">
             <h3 style="font-weight:400;font-family:'Dosis', sans-serif;font-size:28px;">Get new products delivered to your inbox.</h3>
