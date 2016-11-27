@@ -2146,6 +2146,39 @@ a {
   height: 400px;
 }
 
+@media (max-width:415px) {
+  .why_genesus {
+    background: url('https://s3-us-west-2.amazonaws.com/tappyn/why_genesus.jpg');
+    background-size: cover;
+    height: 250px;
+  }
+  .our_story {
+    background: url('https://s3-us-west-2.amazonaws.com/tappyn/our_story.jpg');
+    background-size: cover;
+    height: 300px !important;
+    opacity: 0.7;
+  }
+  .non_gmo {
+    background: url('https://s3-us-west-2.amazonaws.com/tappyn/Non_GMO.jpg');
+    background-size: cover;
+    height: 250px !important;
+    max-height: 400px;
+  }
+  .non_gmo_mid {
+    background: url('https://s3-us-west-2.amazonaws.com/tappyn/mid_slider.jpg');
+    background-size: cover;
+    height: 350px !important;
+    max-height: 400px;
+  }
+
+  .non_gmo_last {
+    background: url('https://s3-us-west-2.amazonaws.com/tappyn/non_gmo_last.jpg');
+    background-size: cover;
+    height: 250px !important;
+    max-height: 400px;
+  }
+}
+
 .our_story {
   background: url('https://s3-us-west-2.amazonaws.com/tappyn/our_story.jpg');
   background-size: cover;

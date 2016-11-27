@@ -217,7 +217,7 @@ chisel_launch.controller('CustomCtrl', [
             if (goal < 20) {
                 bottle = Number($scope.campaign_data.formula.cost1);
             } else if (goal >= 20 && goal < 100) {
-                bottle = Number($scope.campaign_data.formula.recommended_price);
+                bottle = Number($scope.campaign_data.formula.cost30);
             } else if (goal >= 100 && goal < 200) {
                 bottle = Number($scope.campaign_data.formula.cost100);
             } else if (goal == 200) {
@@ -238,7 +238,7 @@ chisel_launch.controller('CustomCtrl', [
 
         $scope.formula_change = function(formula) {
             $scope.campaign_data.formula = formula;
-            $scope.campaign_data.sale_price = formula.cost30;
+            $scope.campaign_data.sale_price = formula.recommended_price;
             if ($scope.campaign_data.formula.back_image && $scope.activeDesignObject == 1) {
                 setTimeout(function() {
                     $('#bottle-back-a').trigger('click');
