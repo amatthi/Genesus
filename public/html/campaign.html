@@ -197,7 +197,7 @@
     </div>
       <div class="col-xs-12 descript lil-pad">
       <div class="col-xs-12 col-sm-6 descript bio-pic lil-pad">
-        <center>
+        <center ng-if="campaign_data.user.profile.photo">
           <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus User Profile Picture">
         </center>
         <h3>{{campaign_data.user.profile.brand_name}} {{campaign_data.user.profile.last_name}}</h3>
