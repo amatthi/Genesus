@@ -29,7 +29,7 @@ trait CampaignTrait
         unset($array[0]);
         //dd($array);
         foreach ($array as $index => $row) {
-            if (count($row) <= 25) {
+            if (count($row) <= 10) {
                 continue;
             }
             $purpose           = $row[0];
@@ -42,6 +42,7 @@ trait CampaignTrait
             $back_image        = str_replace('%', '', $row[7]);
             $back_image        = strpos($back_image, '.') === false ? '' : $back_image;
             $cost30            = (float) str_replace('$', '', $row[8]);
+            $retail            = (float) str_replace('$', '', $row[9]);
             $ingredients       = $row[11];
             $recommended_price = (float) str_replace('$', '', $row[12]);
             $servings          = $row[13];
@@ -56,7 +57,6 @@ trait CampaignTrait
             $instructions      = $row[22];
             $margin            = $row[23];
             $pitch             = $row[24];
-            $retail            = (float) str_replace('$', '', $row[25]);
             if ($formula) {
                 $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'instructions' => $instructions, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'capsules' => $capsules, 'recommended_price' => $recommended_price, 'retail' => $retail, 'owner' => $owner, 'sku' => $sku, 'back_image' => $back_image, 'formula_desc' => $formula_desc, 'benefit_1' => $benefit_1, 'benefit_2' => $benefit_2, 'benefit_3' => $benefit_3, 'benefit_4' => $benefit_4, 'benefit_5' => $benefit_5, 'benefit_6' => $benefit_6, 'description' => [$description], 'study_name' => [$study_name], 'study_url' => [$study_url], 'margin' => $margin, 'pitch' => $pitch];
             } else if ($ingredients) {
