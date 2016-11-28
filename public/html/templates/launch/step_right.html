@@ -33,12 +33,23 @@
                     </div>
                     <div style="display:table-cell;position:relative;top:-10px;">
                       <h4 style="font-weight:600;">{{formula.name}}</h4>
-                      <img src="/img/stars.jpg" class="img-responsive" style="max-height:20px;position:relative;left:-3px;margin-top:0px;">
+                      <img ng-src="/plugin/design/images/ratings/{{formula.name}}.jpg" class="img-responsive" style="max-height:20px;position:relative;left:-3px;margin-top:0px;">
                       <h5 style="margin-top:0px;font-size:12px;margin-bottom:0px;">{{campaign_data.formula.servings}} Servings</h5>
-                      <div class="text-center" style="position: relative;left: -80px;margin-right: -85px;margin-bottom:-10px;">
-                      <span ng-show="formula.benefit_1" style="display:inline;font-size:12px;">{{formula.benefit_1}}</span>
-                      <span ng-show="formula.benefit_2" style="display:inline;font-size:12px;">&#8226 {{formula.benefit_2}}</span>
-                      <span ng-show="formula.benefit_3" style="display:inline;font-size:12px;">&#8226 {{formula.benefit_3}}</span>
+                      <div style="margin-top:0px;font-size:12px;margin-bottom:0px;">
+                        <h5><a ng-if="formula.name == 'Green Tea'" href="http://genesus.co/campaign/green-tea" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'Raspberry Ketones'" href="http://genesus.co/campaign/raspberry-ketones" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'Toner Complex'" href="http://genesus.co/campaign/toner-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'Burner Complex'" href="http://genesus.co/campaign/burner-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'Turmeric Complex'" href="http://genesus.co/campaign/turmeric-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'Nootropic Complex'" href="http://genesus.co/campaign/nootropic" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'Fiber Complex'" href="http://genesus.co/campaign/fiber-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'Supergreens Complex'" href="http://genesus.co/campaign/supergreens-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'Probiotic Complex'" href="http://genesus.co/campaign/probiotic-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'Cranberry'" href="http://genesus.co/campaign/cranberry" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'GABA Complex'" href="http://genesus.co/campaign/sleep-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'Mushroom Complex'" href="http://genesus.co/campaign/mushroom-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'Primal Whey'" href="http://genesus.co/campaign/primal-whey" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+        								<h5><a ng-if="formula.name == 'CLA'" href="http://genesus.co/campaign/cla" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
                     </div>
                     </div>
                   </div>
