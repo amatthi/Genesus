@@ -97,7 +97,7 @@
         <div class="col-xs-12 lil-pad-bottom">
           <center>
             <h2 style="margin-bottom:0px;font-size:24px;font-weight:600;">{{campaign_data.formula.name}}</h2>
-            <img src="/img/stars.jpg" class="img-responsive" style="max-height:30px;" />
+            <img ng-src="/plugin/design/images/ratings/{{formula.name}}.jpg" class="img-responsive" style="max-height:30px;" />
           </center>
         </div>
         <div class="col-xs-12">
@@ -323,27 +323,13 @@
       <div class="row hidden-xs lil-pad">
         <div class="container-fluid lil-pad-bottom">
           <div class="col-xs-12 col-sm-12 science text-center lil-pad-bottom">
-              <h2>Origin</h2>
+              <h2>Suggested Use</h2>
           </div>
 
       <div class="col-xs-12 col-sm-4 col-sm-offset-2">
-      <div class="col-xs-12">
-        <h4 style="color: #444;font-weight: 600;font-size: 24px;">Transparent</h4>
-        <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">Hiding ingredients isn't in our playbook, so we'll make sure to articulate each and every ingredient in our products.</h5>
-        <hr>
+      <div class="col-xs-12 descript-blurb">
+        <h4 style="color:#777;font-size:18px;font-weight:400;margin-top:0px;">{{campaign_data.formula.instructions}}</h4>
       </div>
-
-      <div class="col-xs-12">
-      <h4 style="color: #444;font-weight: 600;font-size: 24px;">Optimized</h4>
-      <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">Nestled in plant-based formula's, our ingredients are carefully tailored to maximize effectiveness. This gives you all the nutrients you need - and none of the one's you don't.</h5>
-      <hr>
-    </div>
-
-    <div class="col-xs-12">
-    <h4 style="color: #444;font-weight: 600;font-size: 24px;">Committed</h4>
-    <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">FDA Registered & cGMP facilities in the United State facilities are used to create all of our products. All of our products go through double gluten free certification and many meet USDA Organic and Non GMO guidelines.</h5>
-    <hr>
-  </div>
       </div>
       <div class="col-xs-12 col-sm-6">
     <center>
