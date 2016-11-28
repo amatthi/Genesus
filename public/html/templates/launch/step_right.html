@@ -29,27 +29,27 @@
                 <div class="CLA_1" ng-class="{'formula-selected':campaign_data.formula == formula}" ng-repeat="formula in campaign_data.purpose.formulas" ng-click="formula_change(formula)">
                   <div style="display:table-row">
                     <div style="display:table-cell;position:relative;width:50px;padding:5px;padding-right:25px;left:10px;">
-                      <img src="/img/Bottle.jpg" alt="Genesus Bottle Image">
+                      <img ng-src="{{add_formula_path(formula)}}" alt="Genesus Bottle Image">
                     </div>
                     <div style="display:table-cell;position:relative;top:-10px;">
                       <h4 style="font-weight:600;">{{formula.name}}</h4>
                       <img ng-src="/plugin/design/images/ratings/{{formula.name}}.jpg" class="img-responsive" style="max-height:20px;position:relative;left:-3px;margin-top:0px;">
                       <h5 style="margin-top:0px;font-size:12px;margin-bottom:0px;">{{campaign_data.formula.servings}} Servings</h5>
                       <div style="margin-top:0px;font-size:12px;margin-bottom:0px;">
-                        <h5><a ng-if="formula.name == 'Green Tea'" href="http://genesus.co/campaign/green-tea" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'Raspberry Ketones'" href="http://genesus.co/campaign/raspberry-ketones" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'Toner Complex'" href="http://genesus.co/campaign/toner-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'Burner Complex'" href="http://genesus.co/campaign/burner-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'Turmeric Complex'" href="http://genesus.co/campaign/turmeric-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'Nootropic Complex'" href="http://genesus.co/campaign/nootropic" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'Fiber Complex'" href="http://genesus.co/campaign/fiber-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'Supergreens Complex'" href="http://genesus.co/campaign/supergreens-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'Probiotic Complex'" href="http://genesus.co/campaign/probiotic-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'Cranberry'" href="http://genesus.co/campaign/cranberry" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'GABA Complex'" href="http://genesus.co/campaign/sleep-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'Mushroom Complex'" href="http://genesus.co/campaign/mushroom-complex" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'Primal Whey'" href="http://genesus.co/campaign/primal-whey" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
-        								<h5><a ng-if="formula.name == 'CLA'" href="http://genesus.co/campaign/cla" target="_blank">SEE SALES PAGE <span class="glyphicon glyphicon-arrow-right"></span></a></h5>
+                        <h5><a ng-if="formula.name == 'Green Tea'" href="http://genesus.co/campaign/green-tea" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'Raspberry Ketones'" href="http://genesus.co/campaign/raspberry-ketones" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'Toner Complex'" href="http://genesus.co/campaign/toner-complex" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'Burner Complex'" href="http://genesus.co/campaign/burner-complex" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'Turmeric Complex'" href="http://genesus.co/campaign/turmeric-complex" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'Nootropic Complex'" href="http://genesus.co/campaign/nootropic" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'Fiber Complex'" href="http://genesus.co/campaign/fiber-complex" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'Supergreens Complex'" href="http://genesus.co/campaign/supergreens-complex" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'Probiotic Complex'" href="http://genesus.co/campaign/probiotic-complex" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'Cranberry'" href="http://genesus.co/campaign/cranberry" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'GABA Complex'" href="http://genesus.co/campaign/sleep-complex" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'Mushroom Complex'" href="http://genesus.co/campaign/mushroom-complex" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'Primal Whey'" href="http://genesus.co/campaign/primal-whey" target="_blank" style="color:#3AC395;">Learn More</a></h5>
+        								<h5><a ng-if="formula.name == 'CLA'" href="http://genesus.co/campaign/cla" target="_blank" style="color:#3AC395;">Learn More</a></h5>
                     </div>
                     </div>
                   </div>
@@ -58,12 +58,12 @@
         </div>
         <div class="launch-options">
             <div class="ing-ex" ng-show="campaign_data.formula">
-                <!--<h3>Cost Per Bottle:</h3>-->
-                <h2>{{campaign_data.formula.cost30 | currency}} <span style="font-size:14px;color:#777;">per bottle</span></h2>
+                <h3>Cost Per Bottle:</h3>
+                <h2>{{campaign_data.formula.cost30 | currency}}</h2>
             </div>
             <div class="ing-ex" ng-show="!campaign_data.formula">
-                <!--<h3>Cost Per Bottle:</h3>-->
-                <h2>$TBD <span style="font-size:14px;color:#777;">per bottle</span></h2>
+                <h3>Cost Per Bottle:</h3>
+                <h2>$TBD</h2>
             </div>
         </div>
     </div>
