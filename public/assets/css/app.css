@@ -121,6 +121,17 @@ strong {
   background-size:cover;
 }
 
+.sell-bg {
+  /**background:#222;**/
+  /**height:100%;**/
+  max-height:500px;
+  width:100%;
+  clear:both;
+  background-color:#fff;
+  background:url(https://s3-us-west-2.amazonaws.com/tappyn/seller_banner.jpg) no-repeat center center;
+  background-size:cover;
+}
+
 .store-bg {
   background:#9CE2CA;
   /**height:100%;**/
