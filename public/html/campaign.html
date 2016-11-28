@@ -290,12 +290,9 @@
                     </h5>
                     <hr>
               </div>
-
               </div>
-
               </div>
             </div>
-
           </div>
         </div>
         <div class="row hidden-sm hidden-md hidden-lg">
@@ -322,27 +319,31 @@
             </center>
       <div class="row lil-pad">
         <div class="container-fluid lil-pad-bottom">
-          <div class="col-xs-12 col-sm-12 science text-center lil-pad-bottom">
+          <div class="col-xs-12 science text-center lil-pad-bottom">
               <h2>USE</h2>
           </div>
-
-      <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-2">
       <div class="col-xs-12">
         <h4 style="color: #444;font-weight: 600;font-size: 24px;">Suggested Use</h4>
         <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">{{campaign_data.formula.instructions}}</h5>
       </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <object data="/plugin/design/images/NF/Burner_Complex.pdf" type="application/pdf" style="width:100%;height:500px;"></object>
-      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <center>
+        <img class="nutrition-facts img-responsive" ng-src="{{add_nutrition_path(campaign_data.formula)}}" alt="Genesus Nutrition Facts" style="max-width:350px;">
+      </center>
+    </div>
         <div class="col-xs-12 col-sm-6 col-sm-offset-6 shipping-info">
           <div class="col-xs-12">
-          <small style="font-size:10px;color:#444;"><em><strong>† Disclaimer:</strong> This statement has not been evaluated by the FDA.<br>This product is not intended to diagnose, treat, cure, or prevent any disease.</em></small>
+            <center>
+          <small style="font-size:10px;color:#444;"><br><em><strong>† Disclaimer:</strong> This statement has not been evaluated by the FDA.<br>This product is not intended to diagnose, treat, cure, or prevent any disease.</em></small>
+        </center>
         </div>
         </div>
       </div>
+      </div>
     </div>
-
     <!--<div class="row hidden-sm hidden-md hidden-lg" style="background-color:#f3f3f3;">
       <div class="container lil-pad-bottom">
         <div class="col-xs-12 lil-pad-bottom">
@@ -374,7 +375,6 @@
     <center class="hidden-xs home-hr" ng-show="campaign_data.user.profile.instagram">
       <hr>
     </center>
-
       <div class="row" ng-show="campaign_data.user.profile.instagram">
         <div class="container lil-pad-bottom">
           <div class="col-xs-12 owner-insta">
