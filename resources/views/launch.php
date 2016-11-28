@@ -35,7 +35,7 @@
                     <div class="col-xs-12 col-sm-7">
                         <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }" ng-click="set_step('create',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">1</span> Create</span>
                         <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_goal() }" ng-click="set_step('goal',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_goal() }">2</span> Details</span>
-                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }" ng-click="set_step('desc',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">3</span> Checkout</span>
+                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }" ng-click="set_step('desc',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">3</span> Launch</span>
                     </div>
                     <div class="col-xs-12 col-sm-3">
                         <span class="step-default">
