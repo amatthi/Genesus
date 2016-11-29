@@ -39,14 +39,14 @@ trait CampaignTrait
             $benefit_1         = $row[4];
             $benefit_2         = $row[5];
             $benefit_3         = $row[6];
-            $back_image        = str_replace('%', '', $row[7]);
-            $back_image        = strpos($back_image, '.') === false ? '' : $back_image;
+            $review_name       = $row[7];
             $cost30            = (float) str_replace('$', '', $row[8]);
             $retail            = (float) str_replace('$', '', $row[9]);
+            $review_body       = $row[10];
             $ingredients       = $row[11];
             $recommended_price = (float) str_replace('$', '', $row[12]);
             $servings          = $row[13];
-            $capsules          = $row[14];
+            $review_title      = $row[14];
             $owner             = $row[15];
             $description       = utf8_encode($row[16]);
             $study_name        = $row[17];
@@ -58,7 +58,7 @@ trait CampaignTrait
             $margin            = $row[23];
             $pitch             = $row[24];
             if ($formula) {
-                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'instructions' => $instructions, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'capsules' => $capsules, 'recommended_price' => $recommended_price, 'retail' => $retail, 'owner' => $owner, 'sku' => $sku, 'back_image' => $back_image, 'formula_desc' => $formula_desc, 'benefit_1' => $benefit_1, 'benefit_2' => $benefit_2, 'benefit_3' => $benefit_3, 'benefit_4' => $benefit_4, 'benefit_5' => $benefit_5, 'benefit_6' => $benefit_6, 'description' => [$description], 'study_name' => [$study_name], 'study_url' => [$study_url], 'margin' => $margin, 'pitch' => $pitch];
+                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'instructions' => $instructions, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'review_title' => $review_title, 'recommended_price' => $recommended_price, 'retail' => $retail, 'review_body' => $review_body, 'owner' => $owner, 'sku' => $sku, 'review_name' => $review_name, 'formula_desc' => $formula_desc, 'benefit_1' => $benefit_1, 'benefit_2' => $benefit_2, 'benefit_3' => $benefit_3, 'benefit_4' => $benefit_4, 'benefit_5' => $benefit_5, 'benefit_6' => $benefit_6, 'description' => [$description], 'study_name' => [$study_name], 'study_url' => [$study_url], 'margin' => $margin, 'pitch' => $pitch];
             } else if ($ingredients) {
                 $ingredients_i++;
                 $result[$purpose_i]['formulas'][$formula_i]['ingredients'][$ingredients_i] = $ingredients;
