@@ -124,7 +124,7 @@ strong {
   max-height:700px;
   width:100%;
   clear:both;
-  margin-top: 10px;
+  padding-top: 50px;
   background-color:#fff;
   background:url(https://s3-us-west-2.amazonaws.com/tappyn/beach_banner.jpg) no-repeat center center;
   background-size:cover;
@@ -163,10 +163,10 @@ strong {
 
 @media (max-width:586px) {
   .hero-bg {
-  background:url(https://s3-us-west-2.amazonaws.com/tappyn/beach_banner_small.jpg) no-repeat center center;
+  background: #fff;
   background-size:cover;
-  margin-top: 0px;
-  height: 500px;
+  height: 300px;
+  padding-top: 0px;
     }
   .sell-bg {
   background:url(https://s3-us-west-2.amazonaws.com/tappyn/seller_banner_small.jpg) no-repeat center center;
@@ -227,19 +227,6 @@ strong {
 }
 
 .hero-content {
-position: relative;
- display: -webkit-box;
- display: -moz-box;
- display: -ms-box;
- display: box;
- -webkit-box-orient: vertical;
- -moz-box-orient: vertical;
- -ms-box-orient: vertical;
- box-orient: vertical;
- -webkit-box-pack: center;
- -moz-box-pack: center;
- -ms-box-pack: center;
- box-pack: center;
  height: 100%;
 }
 
@@ -302,15 +289,15 @@ position: relative;
 .hero-content h1 {
     font-family: 'Dosis', sans-serif;
     font-weight: 500;
-    font-size: 62px;
-    color:#fff;
+    font-size: 42px;
+    color:#444;
     cursor: default;
     line-height: 1.3;
     margin-top: 0px;
     text-transform: uppercase;
 }
 
-@media (min-width:641px) {
+@media (min-width:587px) {
 .hero-content h1 {
     font-family: 'Dosis', sans-serif;
     font-weight: 500;
@@ -757,12 +744,12 @@ footer {
 .footer-nav li a {
     text-decoration: none;
     font-size: 18px;
-    color: #fff;
+    color: #ccc;
     font-weight: 400;
 }
 
 .footer-nav li a:hover {
-  color: #ccc;
+  color: #777;
 }
 
 .footer-nav h3 {
