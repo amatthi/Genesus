@@ -172,7 +172,7 @@ strong {
   background:url(https://s3-us-west-2.amazonaws.com/tappyn/seller_banner_small.jpg) no-repeat center center;
   background-size:cover;
   margin-top: 0px;
-  height: 500px;
+  height: 200px;
     }
 }
 
@@ -297,6 +297,18 @@ strong {
     text-transform: uppercase;
 }
 
+.hero-content-sell h1 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color:#444;
+    cursor: default;
+    line-height: 1.3;
+    margin-top: 0px;
+    text-transform: uppercase;
+    padding-top: 15px;
+}
+
 @media (min-width:587px) {
 .hero-content h1 {
     font-family: 'Dosis', sans-serif;
@@ -309,6 +321,17 @@ strong {
     line-height: 1.3;
     text-transform: uppercase;
     }
+    .hero-content-sell h1 {
+        font-family: 'Dosis', sans-serif;
+        font-weight: 500;
+        font-size: 72px;
+        padding-top: 25px;
+        padding-bottom: 35px;
+        color:#444;
+        cursor: default;
+        line-height: 1.3;
+        text-transform: uppercase;
+        }
 }
 
 /**@media (min-width:600px) and (max-width:882px) {
