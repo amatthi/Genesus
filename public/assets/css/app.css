@@ -824,6 +824,13 @@ footer {
 
 .modal_actions-payment {
     z-index: 100000000 !important;
+    position: fixed !important;
+    opacity: 1;
+    transform-style: preserve-3d;
+}
+
+.modal_actions-payment-small {
+    z-index: 100000000 !important;
     opacity: 1;
     transform-style: preserve-3d;
 }
@@ -2360,6 +2367,12 @@ a {
     font-size: 16px;
     margin-top: 10px;
     font-weight:600;
+}
+
+.payment-container-small {
+    padding-left: 0px;
+    padding-right: 0px;
+    position: absolute !important;
 }
 
 .payment-container {
