@@ -34,9 +34,9 @@ class OrderController extends Controller
         switch ($post['type']) {
             case 'buy_campaign':
                 $this->validate($request, [
-                    'full_name'           => 'required|email|max:255',
+                    'full_name'       => 'required|max:255',
                     'street_address'  => 'required|max:255',
-                    'city'           => 'required|max:255',
+                    'city'            => 'required|max:255',
                     'state'           => 'required|max:255',
                     'country'         => 'required|max:255',
                     'street_address2' => 'required|max:255',
