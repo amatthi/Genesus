@@ -824,7 +824,6 @@ footer {
 
 .modal_actions-payment {
     z-index: 100000000 !important;
-    position: fixed !important;
     opacity: 1;
     transform-style: preserve-3d;
 }
@@ -2366,6 +2365,7 @@ a {
 .payment-container {
     padding-left: 0px;
     padding-right: 0px;
+    position: absolute !important;
 }
 
 .payment-2 h3 {
@@ -2413,7 +2413,6 @@ a {
   font-size: 13px;
   color: #777;
   font-weight: 400;
-  padding-top:15px;
   padding-left:15px;
 }
 
