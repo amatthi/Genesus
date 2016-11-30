@@ -762,11 +762,12 @@ footer {
 }
 
 .footer-nav li a:hover {
-  color: #777;
+  color: #ccc;
 }
 
 .footer-nav h3 {
   color: #fff;
+  cursor: default;
 }
 
 .footer-banner {
@@ -2575,6 +2576,11 @@ a {
 }
 
 .campaign-button button:hover {
+  padding-top:15px;
+  padding-bottom:15px;
+}
+
+.campaign-button button:focus {
   padding-top:15px;
   padding-bottom:15px;
 }
