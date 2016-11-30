@@ -2285,11 +2285,13 @@ a {
 }
 
 .d-key a {
-  color: #F0E9E9;
+  color: #777;
+  text-decoration: underline;
 }
 
 .d-key a:hover {
-  color: #fff;
+  color: #777;
+  text-decoration: underline;
 }
 
 .launch-nutri-img {
