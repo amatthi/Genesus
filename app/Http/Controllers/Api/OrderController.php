@@ -36,10 +36,9 @@ class OrderController extends Controller
                 $this->validate($request, [
                     'full_name'       => 'required|max:255',
                     'street_address'  => 'required|max:255',
-                    'city'            => 'required|max:255',
                     'state'           => 'required|max:255',
                     'country'         => 'required|max:255',
-                    'street_address2' => 'required|max:255',
+                    'city'            => 'required|max:255',
                     'zipcode'         => 'required|max:255',
                 ]);
                 $campaign = Campaign::where('id', $post['data']['id'])->firstOrFail();
@@ -61,7 +60,7 @@ class OrderController extends Controller
         $order->campaign_id = $campaign->id;
         $order->user_id     = ($this->user->id) ? $this->user->id : 0;
         $order->status      = 'paid';
-        $order->others      = $request->only(['email', 'street_address', 'state', 'country', 'street_address2', 'zipcode']);
+        $order->others      = $request->only(['email', 'city', 'street_address', 'state', 'country', 'street_address2', 'zipcode']);
         $order->save();
         return $order;
     }
