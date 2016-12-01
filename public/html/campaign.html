@@ -111,6 +111,9 @@
                 <img class="img-responsive" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement" style="max-height:250px;">
               </center>
             </div>
+            <div class="col-xs-12">
+                <h4 style="color:#444;font-weight:400;font-size:18px;line-height:1.3;">{{campaign_data.formula.formula_desc}}</h4>
+            </div>
             <div class="col-xs-6 lil-pad">
               <h3 style="color:#444;font-size:28px;display:inline;"><span>{{campaign_data.formula.cost30 | currency}}</span></h3>
               <h5 style="font-weight:400;color:#777;">{{campaign_data.formula.servings}} Servings</h5>
@@ -362,7 +365,7 @@
       </div>
     </div>
   </div>
-  <div class="row col-xs-12 hidden-sm hidden-md hidden-lg" ng-show="campaign_data.user.profile.instagram">
+  <div class="row col-xs-12" ng-show="campaign_data.user.profile.instagram">
     <div class="container-fluid lil-pad-bottom">
       <div class="col-xs-12">
         <h5><a href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank" style="color:#3AC395;">@<span style="color:#3AC395;">{{campaign_data.user.profile.instagram}}</span></a></h5>
@@ -373,15 +376,6 @@
   <center class="home-hr" ng-show="campaign_data.user.profile.instagram">
     <hr style="margin-top:0px !important;margin-bottom:0px !important;">
   </center>
-<div class="row hidden-xs col-sm-12" ng-show="campaign_data.user.profile.instagram">
-  <div class="container lil-pad-bottom">
-    <div class="col-xs-12 science owner-insta">
-      <h2>Meet The Owner</h2>
-      <h5><a href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank" style="color:#3AC395;">@<span style="color:#3AC395;">{{campaign_data.user.profile.instagram}}</span></a></h5>
-      <div id="my-instashow"></div>
-    </div>
-  </div>
-</div>
 <center class="home-hr hidden-xs" ng-show="campaign_data.user.profile.instagram">
   <hr style="margin-top:0px !important;margin-bottom:0px !important;">
 </center>
