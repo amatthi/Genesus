@@ -502,7 +502,25 @@ strong {
   color: #fff;
   background: #3AC395;
   border: 1px solid #3AC395;
-  font-size: 22px;
+  font-size: 16px;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+  
+}
+
+.btn-bl-sm:hover {
+  color: #3AC395;
+  background: #fff;
+  border: 1px solid #3AC395;
+  font-size: 16px;
+  font-family: 'Dosis', sans-serif;
+}
+
+.btn-bl-sm:focus {
+  color: #3AC395;
+  background: #fff;
+  border: 1px solid #3AC395;
+  font-size: 16px;
   font-family: 'Dosis', sans-serif;
 }
 
