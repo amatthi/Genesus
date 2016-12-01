@@ -8,15 +8,15 @@
         <div class="col-xs-8 col-xs-offset-1">
             <nav class='hidden-xs'>
                 <ul class="pull-right">
-                    <!--<li class="outline" style='cursor:pointer' ng-show="location != '/launch'">
-                        <a class="new-campaign btn btn-bl" href="/launch" target="_self">Make a Product</a>
-                    </li>-->
+                    <li class="outline" style='cursor:pointer' ng-show="__user.email">
+                        <a class="new-campaign btn btn-bl" href="/launch" target="_self">MAKE A PRODUCT</a>
+                    </li>
                     <li ng-show="!__user.email">
                         <a class="new-campaign" href="javascript:void(0)" ng-click="set_module('login')">Login</a>
                     </li>
-                    <li ng-show="!__user.email">
+                    <!--<li ng-show="!__user.email">
                         <a class="new-campaign" href="javascript:void(0)" ng-click="set_module('register')">Register</a>
-                    </li>
+                    </li>-->
                     <li ng-show="__user.email">
                         <a class="new-campaign" href="/dashboard">{{__user.email}}</a>
                     </li>
@@ -30,9 +30,9 @@
                     <li class="pull-right" uib-dropdown style="padding-top:0px;">
                         <a href uib-dropdown-toggle> Menu <span class="caret"></span></a>
                           <ul uib-dropdown-menu role='menu'>
-                            <li>
+                            <!--<li>
                               <a style="color:#777;" href="/sell" target="_self">Become An Owner</a>
-                            </li>
+                            </li>-->
                             <li>
                               <a style="color:#777;" href="/contact_us" target="_self">Contact Us</a>
                             </li>

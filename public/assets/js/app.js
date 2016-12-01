@@ -11208,6 +11208,7 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
 });
 
 chisel.controller("homeController", function($scope, $rootScope, mainFactory) {
+    $scope.modal_step = 1;
     mainFactory.campaign_purposes().then(function(r) {
         $scope.purposes = r.data;
     });

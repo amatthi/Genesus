@@ -226,11 +226,11 @@ body{
 	display:none;
 }
 #cfgen-element-2-3-set-c{
-	width:300px;
+	width:400px;
 	max-width:100%;
 }
 #cfgen-element-2-3-inputgroup-c{
-	max-width:300px;
+	max-width:400px;
 }
 #cfgen-element-2-5-set-c{
 	width:140px;
@@ -242,7 +242,7 @@ body{
 	font-family:Arial;
 	font-weight:bold;
 	font-style:normal;
-	font-size:20px;
+	font-size:16px;
 	color:#fff;
 	background-color:#3AC395;
 	border-width:1px;
@@ -250,7 +250,6 @@ body{
 	border-color:#3AC395;
 	border-radius:5px;
 	margin-left:0px;
-	height:45px;
 }
 @media only screen and (min-width: 600px){
 #cfgen-element-2-5{
@@ -265,7 +264,8 @@ body{
 	font-style:normal;
 	color:#ffffff;
 	background-color:#3bb000;
-	width:315px;
+	max-width: 400px;
+	width:100%;
 }
 #cfgen-form-2 .cfgen-errormessage{
 	font-family:Verdana;
