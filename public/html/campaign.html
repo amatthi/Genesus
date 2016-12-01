@@ -365,17 +365,25 @@
       </div>
     </div>
   </div>
+  <center class="home-hr" ng-show="campaign_data.user.profile.instagram">
+    <hr style="margin-top:0px !important;margin-bottom:0px !important;">
+  </center>
   <div class="row col-xs-12" ng-show="campaign_data.user.profile.instagram">
     <div class="container-fluid lil-pad-bottom">
-      <div class="col-xs-12">
+      <div class="col-xs-12 science owner-insta hidden-xs">
+        <h2>Meet The Owner</h2>
+      </div>
+      <div class="col-xs-12 hidden-xs science owner-insta">
         <h5><a href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank" style="color:#3AC395;">@<span style="color:#3AC395;">{{campaign_data.user.profile.instagram}}</span></a></h5>
+      </div>
+      <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+        <h5><a href="https://www.instagram.com/{{campaign_data.user.profile.instagram}}/" target="_blank" style="color:#3AC395;">@<span style="color:#3AC395;">{{campaign_data.user.profile.instagram}}</span></a></h5>
+      </div>
+      <div class="col-xs-12">
         <div id="my-instashow"></div>
       </div>
     </div>
   </div>
-  <center class="home-hr" ng-show="campaign_data.user.profile.instagram">
-    <hr style="margin-top:0px !important;margin-bottom:0px !important;">
-  </center>
 <center class="home-hr hidden-xs" ng-show="campaign_data.user.profile.instagram">
   <hr style="margin-top:0px !important;margin-bottom:0px !important;">
 </center>
