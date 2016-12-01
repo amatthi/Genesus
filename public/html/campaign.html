@@ -1,31 +1,13 @@
 <script src="/instashow/instashow/jquery.instashow.packaged.js"></script>
 <script src="cfgen-form-2/js/form.js"></script>
 <link href="cfgen-form-2/css/form.css" rel="stylesheet" type="text/css">
-<!-- Modal -->
-  <div class="modal fade" id="seeMore" role="dialog">
-    <div class="modal-dialog modal-md">
-      <div class="modal-content">
-        <div class="modal-header text-center">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title" style="font-size:22px;font-weight:500;">{{campaign_data.formula.name}}</h4>
-        </div>
-        <div class="modal-body text-center">
-          <h4 style="color:#777;line-height:1.3;font-size:16px;font-weight:400;">{{campaign_data.formula.pitch}}</h4>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--End Modal-->
   <!-- Modal -->
     <div class="modal fade" id="seeMoreIng" role="dialog">
       <div class="modal-dialog modal-md">
         <div class="modal-content">
           <div class="modal-header text-center">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title" style="font-size:22px;font-weight:500;">{{campaign_data.formula.name}}</h4>
+            <h4 class="modal-title" style="font-size:22px;font-weight:500;">{{campaign_data.title}}</h4>
           </div>
           <div class="modal-body">
             <div class="col-xs-12 lil-pad-bottom" ng-repeat="(key,ingredient) in campaign_data.formula.ingredients">
@@ -45,15 +27,15 @@
       </div>
     </div>
     <!--End Modal-->
-  <div class="container-fluid hidden-sm hidden-md hidden-lg" style="background-color:#37495F;">
+  <!--<div class="container-fluid hidden-sm hidden-md hidden-lg" style="background-color:#37495F;">
     <div class="col-xs-12" style="padding-top:50px;">
       <h3 style="font-family:'Dosis', sans-serif;color:#fff;">Get an EXTRA 15% OFF your next order. Plus get FREE shipping.</h3>
     </div>
-  </div>
+  </div>-->
   <div class="container-fluid">
   <!--Desktop-->
     <div class="hidden-xs row lil-pad-bottom pad-top-100">
-        <div class="col-xs-12 col-sm-6 text-center lil-pad no-pad-right">
+        <div class="col-xs-12 col-sm-6 text-center no-pad-right">
           <div class="col-xs-12">
               <center>
                   <img class="img-responsive" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement" style="max-height:350px;">
@@ -68,27 +50,32 @@
               </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-5 campaign-info lil-pad">
+        <div class="col-xs-12 col-sm-5 campaign-info">
           <div class="col-xs-12">
             <div class="col-xs-12 no-pad-left">
-                <h2>{{campaign_data.formula.name}}</h2>
+                <h2>{{campaign_data.title}}</h2>
             </div>
           </div>
-          <div class="col-xs-8 formula-description">
+          <div class="col-xs-10 formula-description">
               <h4>{{campaign_data.formula.formula_desc}}</h4>
           </div>
-            <div class="col-xs-12 campaign-price no-pad-left no-pad-right lil-pad-bottom">
+            <div class="col-xs-6 campaign-price no-pad-left no-pad-right">
               <div class="col-xs-12">
                 <div>
                   <h5 style="display:inline;padding-right:10px;font-weight:300;">{{campaign_data.formula.servings}} Servings</h5>
                   <img ng-src="/plugin/design/images/ratings/{{campaign_data.formula.name}}.jpg" class="img-responsive" style="max-height:40px;display:inline;position:relative;top:-5px;padding-top:5px;" />
                 </div>
                 <div>
-                  <h3 style="margin-top:5px;"><span style="color:#444;font-size:18px;">Our Price:</span> <span>{{campaign_data.formula.cost30 | currency}}</span></h3>
+                  <h3 style="margin-top:5px;"><span style="color:#444;font-size:18px;">Our Price:</span> <span>{{campaign_data.sale_price | currency}}</span></h3>
                 </div>
               </div>
             </div>
-            <div class="col-xs-8 text-center campaign-button lil-pad">
+            <div class="col-xs-4 lil-pad">
+              <div class="campaign-brand-pic pull-right" ng-show="campaign_data.user.profile.photo" style="padding-bottom:5px;">
+                <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus Brand Image">
+              </div>
+            </div>
+            <div class="col-xs-10 text-center campaign-button lil-pad">
                 <button class="col-xs-12 btn btn-wj btn-sm btn-buy" ng-click="buy_campaign()">BUY IT NOW</button>
             </div>
             <div class="col-xs-8 text-center campaign-guarantee">
@@ -98,7 +85,7 @@
         </div>
         <!--End Desktop-->
         <!--Mobile-->
-        <div class="hidden-sm hidden-md hidden-lg row lil-pad-bottom">
+        <div class="hidden-sm hidden-md hidden-lg row lil-pad-bottom pad-top-50">
           <div class="col-xs-12 text-center">
             <div class="col-xs-12 pad-bottom-10">
               <center>
@@ -112,10 +99,10 @@
               </center>
             </div>
             <div class="col-xs-12">
-                <h4 style="color:#444;font-weight:400;font-size:18px;line-height:1.3;">{{campaign_data.formula.formula_desc}}</h4>
+                <h4 style="color:#444;font-weight:400;font-size:18px;line-height:1.3;text-align:left;">{{campaign_data.formula.formula_desc}}</h4>
             </div>
             <div class="col-xs-6 lil-pad">
-              <h3 style="color:#444;font-size:28px;display:inline;"><span>{{campaign_data.formula.cost30 | currency}}</span></h3>
+              <h3 style="color:#444;font-size:28px;display:inline;"><span>{{campaign_data.sale_price | currency}}</span></h3>
               <h5 style="font-weight:400;color:#777;">{{campaign_data.formula.servings}} Servings</h5>
             </div>
             <div class="col-xs-6 lil-pad">
@@ -148,7 +135,7 @@
             <h2 style="font-family:'Dosis', sans-serif;color:#444;font-size:22px;">WHY YOU'LL LOVE IT</h2>
           </div>
           <div class="col-xs-12">
-            <h4 style="color:#777;font-size:16px;line-height:1.3;font-weight:400;">{{campaign_data.formula.pitch | limitTo: 150 }}...<span><a data-toggle="modal" data-target="#seeMore" style="color:#3AC395;">See More</a></span></h4>
+            <h4 style="color:#777;font-size:16px;line-height:1.3;font-weight:400;">{{campaign_data.formula.pitch}}</h4>
           </div>
         </div>
       </div>
@@ -209,6 +196,9 @@
               <center ng-if="campaign_data.user.profile.photo">
                 <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus User Profile Picture">
               </center>
+              <center ng-if="!campaign_data.user.profile.photo">
+                <img src="/img/avatar.png" alt="Genesus User Profile Picture">
+              </center>
               <h3>{{campaign_data.user.profile.brand_name}} {{campaign_data.user.profile.last_name}}</h3>
               <div class="col-xs-12 no-pad-left" ng-show="campaign_data.user.profile.brand_city || campaign_data.user.profile.brand_state">
                 <h4 class="state">{{campaign_data.user.profile.brand_city}} {{campaign_data.user.profile.brand_state}}</h4>
@@ -224,7 +214,7 @@
           </div>
           <div class="col-xs-12 col-sm-6">
             <div class="col-xs-12 descript-blurb">
-              <h4 style="color:#444;line-height:1.3;font-weight:400;font-size:18px;">{{campaign_data.formula.pitch}}</h4>
+              <h4 style="color:#444;line-height:1.6;font-weight:400;font-size:18px;">{{campaign_data.formula.pitch}}</h4>
             </div>
           </div>
         </div>
@@ -261,23 +251,23 @@
   <div class="row hidden-sm hidden-md hidden-lg">
     <div class="container-fluid">
       <div class="col-xs-12">
-        <div class="col-xs-12 pull-left no-pad-left no-pad-right">
+        <div class="col-xs-12 pull-left">
           <h2 style="font-family:'Dosis', sans-serif;color:#444;font-size:22px;text-transform:uppercase;">Ingredients</h2>
         </div>
         <div class="col-xs-12 no-pad-left no-pad-right d-key lil-pad">
           <div class="col-xs-12" ng-repeat="(key,ingredient) in campaign_data.formula.ingredients">
-            <div class="col-xs-12">
+            <div class="col-xs-12 no-pad-left no-pad-right">
               <center>
                 <img class="img-responsive" style="max-width:150px;" ng-src="{{add_ingredient_path(ingredient)}}">
               </center>
             </div>
-            <div class="col-xs-12 ing-images">
+            <div class="col-xs-12 ing-images no-pad-left no-pad-right">
               <h4 style="color:#444;font-size:18px;font-weight:400;line-height:1.3;">{{ingredient}}</h4>
               <h5 style="color:#777;font-size:14px;line-height:1.3;font-weight:400;" ng-bind="campaign_data.formula.description[key]"></h5>
               <h4 style="color:#777;font-size:16px;line-height:1.3;font-weight:400;" class="case-study">The Clinical Studies To Support It</h4>
               <h5 style="color:#777;font-size:14px;line-height:1.3;font-weight:400;">{{campaign_data.formula.study_name[key]}}</h5>
               <h5 style="color:#777;font-size:14px;line-height:1.3;font-weight:400;"><a href="{{campaign_data.formula.study_url[key]}}" target="_blank">See Clinical Study</a></h5>
-              <hr>
+              <hr style="margin-left:0px !important;margin-right:0px !important;">
             </div>
           </div>
         </div>
@@ -287,9 +277,24 @@
   <center class="home-hr hidden-xs">
     <hr style="margin-top:0px !important;margin-bottom:0px !important;">
   </center>
-  <div class="row col-xs-12 hidden-sm hidden-md hidden-lg lil-pad">
+  <div class="row col-xs-12 hidden-sm hidden-md hidden-lg lil-pad" style="background-color:#F5F2ED;">
     <div class="container-fluid lil-pad-bottom">
       <div class="col-xs-12">
+        <div class="col-xs-12 no-pad-left no-pad-right">
+          <h4 style="color: #444;font-weight: 400;font-size: 18px;">Optimized Use</h4>
+          <h5 style="color: #777;line-height: 1.3;font-size: 16px;font-weight:400;">{{campaign_data.formula.instructions}}</h5>
+        </div>
+        <div class="col-xs-12 no-pad-left no-pad-right">
+          <h4 style="color: #444;font-weight: 400;font-size: 18px;">Transparent</h4>
+          <h5 style="color: #777;line-height: 1.3;font-size: 16px;font-weight:400;">Hiding ingredients isn't in our playbook, so we'll make sure to articulate each and every ingredient in our products.</h5>
+        </div>
+        <div class="col-xs-12 no-pad-left no-pad-right">
+          <h4 style="color: #444;font-weight: 400;font-size: 18px;">Committed</h4>
+          <h5 style="color: #777;line-height: 1.3;font-size: 16px;font-weight:400;">FDA Registered & cGMP facilities in the United State facilities are used to create all of our products. All of our products go through double gluten free certification and many meet USDA Organic and Non GMO guidelines.</h5>
+          <hr style="margin-left:0px !important;margin-right:0px !important;">
+        </div>
+      </div>
+      <div class="col-xs-12 no-pad-left no-pad-right">
         <center>
           <img class="nutrition-facts img-responsive" ng-src="{{add_nutrition_path(campaign_data.formula)}}" alt="Genesus Nutrition Facts" style="max-width:350px;">
         </center>
@@ -306,13 +311,13 @@
       </div>
       <div class="col-xs-12 col-sm-4 col-sm-offset-2">
         <div class="col-xs-12">
-          <h4 style="color: #444;font-weight: 600;font-size: 24px;">Transparent</h4>
-          <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">Hiding ingredients isn't in our playbook, so we'll make sure to articulate each and every ingredient in our products.</h5>
+          <h4 style="color: #444;font-weight: 600;font-size: 24px;">Optimized Use</h4>
+          <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">{{campaign_data.formula.instructions}}</h5>
           <hr>
         </div>
         <div class="col-xs-12">
-          <h4 style="color: #444;font-weight: 600;font-size: 24px;">Optimized</h4>
-          <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">Nestled in plant-based formula's, our ingredients are carefully tailored to maximize effectiveness. This gives you all the nutrients you need - and none of the one's you don't.</h5>
+          <h4 style="color: #444;font-weight: 600;font-size: 24px;">Transparent</h4>
+          <h5 style="color: #777;line-height: 1.3;font-size: 18px;font-weight:500;">Hiding ingredients isn't in our playbook, so we'll make sure to articulate each and every ingredient in our products.</h5>
           <hr>
         </div>
         <div class="col-xs-12">
@@ -335,9 +340,6 @@
       </div>
     </div>
   </div>
-  <center class="home-hr hidden-sm hidden-md hidden-lg">
-    <hr style="margin-top:0px !important;margin-bottom:0px !important;">
-  </center>
   <div class="row col-xs-12 hidden-sm hidden-md hidden-lg">
     <div class="container-fluid lil-pad">
       <div class="col-xs-12 pull-left">
@@ -390,7 +392,7 @@
 <div class="row hidden-xs col-sm-12" style="background-color:#fff;">
   <div class="container lil-pad-bottom">
     <div class="col-xs-12 text-center science owner-insta">
-      <h2><em>Review For {{campaign_data.formula.name}}</em></h2>
+      <h2><em>Reviews For {{campaign_data.title}}</em></h2>
     </div>
     <div class="col-xs-12">
       <center>
@@ -411,7 +413,7 @@
 <div class="row col-xs-12 hidden-sm hidden-md hidden-lg" style="background-color:#fff;">
   <div class="container lil-pad-bottom">
     <div class="col-xs-12 text-center science owner-insta">
-      <h2 style="font-family:'Dosis', sans-serif;color:#444;font-size:22px;text-transform:uppercase;"><em>Review For {{campaign_data.formula.name}}</em></h2>
+      <h2 style="font-family:'Dosis', sans-serif;color:#444;font-size:22px;text-transform:uppercase;"><em>Reviews For {{campaign_data.title}}</em></h2>
     </div>
     <div class="col-xs-12">
       <center>

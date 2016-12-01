@@ -1809,6 +1809,7 @@ a {
 
 .descript h3 {
   margin-top:15px;
+  margin-bottom: 0px;
   color:#444;
   text-align:center;
   font-size:26px;
@@ -1819,6 +1820,7 @@ a {
 
 .descript h4 {
   font-size:16px;
+  margin-bottom: 0px;
   font-weight:300;
   color:#444;
   line-height:1.47;
