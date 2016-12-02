@@ -2209,7 +2209,7 @@ a {
   .our_story {
     background: url('https://s3-us-west-2.amazonaws.com/tappyn/our_story.jpg');
     background-size: cover;
-    height: 350px !important;
+    height: 200px !important;
     opacity: 0.7;
   }
   .non_gmo {
