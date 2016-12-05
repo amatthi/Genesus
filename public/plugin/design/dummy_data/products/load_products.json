@@ -665,14 +665,27 @@
          "description":"Lorium ipsum dolor sit amet"
       },
       {
-         "id":54,
-         "name":"Supergreens Complex",
+         "id":52,
+         "name":"Pre-Workout",
          "price":99,
          "category": "Standard",
          "currency":"USD",
-         "image":"dummy_data/products/bottle/whey-protein.jpg",
+         "image":"dummy_data/products/bottle/pre-workout-15.jpg",
          "sub_images":[
-            "dummy_data/products/bottle/whey-protein.jpg"
+            "dummy_data/products/bottle/pre-workout-15.jpg"
+
+         ],
+         "description":"Lorium ipsum dolor sit amet"
+      },
+      {
+         "id":53,
+         "name":"Alcohol Complex",
+         "price":99,
+         "category": "Standard",
+         "currency":"USD",
+         "image":"dummy_data/products/bottle/Evolve.jpg",
+         "sub_images":[
+            "dummy_data/products/bottle/Evolve.jpg"
 
          ],
          "description":"Lorium ipsum dolor sit amet"
