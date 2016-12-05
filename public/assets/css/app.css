@@ -486,15 +486,15 @@ strong {
 }
 
 .btn-bl {
-  color: #fff !important;
-  background: #3AC395 !important;
-  border: 1px solid #3AC395 !important;
-  padding-top: 15px !important;
-  padding-bottom: 15px !important;
-  padding-left: 50px !important;
-  padding-right: 50px !important;
-  font-size: 22px !important;
-  font-family: 'Source Sans Pro', sans-serif !important;
+  color: #fff;
+  background: #3AC395;
+  border: 1px solid #3AC395;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 22px;
+  font-family: 'Source Sans Pro', sans-serif;
   text-transform: uppercase;
 }
 
@@ -532,8 +532,7 @@ strong {
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
-    font-family: 'Source Sans Pro', sans-serif !important;
-    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .btn-bl-sm:hover {
@@ -551,7 +550,7 @@ strong {
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
-    font-family: 'Source Sans Pro', sans-serif !important;
+    font-family: 'Source Sans Pro', sans-serif;
     text-transform: uppercase;
 }
 
@@ -786,16 +785,18 @@ footer {
     text-decoration: none;
     font-size: 18px;
     color: #ccc;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .footer-nav li a:hover {
-  color: #777;
+  color: #999;
 }
 
 .footer-nav h3 {
   color: #fff;
   cursor: default;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
 }
 
 .footer-banner {
