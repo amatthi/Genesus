@@ -167,10 +167,11 @@ strong {
   padding-top: 0px;
     }
   .sell-bg {
-  background:url('https://s3-us-west-2.amazonaws.com/tappyn/seller_banner_small.jpg') no-repeat center center;
+  /**background:url('https://s3-us-west-2.amazonaws.com/tappyn/seller_banner_small.jpg') no-repeat center center;**/
+  background: #fff;
   background-size:cover;
   margin-top: 0px;
-  height: 200px;
+  height: 325px;
     }
 }
 
