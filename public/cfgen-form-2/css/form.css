@@ -3,14 +3,14 @@ body{
 }
 .cfgen-form-container{
 	padding:30px;
+	border:1px solid #EEE;
+	background-color:#FFF;
 	border-radius:4px;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-ms-box-sizing:border-box;
 	box-sizing:border-box;
 	max-width:100%;
-	background-color:#f5f2ed;
-	padding-top:0px;
 }
 .ui-datepicker{
 	font-size:9pt !important;
@@ -86,7 +86,7 @@ body{
 	width:16px;
 	height:16px;
 }
-#cfgen-form-2 .cfgen-errormessage,
+#cfgen-form-2 .cfgen-errormessage, 
 #cfgen-form-2 .cfgen-validationmessage{
 	padding:8px 8px;
 	line-height:normal;
@@ -108,7 +108,7 @@ body{
 #cfgen-form-2 .cfgen-option-checkbox{
 	margin-bottom:2px;
 }
-#cfgen-form-2 .cfgen-option-content input[type=radio],
+#cfgen-form-2 .cfgen-option-content input[type=radio], 
 #cfgen-form-2 .cfgen-option-content input[type=checkbox]{
 	margin-right:2px;
 	margin-left:1px;
@@ -129,34 +129,34 @@ body{
 #cfgen-form-2 .cfgen-rating-c .fa{
 	cursor:pointer;
 }
-#cfgen-form-2 .cfgen-input-c input[type="text"],
-#cfgen-form-2 .cfgen-input-c select,
-#cfgen-form-2 .cfgen-input-c input[type="submit"],
+#cfgen-form-2 .cfgen-input-c input[type="text"], 
+#cfgen-form-2 .cfgen-input-c select, 
+#cfgen-form-2 .cfgen-input-c input[type="submit"], 
 #cfgen-form-2 .cfgen-input-c textarea{
 	outline-style:none;
 }
-#cfgen-form-2 .cfgen-input-c input[type="text"],
-#cfgen-form-2 .cfgen-input-c textarea,
+#cfgen-form-2 .cfgen-input-c input[type="text"], 
+#cfgen-form-2 .cfgen-input-c textarea, 
 #cfgen-form-2 .cfgen-input-c input[type="submit"]{
 	width:100%;
 }
-#cfgen-form-2 .cfgen-input-c input[type="text"],
-#cfgen-form-2 .cfgen-input-c select,
-#cfgen-form-2 .cfgen-input-c input[type="submit"],
-#cfgen-form-2 .cfgen-input-c textarea,
-#cfgen-form-2 .cfgen-icon-c,
-#cfgen-form-2 .cfgen-label,
-#cfgen-form-2 .cfgen-paragraph,
-#cfgen-form-2 .cfgen-errormessage,
+#cfgen-form-2 .cfgen-input-c input[type="text"], 
+#cfgen-form-2 .cfgen-input-c select, 
+#cfgen-form-2 .cfgen-input-c input[type="submit"], 
+#cfgen-form-2 .cfgen-input-c textarea, 
+#cfgen-form-2 .cfgen-icon-c, 
+#cfgen-form-2 .cfgen-label, 
+#cfgen-form-2 .cfgen-paragraph, 
+#cfgen-form-2 .cfgen-errormessage, 
 #cfgen-form-2 .cfgen-validationmessage{
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-ms-box-sizing:border-box;
 	box-sizing:border-box;
 }
-#cfgen-form-2 .cfgen-label,
-#cfgen-form-2 .cfgen-paragraph,
-#cfgen-form-2 .cfgen-errormessage,
+#cfgen-form-2 .cfgen-label, 
+#cfgen-form-2 .cfgen-paragraph, 
+#cfgen-form-2 .cfgen-errormessage, 
 #cfgen-form-2 .cfgen-validationmessage{
 	max-width:100%;
 }
@@ -226,30 +226,31 @@ body{
 	display:none;
 }
 #cfgen-element-2-3-set-c{
-	width:400px;
+	width:300px;
 	max-width:100%;
 }
 #cfgen-element-2-3-inputgroup-c{
-	max-width:400px;
+	max-width:300px;
 }
 #cfgen-element-2-5-set-c{
-	width:140px;
+	width:405px;
 }
 #cfgen-element-2-5-inputgroup-c{
-	max-width:140px;
+	max-width:405px;
 }
 #cfgen-form-2 #cfgen-element-2-5{
 	font-family:Arial;
 	font-weight:bold;
 	font-style:normal;
-	font-size:16px;
-	color:#fff;
-	background-color:#3AC395;
+	font-size:20px;
+	color:#555555;
+	background-color:#f1f1f1;
 	border-width:1px;
 	border-style:solid;
-	border-color:#3AC395;
+	border-color:#cccccc;
 	border-radius:5px;
 	margin-left:0px;
+	height:45px;
 }
 @media only screen and (min-width: 600px){
 #cfgen-element-2-5{
@@ -264,8 +265,7 @@ body{
 	font-style:normal;
 	color:#ffffff;
 	background-color:#3bb000;
-	max-width: 400px;
-	width:100%;
+	width:315px;
 }
 #cfgen-form-2 .cfgen-errormessage{
 	font-family:Verdana;

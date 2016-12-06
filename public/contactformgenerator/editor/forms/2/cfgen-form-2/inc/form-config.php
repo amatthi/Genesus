@@ -27,11 +27,11 @@ $cfg['smtp_password'] = '';
 
 $cfg['timezone'] = 'Europe/Berlin';
 
-$cfg['form_id'] = '';
+$cfg['form_id'] = '2';
 
 $cfg['form_name'] = 'My Contact Form';
 
-$cfg['form_validationmessage'] = 'BOOM!<br />Pat yourself on the back for making the best decision since casual Friday.';
+$cfg['form_validationmessage'] = 'Thank you, your message has been sent to us.<br />We will get back to you as soon as possible.';
 
 $cfg['form_errormessage_captcha'] = '';
 
@@ -68,5 +68,20 @@ $cfg['usernotification_hideemptyvalues'] = false;
 $cfg['formvalidation_required'] = array('cfgen-element-2-3');
 
 $cfg['formvalidation_email'] = array('cfgen-element-2-3');
+
+// MailChimp
+$cfg['mailchimp']['apikey'] = '65e6150b52bd637a4020281759a266bf-us14';
+
+$cfg['mailchimp']['lists'][0]['list_id'] = '4361d5f00a';
+
+$cfg['mailchimp']['lists'][0]['doubleoptin'] = true;
+
+$cfg['mailchimp']['lists'][0]['updateexistingcontact'] = true;
+
+$cfg['mailchimp']['lists'][0]['sendwelcomeemail'] = false;
+
+$cfg['mailchimp']['lists'][0]['fields'][] = array('list_field_id' => 'EMAIL', 'element_id' => 'cfgen-element-2-3');
+
+$cfg['mailchimp']['lists'][0]['fields_by_id']['EMAIL'] = 'cfgen-element-2-3';
 
 ?>

@@ -51,7 +51,7 @@
 	<div class="cfgen-e-set" id="cfgen-element-2-5-set-c">
 		<div class="cfgen-input-group" id="cfgen-element-2-5-inputgroup-c">
 			<div class="cfgen-input-c" id="cfgen-element-2-5-input-c">
-				<input type="submit" class="cfgen-submit" name="cfgen-element-2-5" id="cfgen-element-2-5" value="Send">
+				<input type="submit" class="cfgen-submit" name="cfgen-element-2-5" id="cfgen-element-2-5" value="Request Invite">
 			</div>
 		</div>
 	</div>
