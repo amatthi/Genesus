@@ -797,6 +797,7 @@ footer {
   cursor: default;
   font-family: 'Dosis', sans-serif;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .footer-banner {
