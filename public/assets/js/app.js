@@ -10962,6 +10962,9 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
     .when('/shipping', {
         templateUrl: 'html/shipping.html',
     })
+    .when('/drop_shipping', {
+        templateUrl: 'html/drop_shipping.html',
+    })
     .when('/selling', {
         templateUrl: 'html/selling.html',
     })
