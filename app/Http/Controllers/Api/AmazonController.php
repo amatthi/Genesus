@@ -11,7 +11,7 @@ class AmazonController extends Controller
     private $aws_access_key_id;
     private $aws_secret_key;
     private $bucket_name       = '';
-    private $base_url          = 'https://tappyn.s3.amazonaws.com/';
+    private $base_url          = 'https://tappyn.s3-accelerate.amazonaws.com/';
 
     public function __construct()
     {
@@ -24,7 +24,7 @@ class AmazonController extends Controller
         $this->bucket_name = $request->input('bucket');
         $expire            = gmdate('Y-m-d\TH:i:s\Z', time() + (12 * 60 * 60 * 1000));
 
-        $url             = 'https://' . $this->bucket_name . '.s3.amazonaws.com';
+        $url             = 'https://' . $this->bucket_name . '.s3-accelerate.amazonaws.com';
         $policy_document = '
             {"expiration": "' . $expire . '",
              "conditions": [
