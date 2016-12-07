@@ -1,5 +1,5 @@
 <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <!--<div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-md">
       <div class="modal-content">
         <div class="modal-header text-center">
@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 <!-- step create-->
 <div class="tab-content-1 step1_2" ng-show="launch_step_create()">
     <div class="launch-step-create" style="margin-top:-10px;">
@@ -35,6 +35,7 @@
                       <h4 style="font-weight:600;">{{formula.name}}</h4>
                       <img ng-src="/plugin/design/images/ratings/{{formula.name}}.jpg" class="img-responsive" style="max-height:20px;position:relative;left:-3px;margin-top:0px;">
                       <h5 style="margin-top:0px;font-size:12px;margin-bottom:0px;">{{campaign_data.formula.servings}} Servings</h5>
+                      <small class="small-text">*Amber, glass bottle.</small>
                       <div style="margin-top:0px;font-size:12px;margin-bottom:0px;">
                         <h5><a ng-if="formula.name == 'Green Tea'" href="http://genesus.co/campaign/green-tea" target="_blank" style="color:#07B9FF;">Learn More</a></h5>
         								<h5><a ng-if="formula.name == 'Raspberry Ketones'" href="http://genesus.co/campaign/raspberry-ketones" target="_blank" style="color:#07B9FF;">Learn More</a></h5>
@@ -76,6 +77,5 @@
         </center>
     </div>
 </div>
-<small class="small-text" ng-show="launch_step_create()">*Amber, glass bottle.</small>
- <small ng-show="launch_step_create()" style="color:#777;"><a data-toggle="modal" data-target="#myModal" style="font-size:10px;cursor:pointer;">Looking for more products?</a></small>
+ <!--<small ng-show="launch_step_create()" style="color:#777;"><a data-toggle="modal" data-target="#myModal" style="font-size:10px;cursor:pointer;">Looking for more products?</a></small>-->
 <!-- step create END -->

@@ -2,29 +2,7 @@
 <!-- Modal -->
 	<div class="modal fade" id="launchMore" role="dialog">
 		<div class="modal-dialog modal-md">
-			<div class="modal-content col-xs-12" ng-show="modal_step == 1">
-				<div class="modal-header text-center col-xs-12 no-pad-left no-pad-right">
-					<h2 style="font-size:22px;font-weight:400;color:#444;">ALMOST THERE</h2>
-				</div>
-				<div class="modal-body text-center col-xs-8 col-xs-offset-2">
-					<div class="col-xs-12">
-						<label style="font-weight:400;color:#777;font-size:16px;padding-bottom:15px;">Enter your code to access Genesus and start designing your brand!</label>
-					</div>
-					<div class="col-xs-12 lil-pad-bottom">
-						<input class="input-width border-rad input-border" type="text" required="required" placeholder="Enter Code" style="display:block;">
-					</div>
-					<div class="col-xs-12 text-center">
-						<a href="/launch" class="btn btn-bl-sm btn-lg" target="_self" style="display:block;font-size:16px !important;font-family:'Source Sans Pro', sans-serif;">START FOR FREE</a>
-					</div>
-					<div class="col-xs-12">
-						<h4 style="text-align:left;"><a ng-click="modal_step = 2" style="margin-top:0px;font-weight:400;font-size:14px;cursor:pointer;color:#3AC395;">No code? Request an invite!</a></h4>
-					</div>
-				</div>
-				<div class="modal-footer col-xs-12 no-pad-left no-pad-right" style="border-top:none;">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-			<div class="modal-content col-xs-12" ng-show="modal_step == 2">
+			<div class="modal-content col-xs-12">
 				<div class="modal-header text-center col-xs-12">
 					<h2 style="font-size:22px;font-weight:400;color:#444;">REQUEST AN INVITE</h2>
 				</div>
@@ -48,7 +26,6 @@
 				</div>
 				<div class="modal-footer col-xs-12" style="border-top:none;">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-default pull-left" ng-click="modal_step = 1">Back</button>
 				</div>
 			</div>
 		</div>
@@ -78,10 +55,10 @@
 						<h3 style="font-size:22px;">Design and sell your own line of health products - with no upfront costs.</h3>
 					</div>
 					<div class='hidden-xs col-sm-6 col-sm-offset-1 lil-pad text-center lil-pad-bottom'>
-						<a href="#" data-toggle="modal" data-target="#launchMore" class="btn btn-bl btn-lg">START FOR FREE</a>
+						<a href="/launch" target="_self" class="btn btn-bl btn-lg">START FOR FREE</a>
 					</div>
 					<div class='col-xs-12 hidden-sm hidden-md hidden-lg lil-pad-bottom text-center'>
-						<button type="button" data-toggle="modal" data-target="#launchMore" class="btn btn-bl-sm btn-lg" style="font-size:18px;font-weight:400;font-family:'Source Sans Pro', sans-serif;text-transform:uppercase;width:100%;">MAKE A PRODUCT</button>
+						<a href="/launch" target="_self" class="btn btn-bl-sm btn-lg" style="font-size:18px;font-weight:400;font-family:'Source Sans Pro', sans-serif;text-transform:uppercase;width:100%;">MAKE A PRODUCT</a>
 					</div>
 				</div>
 			</div><!-- Hero Banner End -->
@@ -94,7 +71,7 @@
 							the business you deserve.</h2>
 					</div>
 					<div class="col-xs-12 col-sm-10 col-sm-offset-1 lil-pad-bottom" style="padding-bottom:25px;">
-						<h4><a data-toggle="modal" data-target="#launchMore" style="font-weight:400;color:#3AC395;">Start Designing <span aria-hidden="true" class="glyphicon glyphicon-arrow-right home-arrow"></span></a></h4>
+						<h4><a href="/launch" target="_self" style="font-weight:400;color:#3AC395;">Start Designing <span aria-hidden="true" class="glyphicon glyphicon-arrow-right home-arrow"></span></a></h4>
 					</div>
 					<div class="col-xs-12 col-md-6">
 						<center>
@@ -112,10 +89,10 @@
 						<h5>It used to be that if you wanted to create your own health products, you'd have to spend weeks haggling with manufacturers and pay thousands of dollars upfront. We've solved this by creating a website that lets you create your own brand of the world's best all-natural health products, in seconds. All you have to do is tap a button.</h5>
 					</div>
 					<div class="col-sm-6 col-sm-offset-3 hidden-xs">
-						<a class='btn btn-bl btn-lg' data-toggle="modal" data-target="#launchMore">START FOR FREE</a>
+						<a class='btn btn-bl btn-lg' href="/launch" target="_self">START FOR FREE</a>
 					</div>
 					<div class="col-xs-12 hidden-sm hidden-md hidden-lg lil-pad text-center">
-						<a class='btn btn-bl btn-lg' data-toggle="modal" data-target="#launchMore">START FOR FREE</a>
+						<a class='btn btn-bl btn-lg' href="/launch" target="_self">START FOR FREE</a>
 					</div>
 				</div>
 				</div>
@@ -156,7 +133,7 @@
 							</div>
 						</div>
 						<div class='col-xs-12 hidden-sm hidden-md hidden-lg lil-pad-bottom lil-pad text-center'>
-							<button type="button" data-toggle="modal" data-target="#launchMore" class="btn btn-bl-sm btn-lg" style="font-size:18px;font-weight:400;font-family:'Source Sans Pro', sans-serif;text-transform:uppercase;width:100%;">MAKE A PRODUCT</button>
+							<a href="/launch" target="_self" class="btn btn-bl-sm btn-lg" style="font-size:18px;font-weight:400;font-family:'Source Sans Pro', sans-serif;text-transform:uppercase;width:100%;">MAKE A PRODUCT</a>
 						</div>
 					</div>
 				</div>
@@ -225,7 +202,7 @@
 			<div class="row hidden-xs">
 				<div class='container'>
 					<div class="col-xs-12 text-center">
-						<a class='btn btn-bl btn-lg' data-toggle="modal" data-target="#launchMore">START FOR FREE</a>
+						<a class='btn btn-bl btn-lg' href="/launch" target="_self">START FOR FREE</a>
 					</div>
 				</div>
 			</div>
@@ -272,7 +249,7 @@
 						</div>
 					</div>
 					<div class="col-xs-12 text-center lil-pad-bottom">
-						<a class='btn btn-bl-sm btn-lg' data-toggle="modal" data-target="#launchMore" style="font-size:18px;font-weight:400;">MAKE A PRODUCT</a>
+						<a class='btn btn-bl-sm btn-lg' href="/launch" target="_self" style="font-size:18px;font-weight:400;">MAKE A PRODUCT</a>
 					</div>
 				</div>
 			</div>
@@ -367,7 +344,7 @@
 						<h5>Choose a product, design your label, and start using your brand. Share it with your friends or keep it to yourself. Either way, you'll be energized, filled with nutrients, and ready to take on the things that matter!</h5>
 					</div>
 					<div class="col-xs-12 col-md-6 lil-pad-bottom discover">
-						<a class='btn btn-bl btn-lg' data-toggle="modal" data-target="#launchMore">Get Started Now!</a>
+						<a class='btn btn-bl btn-lg' href="/launch" target="_self">Get Started Now!</a>
 					</div>
 				</div>
 			</div>
