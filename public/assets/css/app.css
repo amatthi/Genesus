@@ -253,6 +253,29 @@ strong {
   border-radius: 4px;
 }
 
+.modal-title {
+  font-size:22px;
+  font-weight:500;
+}
+
+.modal-ing h4 {
+  color:#444;
+  font-size:18px;
+  margin-top:0px;
+  font-weight:400;
+}
+
+.modal-ing h5 {
+  color:#777;
+  font-size:16px;
+  line-height:1.3;
+  font-weight:400;
+}
+
+.inline-block {
+  display:inline-block;
+}
+
 .relieve:hover {
   opacity: 0.7;
   cursor:pointer;
@@ -1265,13 +1288,6 @@ footer {
   max-height: 500px;
 }
 
-.ingredients {
-    background-color: #FEFEFE;
-    overflow: auto;
-    max-height: 285px;
-    border: 1px solid #d8dddf;
-}
-
 .formula-box {
   max-height:280px;
   overflow:auto;
@@ -1843,48 +1859,317 @@ a {
   height: 86px;
 }
 
-.campaign-info h2 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #444;
-  cursor: default;
-}
-
-.campaign-info h4 {
-  font-size: 14px;
-  color: #555F6D;
-  font-weight: 400;
-}
-
-.campaign-info h4 span {
-  color: #71CE66;
-}
-
-.campaign-price h3 {
-  color: #444;
-  cursor: default;
-  font-weight: 400;
-  font-size: 22px;
-  position:relative;
-}
-
-.campaign-price h5 {
-  font-size:16px;
+@media (max-width:499px) {
+  .campaign-info h2 {
+    margin-bottom:0px;
+    font-size:28px;
+    font-weight:600;
+  }
+  .formula-description h4 {
+    color:#444;
+    font-weight:400;
+    font-size:18px;
+    line-height:1.3;
+    text-align:left;
+    margin-bottom: 10px;
+  }
+  .campaign-price {
+    padding-top: 40px;
+  }
+  .campaign-price h4 {
+    text-decoration:line-through;
+    color:#777;
+    font-size:22px;
+    display:inline;
+    float: left;
+    padding-right:10px;
+    text-align:left;
+  }
+  .campaign-price h3 {
+    color:#444;
+    font-size:28px;
+    display:inline;
+    float:left;
+    margin-top: 6px;
+  }
+  .campaign-info h5 {
+    font-weight:400;
+    color:#777;
+    margin-top: 0px;
+  }
+  .campaign-info img {
+    max-height: 30px;
+  }
+  .buy-img img {
+    max-height: 450px;
+    margin-left: 5px;
+  }
+  .campaign-brand-pic img {
+    border-radius:4px;
+    max-width: 75px;
+    float:right;
+  }
+  .campaign-guarantee h4 {
+    color:#3AC395;
+    cursor:default;
+    font-size: 16px;
+  }
+  .descript h2 {
+    font-family: 'Dosis', sans-serif;
+    color:#444;
+    font-size:22px;
+    text-transform: uppercase;
+    margin-top:0px;
+    font-weight:500;
+    margin-bottom: 0px;
+  }
+  .value h2 {
+    color:#444;
+    font-size:14px;
+    text-transform: uppercase;
+    margin-top:0px;
+    font-weight:500;
+    margin-bottom: 10px;
+  }
+  .descript-blurb h4 {
+    font-size:14px;
+    font-weight:400;
+    line-height:1.6;
+    color:#444;
+    margin-top: 0px;
+  }
+  .ingredients h2 {
+  font-family:'Dosis', sans-serif;
   color:#444;
-  margin-top:0px;
-  font-weight:400;
-  cursor:default;
+  font-size:22px;
+  text-transform:uppercase;
+  text-align: center;
+  }
+  .no-pad-xs {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .ing-images {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .ing-image img {
+    max-width: 150px;
+  }
+  .ing-images h3 {
+    color:#444;
+    font-size:18px;
+    font-weight:400;
+    line-height:1.3;
+  }
+  .ing-images h5 {
+    color:#777;
+    font-size:14px;
+    line-height:1.6;
+    font-weight:400;
+  }
+  .ing-images h4 {
+    color:#777;
+    font-size:16px;
+    line-height:1.3;
+    font-weight:400;
+  }
+  .ing-images hr {
+    margin-left:0px !important;
+    margin-right:0px !important;
+  }
+  .science h2 {
+    font-family:'Dosis', sans-serif;
+    color:#444;
+    font-size:22px;
+    text-transform:uppercase;
+    margin-top:0px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .science h4 {
+    color: #444;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .science h5 {
+    color: #777;
+    line-height: 1.6;
+    font-size: 14px;
+    font-weight:400;
+  }
+  .science small {
+    font-size:8px;
+    color:#777;
+  }
+  .insta h2 {
+    font-family:'Dosis', sans-serif;
+    color:#444;
+    font-size:22px;
+    text-transform:uppercase;
+    margin-top:5px;
+    text-align:center;
+    line-height: 1.3;
+  }
 }
+
+@media (min-width:500px) {
+.campaign-price h5 {
+  font-size:18px;
+  color:#777;
+  margin-top:0px;
+  cursor:default;
+  display:inline;
+  padding-right:10px;
+  font-weight:400;
+  }
+  .campaign-price h3 {
+    cursor: default;
+    font-weight: 400;
+    font-size: 32px;
+    color:#444;
+    margin-top:5px;
+  }
+  .campaign-price h4 {
+    cursor: default;
+    font-weight: 400;
+    text-decoration:line-through;
+    color:#777;
+    margin-top:10px;
+    font-size:18px;
+    margin-bottom:0px;
+  }
+.campaign-price img {
+  max-height:40px;
+  display:inline;
+  position:relative;
+  top:-5px;
+  padding-top:5px;
+  }
+  .campaign-info h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #444;
+    cursor: default;
+  }
+  .formula-description h4 {
+    color:#444;
+    font-size:18px;
+    font-weight:400;
+    line-height:1.2;
+    font-family:'Source Sans Pro', sans-serif;
+    cursor: default;
+  }
+  .buy-img img {
+    max-height: 450px;
+  }
+  .campaign-brand-pic img {
+    border-radius:4px;
+    max-width: 100px;
+  }
+  .campaign-guarantee h4 {
+    color:#3AC395;
+    cursor:default;
+    padding-top: 10px;
+  }
+  .descript h2 {
+    font-family: 'Dosis', sans-serif;
+    color:#444;
+    font-size:38px;
+    text-transform: uppercase;
+    margin-top:0px;
+    font-weight:500;
+  }
+  .ingredients h2 {
+    font-family: 'Dosis', sans-serif;
+    color:#444;
+    font-size:38px;
+    text-transform: uppercase;
+    margin-top:0px;
+    font-weight:500;
+    text-align: center;
+  }
+  .value h2 {
+    font-family: 'Dosis', sans-serif;
+    color:#444;
+    font-size:38px;
+    text-transform: uppercase;
+    margin-top:0px;
+    font-weight:500;
+  }
+  .descript-blurb h4 {
+    font-size:18px;
+    font-weight:400;
+    line-height:1.6;
+    color:#444;
+  }
+  .ing-image img {
+    max-width: 250px;
+    float: right;
+    padding-right: 5px;
+  }
+  .ing-images {
+    display:inline-block;
+    max-width:600px;
+  }
+  .ing-images h3 {
+    color:#444;
+    font-size:18px;
+    font-weight:400;
+    line-height:1.3;
+  }
+  .ing-images h5 {
+    color:#777;
+    font-size:14px;
+    line-height:1.6;
+    font-weight:400;
+  }
+  .ing-images h4 {
+    color:#777;
+    font-size:16px;
+    line-height:1.3;
+    font-weight:400;
+  }
+  .ing-images hr {
+    margin-left:0px !important;
+    margin-right:0px !important;
+  }
+  .science h2 {
+    font-family: 'Dosis', sans-serif;
+    font-weight:500;
+    font-size:38px;
+    text-transform:uppercase;
+    color:#444;
+  }
+  .science img {
+    max-width:350px;
+  }
+  .science h4 {
+    color: #444;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .science h5 {
+    color: #777;
+    line-height: 1.3;
+    font-size: 18px;
+    font-weight:500;
+  }
+  .science small {
+    font-size:10px;
+    color:#444;
+  }
+  .insta-tag h5 a {
+    color:#3AC395;
+  }
+  .insta-tag h5 a:hover {
+    color:rgba(58, 195, 149, 0.8);
+  }
+}
+
 
 .progress-bar {
   background-color: #71CE66;
-}
-
-.campaign-info h5 {
-  font-size: 18px;
-  color: #777;
-  font-weight: 400;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .campaign-share p {
@@ -1977,15 +2262,6 @@ a {
 
 .descript {
   cursor:default;
-}
-
-.descript h2 {
-  font-family: 'Dosis', sans-serif;
-  color:#444;
-  font-size:38px;
-  text-transform: uppercase;
-  margin-top:0px;
-  font-weight:500;
 }
 
 .descript h3 {
@@ -2336,21 +2612,6 @@ a {
   cursor: default;
 }
 
-.science h2 {
-  font-family: 'Dosis', sans-serif;
-  font-weight:500;
-  font-size:38px;
-  text-transform:uppercase;
-  color:#444;
-}
-
-.science h4 {
-  color:#F0E9E9;
-  line-height: 1.3;
-  font-weight: 200;
-  font-size: 14px;
-}
-
 .why_genesus {
   background: url('https://s3-us-west-2.amazonaws.com/tappyn/why_genesus.jpg');
   background-size: cover;
@@ -2422,37 +2683,8 @@ a {
   text-align:left;
 }
 
-.descript-blurb h4 {
-  font-size:22px;
-  font-weight:400;
-  line-height:1.6;
-  color:#444;
-}
-
-.science img {
-  max-width:300px;
-}
-
-.d-key h4 {
-  color:#fff;
-  font-size: 22px;
-  font-weight: 400;
-}
-
-.d-key h5 {
-  color:#E5E5E6;
-  font-weight: 300;
-  line-height: 1.3;
-  font-size: 16px;
-}
-
 .margin-top-0 {
   margin-top: 0px;
-}
-
-.case-study {
-  font-size:16px !important;
-  font-weight:300;
 }
 
 .small-text {
@@ -2469,16 +2701,6 @@ a {
 .nutrition-facts {
   width:100%;
   max-width:400px;
-}
-
-.d-key a {
-  color: #777;
-  text-decoration: underline;
-}
-
-.d-key a:hover {
-  color: #777;
-  text-decoration: underline;
 }
 
 .launch-nutri-img {
@@ -2689,23 +2911,10 @@ a {
   text-transform:capitalize;
 }
 
-@media (min-width:992px) {
-.ing-images {
-
-
-  }
-}
-
 .campaign-brand-pic {
   background-color:#fff;
   border-radius:4px;
 }
-
-.campaign-brand-pic img {
-  border-radius:4px;
-  max-width: 75px;
-}
-
 .campaign-top {
   background-color:#F3F3F3;
   padding:10px;
@@ -2715,15 +2924,6 @@ a {
 
 .margin-top-25 {
   margin-top:25px;
-}
-
-.formula-description h4 {
-  color:#444;
-  font-size:18px;
-  font-weight:400;
-  line-height:1.2;
-  font-family:'Source Sans Pro', sans-serif;
-  cursor: default;
 }
 
 .campaign-benefits {
@@ -2745,13 +2945,6 @@ a {
 
 .campaign-benefits h5 span {
   color:#00992f;
-}
-
-.campaign-price h3 span {
-  color: #3ac395;
-  font-size:22px;
-  font-weight:400;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .campaign-progress {
@@ -2776,12 +2969,6 @@ a {
 
 .campaign-guarantee img {
   height:70px;
-}
-
-.campaign-guarantee h4 {
-  color:#3AC395;
-  cursor:default;
-  padding-top: 10px;
 }
 
 .campaign-guarantee span {
