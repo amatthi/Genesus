@@ -314,7 +314,7 @@ strong {
     }
     .hero-content-sell h1 {
         font-family: 'Dosis', sans-serif;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 82px;
         padding-top: 25px;
         color:#fff;
@@ -533,13 +533,6 @@ strong {
     padding-left: 50px;
     padding-right: 50px;
     cursor: pointer;
-}
-
-.btn-bl-sm:hover {
-    background: #fff;
-    color: #3AC395;
-    border: 1px solid #3AC395;
-    font-family: 'Dosis', sans-serif;
 }
 
 .btn-bl:focus {
