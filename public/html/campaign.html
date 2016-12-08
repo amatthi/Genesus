@@ -98,15 +98,15 @@
                 <img class="img-responsive" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement">
               </center>
             </div>
-            <div class="col-xs-12 formula-description">
+            <div class="col-xs-12 formula-description no-pad-xs">
                 <h4>{{campaign_data.formula.formula_desc}}</h4>
             </div>
           </div>
           <div class="col-xs-12 campaign-benefits">
-            <div class="col-xs-12 value">
+            <div class="col-xs-12 value no-pad-xs">
               <h2 class="text-center">NUTRITIONAL VALUES</h2>
             </div>
-            <div class="col-xs-12 text-center">
+            <div class="col-xs-12 text-center no-pad-xs">
               <div class="col-xs-3 no-pad-left no-pad-right" ng-if="campaign_data.formula.benefit_1">
                 <img class="img-responsive" ng-src="{{add_benefit1_path(benefit_1)}}" alt="Genesus product benefit 1">
               </div>
@@ -121,7 +121,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12">
+          <div class="col-xs-12 no-pad-xs">
             <div class="col-xs-6 campaign-price">
               <h4>${{campaign_data.formula.retail}}</h4>
               <h3>{{campaign_data.sale_price | currency}}</h3>
@@ -132,7 +132,7 @@
               </div>
             </div>
           </div>
-        <div class="col-xs-12">
+        <div class="col-xs-12 no-pad-xs">
           <div class="col-xs-12 text-center lil-pad">
               <button class="col-xs-12 btn btn-bl btn-lg" ng-click="buy_campaign()">BUY IT NOW</button>
           </div>
@@ -184,11 +184,11 @@
       <!--End Desktop-->
       <div class="row">
         <div class="container lil-pad">
-          <div class="col-xs-12 col-sm-12 descript">
+          <div class="col-xs-12 col-sm-12 descript no-pad-xs">
             <h2 class="text-center">WHY YOU'LL LOVE IT</h2>
           </div>
-          <div class="col-xs-12 lil-pad no-pad-left no-pad-right">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1 descript-blurb">
+          <div class="col-xs-12 lil-pad no-pad-xs">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 descript-blurb no-pad-xs">
               <h4>{{campaign_data.formula.pitch}}</h4>
             </div>
         </div>
@@ -203,7 +203,7 @@
         <div class="col-xs-12 ingredients">
           <h2>Ingredients</h2>
         </div>
-        <div class="col-xs-12 lil-pad">
+        <div class="col-xs-12 lil-pad no-pad-xs">
           <div class="col-xs-12 no-pad-xs" ng-repeat="(key,ingredient) in campaign_data.formula.ingredients">
             <div class="col-xs-12 col-sm-3 col-sm-offset-1 ing-image">
               <center>
@@ -302,13 +302,13 @@
       <div class="col-xs-12 no-pad-xs lil-pad">
         <div class="col-xs-6 no-pad-xs">
           <div class="col-xs-12 no-pad-xs">
-            <h3 style="margin-top:0px;font-size:18px;margin-bottom:0px;">{{campaign_data.user.profile.brand_name}} {{campaign_data.user.profile.last_name}}</h3>
+            <h3>{{campaign_data.user.profile.brand_name}} {{campaign_data.user.profile.last_name}}</h3>
           </div>
           <div class="col-xs-12 no-pad-xs" ng-show="campaign_data.user.profile.brand_city || campaign_data.user.profile.brand_state">
-            <h4 style="color:#777;font-size:16px;font-weight:400;"><em>{{campaign_data.user.profile.brand_city}} {{campaign_data.user.profile.brand_state}}</em></h4>
+            <h4><em>{{campaign_data.user.profile.brand_city}} {{campaign_data.user.profile.brand_state}}</em></h4>
           </div>
           <div class="col-xs-12 no-pad-xs" ng-show="campaign_data.user.profile.career">
-            <h5 style="font-size:16px;font-weight:400;color:#777;margin-top:0px;">{{campaign_data.user.profile.career}}</h5>
+            <h5>{{campaign_data.user.profile.career}}</h5>
           </div>
           <div class="col-xs-12">
             <a ng-show="campaign_data.profile.facebook" href="{{campaign_data.user.profile.facebook}}" target="_blank"><img src="/img/fb-seller.png"></a>
@@ -317,14 +317,14 @@
           </div>
         </div>
         <div class="col-xs-6 no-pad-xs">
-            <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus User Profile Picture" style="max-width:125px;border-radius:4px;float:right;">
+            <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus User Profile Picture">
         </div>
       </div>
     </div>
   </div>
   <div class="row" ng-show="campaign_data.user.profile.instagram">
     <div class="container lil-pad">
-      <div class="col-xs-12 science owner-insta hidden-xs">
+      <div class="col-xs-12 science hidden-xs">
         <h2>Meet The Owner</h2>
       </div>
       <div class="col-sm-12 hidden-xs insta-tag">
@@ -343,12 +343,12 @@
   </center>
   <div class="row hidden-sm hidden-md hidden-lg" ng-show="campaign_data.blurb">
     <div class="container">
-      <div class="col-xs-12 insta no-pad-xs">
-        <div class="col-xs-12 no-pad-xs">
+      <div class="col-xs-12 no-pad-xs">
+        <div class="col-xs-12 no-pad-xs recc">
           <h3>PERSONAL RECOMMENDATIONS</h3>
         </div>
-        <div class="col-xs-12 no-pad-xs lil-pad-bottom">
-          <h4 style="color:#777;font-size:14px;line-height:1.6;font-weight:400;">"{{campaign_data.formula.pitch}}"</h4>
+        <div class="col-xs-12 no-pad-xs lil-pad-bottom recc">
+          <h4>"{{campaign_data.formula.pitch}}"</h4>
         </div>
       </div>
     </div>
@@ -414,7 +414,7 @@
 </div>
 <div class="row hidden-sm hidden-md hidden-lg" style="background-color:#fff;">
   <div class="container lil-pad lil-pad-bottom">
-    <div class="col-xs-12 text-center science owner-insta no-pad-xs">
+    <div class="col-xs-12 text-center science owner-insta no-pad-xs lil-pad">
       <h2 style="font-family:'Dosis', sans-serif;color:#444;font-size:22px;text-transform:uppercase;"><em>Reviews For {{campaign_data.title}}</em></h2>
     </div>
     <div class="col-xs-12 no-pad-xs">

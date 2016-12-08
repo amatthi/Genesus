@@ -2002,6 +2002,22 @@ a {
     font-size:8px;
     color:#777;
   }
+  .recc h3 {
+    text-align: center;
+    margin-top:0px;
+    font-size:18px;
+    margin-bottom:0px;
+  }
+  .recc h4 {
+    color:#777;
+    font-size:14px;
+    line-height:1.6;
+    font-weight:400;
+  }
+  .insta {
+    cursor: default;
+  }
+
   .insta h2 {
     font-family:'Dosis', sans-serif;
     color:#444;
@@ -2010,6 +2026,27 @@ a {
     margin-top:5px;
     text-align:center;
     line-height: 1.3;
+  }
+  .insta h3 {
+    margin-top:0px;
+    font-size:18px;
+    margin-bottom:0px;
+  }
+  .insta h4 {
+    color:#777;
+    font-size:16px;
+    font-weight:400;
+  }
+  .insta h5 {
+    font-size:16px;
+    font-weight:400;
+    color:#777;
+    margin-top:0px;
+  }
+  .insta img {
+    max-width:125px;
+    border-radius:4px;
+    float:right;
   }
 }
 
@@ -2292,38 +2329,6 @@ a {
 .descript p {
   font-size:14px;
   color: #555F6D;
-}
-
-.owner-insta {
-  cursor: default;
-}
-
-.owner-insta h3 {
-  color:#444;
-  font-size:32px;
-  font-weight:400;
-  font-family: 'Dosis', sans-serif;
-}
-
-.owner-insta h4 {
-  color:#555F6D;
-  font-size:28px;
-  font-weight:300;
-}
-
-.owner-insta h5 {
-  color:#555F6D;
-  font-size:18px;
-  font-weight:300;
-}
-
-.owner-insta h5 a {
-  color:#51A1F4;
-  font-size:20px;
-}
-
-.owner-insta h5 a span {
-  color:#51A1F4;
 }
 
 .blue-row {
