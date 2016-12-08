@@ -1,10 +1,9 @@
 html,body
 {
     width: 100%;
-    height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .container-fluid {
@@ -99,15 +98,8 @@ small {
 
 hr {
     border: 0;
-    margin: 40px 10px !important;
+    margin: 40px 10px;
     border-top: 2px solid #e6e6e6;
-}
-
-.home-hr hr {
-  border: 0;
-   height: 1px;
-   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
-    width: 75%;
 }
 
 a:focus {
@@ -336,7 +328,6 @@ strong {
             color:#fff;
             cursor: default;
             line-height: 1.3;
-            text-transform: uppercase;
             }
 }
 
@@ -512,7 +503,7 @@ strong {
   background: #3AC395;
   border: 1px solid #3AC395;
   font-size: 16px;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 
 }
@@ -522,7 +513,7 @@ strong {
   background: #fff;
   border: 1px solid #3AC395;
   font-size: 16px;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .btn-bl-sm:focus {
@@ -530,7 +521,7 @@ strong {
   background: #fff;
   border: 1px solid #3AC395;
   font-size: 16px;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .btn-bl:hover {
@@ -605,22 +596,6 @@ strong {
   float:right;
 }
 
-.lil-pad {
-  padding-top: 25px;
-}
-
-.freedom h5 {
-  color:#777;
-  font-size:16px;
-  font-weight:400;
-  line-height:1.3;
-  margin-top:0px;
-}
-
-.freedom img {
-  max-height: 325px;
-}
-
 .home-section h2 {
   font-size: 38px;
   font-weight: 400;
@@ -629,71 +604,262 @@ strong {
   color: #444;
 }
 
-.home-section h3 {
-  font-size: 42px;
-  font-weight: 400;
-  cursor: default;
-  line-height: 1.3;
-  font-family: 'Sans Source Pro', sans-serif;
-  color: #444;
-}
-
-.home-section h4 {
-  font-size: 22px;
-  font-weight: 400;
-  cursor: default;
-  line-height: 1.3;
-  font-family: 'Sans Source Pro', sans-serif;
-  color: #444;
-}
-
-.home-section-buy h3 {
-  font-size: 22px;
-  font-weight: 400;
-  cursor: default;
-  font-family: 'Sans Source Pro', sans-serif;
-  line-height: 1.3;
-  color: #444;
-  position: relative;
-  top: 10px;
-}
-
-.home-section-buy img {
-  float:right;
-  max-height: 75px;
-  padding-right: 15px;
-}
-
-.background-home {
-  float: none !important;
-  border-radius: 4px;
-  padding-right: 0px !important;
-}
-
-.home-section-buy h4 {
-  font-size: 16px;
-  font-weight: 400;
-  cursor: default;
-  color: #777;
-  line-height: 1.3;
-  font-family: 'Sans Source Pro', sans-serif;
-  position: relative;
-  top: 10px;
-}
-
-.home-section h5 {
-  font-size: 14px;
-  font-weight: 400;
-  cursor: default;
-  line-height: 1.6;
-  color: #777;
-}
-
+@media (max-width:499px) {
 .freedom h3 {
-  font-size:42px;
+  font-size:28px;
   font-weight:400;
   color:#444;
   line-height:1.3;
+  font-family: 'Dosis', sans-serif;
+  margin-top: 25px;
+  }
+  .home-hr hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+    width: 75%;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  .lil-pad-bottom {
+    padding-bottom: 15px;
+  }
+  .lil-pad {
+    padding-top: 15px;
+  }
+  .big-pad {
+    padding-top: 50px;
+  }
+  .header-pad {
+    padding-top: 50px;
+  }
+  .freedom h5 {
+    color:#777;
+    font-size:14px;
+    font-weight:400;
+    line-height:1.3;
+    margin-top:0px;
+  }
+  .home-section-buy h3 {
+    font-size: 16px;
+    font-weight: 400;
+    cursor: default;
+    font-family: 'Sans Source Pro', sans-serif;
+    line-height: 1.3;
+    color: #444;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .home-section-buy h4 {
+    font-size: 14px;
+    font-weight: 400;
+    cursor: default;
+    color: #777;
+    line-height: 1.3;
+    font-family: 'Sans Source Pro', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .background-home {
+    float: none !important;
+    border-radius: 4px;
+    padding-right: 0px !important;
+  }
+  .home-section-buy img {
+    padding-right: 5px;
+  }
+  .home-section h3 {
+    font-size: 28px;
+    font-weight: 400;
+    cursor: default;
+    line-height: 1.3;
+    font-family: 'Dosis', sans-serif;
+    color: #444;
+  }
+
+  .home-section h4 {
+    font-size: 16px;
+    font-weight: 400;
+    cursor: default;
+    line-height: 1.3;
+    font-family: 'Sans Source Pro', sans-serif;
+    color: #444;
+  }
+  .home-section h5 {
+    font-size: 14px;
+    font-weight: 400;
+    cursor: default;
+    line-height: 1.3;
+    font-family: 'Source Sans Pro', sans-serif;
+    color:#777;
+  }
+  .laptop {
+    padding-bottom: 25px;
+  }
+
+  .better h4 {
+    font-weight:400;
+    font-size:16px;
+    color:#777;
+    line-height:1.3;
+  }
+  .better h5 {
+    font-weight:400;
+    font-size:16px;
+    color:#444;
+    line-height:1.3;
+    float: left;
+  }
+  .better p {
+    font-size:14px;
+    font-weight:400;
+    color:#777;
+    line-height: 1.3;
+    float: left;
+  }
+  .discover img {
+    max-width: 200px;
+  }
+  .discover h5 {
+    color:#646772;
+    margin-bottom: 0px;
+  }
+  .big-pad-bottom {
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width:500px) {
+.freedom h3 {
+  font-size:52px;
+  font-weight:400;
+  color:#444;
+  line-height:1.3;
+  font-family: 'Dosis', sans-serif;
+  }
+.freedom img {
+  max-height: 500px;
+  padding-bottom: 25px;
+  }
+.home-hr hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  width: 75%;
+  }
+.lil-pad-bottom {
+  padding-bottom: 25px;
+  }
+.lil-pad {
+  padding-top: 25px;
+  }
+.big-pad {
+  padding-top: 75px;
+  }
+.header-pad {
+  padding-top: 25px;
+  }
+  .freedom h5 {
+    color:#777;
+    font-size:16px;
+    font-weight:400;
+    line-height:1.3;
+    margin-top:0px;
+  }
+  .home-section-buy h3 {
+    font-size: 18px;
+    font-weight: 400;
+    cursor: default;
+    font-family: 'Sans Source Pro', sans-serif;
+    line-height: 1.3;
+    color: #444;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .home-section-buy h4 {
+    font-size: 16px;
+    font-weight: 400;
+    cursor: default;
+    color: #777;
+    line-height: 1.3;
+    font-family: 'Sans Source Pro', sans-serif;
+    margin-bottom: 25px;
+  }
+  .background-home {
+    float: none !important;
+    border-radius: 4px;
+    padding-right: 0px !important;
+  }
+  .home-section-buy img {
+    max-height: 50px;
+    padding-right: 15px;
+  }
+  .home-section h3 {
+    font-size: 52px;
+    font-weight: 400;
+    cursor: default;
+    line-height: 1.3;
+    font-family: 'Dosis', sans-serif;
+    color: #444;
+  }
+
+  .home-section h4 {
+    font-size: 22px;
+    font-weight: 400;
+    cursor: default;
+    line-height: 1.3;
+    font-family: 'Sans Source Pro', sans-serif;
+    color: #777;
+  }
+  .home-description {
+    padding-top: 100px;
+  }
+  .laptop {
+    max-width: 500px !important;
+  }
+  .home-section h5 {
+    font-size: 18px;
+    font-weight: 400;
+    cursor: default;
+    line-height: 1.3;
+    font-family: 'Source Sans Pro', sans-serif;
+    color:#777;
+  }
+  .home-ex {
+    padding-bottom: 25px;
+  }
+  .better {
+    padding-top: 25px;
+  }
+  .better h4 {
+    font-weight:400;
+    font-size:22px;
+    color:#777;
+    line-height:1.3;
+  }
+  .better h5 {
+    font-weight:400;
+    font-size:18px;
+    color:#444;
+    line-height:1.3;
+    float: left;
+  }
+  .better p {
+    font-size:16px;
+    font-weight:400;
+    color:#777;
+    line-height: 1.3;
+    float: left;
+  }
+  .discover img {
+    max-width: 300px;
+  }
+  .discover h5 {
+    color:#646772;
+  }
+  .big-pad-bottom {
+    padding-bottom: 100px;
+  }
 }
 
 .train h4 {
@@ -734,29 +900,10 @@ strong {
   text-align: center;
 }
 
-.lil-pad-bottom {
-  padding-bottom: 25px;
-}
-
 .better h3 {
   font-size:48px;
   font-weight:200;
   font-family: 'Dosis', sans-serif;
-}
-
-.better h4 {
-  font-weight:400;
-  font-size:22px;
-  color:#777;
-  line-height:1.3;
-}
-
-.better h5 {
-  font-weight:400;
-  font-size:18px;
-  color:#444;
-  line-height:1.3;
-  float: left;
 }
 
 .better span {
@@ -768,18 +915,6 @@ strong {
   max-height: 100px;
   display: inline;
   float: right;
-}
-
-.better p {
-  font-size:16px;
-  font-weight:400;
-  color:#777;
-  line-height: 1.3;
-  float: left;
-}
-
-.discover img {
-  max-width: 300px;
 }
 
 .made-by h5 {
@@ -795,14 +930,6 @@ strong {
   font-family: 'Dosis', sans-serif;
 }
 
-.discover h5 {
-  color:#646772;
-}
-
-.home-ex {
-  padding-bottom: 25px;
-}
-
 .home-ex p {
   color:#646772;
   font-weight: 300;
@@ -813,25 +940,8 @@ strong {
   padding-right: 0px;
 }
 
-.home-section h5 {
-  font-size: 18px;
-  font-weight: 400;
-  cursor: default;
-  line-height: 1.3;
-  font-family: 'Source Sans Pro', sans-serif;
-  color:#777;
-}
-
 .home-ex img {
   max-height: 75px;
-}
-
-.big-pad {
-  padding-top: 75px;
-}
-
-.big-pad-bottom {
-  padding-bottom: 100px;
 }
 
 img.img-test {
@@ -1663,17 +1773,6 @@ a {
   }
 }
 
-.home-description {
-  padding-top: 100px;
-}
-
-@media (max-width:500px) {
-.home-description {
-  padding-top: 25px;
-  }
-}
-
-
 .campaign-section h2 {
   color:#3AC395;
 }
@@ -2003,16 +2102,6 @@ a {
   font-size: 18px;
   padding-top: 8px;
   color: #444;
-}
-
-.laptop {
-  max-width: 300px;
-}
-
-@media (min-width:500px) {
-  .laptop {
-    max-width: 500px !important;
-  }
 }
 
 .dash-campaign-title h5 {
