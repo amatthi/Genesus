@@ -554,13 +554,6 @@ strong {
     text-transform: uppercase;
 }
 
-.btn-bl-sm:focus {
-    color: #3AC395;
-    background: #fff;
-    border: 1px solid #3AC395;
-    font-family: 'Dosis', sans-serif;
-}
-
 .btn-secondary {
     background: #F4F6F5;
     color: #777;
