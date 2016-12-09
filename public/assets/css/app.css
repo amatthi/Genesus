@@ -1197,10 +1197,10 @@ footer {
 
 .tab-content-1 {
   border: 1px solid #ddd;
-  padding: 10px;
-  padding-top: 0px;
   background-color: #F3F3F3;
   border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .tab-content-style {
@@ -1214,6 +1214,12 @@ footer {
   border: 1px solid #ddd;
   padding: 10px;
   background-color: #F4F5F7;
+}
+
+.right-create {
+  position: fixed;
+  right: 0;
+  margin-right: 25px;
 }
 
 .goal-output {
@@ -1306,36 +1312,30 @@ footer {
 }
 
 .CLA_1 {
-  display: table;
-  border: 1px solid #ddd;
+  border: 1px solid #eee;
   cursor: pointer;
-  min-height: 90px;
   background-color: #fff;
-  margin: 2px;
-  width: 98%;
 }
 
-.CLA_1 h4 {
+.CLA_1 h2 {
   display: block;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 3px;
-  padding-right: 5px;
+  font-size: 22px;
+  font-weight: 600;
   color: #444;
-}
-
-.CLA_1 span {
-  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .CLA_1 img {
-  display: inline-block;
-  height:40px;
+  max-height: 100px;
   margin-top: 10px;
 }
 
-.CLA_1 h5 {
-
+.CLA_1 h3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 0px;
 }
 
 .ing-ex h5 {
@@ -1758,6 +1758,18 @@ a {
    position:relative;
  }
 
+ .create-link h5 a {
+   font-weight: 600;
+   font-size: 16px;
+ }
+
+ .create-link h5 a:hover {
+   font-weight: 600;
+   font-size: 16px;
+   color:#3AC395;
+   text-decoration: none;
+ }
+
  .btn-primary:hover {
    color:#fff;
    background: #63d1ab;
@@ -1931,6 +1943,7 @@ a {
     font-weight:500;
     margin-bottom: 10px;
   }
+
   .descript-blurb h4 {
     font-size:14px;
     font-weight:400;

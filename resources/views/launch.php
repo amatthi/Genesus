@@ -33,9 +33,9 @@
             <div ng-controller="CustomCtrl">
                 <div class="col-xs-12 up-down-pad">
                     <div class="col-xs-12 col-sm-7">
-                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }" ng-click="set_step('create',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">1</span> Create</span>
-                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_goal() }" ng-click="set_step('goal',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_goal() }">2</span> Details</span>
-                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }" ng-click="set_step('desc',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">3</span> Launch</span>
+                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }" ng-click="set_step('desc',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">1</span> Select A Product</span>
+                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }" ng-click="set_step('create',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">2</span> Design Your Label</span>
+                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_goal() }" ng-click="set_step('goal',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_goal() }">3</span> Launch Your Brand</span>
                     </div>
                     <div class="col-xs-12 col-sm-3">
                         <span class="step-default">
@@ -58,7 +58,7 @@
                     </div>
                     <!-- custom END -->
                     <!-- step -->
-                    <div class="col-xs-12">
+                    <div class="col-xs-12 lil-pad-bottom">
                     <div class="container-fluid lil-pad">
                     <div ng-include="'/html/templates/launch/step_left.html?'+template_v"></div>
                     <!-- step END -->
@@ -67,7 +67,9 @@
                     <div class="col-xs-12 col-sm-9 bottle-design" ng-show="launch_step_create()" ng-include="'/html/templates/launch/bottle.html?'+template_v"></div>
                     <!-- bottle END -->
                     <!-- step -->
-                    <div class="col-xs-12 col-sm-3" ng-include="'/html/templates/launch/step_right.html?'+template_v"></div>
+                    <div class="col-xs-12 col-sm-9" ng-include="'/html/templates/launch/step_one.html?'+template_v"></div>
+                    <div class="col-xs-12 col-sm-3 right-create" ng-include="'/html/templates/launch/step_right.html?'+template_v"></div>
+
                     <!-- step END -->
                 </div>
               </div>
