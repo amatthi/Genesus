@@ -1216,10 +1216,12 @@ footer {
   background-color: #F4F5F7;
 }
 
+@media (min-width:500px) {
 .right-create {
   position: fixed;
   right: 0;
   margin-right: 25px;
+  }
 }
 
 .goal-output {
