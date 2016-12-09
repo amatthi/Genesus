@@ -26,7 +26,7 @@ class CampaignController extends Controller
             //'png64'           => 'required',
             'sale_price'      => 'required',
             //'description'     => 'required',
-            'length'          => 'required|in:3,4,5,7',
+            //'length'          => 'required|in:3,4,5,7',
             'status'          => 'required|in:public,draft',
             //'slug'            => 'required|max:255',
             //'blurb'            => 'required|max:255',
