@@ -10929,10 +10929,6 @@ chisel.config(function($routeProvider, $locationProvider, $httpProvider) {
         templateUrl: 'html/home.html',
         controller: 'homeController',
     })
-    .when('/sell', {
-        templateUrl: 'html/sell.html',
-        controller: 'homeController',
-    })
     //.when('/launch', {
     //    templateUrl: 'html/launch.html',
     //    controller: 'launchController',
