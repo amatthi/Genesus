@@ -65,9 +65,9 @@
                   <h5>{{campaign_data.formula.servings}} Servings</h5>
                 </div>
                 <div>
-                  <h4>${{campaign_data.formula.retail}}</h4>
+                  <h4><span style="text-decoration:none;">Retail:</span> <span style="text-decoration:line-through;">${{campaign_data.formula.retail}}</span></h4>
                   <h3 style="color:#3AC395;">Sale: {{campaign_data.sale_price | currency}} <span class="today-only" style="color:#777;font-size:16px;">ONLY TODAY!</span></h3>
-                  <h4 style="text-decoration:none;">You Save: ${{ (campaign_data.formula.retail|number) - (campaign_data.sale_price|number)}}.00 ({{campaign_data.formula.margin}}%)</h4>
+                  <h4 style="text-decoration:none;">You Save: ${{ (campaign_data.formula.retail| limitTo: 4 ) - (campaign_data.sale_price| limitTo: 4)}} ({{campaign_data.formula.margin}}%)</h4>
                 </div>
               </div>
             </div>
@@ -125,9 +125,9 @@
           </div>
           <div class="col-xs-12 no-pad-xs">
             <div class="col-xs-6 campaign-price">
-              <h4>${{campaign_data.formula.retail}}</h4>
+              <h4>Retail <span style="text-decoration:line-through;">${{campaign_data.formula.retail}}</span></h4>
               <h3 style="color:#3AC395;">Sale: {{campaign_data.sale_price | currency}} <span style="color:#777;font-size:16px;">ONLY TODAY!</span></h3>
-              <h4 style="text-decoration:none;">You Save: ${{ (campaign_data.formula.retail|number) - (campaign_data.sale_price|number)}}.00 ({{campaign_data.formula.margin}}%)</h4>
+              <h4 style="text-decoration:none;">You Save: ${{ (campaign_data.formula.retail| limitTo: 4) - (campaign_data.sale_price| limitTo: 4)}}.00 ({{campaign_data.formula.margin}}%)</h4>
             </div>
             <div class="col-xs-6 lil-pad">
               <div class="campaign-brand-pic" ng-show="campaign_data.user.profile.photo" style="padding-bottom:5px;">

@@ -1872,6 +1872,11 @@ a {
     display: block;
   }
 }
+@media (min-width:1429px) {
+  .today-only {
+    display: inline;
+  }
+}
 
 .products-style option {
   border: 1px solid #d8dddf;
@@ -1897,7 +1902,6 @@ a {
     padding-top: 40px;
   }
   .campaign-price h4 {
-    text-decoration:line-through;
     color:#777;
     font-size:22px;
     display:inline;
@@ -2091,7 +2095,6 @@ a {
   .campaign-price h4 {
     cursor: default;
     font-weight: 400;
-    text-decoration:line-through;
     color:#777;
     margin-top:10px;
     font-size:18px;
