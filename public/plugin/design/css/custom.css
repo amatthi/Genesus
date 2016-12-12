@@ -1077,7 +1077,7 @@ body.body_overlay::after {
         margin-bottom: 30px;
     }
     .color-mixer br{display: none;}
-    .editor_section{height: auto !important; }
+    .editor_section{min-height: 305px !important; }
     .index_02 .canvas_options{padding-left: 40px;}
     .customizer.customizer_toggle{position: absolute;}
 }

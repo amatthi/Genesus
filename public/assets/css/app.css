@@ -2582,6 +2582,10 @@ a {
   padding-bottom: 250px;
 }
 
+.pad-top-5 {
+  padding-top: 5px;
+}
+
 .pad-top-15 {
   padding-top: 15px;
 }
@@ -2808,10 +2812,163 @@ a {
     border-bottom: 1px solid #ddd;
 }
 
+@media (max-width:499px) {
 .modal-top h2 {
     font-size: 16px;
     margin-top: 10px;
     font-weight:600;
+  }
+.modal-top img {
+  float: right;
+  max-width:50px;
+  display:inline-block;
+  padding-top:5px;
+  }
+.shipping-label h4 {
+  font-family:'Dosis', sans-serif;
+  font-size:14px;
+  font-weight:500;
+  color:#444;
+  text-transform:uppercase;
+  }
+.shipping-label label {
+  font-size: 13px;
+  color: #777;
+  font-weight: 400;
+  }
+.payment-2 h4 {
+  font-family:'Dosis', sans-serif;
+  font-size:14px;
+  font-weight:500;
+  color:#444;
+  text-transform:uppercase;
+  }
+  .shipping-label input {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      padding: 6px;
+      font-size: 12px;
+      margin-bottom: 5px;
+      /**color:#777;**/
+  }
+  .pay-input input {
+      max-width: 100%;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      padding: 6px;
+      font-size: 12px;
+      /**color:#777;**/
+  }
+  .summary-name {
+    font-size:12px;
+    float:left;
+  }
+  .summary-price {
+    font-size:12px;
+    float:right;
+  }
+  .summary-img {
+    max-width:50px;
+    display:inline-block;
+    float:left;
+  }
+  .grand-total-label {
+    float:left;
+    font-size:18px;
+  }
+  .grand-total-price {
+    float:right;
+    font-size:18px;
+    color:#3AC395;
+  }
+  .buy-button input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width:500px) {
+.modal-top h2 {
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight:600;
+  }
+.modal-top img {
+  max-width:75px;
+  display:inline-block;
+  float:right;
+  position:relative;
+  top:-35px;
+  margin-bottom:-25px;
+  }
+.shipping-label h4 {
+  font-family:'Dosis', sans-serif;
+  font-size:18px;
+  font-weight:500;
+  color:#444;
+  text-transform:uppercase;
+  }
+.shipping-label label {
+  font-size: 16px;
+  color: #777;
+  font-weight: 400;
+  }
+.payment-2 h4 {
+  font-family:'Dosis', sans-serif;
+  font-size:18px;
+  font-weight:500;
+  color:#444;
+  text-transform:uppercase;
+  }
+  .shipping-label input {
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      padding: 6px;
+      font-size: 14px;
+      margin-bottom: 5px;
+      /**color:#777;**/
+  }
+  .cvc-code input {
+    margin-left: 30px !important;
+  }
+  .pay-input input {
+      max-width: 100%;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      padding: 6px;
+      font-size: 14px;
+      /**color:#777;**/
+  }
+  .summary-name {
+    font-size:14px;
+    float:left;
+  }
+  .summary-price {
+    font-size:14px;
+    float:right;
+  }
+  .summary-img {
+    max-width:100px;
+    display:inline-block;
+    float:left;
+  }
+  .grand-total-label {
+    float:left;
+    font-size:22px;
+  }
+  .grand-total-price {
+    float:right;
+    font-size:22px;
+    color:#3AC395;
+  }
+  .buy-button input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+  }
+
 }
 
 .payment-container-small {
@@ -2843,15 +3000,6 @@ a {
     padding: 5px;
 }
 
-.pay-input input {
-    max-width: 100%;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    padding: 6px;
-    font-size: 12px;
-    /**color:#777;**/
-}
-
 .pay-input textarea {
     max-width: 100%;
     border-radius: 4px;
@@ -2865,23 +3013,6 @@ a {
   font-size: 13px;
   color: #777;
   font-weight: 400;
-}
-
-.shipping-label label {
-  font-size: 13px;
-  color: #777;
-  font-weight: 400;
-  padding-left:15px;
-}
-
-.shipping-label input {
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    padding: 6px;
-    font-size: 12px;
-    margin-bottom: 5px;
-    /**color:#777;**/
 }
 
 .shipping-label textarea {
