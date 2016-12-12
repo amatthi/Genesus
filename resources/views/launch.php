@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <base href="/plugin/design/">
         <title>Genesus</title>
-        <meta name="description" content="Genesus lets you create your own branded supplement line, risk free.">
+        <meta name="description" content="Genesus lets you create your own Organic, Non-GMO supplement line, risk free.">
         <link rel="shortcut icon" href="/favicon.ico?v=5.0" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">

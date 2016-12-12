@@ -23,10 +23,6 @@ header {
     border-bottom: 1px solid #CCC;
 }
 
-.header-row {
-    overflow: hidden;
-}
-
 header .logo-1 {
     float: none;
 }
@@ -52,12 +48,6 @@ header nav ul li a:hover {
     color: #3AC395;
     cursor:pointer;
     /*border-bottom: 1px solid #07B9FF*/
-}
-
-header nav ul li.login-li {
-    float: right;
-    margin: -5px 0 0;
-    padding: 0;
 }
 
 header nav ul li {
@@ -110,16 +100,6 @@ strong {
   font-weight: 500;
 }
 
-.hero-bg {
-  max-height:650px;
-  height: 650px;
-  width:100%;
-  clear:both;
-  padding-top: 50px;
-  background:url('https://s3-us-west-2.amazonaws.com/tappyn/beach_banner.jpg') no-repeat center center;
-  background-size:cover;
-}
-
 .sell-bg {
   max-height:550px;
   height: 550px;
@@ -129,36 +109,7 @@ strong {
   background-size:cover;
 }
 
-.store-bg {
-  background:#9CE2CA;
-  /**height:100%;**/
-  height:400px;
-  max-height:400px;
-  width:100%;
-  clear:both;
-  background-size:cover;
-  padding-bottom: 200px;
-}
-
 @media (max-width:586px) {
-  .store-bg {
-    background:#9CE2CA;
-    /**height:100%;**/
-    height:300px;
-    max-height:300px;
-    width:100%;
-    clear:both;
-    background-size:cover;
-  }
-}
-
-@media (max-width:586px) {
-  .hero-bg {
-  background: #fff;
-  background-size:cover;
-  height: 300px;
-  padding-top: 0px;
-    }
   .sell-bg {
   /**background:url('https://s3-us-west-2.amazonaws.com/tappyn/seller_banner_small.jpg') no-repeat center center;**/
   background: #fff;
@@ -166,91 +117,6 @@ strong {
   margin-top: 0px;
   height: 325px;
     }
-}
-
-  /**@media (min-width:587px) and (max-width:882px) {
-    .hero-bg {
-    background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbanner-sm.jpg) no-repeat center center;
-    background-size:cover;
-      }
-  }
-
-  @media (min-width:883px) and (max-width:1077px) {
-    .hero-bg {
-    background:url(https://s3-us-west-2.amazonaws.com/tappyn/liftbanner-md.jpg) no-repeat center center;
-    background-size:cover;
-      }
-  }
-
-  @media (min-width:1078px) and (max-width:1500px) {
-    .hero-bg {
-    background:url(https://s3-us-west-2.amazonaws.com/tappyn/genesus_banner.jpg) no-repeat center center;
-    background-size:cover;
-      }
-  }
-
-  @media (min-width:1501px){
-    .hero-bg {
-    background:url(https://s3-us-west-2.amazonaws.com/tappyn/genesus_banner.jpg) no-repeat center center;
-    background-size:cover;
-      }
-  }**/
-
-.store-bg h1 {
-  color: #fff;
-  font-size:78px;
-  font-family:'Dosis', sans-serif;
-  padding-bottom:25px;
-}
-
-.store-bg h3 {
-  color:#fff;
-  font-weight:400;
-  font-size:42px;
-  line-height:1.3;
-}
-
-.testimonials h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #fff;
-    font-weight: 100;
-    font-size: 30px;
-    cursor: default;
-}
-
-.hero-content {
- height: 100%;
-}
-
-.train {
-  background: url('/img/Train.jpg');
-  background-size: cover;
-  height: 300px;
-  border-radius: 4px;
-}
-
-.train:hover {
-  opacity: 0.7;
-  cursor:pointer;
-}
-
-.maintain {
-  background: url('/img/Maintain.jpg');
-  background-size: cover;
-  height: 300px;
-  border-radius: 4px;
-}
-
-.maintain:hover {
-  opacity: 0.7;
-  cursor:pointer;
-}
-
-.relieve {
-  background: url('/img/Relieve.jpg');
-  background-size: cover;
-  height: 300px;
-  border-radius: 4px;
 }
 
 .modal-title {
@@ -276,42 +142,6 @@ strong {
   display:inline-block;
 }
 
-.relieve:hover {
-  opacity: 0.7;
-  cursor:pointer;
-}
-
-.drive {
-  background: url('/img/Drive.jpg');
-  background-size: cover;
-  height: 300px;
-  border-radius: 4px;
-}
-
-.drive:hover {
-  opacity: 0.7;
-  cursor:pointer;
-}
-
-.hero-content h2 {
-    font-family: 'Dosis', sans-serif;
-    color: #fff;
-    font-weight: 300;
-    font-size: 37px;
-    cursor: default;
-}
-
-.hero-content h1 {
-    font-family: 'Dosis', sans-serif;
-    font-weight: 500;
-    font-size: 42px;
-    color:#444;
-    cursor: default;
-    line-height: 1.3;
-    margin-top: 0px;
-    text-transform: uppercase;
-}
-
 .hero-content-sell h1 {
     font-family: 'Dosis', sans-serif;
     font-weight: 500;
@@ -324,17 +154,6 @@ strong {
 }
 
 @media (min-width:587px) {
-.hero-content h1 {
-    font-family: 'Dosis', sans-serif;
-    font-weight: 500;
-    font-size: 72px;
-    padding-top: 25px;
-    padding-bottom: 35px;
-    color:#444;
-    cursor: default;
-    line-height: 1.3;
-    text-transform: uppercase;
-    }
     .hero-content-sell h1 {
         font-family: 'Dosis', sans-serif;
         font-weight: 500;
@@ -352,63 +171,6 @@ strong {
             cursor: default;
             line-height: 1.3;
             }
-}
-
-/**@media (min-width:600px) and (max-width:882px) {
-  .hero-content h3 {
-    color:#444 !important;
-  }
-}
-
-@media (max-width:559px) {
-  .hero-content h3 {
-    display: none !important;
-  }
-}**/
-
-.hero-content h3 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-    color:#444;
-    cursor: default;
-    line-height: 1.3;
-    font-size: 32px;
-}
-
-.hero-content .btn-banner {
-    font-size: 18px;
-    line-height: 50px;
-}
-
-.btn-gy {
-    background: #fff;
-    color: #6c7478;
-    font-weight: 400;
-    border: 1px solid #6c7478;
-    font-size: 16px;
-    border-radius: 6px;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.btn-gy:hover {
-    background: #6c7478;
-    color: #fff;
-    border: 1px solid #6c7478;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.btn-gy:focus {
-    color: #fff;
-    background: #6c7478;
-    border: 1px solid #6c7478;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.btn-gy:active {
-    color: #fff;
-    background: #6c7478;
-    border: 1px solid #6c7478;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .btn-gn {
@@ -482,32 +244,6 @@ strong {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.btn-sell {
-  color: #3ac395;
-  background: #fff;
-  border: 1px solid #3ac395;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 25px;
-  padding-right: 25px;
-  font-size: 18px;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.btn-sell:hover {
-  color: #fff;
-  background: #777;
-  border: 1px solid #777;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.btn-sell:focus {
-  color: #fff;
-  background: #777;
-  border: 1px solid #777;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
 .btn-bl {
   color: #fff;
   background: #3AC395;
@@ -568,27 +304,6 @@ strong {
     padding-right: 50px;
     font-family: 'Source Sans Pro', sans-serif;
     text-transform: uppercase;
-}
-
-.btn-secondary {
-    background: #F4F6F5;
-    color: #777;
-    border: 1px solid #F4F6F5;
-    font-weight: 400;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-    font-size: 18px;
-}
-
-.btn-secondary:hover {
-    background: #F4F6F5;
-    color: #777;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
 }
 
 .new-campaign {
@@ -871,35 +586,6 @@ strong {
   }
 }
 
-.train h4 {
-  color:#fff;
-  text-decoration: none;
-  font-size: 32px;
-  font-weight: 300;
-}
-
-.maintain h4 {
-  color:#fff;
-  text-decoration: none;
-  font-size: 32px;
-  font-weight: 300;
-}
-
-.relieve h4 {
-  color:#fff;
-  text-decoration: none;
-  font-size: 32px;
-  font-weight: 300;
-}
-
-.drive h4 {
-  color:#fff;
-  text-decoration: none;
-  font-size: 32px;
-  font-weight: 300;
-}
-
-
 .home-arrow {
   top:3px;
   padding-left: 10px;
@@ -944,22 +630,8 @@ strong {
   font-weight: 300;
 }
 
-.benefit_div {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .home-ex img {
   max-height: 75px;
-}
-
-img.img-test {
-  max-height: 450px;
-  min-height: 450px;
-}
-
-img.img-woman {
-  max-width: 550px !important;
 }
 
 /** Footer **/
@@ -1080,12 +752,6 @@ footer {
   border-bottom: 1px solid hsla(0, 0%, 80%, 0.61);
 }
 
-@media (min-width:1200px) {
-.button-switch {
-  padding-left: 65px !important;
-  }
-}
-
 .launch-current-step {
   color: #3AC395 !important;
   padding-left: 25px;
@@ -1174,10 +840,6 @@ footer {
   color: #fff;
   border-radius: 50%;
   padding: 0px 6px 1px 6px;
-}
-
-.progress {
-  margin-bottom: 0px;
 }
 
 .tab-content {
@@ -1276,14 +938,6 @@ footer {
   background-color: #F4F5F7 !important;
 }
 
-/**@media (max-width: 1252px) {
-  .tab-select {
-    margin-right: 10px;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}**/
-
 .step1_1 {
   max-width: 322.5px !important;
 }
@@ -1294,15 +948,6 @@ footer {
 
 .design-img {
   max-height: 500px;
-}
-
-.formula-box {
-  max-height:280px;
-  overflow:auto;
-  border: 0.1px solid #ddd;
-  border-left: none;
-  background:#ddd;
-  border-radius:4px;
 }
 
 .pad-bottom-100 {
@@ -1526,22 +1171,6 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 0px 0px 10px !important;
 }
 
-.launch-benefit img {
-  max-height: 70px;
-}
-
-@media (min-width:667px) and (max-width:1178px) {
-.step-2-desc {
-  margin-right: -100px;
-  }
-}
-
-@media (min-width:1179px) {
-.step-2-desc {
-  margin-right: -140px;
-  }
-}
-
 .tab-content-1 p {
   color: #777;
   font-size: 14px;
@@ -1552,14 +1181,6 @@ input[type=range]:focus::-ms-fill-upper {
   font-size: 14px;
   font-weight: 600;
   font-family: 'Dosis', sans-serif;
-}
-
-.goal-select {
-  border: 2px solid #ddd;
-  height: 35px;
-  background-color: #fff;
-  font-size: 18px;
-  color: #444;
 }
 
 .btn-group-1 {
@@ -1586,10 +1207,6 @@ input[type=range]:focus::-ms-fill-upper {
     background-color: #6C7477;
     border-color: #6C7477;
     font-family: 'Source Sans Pro', sans-serif;
-}
-
-.bigger-pad {
-  padding-top: 55px;
 }
 
 .tabing .nav-tabs > li.active > a, .tabing .nav-tabs > li.active > a:focus, .tabing .nav-tabs > li.active > a:hover {
@@ -1856,17 +1473,6 @@ a {
   color:#0698D1;
 }
 
-.products-style-1 option {
-  border: 1px solid #d8dddf;
-  background-color: #fff;
-  height: 50px;
-  width: 56px;
-  display: inline-block;
-  font-size: 12px;
-  text-align: center;
-  border-radius: 4px;
-}
-
 @media (max-width:1428px) {
   .today-only {
     display: block;
@@ -1876,12 +1482,6 @@ a {
   .today-only {
     display: inline;
   }
-}
-
-.products-style option {
-  border: 1px solid #d8dddf;
-  background-color: #fff;
-  height: 86px;
 }
 
 @media (max-width:499px) {
@@ -2229,11 +1829,6 @@ a {
   }
 }
 
-
-.progress-bar {
-  background-color: #71CE66;
-}
-
 .campaign-share p {
   font-size: 12px;
   color: #777;
@@ -2293,18 +1888,6 @@ a {
   font-size: 16px;
   margin: 0px 0px 5px;
   color: #777;
-}
-
-.smalltext{
-    padding-top: 0px;
-    font-size: 14px;
-		color:#777;
-		cursor: default;
-    display: block;
-}
-
-.numtext {
-  display: block;
 }
 
 .brand-social a img {
@@ -2370,30 +1953,6 @@ a {
 
 .pad-top-70 {
   padding-top: 70px;
-}
-
-.launch-options-bottle label {
-  font-weight:300;
-}
-
-.blurb-desc h6 {
-  margin-top:5px;
-  font-size:10px;
-  color:#777;
-}
-
-.goal-desc {
-  height:45px;
-  width:85px;
-  cursor:pointer;
-  background-size:cover;
-  float:left;
-  border-radius:4px;
-  border: 1px solid #ddd;
-  margin: 2px;
-  font-size: 18px;
-  padding-top: 8px;
-  color: #444;
 }
 
 .dash-campaign-title h5 {
@@ -2744,36 +2303,6 @@ a {
 .canvas_sub_image a {
   cursor:pointer;
   font-size:22px;
-}
-
-.bio-info {
-  cursor: default;
-}
-
-.bio-info a {
-  font-size:14px;
-  font-weight:500;
-  color:#555F6D;
-}
-
-.bio-info h4 {
-  color:#434343;
-  margin-top:0px;
-  margin-bottom:0px;
-  font-size:22px;
-  font-weight:600;
-}
-
-.bio-info h5 {
-  line-height:1.3;
-  color:#434343;
-  font-size:14px;
-}
-
-.bio-info p {
-  color:#434343;
-  font-weight:300;
-  font-size:16px;
 }
 
 .state {
@@ -3167,81 +2696,6 @@ a {
   margin-right:10px;
 }
 
-.fivemarbottom {
-    margin-bottom: 5px;
-}
-
-#clockdiv {
-    font-family: sans-serif;
-    color: #333;
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-    font-size: 30px;
-    padding-top: 15px;
-    cursor: default;
-}
-@media (min-width: 1423px) {
-  #clockdiv > timer > div {
-      padding: 5px;
-      border-radius: 4px;
-      background: #fff;
-      display: inline-block;
-      border: 1px solid #ddd;
-      cursor: default;
-  }
-}
-@media (min-width: 1150px) and (max-width: 1422px) {
-#clockdiv > timer > div {
-    padding: 2px;
-    border-radius: 4px;
-    background: #fff;
-    display: inline-block;
-    border: 1px solid #ddd;
-    cursor: default;
-  }
-  .numtext {
-    font-size: 18px;
-  }
-  .smalltext {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 1149px) {
-  #clockdiv > timer > div {
-      padding: 2px;
-      border-radius: 4px;
-      background: #fff;
-      display: inline-block;
-      border: 1px solid #ddd;
-      cursor: default;
-    }
-    .numtext {
-      font-size: 14px;
-    }
-    .smalltext {
-      font-size: 10px;
-    }
-}
-
-#clockdiv > timer > div > span {
-    padding: 0px 15px 0px 15px;
-    border-radius: 3px;
-    background: #fff;
-    cursor: default;
-    color #434343;
-    font-weight: 400;
-}
-
-.payment-back {
-  padding-left: 10px;
-  margin-top: -20px;
-  position: relative;
-  top: -10px;
-  cursor: pointer;
-}
-
 .shipping-info h5 {
   font-size:10px;
 }
@@ -3260,4 +2714,22 @@ a {
   border:1px solid #07B9FF;
   border-radius: 4px;
   box-shadow: 0 0 9px #07B9FF;
+}
+
+.bottle-out {
+  position: relative;
+}
+
+  .bottle-out .bottle-text, .bottle-out .bottle-art {
+    height: 1%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+.graphic_types > div {
+  margin-right: 6px;
 }
