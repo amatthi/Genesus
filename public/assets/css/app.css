@@ -1867,6 +1867,12 @@ a {
   border-radius: 4px;
 }
 
+@media (max-width:1428px) {
+  .today-only {
+    display: block;
+  }
+}
+
 .products-style option {
   border: 1px solid #d8dddf;
   background-color: #fff;

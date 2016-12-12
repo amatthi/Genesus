@@ -66,7 +66,7 @@
                 </div>
                 <div>
                   <h4>${{campaign_data.formula.retail}}</h4>
-                  <h3 style="color:#3AC395;">Sale: {{campaign_data.sale_price | currency}} <span style="color:#777;font-size:16px;">ONLY TODAY!</span></h3>
+                  <h3 style="color:#3AC395;">Sale: {{campaign_data.sale_price | currency}} <span class="today-only" style="color:#777;font-size:16px;">ONLY TODAY!</span></h3>
                   <h4 style="text-decoration:none;">You Save: ${{ (campaign_data.formula.retail|number) - (campaign_data.sale_price|number)}}.00 ({{campaign_data.formula.margin}}%)</h4>
                 </div>
               </div>
