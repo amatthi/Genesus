@@ -53,7 +53,7 @@
             <div class="col-xs-12 no-pad-left">
                 <h2>{{campaign_data.title}}</h2>
                 <img ng-src="/plugin/design/images/ratings/{{campaign_data.formula.name}}.jpg" class="img-responsive" />
-                <p style="display:inline;">313 Reviews</p>
+                <p style="display:inline;color:#777;">313 Reviews</p>
             </div>
           </div>
           <div class="col-xs-10 formula-description">
@@ -62,12 +62,12 @@
             <div class="col-xs-6 campaign-price no-pad-left no-pad-right">
               <div class="col-xs-12 no-pad-right">
                 <div>
-                  <h5>{{campaign_data.formula.servings}} Servings</h5>
+                  <h5>({{campaign_data.formula.servings}} Servings)</h5>
                 </div>
                 <div>
-                  <h4><span style="text-decoration:none;">Retail:</span> <span style="text-decoration:line-through;">${{campaign_data.formula.retail}}</span></h4>
-                  <h3 style="color:#3AC395;">Sale: {{campaign_data.sale_price | currency}} <span class="today-only" style="color:#777;font-size:16px;">ONLY TODAY!</span></h3>
-                  <h4 style="text-decoration:none;">You Save: ${{ (campaign_data.formula.retail| limitTo: 2 ) - (campaign_data.sale_price| limitTo: 2)}} ({{campaign_data.formula.margin}}%)</h4>
+                  <h4>${{campaign_data.formula.retail}}</h4>
+                  <h3 style="color:#3AC395;">Sale: {{campaign_data.sale_price | currency}} <span class="today-only" style="color:#444;font-size:22px;display:block;">ONLY TODAY!</span></h3>
+                  <h4 style="text-decoration:none;font-size:16px;">You save: ${{ (campaign_data.formula.retail| limitTo: 2 ) - (campaign_data.sale_price| limitTo: 2)}} ({{campaign_data.formula.margin}}%)</h4>
                 </div>
               </div>
             </div>
@@ -235,22 +235,22 @@
         <h2>THE NEW STANDARD</h2>
       </div>
       <div class="col-xs-12 lil-pad">
+        <h4>What else is in it?</h4>
+        <h5>Each and every ingredient is clearly spelled out and already in it's optimal form and quantity to ensure your body gets everything it needs - and nothing that it doesn't.</h5>
+      </div>
+      <div class="col-xs-12 lil-pad">
         <center>
           <img class="img-responsive" ng-src="{{add_nutrition_path(campaign_data.formula)}}" alt="Genesus Nutrition Facts">
         </center>
       </div>
       <div class="col-xs-12 lil-pad">
         <div class="col-xs-12 no-pad-left no-pad-right">
-          <h4>What's Inside?</h4>
-          <h5>We've gone ahead and spelled out each and every ingredient in it's optimal form and quantity to ensure your body gets everything it needs - and nothing it doesn't.</h5>
+          <h4>How can I be sure?</h4>
+          <h5>We make available independent, third-party verifications, also known as Certificates of Analysis, that certify our label matches exactly our ingredients.</h5>
         </div>
         <div class="col-xs-12 no-pad-left no-pad-right">
-          <h4>How Do I Know?</h4>
-          <h5>We're working extremely hard to raise the standards for nutrition products. As a result, we are proud to offer Certificates of Analysis for every product we offer. Please contact us to download.</h5>
-        </div>
-        <div class="col-xs-12 no-pad-left no-pad-right">
-          <h4>How Do I Use It?</h4>
-          <h5>{{campaign_data.formula.instructions}}.</h5>
+          <h4>How should I use it?</h4>
+          <h5>{{campaign_data.formula.instructions}}</h5>
         </div>
       </div>
       <div class="col-xs-12 text-left">
@@ -265,17 +265,17 @@
       </div>
       <div class="col-xs-12 col-sm-4 col-sm-offset-2 science">
         <div class="col-xs-12">
-          <h4>What's Inside?</h4>
-          <h5>We've gone ahead and spelled out each and every ingredient in it's optimal form and quantity to ensure your body gets everything it needs - and nothing it doesn't.</h5>
+          <h4>What else is in it?</h4>
+          <h5>Each and every ingredient is clearly spelled out and already in it's optimal form and quantity to ensure your body gets everything it needs - and nothing that it doesn't.</h5>
           <hr>
         </div>
         <div class="col-xs-12">
-          <h4>How Do I Know?</h4>
-          <h5>We're working extremely hard to raise the standards for nutrition products. As a result, we are proud to offer Certificates of Analysis for every product we offer. Please contact us to download.</h5>
+          <h4>How can I be sure?</h4>
+          <h5>We make available independent, third-party verifications, also known as Certificates of Analysis, that certify our label matches exactly our ingredients.</h5>
           <hr>
         </div>
         <div class="col-xs-12">
-          <h4>How Do I Use It?</h4>
+          <h4>How should I use it?</h4>
           <h5>{{campaign_data.formula.instructions}}.</h5>
           <hr>
         </div>
@@ -347,9 +347,6 @@
   <div class="row hidden-sm hidden-md hidden-lg" ng-show="campaign_data.blurb">
     <div class="container">
       <div class="col-xs-12 no-pad-xs">
-        <div class="col-xs-12 no-pad-xs recc">
-          <h3>PERSONAL RECOMMENDATIONS</h3>
-        </div>
         <div class="col-xs-12 no-pad-xs lil-pad-bottom recc">
           <h4>"{{campaign_data.formula.pitch}}"</h4>
         </div>
@@ -447,7 +444,7 @@
 </div>
 <section>
   <div class="col-xs-12 text-center">
-    <h3 style="font-weight:300;">Get New Products Delivered To Your Inbox!</h3>
+    <h3 style="font-weight:300;">GET THE NEWEST PRODUCTS DELIVERED TO YOUR INBOX.</h3>
   </div>
   <div class="col-xs-12 col-sm-4 col-sm-offset-4 lil-pad text-center">
     <!-- Begin MailChimp Signup Form -->
