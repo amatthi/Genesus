@@ -13,17 +13,17 @@ $cfg['email_address_cc'] = '';
 
 $cfg['email_address_bcc'] = '';
 
-$cfg['emailsendingmethod'] = 'smtp';
+$cfg['emailsendingmethod'] = 'php';
 
-$cfg['smtp_host'] = 'smtp.gmail.com';
+$cfg['smtp_host'] = '';
 
-$cfg['smtp_port'] = '2525';
+$cfg['smtp_port'] = '';
 
 $cfg['smtp_encryption'] = '';
 
-$cfg['smtp_username'] = 'alek@genesus.co';
+$cfg['smtp_username'] = '';
 
-$cfg['smtp_password'] = '$100kin4m';
+$cfg['smtp_password'] = '';
 
 $cfg['database_host'] = '127.0.0.1';
 
