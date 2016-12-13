@@ -276,6 +276,9 @@ chisel_launch.controller('CustomCtrl', [
         $scope.add_ingredient_path = function(ingredient) {
             return 'images/ingredients/' + ingredient.replace(/ /g, '_') + '.png';
         }
+        $scope.add_rating_path = function(review_name) {
+            return 'images/ratings/' + review.name.replace(/ /g, '_') + '.jpg';
+        }
 
         $scope.add_benefit1_path = function(benefit_1) {
             benefit_1 = $scope.campaign_data.formula.benefit_1;

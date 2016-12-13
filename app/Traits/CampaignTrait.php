@@ -21,11 +21,11 @@ trait CampaignTrait
         foreach ($lines as $line) {
             $array[] = str_getcsv($line);
         }
-        $last          = [];
-        $result        = [];
-        $purpose_i     = -1;
-        $formula_i     = 0;
-        $ingredients_i = 0;
+        $last           = [];
+        $result         = [];
+        $purpose_i      = -1;
+        $formula_i      = 0;
+        $ingredients_i  = 0;
         unset($array[0]);
         //dd($array);
         foreach ($array as $index => $row) {
@@ -58,14 +58,17 @@ trait CampaignTrait
             $margin            = $row[23];
             $pitch             = $row[24];
             if ($formula) {
-                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'instructions' => $instructions, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'review_title' => $review_title, 'recommended_price' => $recommended_price, 'retail' => $retail, 'review_body' => $review_body, 'owner' => $owner, 'sku' => $sku, 'review_name' => $review_name, 'formula_desc' => $formula_desc, 'benefit_1' => $benefit_1, 'benefit_2' => $benefit_2, 'benefit_3' => $benefit_3, 'benefit_4' => $benefit_4, 'benefit_5' => $benefit_5, 'benefit_6' => $benefit_6, 'description' => [$description], 'study_name' => [$study_name], 'study_url' => [$study_url], 'margin' => $margin, 'pitch' => $pitch];
+                $formula = ['key' => str_slug($formula, '_'), 'name' => $formula, 'instructions' => $instructions, 'cost30' => $cost30, 'cost100' => (float) number_format($cost30 * 0.8, 2), 'cost200' => (float) number_format($cost30 * 0.8 * 0.8, 2), 'ingredients' => [$ingredients], 'servings' => $servings, 'review_title' => [$review_title], 'recommended_price' => $recommended_price, 'retail' => $retail, 'review_body' => [$review_body], 'owner' => $owner, 'sku' => $sku, 'review_name' => [$review_name], 'formula_desc' => $formula_desc, 'benefit_1' => $benefit_1, 'benefit_2' => $benefit_2, 'benefit_3' => $benefit_3, 'benefit_4' => $benefit_4, 'benefit_5' => $benefit_5, 'benefit_6' => $benefit_6, 'description' => [$description], 'study_name' => [$study_name], 'study_url' => [$study_url], 'margin' => $margin, 'pitch' => $pitch];
             } else if ($ingredients) {
                 $ingredients_i++;
-                $result[$purpose_i]['formulas'][$formula_i]['ingredients'][$ingredients_i] = $ingredients;
-                $result[$purpose_i]['formulas'][$formula_i]['ingredients'][$ingredients_i] = $ingredients;
-                $result[$purpose_i]['formulas'][$formula_i]['description'][$ingredients_i] = $description;
-                $result[$purpose_i]['formulas'][$formula_i]['study_name'][$ingredients_i]  = $study_name;
-                $result[$purpose_i]['formulas'][$formula_i]['study_url'][$ingredients_i]   = $study_url;
+                $result[$purpose_i]['formulas'][$formula_i]['ingredients'][$ingredients_i]  = $ingredients;
+                $result[$purpose_i]['formulas'][$formula_i]['ingredients'][$ingredients_i]  = $ingredients;
+                $result[$purpose_i]['formulas'][$formula_i]['description'][$ingredients_i]  = $description;
+                $result[$purpose_i]['formulas'][$formula_i]['study_name'][$ingredients_i]   = $study_name;
+                $result[$purpose_i]['formulas'][$formula_i]['study_url'][$ingredients_i]    = $study_url;
+                $result[$purpose_i]['formulas'][$formula_i]['review_title'][$ingredients_i] = $review_title;
+                $result[$purpose_i]['formulas'][$formula_i]['review_name'][$ingredients_i]  = $review_name;
+                $result[$purpose_i]['formulas'][$formula_i]['review_body'][$ingredients_i]  = $review_body;
                 continue;
             } else {
                 continue;

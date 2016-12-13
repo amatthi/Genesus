@@ -65,7 +65,7 @@
                   <h5>({{campaign_data.formula.servings}} Servings)</h5>
                 </div>
                 <div>
-                  <h4>${{campaign_data.formula.retail}}</h4>
+                  <h4 style="text-decoration:line-through;">${{campaign_data.formula.retail}}</h4>
                   <h3 style="color:#3AC395;margin-bottom:5px;">{{campaign_data.sale_price | currency}}</h3>
                   <h4 style="text-decoration:none;font-size:16px;margin-top:0px;">You save: ${{ (campaign_data.formula.retail| limitTo: 2 ) - (campaign_data.sale_price| limitTo: 2)}} ({{campaign_data.formula.margin}}%)</h4>
                   <h3><span class="today-only" style="color:#444;font-size:22px;display:block;">ONLY TODAY!</span></h3>
@@ -126,9 +126,9 @@
           </div>
           <div class="col-xs-12 no-pad-xs">
             <div class="col-xs-6 campaign-price">
-              <h4>Retail <span style="text-decoration:line-through;">${{campaign_data.formula.retail}}</span></h4>
-              <h3 style="color:#3AC395;">Sale: {{campaign_data.sale_price | currency}} <span style="color:#777;font-size:16px;">ONLY TODAY!</span></h3>
-              <h4 style="text-decoration:none;">You Save: ${{ (campaign_data.formula.retail| limitTo: 4) - (campaign_data.sale_price| limitTo: 4)}}.00 ({{campaign_data.formula.margin}}%)</h4>
+              <h4 style="text-decoration:line-through;color:#444;margin-bottom:0px;">${{campaign_data.formula.retail}}</h4>
+              <h3 style="color:#3AC395;">{{campaign_data.sale_price | currency}} <span style="color:#444;font-size:16px;display:block;margin-top:5px;">ONLY TODAY!</span></h3>
+              <h4 style="text-decoration:none;margin-top:0px;font-size:14px;">You Save: ${{ (campaign_data.formula.retail| limitTo: 4) - (campaign_data.sale_price| limitTo: 4)}}.00 ({{campaign_data.formula.margin}}%)</h4>
             </div>
             <div class="col-xs-6 lil-pad">
               <div class="campaign-brand-pic" ng-show="campaign_data.user.profile.photo" style="padding-bottom:5px;">
@@ -405,11 +405,14 @@
     <div class="col-xs-12 text-center">
       <h3 style="color:#777;margin-top:5px;">Based On 2 Reviews</h3>
     </div>
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <h4 style="color:#777;;font-weight:400;">{{campaign_data.formula.review_title}}</h4>
-      <img ng-src="/plugin/design/images/ratings/{{campaign_data.formula.name}}.jpg" class="img-responsive" style="max-height:20px;margin-left:-5px;" />
-      <h4 style="color:#777;font-weight:400;">{{campaign_data.formula.review_body}}</h4>
-      <h4 style="color:#777;font-weight:400;">- {{campaign_data.formula.review_name}}</h4>
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2" ng-repeat="(key,ingredient) in campaign_data.formula.ingredients">
+      <div class="col-xs-12 no-pad-left no-pad-right" ng-if="campaign_data.formula.review_title[key].length > 0">
+      <h4 style="color:#777;;font-weight:400;">{{campaign_data.formula.review_title[key]}}</h4>
+      <img ng-src="{{add_rating_path(campaign_data.formula.review_name)}}" class="img-responsive" style="max-height:20px;margin-left:-5px;" />
+      <h4 style="color:#777;font-weight:400;">{{campaign_data.formula.review_body[key]}}</h4>
+      <h4 style="color:#777;font-weight:400;">- {{campaign_data.formula.review_name[key]}}</h4>
+    </div>
+    </div>
     </div>
   </div>
 </div>
