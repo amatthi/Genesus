@@ -43,12 +43,6 @@
                       <li class="outline" style='cursor:pointer'>
                           <a class="new-campaign btn btn-bl-sm" ng-click="buy_campaign()" target="_self">BUY IT NOW</a>
                       </li>
-                      <li>
-                          <a class="new-campaign" href="#benefits">Benefits</a>
-                      </li>
-                      <li>
-                          <a class="new-campaign" href="#ingredients">Ingredients</a>
-                      </li>
                       <li ng-show="!__user.email">
                           <a class="new-campaign" href="javascript:void(0)" ng-click="set_module('login')">Login</a>
                       </li>
@@ -68,35 +62,8 @@
                       <li class="pull-right" uib-dropdown style="padding-top:3px;padding-right:5px;">
                           <a href uib-dropdown-toggle><center><img src="/img/menu.png" class="img-responsive" style="max-height:40px;"></center></a>
                             <ul uib-dropdown-menu role='menu'>
-                              <!--<li>
-                                <a style="color:#777;" href="/sell" target="_self">Become An Owner</a>
-                              </li>-->
-                              <li>
-                                <a style="color:#777;" href="/contact_us" target="_self">Contact Us</a>
-                              </li>
-                              <li>
-                                <a  style="color:#777;" href="/faq" target="_self">FAQ</a>
-                              </li>
-                              <li>
-                                <a  style="color:#777;" href="/shipping" target="_self">Shipping</a>
-                              </li>
-                              <li>
-                                <a  style="color:#777;" href="/drop_shipping" target="_self">Drop Shipping</a>
-                              </li>
-                              <li>
-                                <a  style="color:#777;" href="/how_it_works" target="_self">How It Works</a>
-                              </li>
-                              <li>
-                                <a style="color:#777;" href="/why_genesus" target="_self">Why Genesus</a>
-                              </li>
-                              <li>
-                                <a  style="color:#777;" href="/our_story" target="_self">Our Story</a>
-                              </li>
-                              <li>
-                                <a  style="color:#777;" href="/non_gmo" target="_self">Non-GMO</a>
-                              </li>
-                              <li>
-                                <a  style="color:#777;" href="/feeling_guarantee" target="_self">Clean Guarantee</a>
+                              <li class="outline" style='cursor:pointer'>
+                                  <a ng-click="buy_campaign()" target="_self">BUY IT NOW</a>
                               </li>
                           </ul>
                       </li>
@@ -234,7 +201,6 @@
       </center>
     <!--End Mobile-->
       <!--Desktop-->
-      <div id="benefits" style="padding-top:70px;margin-top:-70px;"></div>
       <div class="row campaign-benefits hidden-xs">
         <div class="container lil-pad lil-pad-bottom">
           <div class="col-xs-12 value">
@@ -280,7 +246,6 @@
 <center class="home-hr">
   <hr>
 </center>
-<div id="ingredients" style="padding-top:70px;margin-top:-70px;"></div>
   <div class="row">
     <div class="container-fluid">
       <div class="col-xs-12">
