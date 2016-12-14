@@ -23,16 +23,16 @@
 	</head>
 	<body ng-app="myApp" style="background:#fff;" ng-controller="mainController">
 		<div class='darken' ng-show="now_module != ''"></div>
-		<div ng-include="'/html/templates/navbar.html?'+template_v"></div>
+		<!--<div ng-include="'/html/templates/navbar.html?'+template_v"></div>-->
 		<div id="pop-module">
 			<div class="modal_actions2" ng-if="now_module == 'login'" ng-include="'/html/templates/login.html?'+template_v"></div>
 			<div class="modal_actions2" ng-if="now_module == 'register'" ng-include="'/html/templates/register.html?'+template_v"></div>
 			<div class="modal_actions2" ng-if="now_module == 'payment'" ng-include="'/html/templates/payment.html?'+template_v"></div>
 		</div>
 	<section class="innerpage" ng-view></section>
-	<div class='container-fluid'>
+	<!--<div class='container-fluid'>
 		<div ng-include src="'/html/templates/footer.html'"></div>
-	</div>
+	</div>-->
 	<script>
   window.intercomSettings = {
     app_id: "ifi52d9m"

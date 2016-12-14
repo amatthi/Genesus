@@ -30,6 +30,84 @@
       <h3 style="font-family:'Dosis', sans-serif;color:#fff;">Get an EXTRA 15% OFF your next order. Plus get FREE shipping.</h3>
     </div>
   </div>-->
+  <div class="container-fluid navbar-fixed-top">
+      <header>
+          <div class="col-xs-2 col-sm-2 text-center">
+              <div class="logo-1">
+                  <a href="" style="cursor:default;"><img src="https://s3-us-west-2.amazonaws.com/tappyn/genesus_logo.jpg" height="50px"></a>
+              </div>
+          </div>
+          <div class="col-xs-10 col-sm-10 col-md-9">
+              <nav class='hidden-xs'>
+                  <ul class="pull-right">
+                      <li class="outline" style='cursor:pointer'>
+                          <a class="new-campaign btn btn-bl-sm" ng-click="buy_campaign()" target="_self">BUY IT NOW</a>
+                      </li>
+                      <li>
+                          <a class="new-campaign" href="#benefits">Benefits</a>
+                      </li>
+                      <li>
+                          <a class="new-campaign" href="#ingredients">Ingredients</a>
+                      </li>
+                      <li>
+                          <a class="new-campaign" href="#owner">Meet The Owner</a>
+                      </li>
+                      <li ng-show="!__user.email">
+                          <a class="new-campaign" href="javascript:void(0)" ng-click="set_module('login')">Login</a>
+                      </li>
+                      <!--<li ng-show="!__user.email">
+                          <a class="new-campaign" href="javascript:void(0)" ng-click="set_module('register')">Register</a>
+                      </li>-->
+                      <li ng-show="__user.email">
+                          <a class="new-campaign" href="/dashboard">{{__user.email}}</a>
+                      </li>
+                      <li ng-show="__user.email">
+                          <a class="new-campaign" href="javascript:void(0)" ng-click="logout()">Logout</a>
+                      </li>
+                  </ul>
+              </nav>
+              <nav class='visible-xs'>
+                  <ul style="margin-bottom:0px;">
+                      <li class="pull-right" uib-dropdown style="padding-top:3px;padding-right:5px;">
+                          <a href uib-dropdown-toggle><center><img src="/img/menu.png" class="img-responsive" style="max-height:40px;"></center></a>
+                            <ul uib-dropdown-menu role='menu'>
+                              <!--<li>
+                                <a style="color:#777;" href="/sell" target="_self">Become An Owner</a>
+                              </li>-->
+                              <li>
+                                <a style="color:#777;" href="/contact_us" target="_self">Contact Us</a>
+                              </li>
+                              <li>
+                                <a  style="color:#777;" href="/faq" target="_self">FAQ</a>
+                              </li>
+                              <li>
+                                <a  style="color:#777;" href="/shipping" target="_self">Shipping</a>
+                              </li>
+                              <li>
+                                <a  style="color:#777;" href="/drop_shipping" target="_self">Drop Shipping</a>
+                              </li>
+                              <li>
+                                <a  style="color:#777;" href="/how_it_works" target="_self">How It Works</a>
+                              </li>
+                              <li>
+                                <a style="color:#777;" href="/why_genesus" target="_self">Why Genesus</a>
+                              </li>
+                              <li>
+                                <a  style="color:#777;" href="/our_story" target="_self">Our Story</a>
+                              </li>
+                              <li>
+                                <a  style="color:#777;" href="/non_gmo" target="_self">Non-GMO</a>
+                              </li>
+                              <li>
+                                <a  style="color:#777;" href="/feeling_guarantee" target="_self">Clean Guarantee</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+      </div>
   <div class="container-fluid">
   <!--Desktop-->
     <div class="hidden-xs row lil-pad-bottom big-pad">
@@ -159,6 +237,7 @@
       </center>
     <!--End Mobile-->
       <!--Desktop-->
+      <div id="benefits" style="padding-top:70px;margin-top:-70px;">
       <div class="row campaign-benefits hidden-xs">
         <div class="container lil-pad lil-pad-bottom">
           <div class="col-xs-12 value">
@@ -199,9 +278,11 @@
         </div>
       </div>
     </div>
+  </div>
 <center class="home-hr">
   <hr>
 </center>
+<div id="ingredients" style="padding-top:70px;margin-top:-70px;">
   <div class="row">
     <div class="container-fluid">
       <div class="col-xs-12">
@@ -228,6 +309,7 @@
       </div>
     </div>
   </div>
+</div>
   <center class="home-hr hidden-xs">
     <hr>
   </center>
@@ -327,6 +409,7 @@
       </div>
     </div>
   </div>
+  <div id="owner" style="padding-top:70px;margin-top:-70px;">
   <div class="row" ng-show="campaign_data.user.profile.instagram">
     <div class="container lil-pad">
       <div class="col-xs-12 science hidden-xs">
@@ -343,6 +426,7 @@
       </div>
     </div>
   </div>
+</div>
   <center class="home-hr hidden-xs" ng-show="campaign_data.user.profile.instagram">
     <hr>
   </center>
@@ -470,6 +554,16 @@
     <!--End mc_embed_signup-->
     </div>
   </section>
+</div>
+<div id="footer">
+  <div class="row">
+    <div class="hidden-xs container-fluid" style="background:#F5F2ED;margin-bottom:-2px;">
+      <img class="lil-pad" src="/img/footer_design.png" class="img-responsive" style="width:100%;">
+    </div>
+    <div class="hidden-sm hidden-md hidden-lg container-fluid" style="background:#F5F2ED;margin-bottom:-2px;">
+      <img class="lil-pad" src="/img/footer_design_small.jpg" class="img-responsive" style="width:100%;">
+    </div>
+  </div>
 </div>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580c34729ce0967a"></script>
 <style type="text/css">
