@@ -49,9 +49,6 @@
                       <li>
                           <a class="new-campaign" href="#ingredients">Ingredients</a>
                       </li>
-                      <li>
-                          <a class="new-campaign" href="#owner">Meet The Owner</a>
-                      </li>
                       <li ng-show="!__user.email">
                           <a class="new-campaign" href="javascript:void(0)" ng-click="set_module('login')">Login</a>
                       </li>
@@ -409,7 +406,6 @@
       </div>
     </div>
   </div>
-  <div id="owner" style="padding-top:70px;margin-top:-70px;">
   <div class="row" ng-show="campaign_data.user.profile.instagram">
     <div class="container lil-pad">
       <div class="col-xs-12 science hidden-xs">
@@ -426,7 +422,6 @@
       </div>
     </div>
   </div>
-</div>
   <center class="home-hr hidden-xs" ng-show="campaign_data.user.profile.instagram">
     <hr>
   </center>
