@@ -33,6 +33,7 @@ class OrderController extends Controller
 
         switch ($post['type']) {
             case 'buy_campaign':
+                $this->load->library('slack');
                 $this->validate($request, [
                     'full_name'       => 'required|max:255',
                     'street_address'  => 'required|max:255',
@@ -58,7 +59,6 @@ class OrderController extends Controller
 
     public function buy_campaign(Campaign $campaign, Request $request = null)
     {
-        $this->load->library('slack');
         $order              = new Order;
         $order->campaign_id = $campaign->id;
         $order->user_id     = ($this->user->id) ? $this->user->id : 0;
