@@ -72,6 +72,7 @@ class AuthController extends Controller
             'email'    => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+        \Slack::send('A new user has signed up for Genesus!');
     }
 
     /**
@@ -82,7 +83,6 @@ class AuthController extends Controller
      */
     public function register(Request $request)
     {
-        \Slack::send('A new user has signed up for Genesus!');
         $validator = $this->validator($request->all());
 
         if ($validator->fails()) {
