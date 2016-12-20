@@ -162,10 +162,6 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Laravel\Cashier\CashierServiceProvider::class,
 
-        /**
-        * Slack
-        */
-        Maknz\Slack\Laravel\ServiceProvider::class,
     ],
 
     /*
@@ -213,6 +209,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+
 
     ],
 

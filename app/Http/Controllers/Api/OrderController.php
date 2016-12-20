@@ -44,7 +44,6 @@ class OrderController extends Controller
                 $campaign = Campaign::where('id', $post['data']['id'])->firstOrFail();
                 $this->charge_and_log($campaign, $post);
                 $result = $this->buy_campaign($campaign, $request);
-                \Slack::send('Hello world!');
                 break;
 
             default:
