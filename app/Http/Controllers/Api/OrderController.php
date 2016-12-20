@@ -33,7 +33,7 @@ class OrderController extends Controller
 
         switch ($post['type']) {
             case 'buy_campaign':
-            \Slack::send('Hello world!');
+            \Slack::send('A new order has been placed!');
                 $this->validate($request, [
                     'full_name'       => 'required|max:255',
                     'street_address'  => 'required|max:255',

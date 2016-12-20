@@ -18,6 +18,7 @@ class CampaignController extends Controller
 
     protected function launch(Request $request)
     {
+        \Slack::send('A new campaign has been launched!');
         $this->validate($request, [
             'goal'            => 'required|max:100|min:0',
             'cost_per_bottle' => 'required',
