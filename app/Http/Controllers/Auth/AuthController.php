@@ -72,6 +72,7 @@ class AuthController extends Controller
             'email'    => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+        \Slack::send('A new user has signed up for Genesus!');
     }
 
     /**
