@@ -9,7 +9,6 @@ use App\Order;
 use App\User;
 use Auth;
 use Illuminate\Http\Request;
-use App\Slack;
 
 class OrderController extends Controller
 {
@@ -34,7 +33,7 @@ class OrderController extends Controller
 
         switch ($post['type']) {
             case 'buy_campaign':
-            Slack::send('Hello world!');
+            \Slack::send('Hello world!');
                 $this->validate($request, [
                     'full_name'       => 'required|max:255',
                     'street_address'  => 'required|max:255',
