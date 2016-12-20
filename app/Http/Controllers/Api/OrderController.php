@@ -33,19 +33,6 @@ class OrderController extends Controller
 
         switch ($post['type']) {
             case 'buy_campaign':
-            $client = new Maknz\Slack\Client('https://hooks.slack.com/services/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');
-
-            // Instantiate with defaults, so all messages created
-            // will be sent from 'Cyril' and to the #accounting channel
-            // by default. Any names like @regan or #channel will also be linked.
-            $settings = [
-              'username' => 'Genesus',
-              'channel' => '#general',
-              'link_names' => true
-            ];
-
-            $client = new Maknz\Slack\Client('https://hooks.slack.com/services/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', $settings);
-            $client->send('Hello world!');
                 $this->validate($request, [
                     'full_name'       => 'required|max:255',
                     'street_address'  => 'required|max:255',
@@ -57,6 +44,7 @@ class OrderController extends Controller
                 $campaign = Campaign::where('id', $post['data']['id'])->firstOrFail();
                 $this->charge_and_log($campaign, $post);
                 $result = $this->buy_campaign($campaign, $request);
+                \Slack::send('Hello world!');
                 break;
 
             default:
