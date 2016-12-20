@@ -166,6 +166,8 @@ return [
         * Slack
         */
         Maknz\Slack\Laravel\ServiceProvider::class,
+
+        Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
     ],
 
     /*
@@ -215,6 +217,8 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
         'Slack' => Maknz\Slack\Laravel\Facade::class,
+
+        'Bugsnag' => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
 
     ],
 
