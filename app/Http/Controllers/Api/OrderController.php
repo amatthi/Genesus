@@ -44,6 +44,8 @@ class OrderController extends Controller
                 $campaign = Campaign::where('id', $post['data']['id'])->firstOrFail();
                 $this->charge_and_log($campaign, $post);
                 $result = $this->buy_campaign($campaign, $request);
+                $msg = 'A new campaign has been launched!';
+                $this->slack->send($msg);
                 break;
 
             default:
@@ -56,6 +58,7 @@ class OrderController extends Controller
 
     public function buy_campaign(Campaign $campaign, Request $request = null)
     {
+        $this->load->library('slack');
         $order              = new Order;
         $order->campaign_id = $campaign->id;
         $order->user_id     = ($this->user->id) ? $this->user->id : 0;
