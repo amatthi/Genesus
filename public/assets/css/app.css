@@ -1957,6 +1957,14 @@ a {
   padding-top: 70px;
 }
 
+.pad-left-15 {
+  padding-left: 15px;
+}
+
+.pad-right-15 {
+  padding-right: 15px;
+}
+
 .dash-campaign-title h5 {
   padding-top:7px;
   float:left;
@@ -2505,7 +2513,9 @@ a {
 .payment-container-small {
     padding-left: 0px;
     padding-right: 0px;
-    position: absolute !important;
+    position: fixed !important;
+    overflow: scroll;
+    max-height: 600px;
 }
 
 .payment-container {
