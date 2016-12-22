@@ -740,7 +740,7 @@ footer {
 
 .campaign-icons a span:hover {
   text-decoration: none;
-  color: #4BAEE8;
+  color: #3AC395;
 }
 
 .campaign-icons a:hover {
@@ -1280,8 +1280,25 @@ a {
 
 .dash-nav {
   text-align: center;
-  border-right: 1px solid #ddd;
-  padding-bottom: 800px;
+}
+
+@media (min-width:500px) {
+.dash-nav {
+  text-align: center;
+  }
+  .dash-style {
+    background-color:#F5F7F6;
+    margin-left:-15px;
+    padding-bottom:250px;
+    padding-top: 25px;
+    border-left:1px solid #ddd;
+  }
+  .campaign-overview {
+    background-color: #fff;
+    border:1px solid #ddd;
+    border-radius: 4px;
+    margin-left: 25px;
+  }
 }
 
 .dash-nav li {
@@ -1322,7 +1339,6 @@ a {
   background-color: #fff;
   border:1px solid #ddd;
   border-radius: 4px;
-  margin-left: 25px;
 }
 
 .overview-data h4 {
@@ -1340,6 +1356,11 @@ a {
 }
 
 .overview-data h5 {
+  font-size:12px;
+  color: #ccc;
+}
+
+.overview-data-2 h5 {
   font-size:12px;
   color: #ccc;
 }
@@ -1456,14 +1477,14 @@ a {
 }
 
 .dash-style-standard {
-  margin-top:25px;
+  margin-top:-5px;
   background-color:#fff;
 }
 
 .dash-style {
   background-color:#F5F7F6;
-  margin-left:-15px;
-  padding-bottom:500px;
+  padding-top:50px;
+  padding-bottom: 50px;
 }
 
 .nav-highlight a {
@@ -1967,7 +1988,7 @@ a {
 
 .dash-campaign-title h5 {
   padding-top:7px;
-  float:left;
+  font-size: 18px;
 }
 
 .dash-campaign-goal h5 {

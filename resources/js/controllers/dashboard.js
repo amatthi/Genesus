@@ -53,6 +53,24 @@ chisel.controller("dashboardController", function($scope, $rootScope, $routePara
         }
     }
 
+    $scope.getTotal = function(){
+    var total = 0;
+    for(var i = 0; i < $scope.campaigns.length; i++){
+        var campaign = $scope.campaigns[i];
+        total += (campaign.goal_count * campaign.sale_price);
+        }
+    return total;
+    }
+
+    $scope.getProducts = function(){
+    var totalProducts = 0;
+    for(var i = 0; i < $scope.campaigns.length; i++){
+        var campaign = $scope.campaigns[i];
+        totalProducts += campaign.goal_count;
+        }
+    return totalProducts;
+    }
+
     $scope.update_campaign = function(data) {
         mainFactory.update_campaign(data).then(function(r) {
             alert('Your campaign has been updated!');

@@ -68,7 +68,7 @@
     </header>
     </div>
 <div class="container-fluid dash-background">
-    <div class="col-xs-12 col-sm-2 lil-pad dash-style-standard">
+    <div class="hidden-xs col-sm-2 lil-pad dash-style-standard">
         <ul class="nav nav-pills nav-stacked dash-nav lil-pad">
             <li role="presentation" ng-class="{'dash-a' : dash_view == 'campaigns'}" ng-click="dash_set('campaigns')">
                 <a><img src="https://s3-us-west-2.amazonaws.com/tappyn/Campaigns.jpg" alt="Genesus Dashboard Icons"> Products</a>
@@ -81,7 +81,20 @@
             </li>
         </ul>
     </div>
-    <div class="col-xs-12 col-sm-10 lil-pad dash-campaigns dash-style pad-top-100">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg lil-pad dash-style-standard">
+        <ul class="nav nav-pills dash-nav lil-pad">
+            <li role="presentation" ng-class="{'dash-a' : dash_view == 'campaigns'}" ng-click="dash_set('campaigns')">
+                <a><img src="https://s3-us-west-2.amazonaws.com/tappyn/Campaigns.jpg" alt="Genesus Dashboard Icons"> Products</a>
+            </li>
+            <li role="presentation" ng-class="{'dash-a' : dash_view == 'settings'}" ng-click="dash_set('settings')">
+                <a><img src="https://s3-us-west-2.amazonaws.com/tappyn/Storefront.jpg" alt="Genesus Dashboard Icons"> Profile</a>
+            </li>
+            <li role="presentation" ng-class="{'dash-a' : dash_view == 'payouts'}" ng-click="dash_set('payouts')">
+                <a><img src="https://s3-us-west-2.amazonaws.com/tappyn/Payouts.jpg" alt="Genesus Dashboard Icons"> Payouts</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-10 lil-pad dash-campaigns dash-style">
         <div class="campaign-section" id="campaigns" ng-show="dash_view == 'campaigns'">
             <div class="alert alert-warning alert-dismissible margin-bottom-0 dash-alert" role="alert" ng-show="!profile_data.career">
                 <button class="close" data-dismiss="alert" type="button">
@@ -97,28 +110,28 @@
                 <h3>Overview</h3>
                 <hr>
                 <div class="col-xs-12 col-sm-4 text-center overview-data">
-                    <h4>$0</h4>
-                    <h5>Products Ordered</h5>
+                    <h4>{{ getProducts() }}</h4>
+                    <h5>Total Products Ordered</h5>
                 </div>
                 <div class="col-xs-12 col-sm-4 text-center overview-data">
-                    <h4>$0</h4>
-                    <h5>Profit</h5>
+                    <h4>${{ getTotal() | limitTo: 5}}</h4>
+                    <h5>Total Sales</h5>
                 </div>
                 <div class="col-xs-12 col-sm-4 text-center overview-data-2">
-                    <h4>$0</h4>
-                    <h5>To Be Paid</h5>
+                    <h4>${{getTotal() * 0.3 | limitTo: 5}}</h4>
+                    <h5>Total Profit</h5>
                 </div>
                 <div class="col-xs-12 text-center dash-cat pad-bottom-10">
-                    <div class="col-xs-3 col-sm-2 col-sm-offset-4 dash-bor">
+                    <div class="col-xs-6 col-sm-2 col-sm-offset-4 dash-bor">
                         <a>Today</a>
                     </div>
-                    <div class="col-xs-3 col-sm-2 dash-bor">
+                    <div class="col-xs-6 col-sm-2 dash-bor">
                         <a>Yesterday</a>
                     </div>
-                    <div class="col-xs-3 col-sm-2 dash-bor">
+                    <div class="col-xs-6 col-sm-2 dash-bor">
                         <a>Active</a>
                     </div>
-                    <div class="col-xs-3 col-sm-2">
+                    <div class="col-xs-6 col-sm-2">
                         <a>All Time</a>
                     </div>
                 </div>
@@ -127,30 +140,25 @@
                 <hr>
             </div>
             <div class="col-xs-12 col-sm-10 campaign-overview text-center" ng-repeat="campaign in campaigns">
-                <div class="col-xs-12 col-sm-2 dash-campaign-title">
+                <div class="col-xs-6 col-sm-2 dash-campaign-title">
                     <!--<h5 style="margin-bottom: 0px;"><a href="/campaign/{{campaign.slug}}">{{campaign.purpose.name}} - {{campaign.formula.name}}</a></h5>-->
                     <h5><a href="/campaign/{{campaign.slug}}" style="color:#3AC395;">{{campaign.title}}</a></h5>
                 </div>
-                <div class="col-xs-12 col-sm-2 dash-campaign-goal">
+                <div class="col-xs-6 col-sm-2 dash-campaign-goal">
                     <h5>{{campaign.goal_count}}</h5>
                     <p>Sold</p>
                 </div>
-                <div class="col-xs-12 col-sm-2 dash-campaign-status">
+                <div class="col-xs-6 col-sm-2 dash-campaign-status">
                     <!--<h5 style="margin-bottom: 0px;color:#777;" ng-bind="campaign.status | capitalize"></h5>-->
-                    <h5>Draft</h5>
+                    <h5>{{campaign.status}}</h5>
                     <p></p>
                 </div>
-                <div class="col-xs-12 col-sm-2 dash-na">
-                    <h5>N/A</h5>
+                <div class="col-xs-6 col-sm-2 dash-na">
+                    <h5 ng-init="itemTotal = campaign.goal_count * campaign.sale_price">${{itemTotal}}</h5>
                 </div>
-                <div class="col-sm-2 hidden-xs">
-                </div>
-                <div class="col-xs-12 col-sm-2 campaign-icons">
+                <div class="col-xs-6 col-xs-offset-6 col-sm-2 col-sm-offset-0 campaign-icons">
                     <a uib-tooltip="Edit" ng-click="dash_set('edit',campaign)" style="cursor:pointer;">
                         <span class="glyphicon glyphicon-pencil edit-icon"></span>
-                    </a>
-                    <a uib-tooltip="Request a sample bottle." data-toggle="modal" data-target="#sample-bottle" style="cursor:pointer;">
-                        <span class="glyphicon glyphicon-send edit-icon" style="padding-right:3px;"></span>
                     </a>
                     <a uib-tooltip="Delete" class="delete-alert" onClick="alert('Please contact us at alek@genesus.co to complete the deletion of your campaign!')">
                         <span class="glyphicon glyphicon-trash delete-icon"></span>
