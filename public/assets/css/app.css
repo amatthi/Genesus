@@ -1291,7 +1291,8 @@ a {
     margin-left:-15px;
     padding-bottom:250px;
     padding-top: 25px;
-    border-left:1px solid #ddd;
+    border: 1px solid #ddd;
+    border-top:none;
   }
   .campaign-overview {
     background-color: #fff;
