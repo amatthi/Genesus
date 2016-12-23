@@ -1344,19 +1344,33 @@ a {
 
 .overview-data h4 {
   font-size:28px;
-  font-weight: 600;
+  font-weight: 400;
   color: #333;
+  border-right: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+.overview-data-1 h4 {
+  font-size:58px !important;
+  font-weight: 400;
+  color: #3AC395 !important;
   border-right: 1px solid #ddd;
 }
 
 .overview-data-2 h4 {
   font-size:28px;
-  font-weight: 600;
+  font-weight: 400;
   color: #333;
   border-right: none;
+  padding-top:15px;
 }
 
 .overview-data h5 {
+  font-size:12px;
+  color: #ccc;
+}
+
+.overview-data-1 h5 {
   font-size:12px;
   color: #ccc;
 }

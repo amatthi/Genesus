@@ -113,13 +113,13 @@
                     <h4>{{ getProducts() }}</h4>
                     <h5>Total Products Sold</h5>
                 </div>
-                <div class="col-xs-12 col-sm-4 text-center overview-data">
-                    <h4>${{ getTotal() | limitTo: 5}}</h4>
-                    <h5>Total Sales</h5>
-                </div>
-                <div class="col-xs-12 col-sm-4 text-center overview-data-2">
+                <div class="col-xs-12 col-sm-4 text-center overview-data-1">
                     <h4>${{getTotal() * 0.3 | limitTo: 5}}</h4>
                     <h5>Total Profit</h5>
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center overview-data-2">
+                    <h4>${{ getTotal() | limitTo: 5}}</h4>
+                    <h5>Total Sales</h5>
                 </div>
                 <div class="col-xs-12 text-center dash-cat pad-bottom-10">
                     <div class="col-xs-6 col-sm-2 col-sm-offset-4 dash-bor">
