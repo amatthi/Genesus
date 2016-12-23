@@ -139,8 +139,8 @@
                 <img class="img-responsive" ng-src="{{(campaign_data.bottle_type == 'back' && campaign_data.formula.back_image)? add_back_image_path(campaign_data.formula.back_image) :campaign_data.bottle_img}}" alt="Image Of Custom Supplement" style="margin-left:0px;">
               </center>
             </div>
-            <div class="col-xs-12 lil-pad">
-              <div class="campaign-brand-pic" ng-show="campaign_data.user.profile.photo" style="padding-bottom:5px;">
+            <div class="col-xs-12 lil-pad" style="border-bottom:1px solid #F5F2ED;">
+              <div class="campaign-brand-pic" ng-show="campaign_data.user.profile.photo" style="padding-bottom:15px;">
                 <center>
                 <img ng-src="{{campaign_data.user.profile.photo}}" alt="Genesus Brand Image" style="float:none;">
               </center>
@@ -175,7 +175,7 @@
           </div>-->
           <div class="col-xs-12 no-pad-xs">
             <div class="col-xs-12 campaign-price text-center" style="padding-top:0px;">
-              <h3 style="color:#444;text-align:center;float:none;font-weight:300;">{{campaign_data.sale_price | currency}} <span style="color:#444;font-size:16px;display:block;margin-top:5px;float:none;">ONLY TODAY!</span></h3>
+              <h3 style="color:#444;text-align:center;float:none;font-weight:300;">{{campaign_data.sale_price | currency}}</h3>
             </div>
 
           </div>
@@ -243,7 +243,7 @@
               <img src="/img/e.png" class="img-responsive" style="display:inline;max-width:50px;">
             </div>
             <div class="col-xs-8">
-              <h4 style="display:inline;padding-top:10px;">Reduces Bloating</h4>
+              <h4 style="display:inline;padding-top:10px;">Reduces Bloating*</h4>
             </div>
             </div>
             <div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 pad-bottom-10 no-pad-xs">
@@ -251,7 +251,7 @@
             <img src="/img/f.png" class="img-responsive" style="display:inline;max-width:50px;">
           </div>
           <div class="col-xs-8">
-            <h4 style="display:inline;padding-top:10px;">Maintains Energy</h4>
+            <h4 style="display:inline;padding-top:10px;">Maintains Energy*</h4>
           </div>
           </div>
           <div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 pad-bottom-10 no-pad-xs">
@@ -259,7 +259,7 @@
           <img src="/img/d.png" class="img-responsive" style="display:inline;max-width:50px;">
         </div>
         <div class="col-xs-8">
-          <h4 style="display:inline;padding-top:10px;">Fast Metabolism</h4>
+          <h4 style="display:inline;padding-top:10px;">Improved Metabolism*</h4>
         </div>
         </div>
         <div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 pad-bottom-10 no-pad-xs">
@@ -267,7 +267,7 @@
         <img src="/img/o.png" class="img-responsive" style="display:inline;max-width:50px;">
       </div>
       <div class="col-xs-8">
-        <h4 style="display:inline;padding-top:10px;">Fewer Cravings</h4>
+        <h4 style="display:inline;padding-top:10px;">Fewer Cravings*</h4>
       </div>
       </div>
             </div>
@@ -333,7 +333,7 @@
             </div>
             <div class="col-xs-12 col-sm-6 ing-images">
               <h3>{{ingredient}}</h3>
-              <h5>{{campaign_data.formula.description[key] | limitTo: 150}}...<span><a data-toggle="modal" data-target="#seeMoreIng">See More</a></span></h5>
+              <h5>{{campaign_data.formula.description[key] | limitTo: 150}}...<span><a data-toggle="modal" data-target="#seeMoreIng" style="color:#ca9e41;">See More</a></span></h5>
               <h4>The Clinical Studies To Support It</h4>
               <h5>{{campaign_data.formula.study_name[key]}}</h5>
               <h5><a href="{{campaign_data.formula.study_url[key]}}" target="_blank">See Clinical Study</a></h5>
