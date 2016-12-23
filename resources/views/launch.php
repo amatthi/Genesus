@@ -32,13 +32,13 @@
         <div class="container-fluid ng-scope" ng-controller="ProductCtrl" ng-app="productApp" id="productApp">
             <div ng-controller="CustomCtrl">
                 <div class="col-xs-12 up-down-pad">
-                    <div class="col-xs-12 col-sm-7">
-                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }" ng-click="set_step('desc',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">1</span> Select A Product</span>
-                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }" ng-click="set_step('create',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">2</span> Design Your Label</span>
-                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_goal() }" ng-click="set_step('goal',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_goal() }">3</span> Launch Your Brand</span>
+                    <div class="col-xs-12 col-sm-7 no-pad-xs">
+                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_desc() }" ng-click="set_step('desc',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_desc() }">1</span> <p>Select A Product</p></span>
+                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_create() }" ng-click="set_step('create',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_create() }">2</span> <p>Design Your Label</p></span>
+                        <span class="step-default" ng-class="{ 'launch-current-step' : launch_step_goal() }" ng-click="set_step('goal',1)"><span class="step-number-default" ng-class="{ 'step-number' : launch_step_goal() }">3</span> <p>Launch Your Brand</p></span>
                     </div>
                     <div class="col-xs-12 col-sm-3">
-                        <span class="step-default">
+                        <span class="step-default-save">
                             <a ng-show="__user.email" ng-click="submit_campaign(campaign_data)">
                                 <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
                             </a>
