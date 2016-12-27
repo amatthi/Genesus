@@ -26,7 +26,7 @@ trait CampaignTrait
         $purpose_i      = -1;
         $formula_i      = 0;
         $ingredients_i  = 0;
-        $review_name_i = 0;
+        $review_title_i = 0;
         unset($array[0]);
         //dd($array);
         foreach ($array as $index => $row) {
@@ -70,7 +70,7 @@ trait CampaignTrait
                 continue;
             }
             else if ($review_name) {
-               $review_name_i++;
+               $review_title_i++;
                $result[$purpose_i]['formulas'][$formula_i]['review_name'][$review_title_i]  = $review_name;
                $result[$purpose_i]['formulas'][$formula_i]['review_name'][$review_title_i]  = $review_name;
                 $result[$purpose_i]['formulas'][$formula_i]['review_body'][$review_title_i] = $review_body;
@@ -86,7 +86,7 @@ trait CampaignTrait
                 $result[$purpose_i] = ['key' => str_slug($purpose, '_'), 'name' => $purpose, 'formulas' => [$formula]];
             } else {
                 $ingredients_i = 0;
-                $review_name_i = 0;
+                $review_title_i = 0;
                 $formula_i++;
                 $result[$purpose_i]['formulas'][$formula_i] = $formula;
             }
