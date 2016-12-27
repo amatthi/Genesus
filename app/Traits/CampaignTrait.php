@@ -26,6 +26,7 @@ trait CampaignTrait
         $purpose_i      = -1;
         $formula_i      = 0;
         $ingredients_i  = 0;
+        $review_name_i = 0;
         unset($array[0]);
         //dd($array);
         foreach ($array as $index => $row) {
@@ -66,11 +67,16 @@ trait CampaignTrait
                 $result[$purpose_i]['formulas'][$formula_i]['description'][$ingredients_i]  = $description;
                 $result[$purpose_i]['formulas'][$formula_i]['study_name'][$ingredients_i]   = $study_name;
                 $result[$purpose_i]['formulas'][$formula_i]['study_url'][$ingredients_i]    = $study_url;
-                $result[$purpose_i]['formulas'][$formula_i]['review_title'][$ingredients_i] = $review_title;
-                $result[$purpose_i]['formulas'][$formula_i]['review_name'][$ingredients_i]  = $review_name;
-                $result[$purpose_i]['formulas'][$formula_i]['review_body'][$ingredients_i]  = $review_body;
                 continue;
-            } else {
+            }
+            else if ($review_name) {
+               $review_name_i++;
+               $result[$purpose_i]['formulas'][$formula_i]['review_name'][$review_title_i]  = $review_name;
+               $result[$purpose_i]['formulas'][$formula_i]['review_name'][$review_title_i]  = $review_name;
+                $result[$purpose_i]['formulas'][$formula_i]['review_body'][$review_title_i] = $review_body;
+               $result[$purpose_i]['formulas'][$formula_i]['review_title'][$review_title_i] = $review_title;
+               continue;
+           } else {
                 continue;
             }
 
@@ -80,6 +86,7 @@ trait CampaignTrait
                 $result[$purpose_i] = ['key' => str_slug($purpose, '_'), 'name' => $purpose, 'formulas' => [$formula]];
             } else {
                 $ingredients_i = 0;
+                $review_name_i = 0;
                 $formula_i++;
                 $result[$purpose_i]['formulas'][$formula_i] = $formula;
             }
