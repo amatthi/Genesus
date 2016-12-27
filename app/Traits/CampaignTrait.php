@@ -73,7 +73,7 @@ trait CampaignTrait
                $review_title_i++;
                $result[$purpose_i]['formulas'][$formula_i]['review_name'][$review_title_i]  = $review_name;
                $result[$purpose_i]['formulas'][$formula_i]['review_name'][$review_title_i]  = $review_name;
-                $result[$purpose_i]['formulas'][$formula_i]['review_body'][$review_title_i] = $review_body;
+               $result[$purpose_i]['formulas'][$formula_i]['review_body'][$review_title_i]  = $review_body;
                $result[$purpose_i]['formulas'][$formula_i]['review_title'][$review_title_i] = $review_title;
                continue;
            } else {
