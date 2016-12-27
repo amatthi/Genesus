@@ -38,7 +38,7 @@ class OrderController extends Controller
                     'full_name'       => 'required|max:255',
                     'street_address'  => 'required|max:255',
                     'state'           => 'required|max:255',
-                    'country'         => 'required|max:255',
+                    //'country'         => 'required|max:255',
                     'city'            => 'required|max:255',
                     'zipcode'         => 'required|max:255',
                 ]);
@@ -61,7 +61,7 @@ class OrderController extends Controller
         $order->campaign_id = $campaign->id;
         $order->user_id     = ($this->user->id) ? $this->user->id : 0;
         $order->status      = 'paid';
-        $order->others      = $request->only(['email', 'full_name', 'city', 'street_address', 'state', 'country', 'street_address2', 'zipcode']);
+        $order->others      = $request->only(['email', 'full_name', 'city', 'street_address', 'state', 'street_address2', 'zipcode']);
         $order->save();
         return $order;
     }

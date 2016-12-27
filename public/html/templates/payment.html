@@ -17,42 +17,42 @@
     <div class="col-xs-12 no-pad-left no-pad-right">
       <div class="col-xs-12 col-sm-4 form-group">
         <label>Full Name</label>
-        <input class="form-control" type="text" required="required" ng-model="__payment.full_name" style="display:block;width:100%;margin-bottom:5px;">
+        <input class="form-control" type="text" placeholder="John Smith" required="required" ng-model="__payment.full_name" style="display:block;width:100%;margin-bottom:5px;">
       </div>
       <div class="col-xs-12 col-sm-4 form-group">
         <label>Email</label>
-        <input class="form-control" type="text" required="required" ng-model="__payment.email" style="display:block;width:100%;margin-bottom:5px;">
+        <input class="form-control" type="text" placeholder="johnsmith@gmail.com" required="required" ng-model="__payment.email" style="display:block;width:100%;margin-bottom:5px;">
       </div>
     </div>
       <div class="col-xs-12 no-pad-left no-pad-right lil-pad-bottom" style="border-bottom:1px solid #ddd;">
         <div class="col-xs-12 col-sm-4 form-group">
           <label>Address Line 1</label>
-          <input class="shipping-info form-control" type="text" required="required" ng-model="__payment.street_address">
+          <input class="shipping-info form-control" placeholder="434 forsyth place" type="text" required="required" ng-model="__payment.street_address">
         </div>
         <div class="col-xs-12 col-sm-4 form-group">
           <label>Address Line 2</label>
-          <input class="shipping-info form-control" type="text" ng-model="__payment.street_address2">
+          <input class="shipping-info form-control" placeholder="P.O. Box 119" type="text" ng-model="__payment.street_address2">
         </div>
         <div class="col-xs-12 col-sm-4 form-group">
           <label>City</label>
-          <input class="shipping-info form-control" type="text" required="required" ng-model="__payment.city">
+          <input class="shipping-info form-control" placeholder="Los Angeles" type="text" required="required" ng-model="__payment.city">
         </div>
         <div class="col-xs-12 col-sm-4 form-group">
           <label>State</label>
-          <input class="shipping-info form-control" type="text" required="required" ng-model="__payment.state">
+          <input class="shipping-info form-control" placeholder="CA" type="text" required="required" ng-model="__payment.state">
         </div>
-        <div class="col-xs-12 col-sm-4 form-group">
+        <!--<div class="col-xs-12 col-sm-4 form-group">
           <label>Country</label>
-          <input class="shipping-info form-control" type="text" required="required" ng-model="__payment.country">
-        </div>
+          <input class="shipping-info form-control" placeholder="USA" type="text" required="required" ng-model="__payment.country">
+        </div>-->
         <div class="col-xs-12 col-sm-4 form-group">
           <label>Zip Code</label>
-          <input class="shipping-info form-control" type="text" required="required" ng-model="__payment.zipcode">
+          <input class="shipping-info form-control" placeholder="90291" type="text" required="required" ng-model="__payment.zipcode">
         </div>
       </div>
           <div class="col-xs-12 payment-2 no-pad-left no-pad-right lil-pad">
             <div class="col-xs-12 no-pad-left no-pad-right lil-pad">
-              <h4 class="pad-left-15 pad-right-15">Secure Payment</h4>
+              <h4 class="pad-left-15 pad-right-15">Payment Details</h4>
                 <div class="col-xs-12 no-pad-left no-pad-right" ng-if="__payment.type == 'buy_campaign'">
                     <div class="col-xs-12 form-row pay-input no-pad-left no-pad-right pad-bottom-10">
                       <div class="col-xs-8 col-sm-6 form-group">
