@@ -1607,20 +1607,18 @@ a {
   .campaign-price {
     padding-top: 10px;
   }
-  .campaign-price h4 {
-    color:#777;
-    font-size:22px;
-    display:inline;
-    float: left;
-    padding-right:10px;
-    text-align:left;
-  }
   .campaign-price h3 {
     color:#444;
-    font-size:28px;
+    font-size:18px;
     display:inline;
-    float:left;
     margin-top: 6px;
+  }
+  .campaign-price h4 {
+    color:#444;
+    font-size:12px;
+    display:inline;
+    margin-top: 6px;
+    font-weight: 500;
   }
   .campaign-info h5 {
     font-weight:300;
@@ -1909,6 +1907,10 @@ a {
     font-size:38px;
     text-transform:uppercase;
     color:#444;
+    text-align: center;
+  }
+  .owner {
+    margin-bottom: -25px;
   }
   .science img {
     max-width:350px;
