@@ -75,19 +75,21 @@ class OrderController extends Controller
     public function charge_and_log(Campaign $campaign, array $post)
     {
         $description = 'Charge for Camapign#' . $campaign->id;
+        $email = $this->user->email;
         $option      = ['description' => $description];
         if (!$this->user->exists) {
             $option['source'] = $post['token'];
         }
         $charge  = $this->user->charge($campaign->sale_price * 100, $option);
         $content = [
-            'id'          => $charge->id,
-            'amount'      => $charge->amount,
-            'currency'    => $charge->currency,
-            'customer'    => $charge->customer,
-            'source_id'   => $charge->source->id,
-            'status'      => $charge->status,
-            'description' => $charge->description,
+            'id'            => $charge->id,
+            'amount'        => $charge->amount,
+            'currency'      => $charge->currency,
+            'customer'      => $charge->customer,
+            'source_id'     => $charge->source->id,
+            'status'        => $charge->status,
+            'description'   => $charge->description,
+            "receipt_email" => $charge->email,
         ];
         // dd($content, $charge);
         $log          = new Log;
