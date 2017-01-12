@@ -82,9 +82,6 @@ class OrderController extends Controller
             $option['source'] = $post['token'];
         } else if ($voucher_code = 'CORE') {
         $charge  = $this->user->charge($campaign->sale_price * 70, $option);
-        } else {
-        $charge  = $this->user->charge($campaign->sale_price * 100, $option);
-      }
         $content = [
             'id'            => $charge->id,
             'amount'        => $charge->amount,
@@ -103,5 +100,27 @@ class OrderController extends Controller
         $log->content = $content;
         $log->save();
         // dd($charge);
+        } else {
+        $charge  = $this->user->charge($campaign->sale_price * 100, $option);
+        $content = [
+            'id'            => $charge->id,
+            'amount'        => $charge->amount,
+            'currency'      => $charge->currency,
+            'customer'      => $charge->customer,
+            'source_id'     => $charge->source->id,
+            'status'        => $charge->status,
+            'description'   => $charge->description,
+            "receipt_email" => $charge->email,
+        ];
+        // dd($content, $charge);
+        $log          = new Log;
+        $log->user_id = ($this->user->id) ? $this->user->id : 0;
+        $log->type    = 'charge';
+        $log->type_id = $campaign->id;
+        $log->content = $content;
+        $log->save();
+        // dd($charge);
+      }
+
     }
 }
