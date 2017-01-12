@@ -4,6 +4,7 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     $scope.__user = {};
     $scope.__s = {};
     $scope.__payment = {};
+    $scope.discount = '0.00';
 
     $("body").on('click', '.darken', function(event) {
         if (event.target !== this) {
@@ -133,6 +134,13 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
         }, $scope.handle_error);
 
 
+    }
+
+    $scope.discount_check = function() {
+      if ($scope.__payment.voucher == 'CORE2017') {
+      $scope.discount = $scope.__payment.data.sale_price * 0.3;
+      $scope.__payment.data.sale_price = $scope.__payment.data.sale_price - $scope.discount;
+      }
     }
 
     $scope.set_payment_step = function(step) {

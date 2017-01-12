@@ -17,29 +17,29 @@
     <div class="col-xs-12 no-pad-left no-pad-right">
       <div class="col-xs-12 col-sm-4 form-group">
         <label>Full Name</label>
-        <input class="form-control" type="text" placeholder="John Smith" required="required" ng-model="__payment.full_name" style="display:block;width:100%;margin-bottom:5px;">
+        <input class="form-control" type="text" placeholder="Your Full Name" required="required" ng-model="__payment.full_name" style="display:block;width:100%;margin-bottom:5px;">
       </div>
       <div class="col-xs-12 col-sm-4 form-group">
         <label>Email</label>
-        <input class="form-control" type="text" placeholder="johnsmith@gmail.com" required="required" ng-model="__payment.email" style="display:block;width:100%;margin-bottom:5px;">
+        <input class="form-control" type="text" placeholder="Your Email" required="required" ng-model="__payment.email" style="display:block;width:100%;margin-bottom:5px;">
       </div>
     </div>
       <div class="col-xs-12 no-pad-left no-pad-right lil-pad-bottom" style="border-bottom:1px solid #ddd;">
         <div class="col-xs-12 col-sm-4 form-group">
           <label>Address Line 1</label>
-          <input class="shipping-info form-control" placeholder="434 forsyth place" type="text" required="required" ng-model="__payment.street_address">
+          <input class="shipping-info form-control" placeholder="Your Street Address" type="text" required="required" ng-model="__payment.street_address">
         </div>
         <div class="col-xs-12 col-sm-4 form-group">
           <label>Address Line 2</label>
-          <input class="shipping-info form-control" placeholder="P.O. Box 119" type="text" ng-model="__payment.street_address2">
+          <input class="shipping-info form-control" placeholder="" type="text" ng-model="__payment.street_address2">
         </div>
         <div class="col-xs-12 col-sm-4 form-group">
           <label>City</label>
-          <input class="shipping-info form-control" placeholder="Los Angeles" type="text" required="required" ng-model="__payment.city">
+          <input class="shipping-info form-control" placeholder="Your City" type="text" required="required" ng-model="__payment.city">
         </div>
         <div class="col-xs-12 col-sm-4 form-group">
           <label>State</label>
-          <input class="shipping-info form-control" placeholder="CA" type="text" required="required" ng-model="__payment.state">
+          <input class="shipping-info form-control" placeholder="Your State" type="text" required="required" ng-model="__payment.state">
         </div>
         <!--<div class="col-xs-12 col-sm-4 form-group">
           <label>Country</label>
@@ -102,7 +102,8 @@
                   </div>
                   <div class="col-xs-12 pad-top-5">
                     <label class="voucher-label">Discount Code:</label>
-                    <input type="text" ng-model="voucher" placeholder="Enter Your Code Here" class="voucher-input"> <span class="summary-price">$0.00</span>
+                    <input type="text" ng-model="__payment.voucher" placeholder="Enter Your Code Here" class="voucher-input"> <span class="summary-price">${{discount | limitTo: 4}}</span>
+                    <div class="btn btn-sm discount-btn" ng-click="discount_check()">Apply</div>
                   </div>
                   <div class="col-xs-12 border-bottom lil-pad-bottom pad-top-5">
                     <span class="summary-name">Sub-Total:</span> <span class="summary-price">{{__payment.data.sale_price | currency}}</span>

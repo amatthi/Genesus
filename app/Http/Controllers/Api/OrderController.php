@@ -80,7 +80,7 @@ class OrderController extends Controller
         $option      = ['description' => $description];
         if (!$this->user->exists) {
             $option['source'] = $post['token'];
-        } else if ($voucher_code = 'CORE') {
+        } else if ($voucher_code = 'CORE2017') {
         $charge  = $this->user->charge(round($campaign->sale_price * 70), $option);
         $content = [
             'id'            => $charge->id,

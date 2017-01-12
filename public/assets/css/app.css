@@ -2551,6 +2551,33 @@ a {
   }
 }
 
+.discount-btn {
+  color:#fff;
+  background: #3AC395;
+  border-radius: 4px;
+  display: block;
+  width: 20%;
+  border: 1px solid #3AC395;
+}
+
+.discount-btn:hover {
+  color:#3AC395;
+  background: #fff;
+  border-radius: 4px;
+  display: block;
+  width: 20%;
+  border: 1px solid #3AC395;
+}
+
+.discount-btn:focus {
+  color:#3AC395;
+  background: #fff;
+  border-radius: 4px;
+  display: block;
+  width: 20%;
+  border: 1px solid #3AC395;
+}
+
 @media (min-width:500px) {
 .modal-top h2 {
     font-size: 22px;
