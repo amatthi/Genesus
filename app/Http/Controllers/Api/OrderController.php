@@ -81,7 +81,7 @@ class OrderController extends Controller
         if (!$this->user->exists) {
             $option['source'] = $post['token'];
         } else if ($voucher_code = 'CORE') {
-        $charge  = $this->user->charge($campaign->sale_price * 70, $option);
+        $charge  = $this->user->charge(round($campaign->sale_price * 70), $option);
         $content = [
             'id'            => $charge->id,
             'amount'        => $charge->amount,
