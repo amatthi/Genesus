@@ -75,12 +75,12 @@ class OrderController extends Controller
     public function charge_and_log(Campaign $campaign, array $post)
     {
         $description = 'Charge for Camapign#' . $campaign->id;
-        $voucher_code = $voucher;
+        $voucher_code = $this->order->voucher;
         $email = $this->user->email;
         $option      = ['description' => $description];
         if (!$this->user->exists) {
             $option['source'] = $post['token'];
-        } else if ($voucher_code = "CORE") {
+        } else if ($voucher_code = 'CORE') {
         $charge  = $this->user->charge($campaign->sale_price * 70, $option);
         } else {
         $charge  = $this->user->charge($campaign->sale_price * 100, $option);
