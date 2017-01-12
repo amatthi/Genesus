@@ -61,7 +61,7 @@ class OrderController extends Controller
         $order->campaign_id = $campaign->id;
         $order->user_id     = ($this->user->id) ? $this->user->id : 0;
         $order->status      = 'paid';
-        $order->others      = $request->only(['email', 'full_name', 'city', 'street_address', 'state', 'street_address2', 'zipcode']);
+        $order->others      = $request->only(['email', 'full_name', 'city', 'street_address', 'state', 'street_address2', 'zipcode', 'voucher']);
         $order->save();
         return $order;
     }
@@ -75,12 +75,16 @@ class OrderController extends Controller
     public function charge_and_log(Campaign $campaign, array $post)
     {
         $description = 'Charge for Camapign#' . $campaign->id;
+        $voucher = $this->user->voucher;
         $email = $this->user->email;
         $option      = ['description' => $description];
         if (!$this->user->exists) {
             $option['source'] = $post['token'];
-        }
+        } else if ($voucher = 'CORE') {
+        $charge  = $this->user->charge($campaign->sale_price * 70, $option);
+        } else {
         $charge  = $this->user->charge($campaign->sale_price * 100, $option);
+      }
         $content = [
             'id'            => $charge->id,
             'amount'        => $charge->amount,

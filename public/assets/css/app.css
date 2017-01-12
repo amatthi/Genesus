@@ -2498,6 +2498,15 @@ a {
       margin-bottom: 5px;
       /**color:#777;**/
   }
+  .voucher-input {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      padding: 2px !important;
+      font-size: 12px;
+      margin-bottom: 5px;
+      /**color:#777;**/
+  }
   .pay-input input {
       max-width: 100%;
       border-radius: 4px;
@@ -2510,6 +2519,13 @@ a {
     font-size:12px;
     float:left;
   }
+
+  .voucher-label {
+    font-size:12px !important;
+    float:none !important;
+    color:#333 !important;
+  }
+
   .summary-price {
     font-size:12px;
     float:right;
@@ -2576,6 +2592,14 @@ a {
       margin-bottom: 5px;
       /**color:#777;**/
   }
+  .voucher-input {
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      padding: 2px !important;
+      font-size: 12px !important;
+      margin-bottom: 5px;
+      /**color:#777;**/
+  }
   .cvc-code input {
     margin-left: 30px !important;
   }
@@ -2590,6 +2614,11 @@ a {
   .summary-name {
     font-size:14px;
     float:left;
+  }
+  .voucher-label {
+    font-size:14px !important;
+    float:none !important;
+    color:#333 !important;
   }
   .summary-price {
     font-size:14px;
