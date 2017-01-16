@@ -78,7 +78,9 @@ class OrderController extends Controller
         $voucher_code = $this->user->voucher;
         $email = $this->user->email;
         $option      = ['description' => $description];
-        if ($voucher_code = 'CORE2017') {
+        if (!$this->user->exists) {
+            $option['source'] = $post['token'];
+            if ($voucher_code = 'CORE2017') {
         $charge  = $this->user->charge(round($campaign->sale_price * 70), $option);
         $content = [
             'id'            => $charge->id,
@@ -119,6 +121,51 @@ class OrderController extends Controller
         $log->save();
         // dd($charge);
       }
+    }
+    else {
+        
+        if ($voucher_code = 'CORE2017') {
+    $charge  = $this->user->charge(round($campaign->sale_price * 70), $option);
+    $content = [
+        'id'            => $charge->id,
+        'amount'        => $charge->amount,
+        'currency'      => $charge->currency,
+        'customer'      => $charge->customer,
+        'source_id'     => $charge->source->id,
+        'status'        => $charge->status,
+        'description'   => $charge->description,
+        "receipt_email" => $charge->email,
+    ];
+    // dd($content, $charge);
+    $log          = new Log;
+    $log->user_id = ($this->user->id) ? $this->user->id : 0;
+    $log->type    = 'charge';
+    $log->type_id = $campaign->id;
+    $log->content = $content;
+    $log->save();
+    // dd($charge);
+    } else {
+    $charge  = $this->user->charge($campaign->sale_price * 100, $option);
+    $content = [
+        'id'            => $charge->id,
+        'amount'        => $charge->amount,
+        'currency'      => $charge->currency,
+        'customer'      => $charge->customer,
+        'source_id'     => $charge->source->id,
+        'status'        => $charge->status,
+        'description'   => $charge->description,
+        "receipt_email" => $charge->email,
+    ];
+    // dd($content, $charge);
+    $log          = new Log;
+    $log->user_id = ($this->user->id) ? $this->user->id : 0;
+    $log->type    = 'charge';
+    $log->type_id = $campaign->id;
+    $log->content = $content;
+    $log->save();
+    // dd($charge);
+  }
+}
 
     }
 }
