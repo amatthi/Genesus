@@ -21,7 +21,7 @@
 		<link href="/assets/css/dev.css" rel="stylesheet">
 		<link href="/assets/css/app.css" rel="stylesheet">
 	</head>
-	<body ng-app="myApp" style="background:#fff;" ng-controller="mainController">
+	<body ng-app="myApp" ng-class="{'modal-flow' : now_module != ''}" style="background:#fff;" ng-controller="mainController">
 		<div class='darken' ng-show="now_module != ''"></div>
 		<!--<div ng-include="'/html/templates/navbar.html?'+template_v"></div>-->
 		<div id="pop-module">
