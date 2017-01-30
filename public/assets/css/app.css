@@ -339,6 +339,7 @@ strong {
 .modal-flow {
   overflow: hidden !important;
   overflow-x: hidden !important;
+  position: fixed !important;
 }
 
 @media (max-width:499px) {
