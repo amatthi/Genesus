@@ -100,27 +100,7 @@ class OrderController extends Controller
         $log->content = $content;
         $log->save();
         // dd($charge);
-      } else if ($voucher_code = 'COREPROMO') {
-    $charge  = $this->user->charge(round($campaign->sale_price * 55), $option);
-    $content = [
-        'id'            => $charge->id,
-        'amount'        => $charge->amount,
-        'currency'      => $charge->currency,
-        'customer'      => $charge->customer,
-        'source_id'     => $charge->source->id,
-        'status'        => $charge->status,
-        'description'   => $charge->description,
-        "receipt_email" => $charge->email,
-    ];
-    // dd($content, $charge);
-    $log          = new Log;
-    $log->user_id = ($this->user->id) ? $this->user->id : 0;
-    $log->type    = 'charge';
-    $log->type_id = $campaign->id;
-    $log->content = $content;
-    $log->save();
-    // dd($charge);
-    } else {
+        } else {
         $charge  = $this->user->charge($campaign->sale_price * 100, $option);
         $content = [
             'id'            => $charge->id,
@@ -164,27 +144,7 @@ class OrderController extends Controller
     $log->content = $content;
     $log->save();
     // dd($charge);
-  } if ($voucher_code = 'COREPROMO') {
-$charge  = $this->user->charge(round($campaign->sale_price * 55), $option);
-$content = [
-    'id'            => $charge->id,
-    'amount'        => $charge->amount,
-    'currency'      => $charge->currency,
-    'customer'      => $charge->customer,
-    'source_id'     => $charge->source->id,
-    'status'        => $charge->status,
-    'description'   => $charge->description,
-    "receipt_email" => $charge->email,
-];
-// dd($content, $charge);
-$log          = new Log;
-$log->user_id = ($this->user->id) ? $this->user->id : 0;
-$log->type    = 'charge';
-$log->type_id = $campaign->id;
-$log->content = $content;
-$log->save();
-// dd($charge);
-} else {
+    } else {
     $charge  = $this->user->charge($campaign->sale_price * 100, $option);
     $content = [
         'id'            => $charge->id,

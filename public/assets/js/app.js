@@ -11430,9 +11430,6 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
       if ($scope.__payment.voucher == 'CORE2017' || $scope.__payment.voucher == 'DESTINY2017') {
       $scope.discount = $scope.__payment.data.sale_price * 0.3;
       $scope.__payment.data.sale_price = $scope.__payment.data.sale_price - $scope.discount;
-    } else if ($scope.__payment.voucher == 'COREPROMO') {
-      $scope.discount = $scope.__payment.data.sale_price * 0.45;
-      $scope.__payment.data.sale_price = $scope.__payment.data.sale_price - $scope.discount;
       }
     }
 
