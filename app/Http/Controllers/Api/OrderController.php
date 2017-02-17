@@ -163,7 +163,6 @@ class OrderController extends Controller
       }
     }
     else {
-
         if ($voucher_code = 'CORE2017' || $voucher_code = 'DESTINY2017' || $voucher_code = 'KIMBER2017') {
     $charge  = $this->user->charge(round($campaign->sale_price * 70), $option);
     $content = [
@@ -184,7 +183,7 @@ class OrderController extends Controller
     $log->content = $content;
     $log->save();
     // dd($charge);
-  } else if ($voucher_code = 'COREPROMO') {
+  } if ($voucher_code = 'COREPROMO') {
 $charge  = $this->user->charge(round($campaign->sale_price * 55), $option);
 $content = [
     'id'            => $charge->id,
@@ -204,7 +203,7 @@ $log->type_id = $campaign->id;
 $log->content = $content;
 $log->save();
 // dd($charge);
-} else if ($voucher_code = 'KIMBERPROMO') {
+} if ($voucher_code = 'KIMBERPROMO') {
 $charge  = $this->user->charge(round($campaign->sale_price * 13), $option);
 $content = [
   'id'            => $charge->id,
