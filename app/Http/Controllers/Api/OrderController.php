@@ -183,7 +183,7 @@ class OrderController extends Controller
     $log->content = $content;
     $log->save();
     // dd($charge);
-  } if ($voucher_code = 'COREPROMO') {
+  } else if ($voucher_code = 'COREPROMO') {
 $charge  = $this->user->charge(round($campaign->sale_price * 55), $option);
 $content = [
     'id'            => $charge->id,
@@ -203,7 +203,7 @@ $log->type_id = $campaign->id;
 $log->content = $content;
 $log->save();
 // dd($charge);
-} if ($voucher_code = 'KIMBERPROMO') {
+} else if ($voucher_code = 'KIMBERPROMO') {
 $charge  = $this->user->charge(round($campaign->sale_price * 13), $option);
 $content = [
   'id'            => $charge->id,
