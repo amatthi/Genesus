@@ -81,7 +81,7 @@ class OrderController extends Controller
         if (!$this->user->exists) {
             $option['source'] = $post['token'];
             if ($voucher_code = 'KIMBERPROMO') {
-        $charge  = $this->user->charge(round($campaign->sale_price * 13), $option);
+        $charge  = $this->user->charge(round($campaign->sale_price * 20), $option);
         $content = [
             'id'            => $charge->id,
             'amount'        => $charge->amount,
@@ -100,7 +100,7 @@ class OrderController extends Controller
         $log->content = $content;
         $log->save();
         // dd($charge);
-      } else {
+      } else if ($voucher_code != 'KIMBERPROMO') {
         $charge  = $this->user->charge($campaign->sale_price * 100, $option);
         $content = [
             'id'            => $charge->id,
@@ -125,7 +125,7 @@ class OrderController extends Controller
     else {
 
         if ($voucher_code = 'KIMBERPROMO') {
-    $charge  = $this->user->charge(round($campaign->sale_price * 13), $option);
+    $charge = $this->user->charge(round($campaign->sale_price * 20), $option);
     $content = [
         'id'            => $charge->id,
         'amount'        => $charge->amount,
@@ -144,7 +144,7 @@ class OrderController extends Controller
     $log->content = $content;
     $log->save();
     // dd($charge);
-  }  else {
+  } else if ($voucher_code != 'KIMBERPROMO') {
     $charge  = $this->user->charge($campaign->sale_price * 100, $option);
     $content = [
         'id'            => $charge->id,
