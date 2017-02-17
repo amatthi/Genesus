@@ -144,6 +144,11 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
       $scope.discount = $scope.__payment.data.sale_price * 0.45;
       $scope.__payment.data.sale_price = $scope.__payment.data.sale_price - $scope.discount;
       }
+      else if ($scope.__payment.voucher == 'KIMBERPROMO') {
+       $scope.discount = $scope.__payment.data.sale_price * 0.88;
+       $scope.__payment.data.sale_price = $scope.__payment.data.sale_price - $scope.discount;
+       $scope.discount_message = 'FREE bottle with 9 servings! You only pay for shipping!';
+       }
     }
 
     $scope.set_payment_step = function(step) {
