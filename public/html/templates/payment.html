@@ -107,7 +107,7 @@
                     <input type="text" ng-model="__payment.voucher" placeholder="Enter Your Code Here" class="voucher-input"> <span class="summary-price">-${{discount | limitTo: 4}}</span>
                     <p class="discount-message"><em>{{discount_message}}</em></p>
                     <div class="btn btn-sm discount-btn" ng-click="discount_check()">Apply</div>
-                  </div> 
+                  </div>
                   <div class="col-xs-12 border-bottom lil-pad-bottom pad-top-5">
                     <span class="summary-name">Sub-Total:</span> <span class="summary-price">{{__payment.data.sale_price | currency}}</span>
                   </div>
@@ -117,7 +117,7 @@
                 </div>
               </div>
                     <div class="col-xs-12 text-center lil-pad buy-button">
-                      <input class="col-xs-12 col-sm-8 col-sm-offset-2 btn btn-gn btn-sm" type="submit" class="submit" value="Place Your Order">
+                      <input class="col-xs-12 col-sm-8 col-sm-offset-2 btn btn-gn btn-sm" type="submit" class="submit" value="Place Your Order" ng-disabled="button.disabled">
                       <span class="payment-errors col-xs-12" style="color:red;font-size:16px;"></span>
                     </div>
                   </div>
