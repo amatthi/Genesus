@@ -11407,8 +11407,9 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
         var $form = $('#payment-form');
         if (response.error) {
             $form.find('.payment-errors').text(response.error.message);
-            $form.find('.submit').prop('disabled', false);
+            $form.find('.submit').prop('disabled', true);
         } else {
+            $form.find('.submit').prop('disabled', true);
             $scope.__payment.token = response.id;
             $scope.submit_payment();
             //$scope.$broadcast('stripe_token_get');
