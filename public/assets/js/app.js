@@ -11418,7 +11418,7 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     $scope.submit_payment = function() {
         mainFactory.pay($scope.__payment).then(function(r) {
             var $form = $('#payment-form');
-            $form.find('.submit').prop('disabled', false);
+            $form.find('.submit').prop('disabled', true);
             $scope.__payment.r = r.data;
             $scope.$broadcast('payment_done');
         }, $scope.handle_error);
