@@ -106,9 +106,6 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
         }
     }
 
-    $scope.disableButton = function() {
-        $scope.isDisabled = true;
-    }
 
     $scope.stripe_get_token = function() {
         var $form = $('#payment-form');
@@ -134,6 +131,7 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
         mainFactory.pay($scope.__payment).then(function(r) {
             var $form = $('#payment-form');
             $form.find('.submit').prop('disabled', false);
+            $scope.isDisabled = true;
             $scope.__payment.r = r.data;
             $scope.$broadcast('payment_done');
         }, $scope.handle_error);
