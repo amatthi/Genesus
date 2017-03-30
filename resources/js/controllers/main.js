@@ -5,6 +5,7 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     $scope.__s = {};
     $scope.__payment = {};
     $scope.discount = '0.00';
+    $scope.isDisabled = false;
 
     $("body").on('click', '.darken', function(event) {
         if (event.target !== this) {
@@ -105,6 +106,10 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
         }
     }
 
+    $scope.disableButton = function() {
+        $scope.isDisabled = true;
+    }
+
     $scope.stripe_get_token = function() {
         var $form = $('#payment-form');
         $form.find('.submit').prop('disabled', true);
@@ -117,9 +122,8 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
         var $form = $('#payment-form');
         if (response.error) {
             $form.find('.payment-errors').text(response.error.message);
-            $form.find('.submit').prop('disabled', true);
+            $form.find('.submit').prop('disabled', false);
         } else {
-            $form.find('.submit').prop('disabled', true);
             $scope.__payment.token = response.id;
             $scope.submit_payment();
             //$scope.$broadcast('stripe_token_get');
@@ -129,7 +133,7 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     $scope.submit_payment = function() {
         mainFactory.pay($scope.__payment).then(function(r) {
             var $form = $('#payment-form');
-            $form.find('.submit').prop('disabled', true);
+            $form.find('.submit').prop('disabled', false);
             $scope.__payment.r = r.data;
             $scope.$broadcast('payment_done');
         }, $scope.handle_error);
