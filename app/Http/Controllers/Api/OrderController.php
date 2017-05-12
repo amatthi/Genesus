@@ -39,7 +39,7 @@ class OrderController extends Controller
                     'street_address'  => 'required|max:255',
                     'state'           => 'required|max:255',
                     'city'            => 'required|max:255',
-                    //'zipcode'         => 'required|max:255',
+                    'zipcode'         => 'required|max:255',
                 ]);
                 $campaign = Campaign::where('id', $post['data']['id'])->firstOrFail();
                 $this->charge_and_log($campaign, $post);
@@ -60,7 +60,7 @@ class OrderController extends Controller
         $order->campaign_id = $campaign->id;
         $order->user_id     = ($this->user->id) ? $this->user->id : 0;
         $order->status      = 'paid';
-        $order->others      = $request->only(['email', 'full_name', 'city', 'street_address', 'state', 'street_address2', 'voucher']);
+        $order->others      = $request->only(['email', 'full_name', 'city', 'street_address', 'state', 'street_address2', 'zipcode', 'voucher']);
         $order->save();
         return $order;
     }
