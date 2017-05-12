@@ -61,7 +61,7 @@ class OrderController extends Controller
         $order->campaign_id = $campaign->id;
         $order->user_id     = ($this->user->id) ? $this->user->id : 0;
         $order->status      = 'paid';
-        $order->others      = $request->only(['email', 'full_name', 'city', 'street_address', 'state', 'street_address2', 'zipcode', 'voucher']);
+        $order->others      = $request->only(['email', 'full_name', 'city', 'street_address', 'street_address2', 'voucher']);
         $order->save();
         return $order;
     }
