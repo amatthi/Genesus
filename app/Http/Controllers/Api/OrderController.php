@@ -27,9 +27,9 @@ class OrderController extends Controller
             if ($this->user->exists) {
                 $this->check_token($post['token']);
             }
-        } else if (!$this->user->hasStripeId()) {
-            return response(['stripe' => ['Payment method not found']], 422);
-        }
+        } //else if (!$this->user->hasStripeId()) {
+            //return response(['stripe' => ['Payment method not found']], 422);
+        //}
 
         switch ($post['type']) {
             case 'buy_campaign':
