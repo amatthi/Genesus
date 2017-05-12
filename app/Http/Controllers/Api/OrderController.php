@@ -37,10 +37,10 @@ class OrderController extends Controller
                 $this->validate($request, [
                     'full_name'       => 'required|max:255',
                     'street_address'  => 'required|max:255',
-                    'state'           => 'required|max:255',
+                    //'state'           => 'required|max:255',
                     //'country'         => 'required|max:255',
                     'city'            => 'required|max:255',
-                    'zipcode'         => 'required|max:255',
+                    //'zipcode'         => 'required|max:255',
                 ]);
                 $campaign = Campaign::where('id', $post['data']['id'])->firstOrFail();
                 $this->charge_and_log($campaign, $post);
