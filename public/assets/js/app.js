@@ -11401,8 +11401,8 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     $scope.stripe_get_token = function() {
         var $form = $('#payment-form');
         $form.find('.submit').prop('disabled', true);
-        //$scope.isDisabled = true;
-        console.log($form);
+        $scope.isDisabled = true;
+        //console.log($form);
         Stripe.card.createToken($form, $scope.stripeResponseHandler);
         return false;
     }
