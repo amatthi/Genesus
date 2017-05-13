@@ -123,7 +123,7 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
             $form.find('.submit').prop('disabled', false);
         } else {
             $scope.__payment.token = response.id;
-            if ($scope.__payment == 'buy_campaign') {
+            if ($scope.__payment.type == 'buy_campaign') {
                 $scope.__payment.data = { "id": $scope.__payment.data.id };
             }
             $scope.submit_payment();
