@@ -11326,8 +11326,7 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
             }
         } else if (response.status == 401) {
             alert('must login');
-        }
-        else if(response.status == 404){
+        } else if (response.status == 404) {
             alert('404 page not found');
         }
     }
@@ -11414,6 +11413,9 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
             $form.find('.submit').prop('disabled', false);
         } else {
             $scope.__payment.token = response.id;
+            if ($scope.__payment.type == 'buy_campaign') {
+                $scope.__payment.data = { "id": $scope.__payment.data.id };
+            }
             $scope.submit_payment();
             //$scope.$broadcast('stripe_token_get');
         }
@@ -11431,16 +11433,16 @@ chisel.controller("mainController", function($scope, $rootScope, $upload, mainFa
     }
 
     $scope.discount_check = function() {
-      if ($scope.__payment.voucher == 'KIMBER2017') {
-      $scope.discount = $scope.__payment.data.sale_price * 0.3;
-      $scope.__payment.data.sale_price = $scope.__payment.data.sale_price - $scope.discount;
-      $scope.voucherDisabled = true;
-    } else if ($scope.__payment.voucher == 'KIMBERPROMO') {
-       $scope.discount = $scope.__payment.data.sale_price * 0.87;
-       $scope.__payment.data.sale_price = $scope.__payment.data.sale_price - $scope.discount;
-       $scope.discount_message = 'FREE bottle with 12 servings! You only pay for shipping!';
-       $scope.voucherDisabled = true;
-       }
+        if ($scope.__payment.voucher == 'KIMBER2017') {
+            $scope.discount = $scope.__payment.data.sale_price * 0.3;
+            $scope.__payment.data.sale_price = $scope.__payment.data.sale_price - $scope.discount;
+            $scope.voucherDisabled = true;
+        } else if ($scope.__payment.voucher == 'KIMBERPROMO') {
+            $scope.discount = $scope.__payment.data.sale_price * 0.87;
+            $scope.__payment.data.sale_price = $scope.__payment.data.sale_price - $scope.discount;
+            $scope.discount_message = 'FREE bottle with 12 servings! You only pay for shipping!';
+            $scope.voucherDisabled = true;
+        }
     }
 
     $scope.set_payment_step = function(step) {
